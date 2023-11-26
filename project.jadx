@@ -10,9 +10,600 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.m.f.a"
+        },
+        "newName": "BatteryLevel"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.a"
+        },
+        "newName": "AlgorithmData"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.b"
+        },
+        "newName": "CgmFeature"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.d"
+        },
+        "newName": "CgmMeasurement"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.d$a"
+        },
+        "newName": "CgmFlags"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.e"
+        },
+        "newName": "CgmMeasurementMdtExtension"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.f"
+        },
+        "newName": "CgmMeasurementList"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.g"
+        },
+        "newName": "CgmSessionRunTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.h"
+        },
+        "newName": "CgmSessionStartTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.k"
+        },
+        "newName": "Racp"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.s"
+        },
+        "newName": "SensorConnectedState"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.u"
+        },
+        "newName": "CgmSensorStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.v"
+        },
+        "newName": "CgmCalibrationFlags"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.w"
+        },
+        "newName": "Socp"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.z"
+        },
+        "newName": "TimeStamp"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.o.h.a"
+        },
+        "newName": "ConnectionActiveParams"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.o.h.b"
+        },
+        "newName": "ConnectionRequestedParams"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.p.n"
+        },
+        "newName": "SystemId"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.c0"
+        },
+        "newName": "SliceRacpCommand"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.i0"
+        },
+        "newName": "SliceRacp"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.m"
+        },
+        "newName": "ServerRepository"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.p0"
+        },
+        "newName": "TransferBlockData"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.p0$a"
+        },
+        "newName": "PayloadDescription"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.p0$b"
+        },
+        "newName": "RepositoryEntityPayload"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.s"
+        },
+        "newName": "RTMCP_command"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.w"
+        },
+        "newName": "RTMCP_characteristic"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.q.j.z"
+        },
+        "newName": "ServerRepositoryList"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.a"
+        },
+        "newName": "AlgorithmDataConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.b"
+        },
+        "newName": "AbstractConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.f.a.e.a.b0"
         },
-        "newName": "DecodeMapper"
+        "newName": "ConverterMap"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.c"
+        },
+        "newName": "BatteryLevelConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.c0"
+        },
+        "newName": "CrcException"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.d"
+        },
+        "newName": "ByteArrayConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.d0"
+        },
+        "newName": "VoidConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e"
+        },
+        "newName": "CgmFeaturesConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e0.e"
+        },
+        "newName": "RTMCP_command_Converter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e0.f"
+        },
+        "newName": "RTMCP_characteristic_Converter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e0.g"
+        },
+        "newName": "ServerRepositoryListConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e0.h"
+        },
+        "newName": "SliceRacpCommandConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e0.i"
+        },
+        "newName": "SliceRacpResponseConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.e0.k"
+        },
+        "newName": "TransferBlockDataConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.f"
+        },
+        "newName": "CgmMeasurementMdtExtensionConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.f0.a"
+        },
+        "newName": "DateTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.g"
+        },
+        "newName": "CgmMeasurementsConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.h"
+        },
+        "newName": "CgmSessionRunTimeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.i"
+        },
+        "newName": "CgmSessionStartTimeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.j"
+        },
+        "newName": "ConnectionActiveParamsConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.k"
+        },
+        "newName": "ConnectionRequestedParamsConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.o"
+        },
+        "newName": "DateTimeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.r"
+        },
+        "newName": "RacpConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.s"
+        },
+        "newName": "SensorConnectedStateConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.t"
+        },
+        "newName": "SocpConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.u"
+        },
+        "newName": "StringConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.v"
+        },
+        "newName": "SystemIdConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.w"
+        },
+        "newName": "TimeStampConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.y"
+        },
+        "newName": "ChecksumVerifier"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.g.a.a.e.b.e"
+        },
+        "newName": "GattPayload"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.g.a.a.e.b.e$a"
+        },
+        "newName": "GattPayload"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "e.g.f.a.d.d.a.n.w.d",
+          "shortId": "id:J"
+        },
+        "newName": "id"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.d.a.n.w.d",
+          "shortId": "a()F"
+        },
+        "newName": "getGlucose"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.d.a.n.w.d",
+          "shortId": "b()Ljava/lang/Float;"
+        },
+        "newName": "getTrend"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.d.a.n.w.d",
+          "shortId": "c()Ljava/util/Set;"
+        },
+        "newName": "getSensorStatusFlags"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.d.a.n.w.d",
+          "shortId": "d()Ljava/util/Set;"
+        },
+        "newName": "getCalibrationFlags"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.d.a.n.w.d",
+          "shortId": "e()I"
+        },
+        "newName": "getTimeOffset"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.b0",
+          "shortId": "c(Ljava/lang/Class;Le/g/f/a/e/a/z;)V"
+        },
+        "newName": "addConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.e",
+          "shortId": "k(Le/g/g/a/a/e/b/e;)Le/g/f/a/d/d/a/n/w/b;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131072
+        },
+        "newName": "crc_value"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.e",
+          "shortId": "k(Le/g/g/a/a/e/b/e;)Le/g/f/a/d/d/a/n/w/b;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327682
+        },
+        "newName": "e2e_crc_feature_flag"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.e0.d",
+          "shortId": "k(Le/g/g/a/a/e/b/e;)Le/g/f/a/d/d/a/q/j/l;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "repositoryId"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.e0.e",
+          "shortId": "b(Ljava/lang/Object;)Le/g/g/a/a/e/b/e;"
+        },
+        "newName": "pack"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.e0.g",
+          "shortId": "j()Ljava/lang/Class;"
+        },
+        "newName": "getClass"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.e0.g",
+          "shortId": "l(Le/g/g/a/a/e/b/e;II)Ljava/util/Collection;"
+        },
+        "newName": "pack"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.i",
+          "shortId": "a(Le/g/g/a/a/e/b/e;)Ljava/lang/Object;"
+        },
+        "newName": "unpack"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.i",
+          "shortId": "b(Ljava/lang/Object;)Le/g/g/a/a/e/b/e;"
+        },
+        "newName": "pack"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.y",
+          "shortId": "a(Le/g/g/a/a/e/b/e;II)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262145
+        },
+        "newName": "payload"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.y",
+          "shortId": "a(Le/g/g/a/a/e/b/e;II)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "protectedOffset"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.y",
+          "shortId": "a(Le/g/g/a/a/e/b/e;II)I"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "protectedLength"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.y",
+          "shortId": "b(II)Ljava/lang/String;"
+        },
+        "newName": "getAsString"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.y",
+          "shortId": "c(Le/g/g/a/a/e/b/e;III)I"
+        },
+        "newName": "do_e2e_crc"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.y",
+          "shortId": "d(Le/g/g/a/a/e/b/e;I)V"
+        },
+        "newName": "checkLength"
       }
     ]
   },
@@ -41,14 +632,74 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.b0",
       "subPath": "java",
-      "caret": 3247,
+      "caret": 3143,
       "view": {
         "x": 0,
-        "y": 572
+        "y": 383
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.d0",
+      "subPath": "java",
+      "caret": 175,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.u",
+      "subPath": "java",
+      "caret": 233,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.v",
+      "subPath": "java",
+      "caret": 352,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.j",
+      "subPath": "java",
+      "caret": 302,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e",
+      "subPath": "java",
+      "caret": 1120,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.a.a.e.b.e",
+      "subPath": "java",
+      "caret": 158,
+      "view": {
+        "x": 0,
+        "y": 0
       }
     }
   ],
-  "activeTab": 2,
+  "activeTab": 7,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
