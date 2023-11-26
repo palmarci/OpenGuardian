@@ -464,6 +464,38 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.b",
+          "shortId": "f(Le/g/g/a/a/e/b/e;II)F"
+        },
+        "newName": "unpackFloat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.b",
+          "shortId": "g(Le/g/g/a/a/e/b/e;II)I"
+        },
+        "newName": "unpackInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.b",
+          "shortId": "h(Le/g/g/a/a/e/b/e;II)J"
+        },
+        "newName": "unpackLong"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.e.a.b",
+          "shortId": "i(Le/g/g/a/a/e/b/e;I)Ljava/lang/String;"
+        },
+        "newName": "unpackString"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "e.g.f.a.e.a.b0",
           "shortId": "c(Ljava/lang/Class;Le/g/f/a/e/a/z;)V"
         },
@@ -604,6 +636,98 @@
           "shortId": "d(Le/g/g/a/a/e/b/e;I)V"
         },
         "newName": "checkLength"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "d(II)Ljava/lang/Float;"
+        },
+        "newName": "unpackFloat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "e(I)Ljava/lang/IllegalArgumentException;"
+        },
+        "newName": "FormatException"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "f(II)Ljava/lang/Integer;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262148
+        },
+        "newName": "temp"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "f(II)Ljava/lang/Integer;"
+        },
+        "newName": "unpackInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "g(II)Ljava/lang/Long;"
+        },
+        "newName": "unpackLong"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "i(I)I"
+        },
+        "newName": "And15"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "l(B)I"
+        },
+        "newName": "And255"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "m(BB)I"
+        },
+        "newName": "bytesToUInt16"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "n(BBB)I"
+        },
+        "newName": "bytesToUInt24"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "o(BBBB)I"
+        },
+        "newName": "bytesToUnsignedInt32"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "p(II)I"
+        },
+        "newName": "signExtend"
       }
     ]
   },
@@ -612,7 +736,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.t",
       "subPath": "java",
-      "caret": 910,
+      "caret": 919,
       "view": {
         "x": 0,
         "y": 0
@@ -622,7 +746,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.z",
       "subPath": "java",
-      "caret": 175,
+      "caret": 176,
       "view": {
         "x": 0,
         "y": 0
@@ -632,17 +756,17 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.b0",
       "subPath": "java",
-      "caret": 3143,
+      "caret": 3425,
       "view": {
         "x": 0,
-        "y": 383
+        "y": 399
       }
     },
     {
       "type": "class",
       "tabPath": "e.g.f.a.e.a.d0",
       "subPath": "java",
-      "caret": 175,
+      "caret": 188,
       "view": {
         "x": 0,
         "y": 0
@@ -652,7 +776,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.u",
       "subPath": "java",
-      "caret": 233,
+      "caret": 250,
       "view": {
         "x": 0,
         "y": 0
@@ -662,17 +786,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.v",
       "subPath": "java",
-      "caret": 352,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.j",
-      "subPath": "java",
-      "caret": 302,
+      "caret": 375,
       "view": {
         "x": 0,
         "y": 0
@@ -682,7 +796,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e",
       "subPath": "java",
-      "caret": 1120,
+      "caret": 520,
       "view": {
         "x": 0,
         "y": 0
@@ -690,16 +804,556 @@
     },
     {
       "type": "class",
+      "tabPath": "e.g.f.a.e.a.b",
+      "subPath": "java",
+      "caret": 2029,
+      "view": {
+        "x": 0,
+        "y": 478
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.b",
+      "subPath": "java",
+      "caret": 758,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.l",
+      "subPath": "java",
+      "caret": 6617,
+      "view": {
+        "x": 0,
+        "y": 2252
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.g",
+      "subPath": "java",
+      "caret": 918,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.d",
+      "subPath": "java",
+      "caret": 809,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.i.d.e",
+      "subPath": "java",
+      "caret": 179,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.v",
+      "subPath": "java",
+      "caret": 219,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.u",
+      "subPath": "java",
+      "caret": 214,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.f",
+      "subPath": "java",
+      "caret": 205,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.f",
+      "subPath": "java",
+      "caret": 1162,
+      "view": {
+        "x": 0,
+        "y": 270
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.e",
+      "subPath": "java",
+      "caret": 308,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.y",
+      "subPath": "java",
+      "caret": 2542,
+      "view": {
+        "x": 0,
+        "y": 120
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.i",
+      "subPath": "java",
+      "caret": 1313,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.h",
+      "subPath": "java",
+      "caret": 343,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.g",
+      "subPath": "java",
+      "caret": 178,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.h",
+      "subPath": "java",
+      "caret": 238,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.r",
+      "subPath": "java",
+      "caret": 2926,
+      "view": {
+        "x": 0,
+        "y": 719
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.k",
+      "subPath": "java",
+      "caret": 177,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.t",
+      "subPath": "java",
+      "caret": 5825,
+      "view": {
+        "x": 0,
+        "y": 1764
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.w",
+      "subPath": "java",
+      "caret": 330,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.s",
+      "subPath": "java",
+      "caret": 150,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.s",
+      "subPath": "java",
+      "caret": 272,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.w",
+      "subPath": "java",
+      "caret": 397,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.l0",
+      "subPath": "java",
+      "caret": 201,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.j",
+      "subPath": "java",
+      "caret": 552,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.e",
+      "subPath": "java",
+      "caret": 4124,
+      "view": {
+        "x": 0,
+        "y": 1378
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.s",
+      "subPath": "java",
+      "caret": 171,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.w",
+      "subPath": "java",
+      "caret": 148,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.f",
+      "subPath": "java",
+      "caret": 8506,
+      "view": {
+        "x": 0,
+        "y": 1832
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.h",
+      "subPath": "java",
+      "caret": 3112,
+      "view": {
+        "x": 0,
+        "y": 1122
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.c0",
+      "subPath": "java",
+      "caret": 155,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.i0",
+      "subPath": "java",
+      "caret": 149,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.i",
+      "subPath": "java",
+      "caret": 1795,
+      "view": {
+        "x": 0,
+        "y": 335
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.k",
+      "subPath": "java",
+      "caret": 1598,
+      "view": {
+        "x": 0,
+        "y": 95
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.p0",
+      "subPath": "java",
+      "caret": 250,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.d",
+      "subPath": "java",
+      "caret": 624,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.l",
+      "subPath": "java",
+      "caret": 148,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.e0.g",
+      "subPath": "java",
+      "caret": 1401,
+      "view": {
+        "x": 0,
+        "y": 120
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.z",
+      "subPath": "java",
+      "caret": 211,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.q.j.m",
+      "subPath": "java",
+      "caret": 148,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.a",
+      "subPath": "java",
+      "caret": 456,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.a",
+      "subPath": "java",
+      "caret": 311,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.o",
+      "subPath": "java",
+      "caret": 423,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.m.f.a",
+      "subPath": "java",
+      "caret": 151,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.f0.a",
+      "subPath": "java",
+      "caret": 163,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.o.h.a",
+      "subPath": "java",
+      "caret": 1258,
+      "view": {
+        "x": 300,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.o.h.b",
+      "subPath": "java",
+      "caret": 344,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.p.i",
+      "subPath": "java",
+      "caret": 140,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.q",
+      "subPath": "java",
+      "caret": 304,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.p.n",
+      "subPath": "java",
+      "caret": 214,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.d",
+      "subPath": "java",
+      "caret": 186,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.b.a",
+      "subPath": "java",
+      "caret": 812,
+      "view": {
+        "x": 0,
+        "y": 110
+      }
+    },
+    {
+      "type": "class",
       "tabPath": "e.g.g.a.a.e.b.e",
       "subPath": "java",
-      "caret": 158,
+      "caret": 4804,
+      "view": {
+        "x": 0,
+        "y": 1839
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.j",
+      "subPath": "java",
+      "caret": 1331,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.c0",
+      "subPath": "java",
+      "caret": 355,
       "view": {
         "x": 0,
         "y": 0
       }
     }
   ],
-  "activeTab": 7,
+  "activeTab": 60,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [

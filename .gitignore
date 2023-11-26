@@ -1,2 +1,4 @@
 *.apk
 *.cache
+__pycache__/
+*.py[cod]

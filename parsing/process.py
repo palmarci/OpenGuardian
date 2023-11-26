@@ -4,6 +4,8 @@ from enum import Enum
 from datetime import datetime, timezone, timedelta
 from binascii import hexlify
 
+from gattpayload import connectionActiveParamsUnpack
+
 class TerminalColors:
 	HEADER = '\033[95m'
 	OKBLUE = '\033[94m'
@@ -32,6 +34,8 @@ class BtMsg:
 
 	def __parse(self):
 		# TODO
+		if self.service == "connectionManagement_activeParams":
+			return connectionActiveParamsUnpack(self.data)
 		return ""
 
 	def _dump(self):
@@ -101,7 +105,7 @@ class BtMsg:
 		return output
 
 # globals
-dump_length = 80
+dump_length = 50
 filename = None
 SERVICE_MAP = {
 	# services
