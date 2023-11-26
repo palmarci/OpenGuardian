@@ -1,0 +1,57 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "Guardian_134.apk"
+  ],
+  "treeExpansions": [],
+  "codeData": {
+    "comments": [],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.b0"
+        },
+        "newName": "DecodeMapper"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.t",
+      "subPath": "java",
+      "caret": 910,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.z",
+      "subPath": "java",
+      "caret": 175,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.b0",
+      "subPath": "java",
+      "caret": 3247,
+      "view": {
+        "x": 0,
+        "y": 572
+      }
+    }
+  ],
+  "activeTab": 2,
+  "cacheDir": "Guardian_134.apk.cache",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "000202"
+  ]
+}
