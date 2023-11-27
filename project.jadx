@@ -229,7 +229,7 @@
           "refType": "CLASS",
           "declClass": "e.g.f.a.e.a.c0"
         },
-        "newName": "CrcException"
+        "newName": "ParsingException"
       },
       {
         "nodeRef": {
@@ -398,6 +398,13 @@
           "declClass": "e.g.f.a.e.a.y"
         },
         "newName": "ChecksumVerifier"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.e.a.z"
+        },
+        "newName": "IDataConverter"
       },
       {
         "nodeRef": {
@@ -756,7 +763,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.b0",
       "subPath": "java",
-      "caret": 3425,
+      "caret": 3424,
       "view": {
         "x": 0,
         "y": 399
@@ -806,7 +813,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.b",
       "subPath": "java",
-      "caret": 2029,
+      "caret": 1991,
       "view": {
         "x": 0,
         "y": 478
@@ -826,10 +833,10 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.l",
       "subPath": "java",
-      "caret": 6617,
+      "caret": 9441,
       "view": {
         "x": 0,
-        "y": 2252
+        "y": 3004
       }
     },
     {
@@ -916,7 +923,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.y",
       "subPath": "java",
-      "caret": 2542,
+      "caret": 2558,
       "view": {
         "x": 0,
         "y": 120
@@ -1006,7 +1013,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.s",
       "subPath": "java",
-      "caret": 150,
+      "caret": 148,
       "view": {
         "x": 0,
         "y": 0
@@ -1016,7 +1023,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.s",
       "subPath": "java",
-      "caret": 272,
+      "caret": 1089,
       "view": {
         "x": 0,
         "y": 0
@@ -1086,7 +1093,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.f",
       "subPath": "java",
-      "caret": 8506,
+      "caret": 8540,
       "view": {
         "x": 0,
         "y": 1832
@@ -1126,7 +1133,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.i",
       "subPath": "java",
-      "caret": 1795,
+      "caret": 1799,
       "view": {
         "x": 0,
         "y": 335
@@ -1136,7 +1143,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.k",
       "subPath": "java",
-      "caret": 1598,
+      "caret": 1602,
       "view": {
         "x": 0,
         "y": 95
@@ -1156,7 +1163,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.d",
       "subPath": "java",
-      "caret": 624,
+      "caret": 628,
       "view": {
         "x": 0,
         "y": 0
@@ -1176,7 +1183,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.g",
       "subPath": "java",
-      "caret": 1401,
+      "caret": 1405,
       "view": {
         "x": 0,
         "y": 120
@@ -1256,9 +1263,9 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.o.h.a",
       "subPath": "java",
-      "caret": 1258,
+      "caret": 148,
       "view": {
-        "x": 300,
+        "x": 0,
         "y": 0
       }
     },
@@ -1316,7 +1323,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.b.a",
       "subPath": "java",
-      "caret": 812,
+      "caret": 811,
       "view": {
         "x": 0,
         "y": 110
@@ -1326,17 +1333,17 @@
       "type": "class",
       "tabPath": "e.g.g.a.a.e.b.e",
       "subPath": "java",
-      "caret": 4804,
+      "caret": 8105,
       "view": {
         "x": 0,
-        "y": 1839
+        "y": 0
       }
     },
     {
       "type": "class",
       "tabPath": "e.g.f.a.e.a.j",
       "subPath": "java",
-      "caret": 1331,
+      "caret": 939,
       "view": {
         "x": 0,
         "y": 0
@@ -1351,12 +1358,54 @@
         "x": 0,
         "y": 0
       }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.z",
+      "subPath": "java",
+      "caret": 191,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.a0",
+      "subPath": "java",
+      "caret": 129,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.l",
+      "subPath": "java",
+      "caret": 329,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.x",
+      "subPath": "java",
+      "caret": 125,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
     }
   ],
-  "activeTab": 60,
+  "activeTab": 7,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "ActiveParam",
+    "SensorConnected",
     "ConverterMap",
     "Converter",
     "000202"

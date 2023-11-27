@@ -197,4 +197,5 @@ def main():
 		print(m)
 
 if __name__ == "__main__":
+	print("OUTDATED! Use the java project!")
 	main()
