@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "openguardian4.App",
+            "projectName": "app"
+        },
+        {
+            "type": "java",
+            "name": "Java: debug",
+            "request": "launch",
+            "args": [
+                "/home/marci/Diab/guardian2/guardian-134-decompilation/parsing/dumps/2023_11_28_17_14_calibratation_sensorexpired.txt"
+            ],
+            "mainClass": ""
+        },
+        {
+            "name": "Python: debug",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "/home/marci/Diab/guardian2/communication/newformat.log"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

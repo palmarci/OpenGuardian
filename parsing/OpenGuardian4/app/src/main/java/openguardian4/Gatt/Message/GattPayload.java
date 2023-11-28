@@ -1,20 +1,13 @@
-package openguardian4.Gatt;
+package openguardian4.Gatt.Message;
 
 import java.util.Arrays;
 import openguardian4.Utils;
 
+import openguardian4.Gatt.Converters.UnpackException;
 /* renamed from: e.g.g.a.a.e.b.e */
 /* loaded from: classes.dex */
-public class GattPayload {
-	public static final int FORMAT_FLOAT = 52;
-	public static final int FORMAT_SFLOAT = 50;
-	public static final int FORMAT_SINT16 = 34;
-	public static final int FORMAT_SINT32 = 36;
-	public static final int FORMAT_SINT8 = 33;
-	public static final int FORMAT_UINT16 = 18;
-	public static final int FORMAT_UINT24 = 19;
-	public static final int FORMAT_UINT32 = 20;
-	public static final int FORMAT_UINT8 = 17;
+public class GattPayload  {
+
 	private final byte[] value;
 
 	/* renamed from: e.g.g.a.a.e.b.e$a */
@@ -41,9 +34,9 @@ public class GattPayload {
 	}
 
 	/* renamed from: e */
-	public static IllegalArgumentException FormatException(int format) {
-		return new IllegalArgumentException("Format type " + format + " is not supported");
-	}
+//	public static IllegalArgumentException FormatException(int format) {
+//		return new IllegalArgumentException("Format type " + format + " is not supported");
+//	}
 
 	/* renamed from: i */
 	public static int extractLowerNibble(int i) {
@@ -77,7 +70,7 @@ public class GattPayload {
 	}
 
 	/* renamed from: d */
-	public Float unpackFloat(int format, int index) {
+	public Float unpackFloat(int format, int index) throws UnpackException  {
 		float floatValue;
 
 		int nibbleOffset = extractLowerNibble(format) + index;
@@ -87,13 +80,13 @@ public class GattPayload {
 			return null;
 		}
 
-		if (format == FORMAT_SFLOAT) {
+		if (format == PayloadFormat.FORMAT_SFLOAT.getValue()) {
 			floatValue = unpackFloatFrom2Bytes(byteArray[index], byteArray[index + 1]);
-		} else if (format == FORMAT_FLOAT) {
+		} else if (format == PayloadFormat.FORMAT_FLOAT.getValue()) {
 			floatValue = unpackFloatFrom4Bytes(byteArray[index], byteArray[index + 1], byteArray[index + 2],
 					byteArray[index + 3]);
 		} else {
-			throw FormatException(format);
+			throw new UnpackException("Invalid format: " + format);
 		}
 
 		return Float.valueOf(floatValue);
@@ -110,41 +103,37 @@ public class GattPayload {
 	}
 
 	/* renamed from: f */
-	public Integer unpackInt(int format, int i2) {
+	public Integer unpackInt(int format, int index) throws UnpackException  {
 		int temp1;
 		int temp2;
 		int bitLength;
-		int length = extractLowerNibble(format) + i2;
+		int length = extractLowerNibble(format) + index;
 		byte[] bArr = this.value;
 		if (length > bArr.length) {
 			return null;
 		}
-		if (format == FORMAT_SINT8) {
-			temp1 = byteToUInt8(bArr[i2]);
+		if (format == PayloadFormat.FORMAT_SINT8.getValue()) {
+			temp1 = byteToUInt8(bArr[index]);
 			bitLength = 8;
-		} else if (format == FORMAT_SINT16) {
-			temp1 = bytesToUInt16(bArr[i2], bArr[i2 + 1]);
+		} else if (format == PayloadFormat.FORMAT_SINT16.getValue()) {
+			temp1 = bytesToUInt16(bArr[index], bArr[index + 1]);
 			bitLength = 16;
-		} else if (format != FORMAT_SINT32) {
-			switch (format) {
-				case FORMAT_UINT8:
-					temp2 = byteToUInt8(bArr[i2]);
-					break;
-				case FORMAT_UINT16:
-					temp2 = bytesToUInt16(bArr[i2], bArr[i2 + 1]);
-					break;
-				case FORMAT_UINT24:
-					temp2 = bytesToUInt24(bArr[i2], bArr[i2 + 1], bArr[i2 + 2]);
-					break;
-				case FORMAT_UINT32:
-					temp2 = bytesToUnsignedInt32(bArr[i2], bArr[i2 + 1], bArr[i2 + 2], bArr[i2 + 3]);
-					break;
-				default:
-					throw FormatException(format);
+		} else if (format != PayloadFormat.FORMAT_SINT32.getValue()) {
+
+			if (format == PayloadFormat.FORMAT_UINT8.getValue()) {
+				temp2 = byteToUInt8(bArr[index]);
+			} else if (format == PayloadFormat.FORMAT_UINT16.getValue()) {
+				temp2 = bytesToUInt16(bArr[index], bArr[index + 1]);
+			} else if (format == PayloadFormat.FORMAT_UINT24.getValue()) {
+				temp2 = bytesToUInt24(bArr[index], bArr[index + 1], bArr[index + 2]);
+			} else if (format == PayloadFormat.FORMAT_UINT32.getValue()) {
+				temp2 = bytesToUnsignedInt32(bArr[index], bArr[index + 1], bArr[index + 2], bArr[index + 3]);
+			} else {
+				throw new UnpackException("Invalid format: " + format);
 			}
 			return Integer.valueOf(temp2);
 		} else {
-			temp1 = bytesToUnsignedInt32(bArr[i2], bArr[i2 + 1], bArr[i2 + 2], bArr[i2 + 3]);
+			temp1 = bytesToUnsignedInt32(bArr[index], bArr[index + 1], bArr[index + 2], bArr[index + 3]);
 			bitLength = 32;
 		}
 		temp2 = signExtend(temp1, bitLength);
@@ -152,7 +141,7 @@ public class GattPayload {
 	}
 
 	/* renamed from: g */
-	public Long unpackLong(int i, int i2) {
+	public Long unpackLong(int i, int i2) throws UnpackException  {
 		Integer unpackInt = unpackInt(i, i2);
 		if (unpackInt != null) {
 			return Long.valueOf(unpackInt.intValue() & 4294967295L);

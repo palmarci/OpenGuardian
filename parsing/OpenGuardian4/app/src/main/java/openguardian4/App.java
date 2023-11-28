@@ -102,7 +102,9 @@ public class App {
 		}
 
 		for (BluetoothMessage msg : messages) {
-			System.out.println(msg);
+			if (msg.getParsedMessage() != null) {
+				System.out.println(msg);
+			}
 		}
 	}
 }

@@ -31,6 +31,13 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.c"
+        },
+        "newName": "SensorFeatures"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.f.a.d.d.a.n.w.d"
         },
         "newName": "CgmMeasurement"
@@ -73,6 +80,13 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.i"
+        },
+        "newName": "ChangeSensorError"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.f.a.d.d.a.n.w.k"
         },
         "newName": "Racp"
@@ -83,6 +97,13 @@
           "declClass": "e.g.f.a.d.d.a.n.w.s"
         },
         "newName": "SensorConnectedState"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.d.a.n.w.t"
+        },
+        "newName": "SensorError"
       },
       {
         "nodeRef": {
@@ -208,7 +229,7 @@
           "refType": "CLASS",
           "declClass": "e.g.f.a.e.a.b"
         },
-        "newName": "AbstractConverter"
+        "newName": "ConvertUtils"
       },
       {
         "nodeRef": {
@@ -409,6 +430,20 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.f.a.i.d.c"
+        },
+        "newName": "IGattEnumConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.i.d.e"
+        },
+        "newName": "IntEnumConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.g.a.a.e.b.e"
         },
         "newName": "GattPayload"
@@ -427,6 +462,14 @@
           "shortId": "id:J"
         },
         "newName": "id"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.d.a.n.w.a",
+          "shortId": "b()Ljava/util/Set;"
+        },
+        "newName": "getSensorErrors"
       },
       {
         "nodeRef": {
@@ -647,6 +690,30 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "e.g.f.a.i.d.e",
+          "shortId": "b(I[Le/g/f/a/i/d/c;)Ljava/util/Set;"
+        },
+        "newName": "fromInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "b(BB)F"
+        },
+        "newName": "unpackFloatFrom2Bytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.a.a.e.b.e",
+          "shortId": "c(BBBB)F"
+        },
+        "newName": "unpackFloatFrom4Bytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "e.g.g.a.a.e.b.e",
           "shortId": "d(II)Ljava/lang/Float;"
         },
@@ -694,7 +761,7 @@
           "declClass": "e.g.g.a.a.e.b.e",
           "shortId": "i(I)I"
         },
-        "newName": "And15"
+        "newName": "extractLowerNibble"
       },
       {
         "nodeRef": {
@@ -702,7 +769,7 @@
           "declClass": "e.g.g.a.a.e.b.e",
           "shortId": "l(B)I"
         },
-        "newName": "And255"
+        "newName": "byteToUInt8"
       },
       {
         "nodeRef": {
@@ -1404,6 +1471,10 @@
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "connectionsupervis",
+    "AlgorithmDataConverter",
+    "algorithmdata",
+    "AlgorithmData",
     "0000fe82",
     "0000180F",
     "0000180A",

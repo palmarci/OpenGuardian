@@ -5,31 +5,35 @@ import java.time.LocalDateTime;
 import java.util.TimeZone;
 
 import openguardian4.Utils;
-import openguardian4.Gatt.GattPayload;
-import openguardian4.Gatt.Message.BaseGattMessage;
+import openguardian4.Gatt.Message.AbstractGattMessage;
+import openguardian4.Gatt.Message.GattPayload;
 
 public class BluetoothMessage implements Comparable<BluetoothMessage> {
 
 	private LocalDateTime time;
 	private BluetoothMessageType type;
-	private BaseGattMessage gattMessage;
-	private String service;
+	private AbstractGattMessage parsedMessage;
+	private String serviceUuid;
 	private byte[] rawData;
 	private boolean decrypted;
 
-	public BluetoothMessage(long unixTimestamp, BluetoothMessageType type, String service, byte[] data,
-			boolean decrypted) throws Exception {
+	public BluetoothMessage(long unixTimestamp, BluetoothMessageType type, String serviceUuid, byte[] data,
+			boolean decrypted) {
 		// parse unix timestamp
-		this.time = LocalDateTime.ofInstant(Instant.ofEpochMilli(unixTimestamp), TimeZone.getDefault().toZoneId());
+		this.time = LocalDateTime.ofInstant(Instant.ofEpochMilli(unixTimestamp),
+				TimeZone.getDefault().toZoneId());
 		this.type = type;
 		// parse message if we have a converter for it
-		var converter = Utils.getConverter(service);
-
+		var converter = Utils.getConverter(serviceUuid);
 		if (converter != null) {
-			this.gattMessage = converter.unpack(new GattPayload(data));
+			var unpacked = converter.unpack(new GattPayload(data));
+			if (unpacked != null) {
+				this.parsedMessage = unpacked;
+			}
+
 		}
 
-		this.service = service;
+		this.serviceUuid = serviceUuid;
 		// this.data = hexStringToByteArray(data);
 		this.rawData = data;
 		this.decrypted = decrypted;
@@ -51,20 +55,20 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		this.type = type;
 	}
 
-	public BaseGattMessage getGattMessage() {
-		return this.gattMessage;
+	public AbstractGattMessage getParsedMessage() {
+		return this.parsedMessage;
 	}
 
-	public void setGattMessage(BaseGattMessage parsedMessage) {
-		this.gattMessage = parsedMessage;
+	public void setParsedMessage(AbstractGattMessage parsedMessage) {
+		this.parsedMessage = parsedMessage;
 	}
 
-	public String getService() {
-		return this.service;
+	public String getServiceUuid() {
+		return this.serviceUuid;
 	}
 
-	public void setService(String service) {
-		this.service = service;
+	public void setServiceUuid(String serviceUuid) {
+		this.serviceUuid = serviceUuid;
 	}
 
 	public byte[] getRawData() {
@@ -92,8 +96,8 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		return this.getClass() + " {" +
 				" time='" + getTime() + "'" +
 				", type='" + getType() + "'" +
-				", parsedMessage='" + getGattMessage() + "'" +
-				", service='" + getService() + "'" +
+				", parsedMessage='" + getParsedMessage() + "'" +
+				", service='" + getServiceUuid() + "'" +
 				", rawData='" + Utils.bytesToHexStr(getRawData()) + "'" +
 				", decrypted='" + isDecrypted() + "'" +
 				"}";

@@ -1,7 +1,7 @@
 package openguardian4;
 
-import openguardian4.Gatt.Converters.IMessageConverter;
-import openguardian4.Gatt.Message.MessageType;
+import openguardian4.Gatt.Converters.AbstractMessageConverter;
+import openguardian4.Gatt.Message.GattMessageType;
 
 public final class Utils {
 
@@ -26,8 +26,8 @@ public final class Utils {
 		return data;
 	}
 
-	public static IMessageConverter getConverter(String service) {
-		for (MessageType type : MessageType.values()) {
+	public static AbstractMessageConverter getConverter(String service) {
+		for (GattMessageType type : GattMessageType.values()) {
 			if (type.uuid.equals(service)) {
 				return type.converter;
 			}
