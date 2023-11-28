@@ -1,5 +1,8 @@
 package openguardian4;
 
+import openguardian4.Gatt.Converters.IMessageConverter;
+import openguardian4.Gatt.Message.MessageType;
+
 public final class Utils {
 
 	public static String bytesToHexStr(byte[] bytes) {
@@ -21,6 +24,15 @@ public final class Utils {
 					+ Character.digit(s.charAt(i + 1), 16));
 		}
 		return data;
+	}
+
+	public static IMessageConverter getConverter(String service) {
+		for (MessageType type : MessageType.values()) {
+			if (type.uuid.equals(service)) {
+				return type.converter;
+			}
+		}
+		return null;
 	}
 
 }

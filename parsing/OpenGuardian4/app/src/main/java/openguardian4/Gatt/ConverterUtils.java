@@ -1,7 +1,6 @@
 package openguardian4.Gatt;
 
 public final class ConverterUtils {
-	private static final String UNPACKING_EXCEPTION_MESSAGE = "Not sufficient payload length for extracting";
 	// private final InterfaceC7597a0 factory;
 
 	// public AbstractConverter(InterfaceC7597a0 interfaceC7597a0) {
@@ -14,7 +13,7 @@ public final class ConverterUtils {
 		if (unpackFloat != null) {
 			return unpackFloat.floatValue();
 		}
-		throw new Exception(UNPACKING_EXCEPTION_MESSAGE);
+		throw new UnpackException();
 
 		// throw new CrcException(String.format(UNPACKING_EXCEPTION_MESSAGE,
 		// Integer.valueOf(i)), i2, Payload.m3851j());
@@ -26,7 +25,7 @@ public final class ConverterUtils {
 		if (unpackInt != null) {
 			return unpackInt.intValue();
 		}
-		throw new Exception(UNPACKING_EXCEPTION_MESSAGE);
+		throw new UnpackException();
 
 		// throw new CrcException(String.format(UNPACKING_EXCEPTION_MESSAGE,
 		// Integer.valueOf(i)), i2, Payload.m3851j());
@@ -38,7 +37,7 @@ public final class ConverterUtils {
 		if (unpackLong != null) {
 			return unpackLong.longValue();
 		}
-		throw new Exception(UNPACKING_EXCEPTION_MESSAGE);
+		throw new UnpackException();
 		// throw new CrcException(String.format(UNPACKING_EXCEPTION_MESSAGE,
 		// Integer.valueOf(i)), i2, Payload.m3851j());
 	}
@@ -49,7 +48,7 @@ public final class ConverterUtils {
 		if (m3853h != null) {
 			return m3853h;
 		}
-		throw new Exception(UNPACKING_EXCEPTION_MESSAGE);
+		throw new UnpackException();
 
 		// throw new CrcException("Not sufficient payload length for extracting string",
 		// i, Payload.m3851j());

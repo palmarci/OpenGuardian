@@ -5,15 +5,14 @@ import java.time.LocalDateTime;
 import java.util.TimeZone;
 
 import openguardian4.Utils;
-import openguardian4.Gatt.ConverterMap;
 import openguardian4.Gatt.GattPayload;
-import openguardian4.Gatt.Messages.BaseMessage;
+import openguardian4.Gatt.Message.BaseGattMessage;
 
 public class BluetoothMessage implements Comparable<BluetoothMessage> {
 
 	private LocalDateTime time;
 	private BluetoothMessageType type;
-	private BaseMessage parsedMessage;
+	private BaseGattMessage gattMessage;
 	private String service;
 	private byte[] rawData;
 	private boolean decrypted;
@@ -24,10 +23,10 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		this.time = LocalDateTime.ofInstant(Instant.ofEpochMilli(unixTimestamp), TimeZone.getDefault().toZoneId());
 		this.type = type;
 		// parse message if we have a converter for it
-		var converter = ConverterMap.getConverter(service);
+		var converter = Utils.getConverter(service);
 
 		if (converter != null) {
-			this.parsedMessage = converter.unpack(new GattPayload(data));
+			this.gattMessage = converter.unpack(new GattPayload(data));
 		}
 
 		this.service = service;
@@ -52,12 +51,12 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		this.type = type;
 	}
 
-	public BaseMessage getParsedMessage() {
-		return this.parsedMessage;
+	public BaseGattMessage getGattMessage() {
+		return this.gattMessage;
 	}
 
-	public void setParsedMessage(BaseMessage parsedMessage) {
-		this.parsedMessage = parsedMessage;
+	public void setGattMessage(BaseGattMessage parsedMessage) {
+		this.gattMessage = parsedMessage;
 	}
 
 	public String getService() {
@@ -93,7 +92,7 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		return this.getClass() + " {" +
 				" time='" + getTime() + "'" +
 				", type='" + getType() + "'" +
-				", parsedMessage='" + getParsedMessage() + "'" +
+				", parsedMessage='" + getGattMessage() + "'" +
 				", service='" + getService() + "'" +
 				", rawData='" + Utils.bytesToHexStr(getRawData()) + "'" +
 				", decrypted='" + isDecrypted() + "'" +

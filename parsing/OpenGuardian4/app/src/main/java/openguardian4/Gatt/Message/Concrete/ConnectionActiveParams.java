@@ -1,6 +1,7 @@
-package openguardian4.Gatt.Messages;
+package openguardian4.Gatt.Message.Concrete;
+import openguardian4.Gatt.Message.BaseGattMessage;
 
-public class ConnectionActiveParams extends BaseMessage {
+public class ConnectionActiveParams extends BaseGattMessage {
 	public static final ConnectionActiveParams EMPTY = new ConnectionActiveParams(0, 0, 0, 0);
 	private int connectionInterval;
 	private int connectionSupervisionTimeOut;

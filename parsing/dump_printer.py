@@ -4,8 +4,6 @@ from enum import Enum
 from datetime import datetime, timezone, timedelta
 from binascii import hexlify
 
-from gattpayload import connectionActiveParamsUnpack
-
 class TerminalColors:
 	HEADER = '\033[95m'
 	OKBLUE = '\033[94m'
@@ -34,8 +32,6 @@ class BtMsg:
 
 	def __parse(self):
 		# TODO
-		if self.service == "connectionManagement_activeParams":
-			return connectionActiveParamsUnpack(self.data)
 		return ""
 
 	def _dump(self):
@@ -108,33 +104,39 @@ class BtMsg:
 dump_length = 50
 filename = None
 SERVICE_MAP = {
-	# services
-	"00000200-0000-1000-0000-009132591325": "cgmMeasurementMdtExtService",
-	"0000180A-0000-1000-8000-00805F9B34FB": "deviceInfoService",
-	"0000180F-0000-1000-8000-00805F9B34FB": "batteryService",
-	"0000180A-0000-1000-8000-00805F9B34FB": "deviceInfoService",
-	"0000181F-0000-1000-8000-00805F9B34FB": "cgmService",
-	"0000fe82-0000-1000-0000-009132591325": "sakeService", # this is port AND a service
-	# ports
-	"00000201-0000-1000-0000-009132591325": "cgmMeasurementMdtExt_sensorConnectedState",
-	"00000202-0000-1000-0000-009132591325": "cgmMeasurementMdtExt_sensorExpirationTime",
-	"00000203-0000-1000-0000-009132591325": "cgmMeasurementMdtExt_sensorCalibartionTime",
-	"00000204-0000-1000-0000-009132591325": "cgmMeasurementMdtExt_calibrationTimeRecommended",
-	"00002a19-0000-1000-8000-00805f9b34fb": "battery_chargeState",
-	"00002a24-0000-1000-8000-00805f9b34fb": "deviceInfo_modelNumber",
-	"00002a26-0000-1000-8000-00805f9b34fb": "deviceInfo_firmwareRevision",
-	"00002a27-0000-1000-8000-00805f9b34fb": "deviceInfo_hardwareRevision",
-	"00002a28-0000-1000-8000-00805f9b34fb": "deviceInfo_softwareRevision",
-	"00002A50-0000-1000-8000-00805F9B34FB": "deviceInfo_pnpId",
-	"00002a29-0000-1000-8000-00805f9b34fb": "deviceInfo_manufacturerName",
+	"0000181F-0000-1000-8000-00805f9b34fb": "cgmService",
 	"00002a52-0000-1000-8000-00805f9b34fb": "cgm_recordAccessControlPoint",
 	"00002aa7-0000-1000-8000-00805f9b34fb": "cgm_measurement",
 	"00002aa8-0000-1000-8000-00805f9b34fb": "cgm_feature",
 	"00002aaa-0000-1000-8000-00805f9b34fb": "cgm_sessionStartTime",
 	"00002aab-0000-1000-8000-00805f9b34fb": "cgm_sessionRunTime",
 	"00002aac-0000-1000-8000-00805f9b34fb": "cgm_specificOperationControlPoint",
+
+	"00000200-0000-1000-0000-009132591325": "cgm_MdtExtService",
+	"00000201-0000-1000-0000-009132591325": "cgm_MdtExt_sensorConnectedState",
+	"00000202-0000-1000-0000-009132591325": "cgm_MdtExt_sensorExpirationTime",
+	"00000203-0000-1000-0000-009132591325": "cgm_MdtExt_sensorCalibartionTime",
+	"00000204-0000-1000-0000-009132591325": "cgm_MdtExt_calibrationTimeRecommended",
+	"00000205-0000-1000-0000-009132591325": "cgm_MdtExt_algorithmData",
+
+
+	"0000180A-0000-1000-8000-00805f9b34fb": "deviceInfoService",
+	"00002a19-0000-1000-8000-00805f9b34fb": "deviceInfo_chargeState",
+	"00002a24-0000-1000-8000-00805f9b34fb": "deviceInfo_modelNumber",
+	"00002a26-0000-1000-8000-00805f9b34fb": "deviceInfo_firmwareRevision",
+	"00002a27-0000-1000-8000-00805f9b34fb": "deviceInfo_hardwareRevision",
+	"00002a28-0000-1000-8000-00805f9b34fb": "deviceInfo_softwareRevision",
+	"00002A50-0000-1000-8000-00805f9b34fb": "deviceInfo_pnpId",
+	"00002a29-0000-1000-8000-00805f9b34fb": "deviceInfo_manufacturerName",
+
 	"500d8e40-be34-11e4-9b24-0002a5d5c51b": "connectionManagement_clientRequestedParams",
 	"5f0b2420-be34-11e4-bc62-0002a5d5c51b": "connectionManagement_activeParams",
+
+	# these are the services which have only one port
+	"0000fe82-0000-1000-0000-009132591325": "sakeService", 
+	"0000180F-0000-1000-8000-00805f9b34fb": "batteryLevelService",
+
+
 }
 
 # helpers

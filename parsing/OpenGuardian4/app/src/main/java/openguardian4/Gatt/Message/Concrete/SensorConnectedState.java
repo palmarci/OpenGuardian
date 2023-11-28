@@ -1,6 +1,8 @@
-package openguardian4.Gatt.Messages;
+package openguardian4.Gatt.Message.Concrete;
 
-public class SensorConnectedState extends BaseMessage {
+import openguardian4.Gatt.Message.BaseGattMessage;
+
+public class SensorConnectedState extends BaseGattMessage {
 	private final boolean connected;
 
 	public SensorConnectedState(boolean connected) {
