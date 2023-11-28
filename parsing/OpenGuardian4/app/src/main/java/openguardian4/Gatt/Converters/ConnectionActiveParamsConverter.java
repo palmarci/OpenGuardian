@@ -1,9 +1,9 @@
-package openguardian.Gatt.Converters;
+package openguardian4.Gatt.Converters;
 
-import openguardian.Gatt.ConverterUtils;
-import openguardian.Gatt.GattPayload;
-import openguardian.Gatt.Messages.BaseMessage;
-import openguardian.Gatt.Messages.ConnectionActiveParams;
+import openguardian4.Gatt.ConverterUtils;
+import openguardian4.Gatt.GattPayload;
+import openguardian4.Gatt.Messages.BaseMessage;
+import openguardian4.Gatt.Messages.ConnectionActiveParams;
 
 public class ConnectionActiveParamsConverter implements IMessageConverter {
 
@@ -22,8 +22,7 @@ public class ConnectionActiveParamsConverter implements IMessageConverter {
                     // ChecksumVerifier.checkLength(gattPayload, And153 + GattPayload.And15(18)); //TODO
              return new ConnectionActiveParams(unpackInt, unpackInt2, unpackInt3, unpackInt4);
         } catch (Exception e) {
-            // TODO Auto-generated catch block
-            System.out.println("Could not parse payload:" + gattPayload.toString());
+            System.out.println("Could not parse payload with " + this.getClass() + ": " + gattPayload.toString());
             e.printStackTrace();
             return null;
         }

@@ -1,6 +1,7 @@
-package openguardian.Gatt;
+package openguardian4.Gatt;
 
 import java.util.Arrays;
+import openguardian4.Utils;
 
 /* renamed from: e.g.g.a.a.e.b.e */
 /* loaded from: classes.dex */
@@ -289,6 +290,6 @@ public class GattPayload {
 
 
 	public String toString() {
-		return "GattPayload{value=" + Arrays.toString(this.value) + "}";
+		return "GattPayload{value=" + Utils.bytesToHexStr(this.value) + "}";
 	}
 }

@@ -1,13 +1,13 @@
-package openguardian.Bluetooth;
+package openguardian4.Bluetooth;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.TimeZone;
 
-import openguardian.Utils;
-import openguardian.Gatt.ConverterMap;
-import openguardian.Gatt.GattPayload;
-import openguardian.Gatt.Messages.BaseMessage;
+import openguardian4.Utils;
+import openguardian4.Gatt.ConverterMap;
+import openguardian4.Gatt.GattPayload;
+import openguardian4.Gatt.Messages.BaseMessage;
 
 public class BluetoothMessage implements Comparable<BluetoothMessage> {
 

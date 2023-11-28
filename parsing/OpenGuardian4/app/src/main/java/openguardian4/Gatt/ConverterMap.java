@@ -1,9 +1,9 @@
-package openguardian.Gatt;
+package openguardian4.Gatt;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import openguardian.Gatt.Converters.*;
+import openguardian4.Gatt.Converters.*;
 
 public final class ConverterMap {
 

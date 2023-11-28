@@ -26,8 +26,18 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'openmedtronic.App'
+    mainClass = 'openguardian4.App'
 }
+
+jar {
+  manifest {
+    attributes 'Main-Class': application.mainClass
+  }
+  from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+}
+}
+
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.

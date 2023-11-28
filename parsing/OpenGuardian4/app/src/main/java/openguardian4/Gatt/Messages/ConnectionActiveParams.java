@@ -1,4 +1,4 @@
-package openguardian.Gatt.Messages;
+package openguardian4.Gatt.Messages;
 
 public class ConnectionActiveParams extends BaseMessage {
 	public static final ConnectionActiveParams EMPTY = new ConnectionActiveParams(0, 0, 0, 0);
