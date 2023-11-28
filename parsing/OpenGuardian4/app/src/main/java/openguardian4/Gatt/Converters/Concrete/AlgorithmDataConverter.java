@@ -21,18 +21,18 @@ public class AlgorithmDataConverter extends AbstractMessageConverter {
 			Integer sensorError;
 			Integer changeSensorError;
 			Integer flags_raw = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT8.getValue(), 0);
-			Integer offset = GattPayload.extractLowerNibble(PayloadFormat.FORMAT_UINT8.getValue()) + 0; // offset weird
-																										// here
+			Integer offset = GattPayload.extractLowerNibble(PayloadFormat.FORMAT_UINT8.getValue()) + 0; // TODO offset weird?
+																										
 			Set<AlgorithmDataFlags> flags = IntEnumConverter.fromInt(flags_raw, AlgorithmDataFlags.values());
 			if (flags.contains(AlgorithmDataFlags.SENSOR_ERROR_REASON_PRESENT)) {
 				sensorError = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT16.getValue(), offset);
-				offset += GattPayload.extractLowerNibble(PayloadFormat.FORMAT_UINT16.getValue()); // weird
+				offset += GattPayload.extractLowerNibble(PayloadFormat.FORMAT_UINT16.getValue()); 
 			} else {
 				sensorError = 0;
 			}
 			if (flags.contains(AlgorithmDataFlags.CHANGE_SENSOR_ERROR_REASON_PRESENT)) {
 				changeSensorError = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT16.getValue(), offset);
-				offset += GattPayload.extractLowerNibble(PayloadFormat.FORMAT_UINT16.getValue()); // weird
+				offset += GattPayload.extractLowerNibble(PayloadFormat.FORMAT_UINT16.getValue()); 
 			} else {
 				changeSensorError = 0;
 			}

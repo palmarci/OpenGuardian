@@ -32,7 +32,6 @@ public class App {
 			while ((line = br.readLine()) != null) {
 				lines.add(line);
 			}
-
 		}
 		// extract the crypto pairs first since its not necessarily in order with the
 		// other messages
@@ -53,6 +52,7 @@ public class App {
 			}
 		}
 
+		//extract the messages
 		for (String line : lines) {
 			String[] parts = line.split(",");
 			long timestamp = Long.parseLong(parts[0]); // / 1000;

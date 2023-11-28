@@ -20,8 +20,13 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 	public BluetoothMessage(long unixTimestamp, BluetoothMessageType type, String serviceUuid, byte[] data,
 			boolean decrypted) {
 		// parse unix timestamp
-		this.time = LocalDateTime.ofInstant(Instant.ofEpochMilli(unixTimestamp),
-				TimeZone.getDefault().toZoneId());
+		var utcTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(unixTimestamp),
+				TimeZone.getTimeZone("Etc/UTC").toZoneId());
+		var osTimeZone = TimeZone.getDefault().toZoneId();
+		LocalDateTime currentTime = utcTime.atZone(TimeZone.getTimeZone("Etc/UTC").toZoneId())
+				.withZoneSameInstant(osTimeZone).toLocalDateTime();
+		this.time = currentTime;
+
 		this.type = type;
 		// parse message if we have a converter for it
 		var converter = Utils.getConverter(serviceUuid);

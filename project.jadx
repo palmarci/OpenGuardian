@@ -432,7 +432,7 @@
           "refType": "CLASS",
           "declClass": "e.g.f.a.i.d.c"
         },
-        "newName": "IGattEnumConverter"
+        "newName": "IGattEnum"
       },
       {
         "nodeRef": {
@@ -840,7 +840,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.d0",
       "subPath": "java",
-      "caret": 188,
+      "caret": 183,
       "view": {
         "x": 0,
         "y": 0
@@ -850,7 +850,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.u",
       "subPath": "java",
-      "caret": 250,
+      "caret": 245,
       "view": {
         "x": 0,
         "y": 0
@@ -860,7 +860,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.v",
       "subPath": "java",
-      "caret": 375,
+      "caret": 370,
       "view": {
         "x": 0,
         "y": 0
@@ -870,7 +870,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e",
       "subPath": "java",
-      "caret": 520,
+      "caret": 534,
       "view": {
         "x": 0,
         "y": 0
@@ -880,17 +880,17 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.b",
       "subPath": "java",
-      "caret": 1991,
+      "caret": 1482,
       "view": {
         "x": 0,
-        "y": 478
+        "y": 159
       }
     },
     {
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.b",
       "subPath": "java",
-      "caret": 758,
+      "caret": 787,
       "view": {
         "x": 0,
         "y": 0
@@ -910,7 +910,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.g",
       "subPath": "java",
-      "caret": 918,
+      "caret": 724,
       "view": {
         "x": 0,
         "y": 0
@@ -920,7 +920,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.d",
       "subPath": "java",
-      "caret": 809,
+      "caret": 315,
       "view": {
         "x": 0,
         "y": 0
@@ -940,7 +940,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.v",
       "subPath": "java",
-      "caret": 219,
+      "caret": 202,
       "view": {
         "x": 0,
         "y": 0
@@ -950,7 +950,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.u",
       "subPath": "java",
-      "caret": 214,
+      "caret": 202,
       "view": {
         "x": 0,
         "y": 0
@@ -960,7 +960,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.f",
       "subPath": "java",
-      "caret": 205,
+      "caret": 611,
       "view": {
         "x": 0,
         "y": 0
@@ -970,7 +970,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.f",
       "subPath": "java",
-      "caret": 1162,
+      "caret": 1161,
       "view": {
         "x": 0,
         "y": 270
@@ -980,7 +980,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.e",
       "subPath": "java",
-      "caret": 308,
+      "caret": 725,
       "view": {
         "x": 0,
         "y": 0
@@ -990,7 +990,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.y",
       "subPath": "java",
-      "caret": 2558,
+      "caret": 2571,
       "view": {
         "x": 0,
         "y": 120
@@ -1000,7 +1000,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.i",
       "subPath": "java",
-      "caret": 1313,
+      "caret": 1302,
       "view": {
         "x": 0,
         "y": 0
@@ -1010,7 +1010,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.h",
       "subPath": "java",
-      "caret": 343,
+      "caret": 347,
       "view": {
         "x": 0,
         "y": 0
@@ -1040,7 +1040,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.r",
       "subPath": "java",
-      "caret": 2926,
+      "caret": 2921,
       "view": {
         "x": 0,
         "y": 719
@@ -1060,7 +1060,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.t",
       "subPath": "java",
-      "caret": 5825,
+      "caret": 5834,
       "view": {
         "x": 0,
         "y": 1764
@@ -1090,7 +1090,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.s",
       "subPath": "java",
-      "caret": 1089,
+      "caret": 0,
       "view": {
         "x": 0,
         "y": 0
@@ -1100,7 +1100,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.w",
       "subPath": "java",
-      "caret": 397,
+      "caret": 392,
       "view": {
         "x": 0,
         "y": 0
@@ -1120,7 +1120,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.j",
       "subPath": "java",
-      "caret": 552,
+      "caret": 549,
       "view": {
         "x": 0,
         "y": 0
@@ -1130,10 +1130,10 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.e",
       "subPath": "java",
-      "caret": 4124,
+      "caret": 4019,
       "view": {
         "x": 0,
-        "y": 1378
+        "y": 1346
       }
     },
     {
@@ -1160,7 +1160,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.f",
       "subPath": "java",
-      "caret": 8540,
+      "caret": 8697,
       "view": {
         "x": 0,
         "y": 1832
@@ -1170,7 +1170,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.h",
       "subPath": "java",
-      "caret": 3112,
+      "caret": 3102,
       "view": {
         "x": 0,
         "y": 1122
@@ -1250,7 +1250,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.e0.g",
       "subPath": "java",
-      "caret": 1405,
+      "caret": 1440,
       "view": {
         "x": 0,
         "y": 120
@@ -1280,7 +1280,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.a",
       "subPath": "java",
-      "caret": 456,
+      "caret": 419,
       "view": {
         "x": 0,
         "y": 0
@@ -1290,17 +1290,17 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.n.w.a",
       "subPath": "java",
-      "caret": 311,
+      "caret": 1600,
       "view": {
         "x": 0,
-        "y": 0
+        "y": 235
       }
     },
     {
       "type": "class",
       "tabPath": "e.g.f.a.e.a.o",
       "subPath": "java",
-      "caret": 423,
+      "caret": 418,
       "view": {
         "x": 0,
         "y": 0
@@ -1330,7 +1330,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.d.a.o.h.a",
       "subPath": "java",
-      "caret": 148,
+      "caret": 163,
       "view": {
         "x": 0,
         "y": 0
@@ -1360,7 +1360,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.q",
       "subPath": "java",
-      "caret": 304,
+      "caret": 299,
       "view": {
         "x": 0,
         "y": 0
@@ -1400,17 +1400,17 @@
       "type": "class",
       "tabPath": "e.g.g.a.a.e.b.e",
       "subPath": "java",
-      "caret": 8105,
+      "caret": 9074,
       "view": {
         "x": 0,
-        "y": 0
+        "y": 3774
       }
     },
     {
       "type": "class",
       "tabPath": "e.g.f.a.e.a.j",
       "subPath": "java",
-      "caret": 939,
+      "caret": 1524,
       "view": {
         "x": 0,
         "y": 0
@@ -1440,7 +1440,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.a0",
       "subPath": "java",
-      "caret": 129,
+      "caret": 185,
       "view": {
         "x": 0,
         "y": 0
@@ -1450,7 +1450,7 @@
       "type": "class",
       "tabPath": "e.g.f.a.e.a.l",
       "subPath": "java",
-      "caret": 329,
+      "caret": 540,
       "view": {
         "x": 0,
         "y": 0
@@ -1465,12 +1465,205 @@
         "x": 0,
         "y": 0
       }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.a",
+      "subPath": "java",
+      "caret": 673,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.h",
+      "subPath": "java",
+      "caret": 2216,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.p.c",
+      "subPath": "java",
+      "caret": 493,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.m.d",
+      "subPath": "java",
+      "caret": 395,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.m.e",
+      "subPath": "java",
+      "caret": 710,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.f.c.d",
+      "subPath": "java",
+      "caret": 677,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.s",
+      "subPath": "java",
+      "caret": 494,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.a.a.e.b.b",
+      "subPath": "java",
+      "caret": 426,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.a.a.e.b.h.a",
+      "subPath": "java",
+      "caret": 486,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.f",
+      "subPath": "java",
+      "caret": 576,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.p.g",
+      "subPath": "java",
+      "caret": 358,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.s.d",
+      "subPath": "java",
+      "caret": 493,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.s.b",
+      "subPath": "java",
+      "caret": 889,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.i.d.c",
+      "subPath": "java",
+      "caret": 128,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.t",
+      "subPath": "java",
+      "caret": 316,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.e.e.v.a",
+      "subPath": "java",
+      "caret": 3017,
+      "view": {
+        "x": 0,
+        "y": 332
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.i",
+      "subPath": "java",
+      "caret": 202,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.a0.b",
+      "subPath": "java",
+      "caret": 828,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.n.w.c",
+      "subPath": "java",
+      "caret": 785,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
     }
   ],
-  "activeTab": 7,
+  "activeTab": 10,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "SENSOR_STATUS_CAL_TEMP_PRESENT",
+    "SENSOR_STATUS_STATUS_PRESENT",
+    "CgmMeasurement",
     "connectionsupervis",
     "AlgorithmDataConverter",
     "algorithmdata",
