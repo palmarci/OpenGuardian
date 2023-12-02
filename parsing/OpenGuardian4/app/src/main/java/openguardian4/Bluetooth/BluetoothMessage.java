@@ -102,7 +102,7 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 				" time='" + getTime() + "'" +
 				", type='" + getType() + "'" +
 				", parsedMessage='" + getParsedMessage() + "'" +
-				", service='" + getServiceUuid() + "'" +
+				", serviceUuid='" + getServiceUuid() + "'" +
 				", rawData='" + Utils.bytesToHexStr(getRawData()) + "'" +
 				", decrypted='" + isDecrypted() + "'" +
 				"}";

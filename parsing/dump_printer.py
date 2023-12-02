@@ -15,6 +15,7 @@ class TerminalColors:
 	BOLD = '\033[1m'
 	UNDERLINE = '\033[4m'
 
+dumpSake = False
 
 class BtMsg:
 
@@ -37,7 +38,7 @@ class BtMsg:
 	def _dump(self):
 		result = []
 
-		if self.service == "sakeService":
+		if self.service == "sakeService" and dumpSake:
 			result.append("...skipping sake dumps...")
 		else:
 			parsed = self.__parse()
@@ -101,7 +102,7 @@ class BtMsg:
 		return output
 
 # globals
-dump_length = 50
+dump_length = 100
 filename = None
 SERVICE_MAP = {
 	"0000181F-0000-1000-8000-00805f9b34fb": "cgmService",

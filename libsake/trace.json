@@ -1,0 +1,6137 @@
+[
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 13634,
+        "timestamp": 23428,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e8e48"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x78149dce40"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 13634,
+        "timestamp": 23454,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e8e48"
+            }
+        ],
+        "ret": {
+            "value": 87
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 13634,
+        "timestamp": 23459,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e8e48"
+            },
+            {
+                "value": "0x78149dce40",
+                "data": "5fe5928308010230f0b50df613f2e429c8c5e8713854add1a69b837235a3e974304d8055ccb397838b90823c73236d6a83dcc9db3a2a939ff16145ca4169ef93a7fa39b20962b05e57413bff8b3d61fce0dfef2c43b326"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16127,
+        "timestamp": 26751,
+        "backtrace": [
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x784f781300"
+            },
+            {
+                "value": 20
+            }
+        ],
+        "ret": {
+            "value": "0x11"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16127,
+        "timestamp": 26780,
+        "backtrace": [
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x784f781300"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x780d2d5c60",
+            "data": "0000000000000000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16127,
+        "timestamp": 26804,
+        "backtrace": [
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x784f781300"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x780d2d5c60",
+                "data": "0000000000000000000000000000000000000000"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 26992,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7ab48"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7825cfae40"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 15683,
+        "timestamp": 27021,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7ab48"
+            }
+        ],
+        "ret": {
+            "value": 20
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27026,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7ab48"
+            },
+            {
+                "value": "0x7825cfae40",
+                "data": "0201cd9ce70679be51504c8ac1b94ec99a7cad4b"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 15683,
+        "timestamp": 27059,
+        "backtrace": [
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": 20
+            }
+        ],
+        "ret": {
+            "value": "0x19"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27083,
+        "backtrace": [
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7825cfae40",
+            "data": "0000000000000000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27108,
+        "backtrace": [
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x7825cfae40",
+                "data": "f7eaa8c5339b408708660e11f0170e99e4665837"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27222,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7ab48"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec30160",
+            "data": "f4ec519f6ca8c1434990cd7e1130dad046dafaf7"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 15683,
+        "timestamp": 27250,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7ab48"
+            }
+        ],
+        "ret": {
+            "value": 20
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27255,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7ab48"
+            },
+            {
+                "value": "0x789ec30160",
+                "data": "f4ec519f6ca8c1434990cd7e1130dad046dafaf7"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 15683,
+        "timestamp": 27290,
+        "backtrace": [
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": 20
+            }
+        ],
+        "ret": {
+            "value": "0x11"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27314,
+        "backtrace": [
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec30160",
+            "data": "0000000000000000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27338,
+        "backtrace": [
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x789ec30160",
+                "data": "072054a09e8ee6d9eea0eaba21a487788c61d8cb"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27442,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7aa58"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec30240"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 15683,
+        "timestamp": 27469,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7aa58"
+            }
+        ],
+        "ret": {
+            "value": 20
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27473,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad7aa58"
+            },
+            {
+                "value": "0x789ec30240",
+                "data": "a77e7e837ebaf449a3a15a4d489505a98d000999"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 15683,
+        "timestamp": 27498,
+        "backtrace": [
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a5c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a5c",
+                    "name": "0x4a5c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": 20
+            }
+        ],
+        "ret": {
+            "value": "0x11"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27522,
+        "backtrace": [
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091a7c",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091a7c",
+                    "name": "0x4a7c",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec30240",
+            "data": "0000000000000000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27546,
+        "backtrace": [
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ae8",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ae8",
+                    "name": "0x4ae8",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x789ec30240",
+                "data": "0c015c852ad6ff07f7d5984504c4f42e0d008eca"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27878,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad79908"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec005a0"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 15683,
+        "timestamp": 27905,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad79908"
+            }
+        ],
+        "ret": {
+            "value": 3
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27910,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x789ad79908"
+            },
+            {
+                "value": "0x789ec005a0",
+                "data": "904962"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 15683,
+        "timestamp": 27949,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": 6
+            }
+        ],
+        "ret": {
+            "value": "0x15"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 15683,
+        "timestamp": 27973,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x15"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec005a0",
+            "data": "000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 15683,
+        "timestamp": 27997,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78080806c0"
+            },
+            {
+                "value": "0x15"
+            },
+            {
+                "value": "0x789ec005a0",
+                "data": "eea13d0124e3"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 28691,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d0320"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 28729,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 13
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 28735,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x77f29d0320",
+                "data": "50189d67a62c73965133016d30"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 28772,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 10
+            }
+        ],
+        "ret": {
+            "value": "0x15"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 28799,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x15"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d0320",
+            "data": "00000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 28823,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x15"
+            },
+            {
+                "value": "0x77f29d0320",
+                "data": "91071d00ffff60273420"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16128,
+        "timestamp": 28981,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x77e7a4f6c8"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec008e8"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16128,
+        "timestamp": 29026,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x77e7a4f6c8"
+            }
+        ],
+        "ret": {
+            "value": 3
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16128,
+        "timestamp": 29032,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x77e7a4f6c8"
+            },
+            {
+                "value": "0x789ec008e8",
+                "data": "8a32d1"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16128,
+        "timestamp": 29059,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": 6
+            }
+        ],
+        "ret": {
+            "value": "0x11"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16128,
+        "timestamp": 29085,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec008e8",
+            "data": "000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16128,
+        "timestamp": 29109,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x789ec008e8",
+                "data": "0841d7027276"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 29263,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d0340",
+            "data": "ac506c08e63c6c516519ed021d"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 29291,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 14
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 29296,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x77f29d0340",
+                "data": "ac506c08e63c6c516519ed021d51"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 29320,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 11
+            }
+        ],
+        "ret": {
+            "value": "0x19"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 29344,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d0340",
+            "data": "0000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 29368,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x77f29d0340",
+                "data": "8be175060301000000d07c"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 13634,
+        "timestamp": 29529,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e7de8"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7898ae66a0"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 13634,
+        "timestamp": 29569,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e7de8"
+            }
+        ],
+        "ret": {
+            "value": 3
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 13634,
+        "timestamp": 29574,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e7de8"
+            },
+            {
+                "value": "0x7898ae66a0",
+                "data": "8cf4b1"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 13634,
+        "timestamp": 29602,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": 6
+            }
+        ],
+        "ret": {
+            "value": "0xa9"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 13634,
+        "timestamp": 29627,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0xa9"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7898ae66a0",
+            "data": "000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 13634,
+        "timestamp": 29652,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0xa9"
+            },
+            {
+                "value": "0x7898ae66a0",
+                "data": "1e97970339b4"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 29847,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7808031168",
+            "data": "12dd2dc3031ae500000100000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 29876,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 7
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 29881,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x7808031168",
+                "data": "12dd2dc3031ae5"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 29905,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 4
+            }
+        ],
+        "ret": {
+            "value": "0x19"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 29930,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7808031168",
+            "data": "00000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 29954,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x7808031168",
+                "data": "8d0ba0c1"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 13634,
+        "timestamp": 30112,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e8c58"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d02f0"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 13634,
+        "timestamp": 30142,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e8c58"
+            }
+        ],
+        "ret": {
+            "value": 11
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 13634,
+        "timestamp": 30147,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0x7fe59e8c58"
+            },
+            {
+                "value": "0x77f29d02f0",
+                "data": "e7070b1d103726040082b7"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 13634,
+        "timestamp": 30174,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": 14
+            }
+        ],
+        "ret": {
+            "value": "0xa1"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 13634,
+        "timestamp": 30198,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0xa1"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d02f0",
+            "data": "0000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 13634,
+        "timestamp": 30222,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x78aab376c0"
+            },
+            {
+                "value": "0xa1"
+            },
+            {
+                "value": "0x77f29d02f0",
+                "data": "477869f7dc41f0c0439a9e049226"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 30478,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d0350",
+            "data": "6ab9706d50744d"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 30509,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 14
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 30515,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x77f29d0350",
+                "data": "6ab9706d50744d8aff467b0461d7"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 30539,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 11
+            }
+        ],
+        "ret": {
+            "value": "0x15"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 30561,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x15"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x77f29d0350",
+            "data": "0000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 30583,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x15"
+            },
+            {
+                "value": "0x77f29d0350",
+                "data": "e7070b1c130b0b0400bcbb"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16128,
+        "timestamp": 31013,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x77e7a4f4f8"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec009c8"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16128,
+        "timestamp": 31038,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x77e7a4f4f8"
+            }
+        ],
+        "ret": {
+            "value": 5
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16128,
+        "timestamp": 31043,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x77e7a4f4f8"
+            },
+            {
+                "value": "0x789ec009c8",
+                "data": "05ffff633a"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16128,
+        "timestamp": 31065,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": 8
+            }
+        ],
+        "ret": {
+            "value": "0x19"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16128,
+        "timestamp": 31087,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x789ec009c8",
+            "data": "0000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16128,
+        "timestamp": 31108,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290ee00"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x789ec009c8",
+                "data": "97a1891dd6057d24"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 31231,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7814a77b50",
+            "data": "0653f8b386065ddfd02801182405"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 31258,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 16
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 31263,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x7814a77b50",
+                "data": "0653f8b386065ddfd02801182405f0ff"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 31288,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 13
+            }
+        ],
+        "ret": {
+            "value": "0x19"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 31312,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7814a77b50",
+            "data": "00000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 31336,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x7814a77b50",
+                "data": "060000ffff11ffffffff007196"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 45616,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x78aab09da0",
+            "data": "3230661113717882402c86c83bb80679"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 45645,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 17
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 45650,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x78aab09da0",
+                "data": "3230661113717882402c86c83bb80679ab"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 45677,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 14
+            }
+        ],
+        "ret": {
+            "value": "0x11"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 45701,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7814a77b50",
+            "data": "0000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 45725,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x11"
+            },
+            {
+                "value": "0x7814a77b50",
+                "data": "0ec3500114050000b6ef0a00b8d2"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 47366,
+        "backtrace": [
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b70",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b70",
+                    "name": "0x4b70",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x78aab2a340",
+            "data": "c103d281e221ecdc2182118e3435a00749"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetArrayLength",
+            "args": [
+                "JNIEnv*",
+                "jarray"
+            ],
+            "ret": "jsize"
+        },
+        "thread_id": 16124,
+        "timestamp": 47397,
+        "backtrace": [
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091b88",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091b88",
+                    "name": "0x4b88",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            }
+        ],
+        "ret": {
+            "value": 18
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 47403,
+        "backtrace": [
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            },
+            {
+                "address": "0x784431b30c",
+                "module": null,
+                "symbol": {
+                    "address": "0x784431b30c",
+                    "name": null,
+                    "moduleName": null,
+                    "fileName": null,
+                    "lineNumber": null,
+                    "column": null
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x7821706518"
+            },
+            {
+                "value": "0x78aab2a340",
+                "data": "c103d281e221ecdc2182118e3435a00749f5"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "NewByteArray",
+            "args": [
+                "JNIEnv*",
+                "jsize"
+            ],
+            "ret": "jbyteArray"
+        },
+        "thread_id": 16124,
+        "timestamp": 47427,
+        "backtrace": [
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c40",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c40",
+                    "name": "0x4c40",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": 15
+            }
+        ],
+        "ret": {
+            "value": "0x19"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "GetByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jboolean*"
+            ],
+            "ret": "jbyte*"
+        },
+        "thread_id": 16124,
+        "timestamp": 47451,
+        "backtrace": [
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091c60",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091c60",
+                    "name": "0x4c60",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x0"
+            }
+        ],
+        "ret": {
+            "value": "0x7814a77b50",
+            "data": "000000000000000000000000000000"
+        },
+        "java_params": []
+    },
+    {
+        "struct": "JNIEnv",
+        "method": {
+            "name": "ReleaseByteArrayElements",
+            "args": [
+                "JNIEnv*",
+                "jbyteArray",
+                "jbyte*",
+                "jint"
+            ],
+            "ret": "void"
+        },
+        "thread_id": 16124,
+        "timestamp": 47476,
+        "backtrace": [
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            },
+            {
+                "address": "0x7844091ccc",
+                "module": {
+                    "name": "libandroid-sake-lib.so",
+                    "base": "0x784408d000",
+                    "size": 77824,
+                    "path": "/data/app/com.medtronic.diabetes.guardian-eFjnQhjqogLxr18BzerdQg==/base.apk!/lib/arm64-v8a/libandroid-sake-lib.so"
+                },
+                "symbol": {
+                    "address": "0x7844091ccc",
+                    "name": "0x4ccc",
+                    "moduleName": "libandroid-sake-lib.so",
+                    "fileName": "",
+                    "lineNumber": 0,
+                    "column": 0
+                }
+            }
+        ],
+        "args": [
+            {
+                "value": "0x77f290e400"
+            },
+            {
+                "value": "0x19"
+            },
+            {
+                "value": "0x7814a77b50",
+                "data": "1b6555000b00003f01bd16c6ff1300"
+            },
+            {
+                "value": 0
+            }
+        ],
+        "ret": {
+            "value": null
+        },
+        "java_params": []
+    }
+]
