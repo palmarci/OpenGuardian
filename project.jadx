@@ -1500,7 +1500,7 @@
       "type": "class",
       "tabPath": "com.medtronic.minimed.sake.SakeJNI",
       "subPath": "java",
-      "caret": 84,
+      "caret": 8,
       "view": {
         "x": 0,
         "y": 0
@@ -1590,17 +1590,17 @@
       "type": "class",
       "tabPath": "e.g.g.b.e",
       "subPath": "java",
-      "caret": 3133,
+      "caret": 1345,
       "view": {
         "x": 0,
-        "y": 0
+        "y": 22
       }
     },
     {
       "type": "class",
       "tabPath": "e.g.g.b.b",
       "subPath": "java",
-      "caret": 846,
+      "caret": 562,
       "view": {
         "x": 0,
         "y": 0
@@ -1620,10 +1620,10 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.a.w",
       "subPath": "java",
-      "caret": 7449,
+      "caret": 1699,
       "view": {
         "x": 0,
-        "y": 1816
+        "y": 276
       }
     },
     {
@@ -1640,14 +1640,14 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.a.s",
       "subPath": "java",
-      "caret": 222,
+      "caret": 0,
       "view": {
         "x": 0,
         "y": 0
       }
     }
   ],
-  "activeTab": 9,
+  "activeTab": 12,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
