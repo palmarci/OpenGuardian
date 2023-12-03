@@ -5,55 +5,75 @@
   ],
   "treeExpansions": [
     [
-      "com",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ],
     [
-      "medtronic",
-      "com",
+      "p416g",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ],
     [
-      "minimed",
-      "medtronic",
-      "com",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ],
     [
-      "sake",
-      "minimed",
-      "medtronic",
-      "com",
+      "p473d",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ],
     [
-      "com.medtronic.minimed.sake.SAKE_CLIENT_S",
-      "sake",
-      "minimed",
-      "medtronic",
-      "com",
+      "p474a",
+      "p473d",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ],
     [
-      "com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S",
-      "sake",
-      "minimed",
-      "medtronic",
-      "com",
+      "p487c",
+      "p473d",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ],
     [
-      "com.medtronic.minimed.sake.SakeJNI",
-      "sake",
-      "minimed",
-      "medtronic",
-      "com",
+      "Sake",
+      "p473d",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
+      "Source code",
+      "Guardian_134.apk"
+    ],
+    [
+      "e.g.f.a.d.a.w",
+      "Sake",
+      "p473d",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
+      "Source code",
+      "Guardian_134.apk"
+    ],
+    [
+      "e.g.f.a.d.a.v",
+      "Sake",
+      "p473d",
+      "p471f.p472a",
+      "p416g",
+      "p123e",
       "Source code",
       "Guardian_134.apk"
     ]
@@ -61,6 +81,34 @@
   "codeData": {
     "comments": [],
     "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.SAKE_CLIENT_S"
+        },
+        "newName": "NativeSakeClient"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S"
+        },
+        "newName": "NativeSakeKeyDatabase"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S"
+        },
+        "newName": "NativeSakeSecureMessage"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S"
+        },
+        "newName": "NativeSakeUserMessage"
+      },
       {
         "nodeRef": {
           "refType": "CLASS",
@@ -73,7 +121,7 @@
           "refType": "CLASS",
           "declClass": "e.g.f.a.d.a.s"
         },
-        "newName": "AuthStatus"
+        "newName": "SakeAuthStatus"
       },
       {
         "nodeRef": {
@@ -113,9 +161,23 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.f.a.d.a.w$a"
+        },
+        "newName": "SakeClientEx"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.f.a.d.a.x"
         },
         "newName": "SakeCipher"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.f.a.d.a.y"
+        },
+        "newName": "ISakeHandshaker"
       },
       {
         "nodeRef": {
@@ -561,6 +623,13 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.f.a.h.a2"
+        },
+        "newName": "SakeService"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.f.a.i.d.c"
         },
         "newName": "IGattEnum"
@@ -645,6 +714,13 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "e.g.g.b.a"
+        },
+        "newName": "SakeException"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "e.g.g.b.b"
         },
         "newName": "SakeStatus"
@@ -665,6 +741,20 @@
       },
       {
         "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.g.b.e"
+        },
+        "newName": "SakeClientImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e.g.g.b.f"
+        },
+        "newName": "ISakeClient"
+      },
+      {
+        "nodeRef": {
           "refType": "FIELD",
           "declClass": "e.g.f.a.d.d.a.n.w.d",
           "shortId": "id:J"
@@ -674,10 +764,126 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_CLIENT_S",
+          "shortId": "b(Lcom/medtronic/minimed/sake/SAKE_CLIENT_S;)J"
+        },
+        "newName": "getPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_CLIENT_S",
+          "shortId": "c()Le/g/g/b/a;"
+        },
+        "newName": "getLastError"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S",
+          "shortId": "b(Lcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;)J"
+        },
+        "newName": "getPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "a()V"
+        },
+        "newName": "deleteSecureMessage"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "b()J"
+        },
+        "newName": "getSecureMessageByteCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
+          "shortId": "a()V"
+        },
+        "newName": "delete"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
+          "shortId": "b()J"
+        },
+        "newName": "getByteCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
+          "shortId": "c(Lcom/medtronic/minimed/sake/SAKE_USER_MESSAGE_S;)J"
+        },
+        "newName": "getPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SakeJNI",
+          "shortId": "Sake_Client_Init(JLcom/medtronic/minimed/sake/SAKE_CLIENT_S;JLcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 0
+        },
+        "newName": "clientPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SakeJNI",
+          "shortId": "Sake_Client_Init(JLcom/medtronic/minimed/sake/SAKE_CLIENT_S;JLcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "dbPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "\u003cinit\u003e(I)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "size"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.medtronic.minimed.sake.p_uint8_t",
           "shortId": "a()Le/g/g/b/c;"
         },
         "newName": "GetAsPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.e.g.i0",
+          "shortId": "i(Ljava/lang/String;)Le/g/f/a/h/a2;"
+        },
+        "newName": "getMonitoringSakeService"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.e.k.c",
+          "shortId": "k()Le/g/f/a/h/a2;"
+        },
+        "newName": "getSakeService"
       },
       {
         "nodeRef": {
@@ -707,6 +913,14 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "e.g.f.a.d.a.w",
+          "shortId": "c(Le/g/f/a/d/a/v$a;)V"
+        },
+        "newName": "addListener"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.d.a.w",
           "shortId": "h([B)Z"
         },
         "newName": "initClient"
@@ -721,7 +935,7 @@
           "attachType": "VAR",
           "index": 0
         },
-        "newName": "pKeyDb"
+        "newName": "keydbbuffer"
       },
       {
         "nodeRef": {
@@ -987,6 +1201,22 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "e.g.f.a.h.a2",
+          "shortId": "a([B)Le/g/f/a/d/a/v;"
+        },
+        "newName": "getNewSakeClient"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
+          "shortId": "b(Le/g/f/a/d/d/a/s/c;Le/g/f/a/d/a/v;)Le/g/f/a/d/a/y;"
+        },
+        "newName": "getNewHandshakeManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
           "shortId": "f()V"
         },
         "newName": "rehandshake"
@@ -995,9 +1225,49 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "e.g.f.a.h.a2",
+          "shortId": "n(Le/g/f/a/d/a/s;)Z"
+        },
+        "newName": "isLost"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
           "shortId": "p(Le/g/f/a/d/a/s;)Lh/c/a0;"
         },
         "newName": "initAutoReHandshake"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
+          "shortId": "q(Ljava/lang/Boolean;)V"
+        },
+        "newName": "initAutoReHandshake"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
+          "shortId": "s([BLh/c/c;)V"
+        },
+        "newName": "setupClient"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
+          "shortId": "u(Lh/c/r;Le/g/f/a/d/a/y$b;)V"
+        },
+        "newName": "handshakeManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.f.a.h.a2",
+          "shortId": "z(Ljava/lang/Boolean;)V"
+        },
+        "newName": "setHandler"
       },
       {
         "nodeRef": {
@@ -1186,6 +1456,14 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "e.g.g.b.a",
+          "shortId": "a(I)Le/g/g/b/a;"
+        },
+        "newName": "parseErrorCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "e.g.g.b.b",
           "shortId": "a(I)Le/g/g/b/b;"
         },
@@ -1198,965 +1476,31 @@
           "shortId": "a(Le/g/g/b/c;)J"
         },
         "newName": "getPointer"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e.g.g.b.e",
+          "shortId": "i(Le/g/g/b/d;[B)V"
+        },
+        "newName": "memMove"
+      },
+      {
+        "nodeRef": {
+          "refType": "PKG",
+          "declClass": "e.g.f.a.d.a",
+          "shortId": ""
+        },
+        "newName": "Sake"
       }
     ]
   },
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.t",
-      "subPath": "java",
-      "caret": 983,
-      "view": {
-        "x": 34,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.z",
-      "subPath": "java",
-      "caret": 176,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.b0",
-      "subPath": "java",
-      "caret": 3424,
-      "view": {
-        "x": 0,
-        "y": 399
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.d0",
-      "subPath": "java",
-      "caret": 183,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.u",
-      "subPath": "java",
-      "caret": 245,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.v",
-      "subPath": "java",
-      "caret": 370,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e",
-      "subPath": "java",
-      "caret": 534,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.b",
-      "subPath": "java",
-      "caret": 1453,
-      "view": {
-        "x": 0,
-        "y": 159
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.b",
-      "subPath": "java",
-      "caret": 787,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.l",
-      "subPath": "java",
-      "caret": 1188,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.g",
-      "subPath": "java",
-      "caret": 3088,
-      "view": {
-        "x": 0,
-        "y": 814
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.d",
-      "subPath": "java",
-      "caret": 994,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.i.d.e",
-      "subPath": "java",
-      "caret": 179,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.v",
-      "subPath": "java",
-      "caret": 202,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.u",
-      "subPath": "java",
-      "caret": 202,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.f",
-      "subPath": "java",
-      "caret": 280,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.f",
-      "subPath": "java",
-      "caret": 1161,
-      "view": {
-        "x": 0,
-        "y": 270
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.e",
-      "subPath": "java",
-      "caret": 725,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.y",
-      "subPath": "java",
-      "caret": 2587,
-      "view": {
-        "x": 0,
-        "y": 120
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.i",
-      "subPath": "java",
-      "caret": 1302,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.h",
-      "subPath": "java",
-      "caret": 347,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.g",
-      "subPath": "java",
-      "caret": 178,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.h",
-      "subPath": "java",
-      "caret": 238,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.r",
-      "subPath": "java",
-      "caret": 2921,
-      "view": {
-        "x": 0,
-        "y": 719
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.k",
-      "subPath": "java",
-      "caret": 177,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.t",
-      "subPath": "java",
-      "caret": 5834,
-      "view": {
-        "x": 0,
-        "y": 1764
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.w",
-      "subPath": "java",
-      "caret": 330,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.s",
-      "subPath": "java",
-      "caret": 148,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.s",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.w",
-      "subPath": "java",
-      "caret": 392,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.l0",
-      "subPath": "java",
-      "caret": 201,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.j",
-      "subPath": "java",
-      "caret": 549,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.e",
-      "subPath": "java",
-      "caret": 4019,
-      "view": {
-        "x": 0,
-        "y": 1346
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.s",
-      "subPath": "java",
-      "caret": 171,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.w",
-      "subPath": "java",
-      "caret": 148,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.f",
-      "subPath": "java",
-      "caret": 8697,
-      "view": {
-        "x": 0,
-        "y": 1832
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.h",
-      "subPath": "java",
-      "caret": 3102,
-      "view": {
-        "x": 0,
-        "y": 1122
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.c0",
-      "subPath": "java",
-      "caret": 155,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.i0",
-      "subPath": "java",
-      "caret": 149,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.i",
-      "subPath": "java",
-      "caret": 1799,
-      "view": {
-        "x": 0,
-        "y": 335
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.k",
-      "subPath": "java",
-      "caret": 1602,
-      "view": {
-        "x": 0,
-        "y": 95
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.p0",
-      "subPath": "java",
-      "caret": 250,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.d",
-      "subPath": "java",
-      "caret": 628,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.l",
-      "subPath": "java",
-      "caret": 148,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.e0.g",
-      "subPath": "java",
-      "caret": 1440,
-      "view": {
-        "x": 0,
-        "y": 120
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.z",
-      "subPath": "java",
-      "caret": 211,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.j.m",
-      "subPath": "java",
-      "caret": 148,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.a",
-      "subPath": "java",
-      "caret": 419,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.a",
-      "subPath": "java",
-      "caret": 1600,
-      "view": {
-        "x": 0,
-        "y": 206
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.o",
-      "subPath": "java",
-      "caret": 418,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.m.f.a",
-      "subPath": "java",
-      "caret": 151,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.f0.a",
-      "subPath": "java",
-      "caret": 163,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.o.h.a",
-      "subPath": "java",
-      "caret": 163,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.o.h.b",
-      "subPath": "java",
-      "caret": 344,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.p.i",
-      "subPath": "java",
-      "caret": 140,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.q",
-      "subPath": "java",
-      "caret": 299,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.p.n",
-      "subPath": "java",
-      "caret": 214,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.d",
-      "subPath": "java",
-      "caret": 186,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.b.a",
-      "subPath": "java",
-      "caret": 811,
-      "view": {
-        "x": 0,
-        "y": 110
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.e",
-      "subPath": "java",
-      "caret": 9074,
-      "view": {
-        "x": 0,
-        "y": 3774
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.j",
-      "subPath": "java",
-      "caret": 1524,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.c0",
-      "subPath": "java",
-      "caret": 355,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.z",
-      "subPath": "java",
-      "caret": 191,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.a0",
-      "subPath": "java",
-      "caret": 242,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.l",
-      "subPath": "java",
-      "caret": 305,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.e.a.x",
-      "subPath": "java",
-      "caret": 125,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.a",
-      "subPath": "java",
-      "caret": 681,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.h",
-      "subPath": "java",
-      "caret": 2260,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.p.c",
-      "subPath": "java",
-      "caret": 509,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.m.d",
-      "subPath": "java",
-      "caret": 380,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.m.e",
-      "subPath": "java",
-      "caret": 726,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.f.c.d",
-      "subPath": "java",
-      "caret": 677,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.s",
-      "subPath": "java",
-      "caret": 479,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.b",
-      "subPath": "java",
-      "caret": 767,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.h.a",
-      "subPath": "java",
-      "caret": 486,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.f",
-      "subPath": "java",
-      "caret": 584,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.p.g",
-      "subPath": "java",
-      "caret": 374,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.s.d",
-      "subPath": "java",
-      "caret": 638,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.s.b",
-      "subPath": "java",
-      "caret": 482,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.i.d.c",
-      "subPath": "java",
-      "caret": 128,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.t",
-      "subPath": "java",
-      "caret": 316,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.e.e.v.a",
-      "subPath": "java",
-      "caret": 3017,
-      "view": {
-        "x": 0,
-        "y": 332
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.i",
-      "subPath": "java",
-      "caret": 202,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.a0.b",
-      "subPath": "java",
-      "caret": 828,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.n.w.c",
-      "subPath": "java",
-      "caret": 785,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
       "tabPath": "com.medtronic.minimed.sake.SakeJNI",
       "subPath": "java",
-      "caret": 502,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
-      "subPath": "java",
-      "caret": 499,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.b.e",
-      "subPath": "java",
-      "caret": 1661,
-      "view": {
-        "x": 0,
-        "y": 72
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SAKE_CLIENT_S",
-      "subPath": "java",
-      "caret": 228,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.b.b",
-      "subPath": "java",
-      "caret": 1174,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.b.f",
-      "subPath": "java",
-      "caret": 456,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S",
-      "subPath": "java",
-      "caret": 81,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.a.w",
-      "subPath": "java",
-      "caret": 829,
-      "view": {
-        "x": 0,
-        "y": 104
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.p_uint8_t",
-      "subPath": "java",
-      "caret": 448,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.b.c",
-      "subPath": "java",
-      "caret": 225,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.b.d",
-      "subPath": "java",
-      "caret": 108,
+      "caret": 84,
       "view": {
         "x": 0,
         "y": 0
@@ -2166,7 +1510,7 @@
       "type": "class",
       "tabPath": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
       "subPath": "java",
-      "caret": 122,
+      "caret": 189,
       "view": {
         "x": 0,
         "y": 0
@@ -2174,29 +1518,119 @@
     },
     {
       "type": "class",
-      "tabPath": "m.b.d",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
       "subPath": "java",
-      "caret": 7229,
+      "caret": 1192,
       "view": {
         "x": 0,
-        "y": 1814
+        "y": 172
       }
     },
     {
       "type": "class",
-      "tabPath": "m.b.c",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_CLIENT_S",
       "subPath": "java",
-      "caret": 96,
+      "caret": 659,
       "view": {
         "x": 0,
-        "y": 174
+        "y": 0
       }
     },
     {
       "type": "class",
-      "tabPath": "e.g.f.a.d.a.u",
+      "tabPath": "e.g.g.b.c",
       "subPath": "java",
-      "caret": 813,
+      "caret": 64,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.b.a",
+      "subPath": "java",
+      "caret": 6525,
+      "view": {
+        "x": 0,
+        "y": 1016
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S",
+      "subPath": "java",
+      "caret": 435,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.p_uint8_t",
+      "subPath": "java",
+      "caret": 979,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.b.f",
+      "subPath": "java",
+      "caret": 156,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.b.e",
+      "subPath": "java",
+      "caret": 3133,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.b.b",
+      "subPath": "java",
+      "caret": 846,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.g.b.d",
+      "subPath": "java",
+      "caret": 416,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.a.w",
+      "subPath": "java",
+      "caret": 7449,
+      "view": {
+        "x": 0,
+        "y": 1816
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.a.v",
+      "subPath": "java",
+      "caret": 573,
       "view": {
         "x": 0,
         "y": 0
@@ -2206,277 +1640,23 @@
       "type": "class",
       "tabPath": "e.g.f.a.d.a.s",
       "subPath": "java",
-      "caret": 123,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "b.r.c.a",
-      "subPath": "java",
-      "caret": 11524,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.h.a2",
-      "subPath": "java",
-      "caret": 4468,
-      "view": {
-        "x": 0,
-        "y": 1359
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.i.c",
-      "subPath": "java",
-      "caret": 144,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.i.a",
-      "subPath": "java",
-      "caret": 152,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.h.i",
-      "subPath": "java",
-      "caret": 1113,
-      "view": {
-        "x": 0,
-        "y": 270
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.h.c",
-      "subPath": "java",
-      "caret": 6005,
-      "view": {
-        "x": 0,
-        "y": 3256
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.i.b",
-      "subPath": "java",
-      "caret": 198,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.d",
-      "subPath": "java",
-      "caret": 132,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.e",
-      "subPath": "java",
-      "caret": 827,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.g",
-      "subPath": "java",
-      "caret": 131,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.h.f",
-      "subPath": "java",
-      "caret": 312,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.b.a.a.h.f.c",
-      "subPath": "java",
-      "caret": 1382,
-      "view": {
-        "x": 0,
-        "y": 4270
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.f.a.j.a",
-      "subPath": "java",
-      "caret": 290,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.a",
-      "subPath": "java",
-      "caret": 2820,
-      "view": {
-        "x": 0,
-        "y": 568
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.q.b",
-      "subPath": "java",
-      "caret": 611,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.f.c.q",
-      "subPath": "java",
-      "caret": 760,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.i.d",
-      "subPath": "java",
-      "caret": 744,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.g.a.a.e.b.i.e",
-      "subPath": "java",
-      "caret": 151,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.a.x",
-      "subPath": "java",
-      "caret": 1433,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.f.c.c",
-      "subPath": "java",
-      "caret": 5362,
-      "view": {
-        "x": 0,
-        "y": 1551
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.a.t",
-      "subPath": "java",
-      "caret": 223,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.s.a",
-      "subPath": "java",
-      "caret": 219,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.d.a.k",
-      "subPath": "java",
-      "caret": 2243,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.a.z",
-      "subPath": "java",
-      "caret": 1205,
-      "view": {
-        "x": 0,
-        "y": 14
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.a.v",
-      "subPath": "java",
-      "caret": 716,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "e.g.f.a.d.a.y",
-      "subPath": "java",
-      "caret": 487,
+      "caret": 222,
       "view": {
         "x": 0,
         "y": 0
       }
     }
   ],
-  "activeTab": 124,
+  "activeTab": 9,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "handshake",
+    "-sake",
+    " SakeStatus.getStatus(",
+    "sake-lib",
+    "sakejni",
+    "SakeHandshake",
     "0000fe82",
     "ordering",
     "Iencryptionh",
@@ -2500,7 +1680,6 @@
     "ActiveParam",
     "SensorConnected",
     "ConverterMap",
-    "Converter",
-    "000202"
+    "Converter"
   ]
 }
