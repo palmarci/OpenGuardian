@@ -1,6 +1,13 @@
-# guardian-134-decompilation
+# OpenGuardian4
 
-## java - jadx usage
+Reverse engineering the BT communication for the Medtronic Guardian 4 glucose monitoring system.
+
+### folders
+- Sakeproxy: android app to interface with the native sake crpyto library
+- OpenGuardian4: the java parser to decode the decrypted messages
+- Parsing: contains the frida script to monitor the messages, dumps, a python script to decode everything 
+
+### jadx usage
 - md5sum of the original file: 865d1872c197c073830c02416d63f294
 - you can get it here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download
 - place it under the name "Guardian_134.apk"
@@ -8,7 +15,7 @@
 - open the project
 - you will mostly need just two buttons: X for references and N for rename
 
-### finding the converter map
+#### finding the converter map
 
 - **just search for classes > ConverterMap** or
 	- look for a uuid string of a gatt service (for example "00000202-0000-1000-0000-009132591325")
@@ -18,5 +25,6 @@
 	- you will see the conveters and the classes mapped there
 
 
-## sake - ghidra
+### sake - ghidra
 - TBD
+
