@@ -3,7 +3,9 @@ import os
 from enum import Enum
 from datetime import datetime, timezone, timedelta
 from binascii import hexlify
+import re
 
+# classes
 class TerminalColors:
 	HEADER = '\033[95m'
 	OKBLUE = '\033[94m'
@@ -15,10 +17,7 @@ class TerminalColors:
 	BOLD = '\033[1m'
 	UNDERLINE = '\033[4m'
 
-dumpSake = False
-
 class BtMsg:
-
 	class BtMsgType(Enum):
 		READ = "<< READ"
 		NOTIFY =  "<< NOTIFY"
@@ -30,10 +29,7 @@ class BtMsg:
 	data: bytes
 	decrypted: bool
 	parsed: str
-
-	def __parse(self):
-		# TODO
-		return ""
+	comment: str = None
 
 	def _dump(self):
 		result = []
@@ -41,22 +37,23 @@ class BtMsg:
 		if self.service == "sakeService" and dumpSake:
 			result.append("...skipping sake dumps...")
 		else:
-			parsed = self.__parse()
-			if parsed != "":
-				result.append(f"parsed: {parsed}")
 			raw_part = f"{hexlify(self.data, ' ').decode()}"
 			ascii_part = ''.join([chr(byte) if 32 <= byte < 127 else '.' for byte in self.data])
 			dec_part = ' '.join(str(byte) for byte in self.data)
 			result.append(f"raw: {raw_part}")
 			result.append(f"dec: {dec_part}")
 			result.append(f"ascii: {ascii_part}")
-
+			if self.comment is not None:
+				result.append("\n\n\n" + TerminalColors.OKCYAN + "\t" * 5 + "Comment: " + self.comment + TerminalColors.RESET + "\n\n")
+			
 		return result
 
-	def __init__(self, time, type:str, service:str, data:str, decrypted):
+	def __init__(self, time, type:str, service:str, data:str, decrypted, comment:str=None):
 		self.time = time
 		parsed_type = None
 		self.decrypted = decrypted
+		if comment != None:
+			self.comment = comment.strip(" ")
 		for t in self.BtMsgType:
 			if type.upper() == t.name:
 				parsed_type = t
@@ -64,7 +61,7 @@ class BtMsg:
 			raise Exception(f"Could not parse type '{type}'")
 		self.type = parsed_type
 
-		if service in SERVICE_MAP:
+		if service.lower() in SERVICE_MAP:
 			self.service = SERVICE_MAP[service]
 		else:
 			self.service = service
@@ -104,8 +101,9 @@ class BtMsg:
 # globals
 dump_length = 100
 filename = None
+dumpSake = False
 SERVICE_MAP = {
-	"0000181F-0000-1000-8000-00805f9b34fb": "cgmService",
+	"0000181f-0000-1000-8000-00805f9b34fb": "cgmService",
 	"00002a52-0000-1000-8000-00805f9b34fb": "cgm_recordAccessControlPoint",
 	"00002aa7-0000-1000-8000-00805f9b34fb": "cgm_measurement",
 	"00002aa8-0000-1000-8000-00805f9b34fb": "cgm_feature",
@@ -121,13 +119,13 @@ SERVICE_MAP = {
 	"00000205-0000-1000-0000-009132591325": "cgm_MdtExt_algorithmData",
 
 
-	"0000180A-0000-1000-8000-00805f9b34fb": "deviceInfoService",
+	"0000180a-0000-1000-8000-00805f9b34fb": "deviceInfoService",
 	"00002a19-0000-1000-8000-00805f9b34fb": "deviceInfo_chargeState",
 	"00002a24-0000-1000-8000-00805f9b34fb": "deviceInfo_modelNumber",
 	"00002a26-0000-1000-8000-00805f9b34fb": "deviceInfo_firmwareRevision",
 	"00002a27-0000-1000-8000-00805f9b34fb": "deviceInfo_hardwareRevision",
 	"00002a28-0000-1000-8000-00805f9b34fb": "deviceInfo_softwareRevision",
-	"00002A50-0000-1000-8000-00805f9b34fb": "deviceInfo_pnpId",
+	"00002a50-0000-1000-8000-00805f9b34fb": "deviceInfo_pnpId", # some kind of version
 	"00002a29-0000-1000-8000-00805f9b34fb": "deviceInfo_manufacturerName",
 
 	"500d8e40-be34-11e4-9b24-0002a5d5c51b": "connectionManagement_clientRequestedParams",
@@ -135,7 +133,7 @@ SERVICE_MAP = {
 
 	# these are the services which have only one port
 	"0000fe82-0000-1000-0000-009132591325": "sakeService", 
-	"0000180F-0000-1000-8000-00805f9b34fb": "batteryLevelService",
+	"0000180f-0000-1000-8000-00805f9b34fb": "batteryLevelService",
 
 
 }
@@ -146,7 +144,6 @@ def convert_timestamp(unix_timestamp):
 	utc_datetime = datetime.fromtimestamp(unix_timestamp).replace(tzinfo=timezone.utc)
 	tz = timezone(timedelta(hours=1))
 	return utc_datetime.astimezone(tz)
-
 
 def main():
 	if len(sys.argv) > 1:
@@ -169,6 +166,8 @@ def main():
 
 	# extract the encrypted messages
 	for line in lines:
+		line = re.sub(r'\#.*', "", line) # ignore comments
+		line = line.replace(" ", "")
 		timestamp, module, hook, params = line.split(',')
 		if module == "sake":
 			d1, d2 = params.split(';')
@@ -179,6 +178,13 @@ def main():
 
 	# parse the bt messages
 	for line in lines:
+		split = line.split("#")
+		comment = None
+		if len(split) == 2:
+			line = split[0]
+			comment = split[1]
+		elif len(split) > 2:
+			raise Exception(f"Invalid number of comments found on line: {line}")
 		timestamp, module, hook, params = line.split(',')
 		time = convert_timestamp(timestamp)
 		if module == "bt":
@@ -192,7 +198,7 @@ def main():
 			else:
 				bt_data = data
 			# create msg
-			msg = BtMsg(time, hook, service, bt_data, decrypted)
+			msg = BtMsg(time, hook, service, bt_data, decrypted, comment)
 			messages.append(msg)
 
 	messages.sort()
@@ -200,5 +206,5 @@ def main():
 		print(m)
 
 if __name__ == "__main__":
-	print("OUTDATED! Use the java project!")
+	print("Use the Java project for decoding!")
 	main()

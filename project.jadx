@@ -1651,6 +1651,7 @@
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "00002a50-0000-1000-8000-00805f9b34fb",
     "handshake",
     "-sake",
     " SakeStatus.getStatus(",
@@ -1679,7 +1680,6 @@
     "00205",
     "ActiveParam",
     "SensorConnected",
-    "ConverterMap",
-    "Converter"
+    "ConverterMap"
   ]
 }
