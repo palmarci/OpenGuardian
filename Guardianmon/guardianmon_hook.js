@@ -1,17 +1,6 @@
 /*
 
-Usage: 
-0) get a rooted android phone
-1) download frida server (https://frida.re/docs/android/)
-3) connect to adb via usb 
-4) start your frida server as root
-5) frida -U -f com.medtronic.diabetes.guardian -l guardianmon.js
-
-Credits:
-2023 palmarci
-
-Other credits:
-https://github.com/optiv/blemon/blob/master/frida/blemon.js
+Credits: https://github.com/optiv/blemon/blob/master/frida/blemon.js
 
 */
 

@@ -14,7 +14,7 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 ## jadx usage
 1. get the apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download
 	(md5sum of the original file: 865d1872c197c073830c02416d63f294.
-2. place it under the name "Guardian_134.apk"
+2. place it in the project's root folder under the name "Guardian_134.apk"
 3. get jadx from here: https://github.com/skylot/jadx/releases
 4. open the project
 5. profit (you will mostly need just two buttons: X for references and N for rename.
@@ -35,6 +35,7 @@ or from sketch:
 
 ## libsake ghidra
 - TODO
+- https://github.com/Ayrx/JNIAnalyzer
 
 ## Guardianmon
 

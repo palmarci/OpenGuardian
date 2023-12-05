@@ -3,13 +3,10 @@
     <PROJECT_DATA_XML_NAME NAME="DISPLAY_DATA">
         <SAVE_STATE>
             <ARRAY NAME="EXPANDED_PATHS" TYPE="string">
-                <A VALUE="libsake_re:" />
+                <A VALUE="Sake_RE:" />
             </ARRAY>
             <STATE NAME="SHOW_TABLE" TYPE="boolean" VALUE="false" />
         </SAVE_STATE>
-    </PROJECT_DATA_XML_NAME>
-    <PROJECT_DATA_XML_NAME NAME="LOADER_OPTIONS">
-        <SAVE_STATE />
     </PROJECT_DATA_XML_NAME>
     <TOOL_MANAGER ACTIVE_WORKSPACE="Workspace">
         <WORKSPACE NAME="Workspace" ACTIVE="true" />

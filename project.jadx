@@ -1645,9 +1645,79 @@
         "x": 0,
         "y": 0
       }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.p.j",
+      "subPath": "java",
+      "caret": 810,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.d.a.p.i",
+      "subPath": "java",
+      "caret": 435,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.b0",
+      "subPath": "java",
+      "caret": 3208,
+      "view": {
+        "x": 0,
+        "y": 351
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.e.a.q",
+      "subPath": "java",
+      "caret": 253,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.d.b.e.f",
+      "subPath": "java",
+      "caret": 3068,
+      "view": {
+        "x": 0,
+        "y": 574
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.f.a.h.v1",
+      "subPath": "java",
+      "caret": 1059,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "e.g.e.g.i0",
+      "subPath": "java",
+      "caret": 29280,
+      "view": {
+        "x": 0,
+        "y": 10216
+      }
     }
   ],
-  "activeTab": 12,
+  "activeTab": 21,
   "cacheDir": "Guardian_134.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
