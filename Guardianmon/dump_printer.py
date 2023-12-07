@@ -4,6 +4,8 @@ from enum import Enum
 from datetime import datetime, timezone, timedelta
 from binascii import hexlify
 import re
+import pytz
+import tzlocal
 
 # classes
 class TerminalColors:
@@ -16,6 +18,7 @@ class TerminalColors:
 	RESET = '\033[0m'
 	BOLD = '\033[1m'
 	UNDERLINE = '\033[4m'
+	YELLOW = "\033[93m"
 
 class BtMsg:
 	class BtMsgType(Enum):
@@ -23,7 +26,7 @@ class BtMsg:
 		NOTIFY =  "<< NOTIFY"
 		WRITE =  ">> WRITE"
 
-	time : datetime
+	time : int
 	type : BtMsgType
 	service: str
 	data: bytes
@@ -48,7 +51,7 @@ class BtMsg:
 			
 		return result
 
-	def __init__(self, time, type:str, service:str, data:str, decrypted, comment:str=None):
+	def __init__(self, time:int, type:str, service:str, data:str, decrypted, comment:str=None):
 		self.time = time
 		parsed_type = None
 		self.decrypted = decrypted
@@ -79,8 +82,11 @@ class BtMsg:
 			textcolor = TerminalColors.FAIL
 		dumps = self._dump()
 
-		time = self.time.strftime('%H:%M:%S')
-		output = f"{time: <{8}} | "
+		local_timezone = tzlocal.get_localzone()
+		local_time = datetime.fromtimestamp(self.time, local_timezone)
+		formatted_time = local_time.strftime('%H:%M:%S')
+		#return formatted_time
+		output = f"{formatted_time: <{8}} | "
 		output += f"{self.type.value: <{10}} | "
 		output += f"{self.service: <{50}}"
 		offset = len(output)
@@ -138,12 +144,6 @@ SERVICE_MAP = {
 
 }
 
-# helpers
-def convert_timestamp(unix_timestamp):
-	unix_timestamp = int(unix_timestamp) / 1000
-	utc_datetime = datetime.fromtimestamp(unix_timestamp).replace(tzinfo=timezone.utc)
-	tz = timezone(timedelta(hours=1))
-	return utc_datetime.astimezone(tz)
 
 def main():
 	if len(sys.argv) > 1:
@@ -186,7 +186,7 @@ def main():
 		elif len(split) > 2:
 			raise Exception(f"Invalid number of comments found on line: {line}")
 		timestamp, module, hook, params = line.split(',')
-		time = convert_timestamp(timestamp)
+		#time = convert_timestamp(timestamp)
 		if module == "bt":
 			service, data = params.split(';')
 			# try to get decrypted data
@@ -198,7 +198,7 @@ def main():
 			else:
 				bt_data = data
 			# create msg
-			msg = BtMsg(time, hook, service, bt_data, decrypted, comment)
+			msg = BtMsg(int(timestamp)/1000, hook, service, bt_data, decrypted, comment)
 			messages.append(msg)
 
 	messages.sort()
@@ -206,5 +206,5 @@ def main():
 		print(m)
 
 if __name__ == "__main__":
-	print("Use the Java project for decoding!")
+	print("Use the Java project for decoding the message classes!\n")
 	main()

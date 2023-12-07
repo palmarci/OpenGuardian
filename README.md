@@ -9,7 +9,8 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 	- example dumps 
 	- python script to decode the dumps into a human readable format
 - OpenGuardian4: the java parser to decode the decrypted messages
-- libsake_re: the ghidra project to fully reverse engineer the armv7 sake library
+- Sake_RE: the ghidra project to fully reverse engineer the armv7 sake library
+- MinimedPatch: guide & patched apk Minimed mobile app v2.2.0 to remove whitelist, root & developer option checks
 
 ## jadx usage
 1. get the apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download

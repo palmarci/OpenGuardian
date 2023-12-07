@@ -1,0 +1,330 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "MiniMed_Mobile_220_original.apk"
+  ],
+  "treeExpansions": [],
+  "codeData": {
+    "comments": [],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a5.a"
+        },
+        "newName": "compatibilityStatusToConfigurationStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a5.g"
+        },
+        "newName": "DeviceConfigurationMonitorImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "a5.i"
+        },
+        "newName": "securityStatusToConfigurationStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "m6.z0"
+        },
+        "newName": "ForbiddenDeviceConfigStatusPreventer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "y4.a"
+        },
+        "newName": "CurrentMobileConfiguration"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "y4.d"
+        },
+        "newName": "IMobileApprovedConfigurationsManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "y4.d$a"
+        },
+        "newName": "PHONE_SUPPORTED_STATE"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "y5.c"
+        },
+        "newName": "ISecurityManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "y5.c$a"
+        },
+        "newName": "PHONE_STATE"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a5.g",
+          "shortId": "\u003cinit\u003e(Ly4/d;Ly5/c;Ly4/a;La5/i;La5/a;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131072
+        },
+        "newName": "configurationsManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a5.g",
+          "shortId": "\u003cinit\u003e(Ly4/d;Ly5/c;Ly4/a;La5/i;La5/a;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "securityManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a5.g",
+          "shortId": "\u003cinit\u003e(Ly4/d;Ly5/c;Ly4/a;La5/i;La5/a;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "currentMobileConfiguration"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a5.g",
+          "shortId": "\u003cinit\u003e(Ly4/d;Ly5/c;Ly4/a;La5/i;La5/a;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "securityStatusToConfigurationStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "a5.i",
+          "shortId": "apply(Ljava/lang/Object;)Ljava/lang/Object;"
+        },
+        "newName": "convertStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.bl.configmonitor.DeviceConfigurationMonitor",
+          "shortId": "a()Z"
+        },
+        "newName": "isCommunicationAllowed"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "m6.z0",
+          "shortId": "o0()Z"
+        },
+        "newName": "getValidty"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.service.o",
+      "subPath": "java",
+      "caret": 15092,
+      "view": {
+        "x": 0,
+        "y": 3039
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "m6.a",
+      "subPath": "java",
+      "caret": 5576,
+      "view": {
+        "x": 0,
+        "y": 1260
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.carelink.model.MobileSecurityConfigurations",
+      "subPath": "java",
+      "caret": 168,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "y5.i",
+      "subPath": "java",
+      "caret": 4397,
+      "view": {
+        "x": 0,
+        "y": 1678
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "y5.c",
+      "subPath": "java",
+      "caret": 453,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "io.reactivex.j",
+      "subPath": "java",
+      "caret": 6241,
+      "view": {
+        "x": 0,
+        "y": 2358
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "a5.g",
+      "subPath": "java",
+      "caret": 6946,
+      "view": {
+        "x": 0,
+        "y": 1892
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "a5.i",
+      "subPath": "java",
+      "caret": 353,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.configmonitor.DeviceConfigurationMonitor",
+      "subPath": "java",
+      "caret": 1119,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "qc.j",
+      "subPath": "java",
+      "caret": 1087,
+      "view": {
+        "x": 0,
+        "y": 287
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "a5.j",
+      "subPath": "java",
+      "caret": 752,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "y4.d",
+      "subPath": "java",
+      "caret": 224,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "y4.a",
+      "subPath": "java",
+      "caret": 251,
+      "view": {
+        "x": 0,
+        "y": 408
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "a5.h",
+      "subPath": "java",
+      "caret": 1090,
+      "view": {
+        "x": 315,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "a5.a",
+      "subPath": "java",
+      "caret": 391,
+      "view": {
+        "x": 0,
+        "y": 30
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.notification.v0",
+      "subPath": "java",
+      "caret": 4551,
+      "view": {
+        "x": 0,
+        "y": 2242
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "m6.z0",
+      "subPath": "java",
+      "caret": 34628,
+      "view": {
+        "x": 0,
+        "y": 14134
+      }
+    }
+  ],
+  "activeTab": 16,
+  "cacheDir": "MiniMed_Mobile_220_original.apk.cache",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "security",
+    ".ROOTED",
+    "root",
+    "BC_MESSAGE_PHONE_ROOTED",
+    "rooted device",
+    "2131820753"
+  ]
+}
