@@ -9,7 +9,7 @@ setTimeout(function () {
 		
 		activity.$init.overload('boolean', 'boolean').implementation = function (arg0, arg1) {
 
-			console.log(arg0 + ", " + arg1);
+			console.log("init called: ", arg0 + ", " + arg1);
 
 			return this.init.overload('boolean', 'boolean').call(this, false, false);
 		}

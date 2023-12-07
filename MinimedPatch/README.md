@@ -7,8 +7,7 @@
 - adb access
 - rooted android phone
 - frida server on phone & frida client on pc
-
-- sha256 hash of the unmodified apk: `437556f9e562073293ace335468cc35a1a9c0e1cae79be58de5a3bf716511e2d`
+- unmodified v2.2.0 apk, sha256 checksum: `437556f9e562073293ace335468cc35a1a9c0e1cae79be58de5a3bf716511e2d`
 
 ## patching
 
@@ -32,5 +31,5 @@
     return-object v0
 	```
 
-## rebuild the apk
+### rebuild the apk
 - execute `../rebuild_reinstall.sh` in the apktool decode output folder
