@@ -1,0 +1,2772 @@
+2023-12-09 17:25:07,327 I [main] MiniMedApplication <APP_STARTED>
+2023-12-09 17:25:07,328 D [main] MiniMedApplication <APP_VERSION> APP VERSION:    2.2.0 (908)
+2023-12-09 17:25:07,328 D [main] MiniMedApplication APP BUILD ID:   2.2.0-publiceu-231026-c4effe7
+2023-12-09 17:25:07,328 D [main] MiniMedApplication STAGING:        true
+2023-12-09 17:25:07,328 D [main] MiniMedApplication MANUFACTURER:   LGE
+2023-12-09 17:25:07,328 D [main] MiniMedApplication <HW_INFO> MODEL:          Nexus 5X
+2023-12-09 17:25:07,328 D [main] MiniMedApplication <HW_INFO> HARDWARE:       bullhead
+2023-12-09 17:25:07,328 D [main] MiniMedApplication RADIO:          M8994F-2.6.42.5.03
+2023-12-09 17:25:07,328 D [main] MiniMedApplication SUPPORTED_ABIS: [arm64-v8a, armeabi-v7a, armeabi]
+2023-12-09 17:25:07,328 D [main] MiniMedApplication BUILD_ID:       QQ3A.200805.001 - eng.macaqu.20210714.215356
+2023-12-09 17:25:07,328 D [main] MiniMedApplication BOOTLOADER:     BHZ32c
+2023-12-09 17:25:07,328 D [main] MiniMedApplication API LEVEL:      29
+2023-12-09 17:25:07,329 D [main] MiniMedApplication <OS_VERSION> OS VERSION:     10
+2023-12-09 17:25:07,332 D [main] a Registered DeviceIdleStateReceiver.
+2023-12-09 17:25:07,378 D [main] MasInitializer Configuration for MAS not found. Initialization with default configuration.
+2023-12-09 17:25:08,276 D [main] HardcodedCertificateRepository Found the hardcoded TLS certificate for 'clcloud.minimed.eu'.
+2023-12-09 17:25:08,280 D [main] MasInitializer Added 'https://clcloud.minimed.eu' to the list of trusted hosts.
+2023-12-09 17:25:08,280 D [main] MiniMedApplication MAS initialization completed.
+2023-12-09 17:25:08,299 D [main] TeneoClientConfigurator Started Teneo Client configuration.
+2023-12-09 17:25:08,303 D [main] TeneoClientConfigurator Configuring Secure Session Teneo API (Snapshot), configuration: null
+2023-12-09 17:25:08,305 D [main] TeneoClientConfigurator Teneo Client configured.
+2023-12-09 17:25:08,305 D [main] MiniMedApplication Teneo client configuration completed.
+2023-12-09 17:25:08,362 D [main] SecuredTlsCertificateRepository Started looking certificate for - 'teneo-cloud.medtronic.com'
+2023-12-09 17:25:08,362 D [main] SakeKeysRetrievalConfiguratorImpl No certificate found for SALE Keys Retrieval.
+2023-12-09 17:25:08,362 D [main] MiniMedApplication SAKE Keys Retrieval configured.
+2023-12-09 17:25:08,366 D [main] InitializeAppInstanceIdOnFirstLaunchUseCase isAppInstanceEmpty: true
+2023-12-09 17:25:08,366 D [main] GenerateAppInstanceIdUseCase Generated App Instance Id = 4bae0f14-d8ff-455a-b2df-2297387cf91c
+2023-12-09 17:25:08,389 D [RxCachedThreadScheduler-2] NetworkStateProvider Checking Internet availability, networkCapabilities=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps SignalStrength: -30],
+2023-12-09 17:25:08,389 D [RxCachedThreadScheduler-2] NetworkStateProvider Internet is available: true
+2023-12-09 17:25:08,389 D [RxCachedThreadScheduler-2] InternetConnectionCheckerIml Internet available: true
+2023-12-09 17:25:08,467 D [main] RealTimeThreadWorker-93872562 Scheduled job #1 in 0 MINUTES, runAtMillis=1828198
+2023-12-09 17:25:08,467 D [Thread-8] RealTimeThreadWorker-93872562 Thread started.
+2023-12-09 17:25:08,468 D [Thread-8] RealTimeThreadWorker-93872562 Execute job #1.
+2023-12-09 17:25:08,468 D [Thread-8] RealTimeThreadWorker-93872562 Scheduled job #2 in 3599999000000 NANOSECONDS, runAtMillis=5428198
+2023-12-09 17:25:08,470 D [main] AnalyticsCollectorProxy Track App state started
+2023-12-09 17:25:08,471 D [RxCachedThreadScheduler-4] OutdatedDiscoveryConfigurationMonitor Checking discovery config for updates
+2023-12-09 17:25:08,480 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"clientInfo":{"clientDeviceModel":"Nexus 5X","clientOsType":"Android","clientOsVersion":"10","clientVersion":"2.2.0 (908)"},"state":"STARTED"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:08.471+01:00","type":"AppStateChangeEvent"}
+2023-12-09 17:25:08,488 D [main] AnalyticsCollectorProxy Track network state. Network is available: true. [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps SignalStrength: -30]
+2023-12-09 17:25:08,495 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"availableTransports":["WIFI"],"state":"AVAILABLE"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:08.492+01:00","type":"NetworkStateChangeEvent"}
+2023-12-09 17:25:08,500 I [main] AppAnalyticsMonitor <NET_WIFI>
+2023-12-09 17:25:08,504 D [RxCachedThreadScheduler-4] OutdatedDiscoveryConfigurationMonitor User authenticated: false
+2023-12-09 17:25:08,504 D [RxCachedThreadScheduler-4] OutdatedDiscoveryConfigurationMonitor Finished discovery config check
+2023-12-09 17:25:08,569 E [RxCachedThreadScheduler-3] MobileSecurityUtil Rooted phone detected
+2023-12-09 17:25:08,572 D [AsyncAppender-Worker-null] AnalyticsCollectorProxy Track error event: Rooted phone detected
+2023-12-09 17:25:08,578 D [AsyncAppender-Worker-null] CarelinkAnalyticsCollector Analytics event {"data":{"message":"Rooted phone detected"},"cat":"error","cid":"","grp":"APP","ts":"2023-12-09T17:25:08.572+01:00","type":"Error"}
+2023-12-09 17:25:08,585 E [RxCachedThreadScheduler-3] MobileSecurityUtil Rooted phone detected
+2023-12-09 17:25:08,585 D [RxCachedThreadScheduler-3] MobileSecurityManagerImpl Mobile security status: SUPPORTED.
+2023-12-09 17:25:08,586 D [RxCachedThreadScheduler-3] MobileApprovedConfigurationsManagerImpl Internet connection available: true
+2023-12-09 17:25:08,591 D [AsyncAppender-Worker-null] AnalyticsCollectorProxy Track error event: Rooted phone detected
+2023-12-09 17:25:08,592 D [AsyncAppender-Worker-null] CarelinkAnalyticsCollector Analytics event {"data":{"message":"Rooted phone detected"},"cat":"error","cid":"","grp":"APP","ts":"2023-12-09T17:25:08.591+01:00","type":"Error"}
+2023-12-09 17:25:08,605 D [RxCachedThreadScheduler-3] PublicApi Started loading device configuration.
+2023-12-09 17:25:08,608 D [RxCachedThreadScheduler-3] MasRequestExecutor Sending public GET request to 'https://clcloud.minimed.eu/connect/v2/client/config/blengp/android/whitelist'.
+2023-12-09 17:25:08,683 D [main] SplashScreenPresenter Start timer.
+2023-12-09 17:25:08,688 D [RxCachedThreadScheduler-5] ForbiddenDeviceConfigStatusPreventer Don't trigger device configuration check. Elapsed time since previous check: 222 ms.
+2023-12-09 17:25:08,709 D [RxCachedThreadScheduler-7] GooglePlayServicesSecurityProviderUpdater Checking play services provider for updates
+2023-12-09 17:25:08,710 D [main] AnalyticsCollectorProxy Track App state foregrounded
+2023-12-09 17:25:08,711 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"state":"FOREGROUNDED"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:08.710+01:00","type":"AppStateChangeEvent"}
+2023-12-09 17:25:08,712 I [main] AppForegroundStateProvider <APP_FOREGROUND>
+2023-12-09 17:25:08,712 D [main] AppForegroundStateProvider App moved to foreground. Due to screen unlock: false.
+2023-12-09 17:25:08,816 D [main] AnalyticsCollectorProxy Track screen transition enter: SPLASH
+2023-12-09 17:25:08,822 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"1.0-SplashScreen","state":"SCREEN_ENTER","title":"Splash","uiddRef":"3414718"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:08.817+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:08,907 I [RxComputationThreadPool-2] NetworkStateProvider Observed Network is available: true
+2023-12-09 17:25:08,944 D [RxCachedThreadScheduler-8] NetworkStateProvider Checking Internet availability, networkCapabilities=[ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED LinkUpBandwidth>=1048576Kbps LinkDnBandwidth>=1048576Kbps SignalStrength: -30],
+2023-12-09 17:25:09,250 D [RxCachedThreadScheduler-7] GooglePlayServicesSecurityProviderUpdater Provider updates successfully/already installed
+2023-12-09 17:25:09,678 D [RxCachedThreadScheduler-8] PublicApi Received device configuration. Response: [
+  {
+    "appVersion": [
+      "2.0.*",
+      "1.4.*",
+      "1.3.*",
+      "1.2.*",
+      "1.1.*",
+      "1.0.*",
+      "0.9.*"
+    ],
+    "WHITELIST": {
+      "configs": {
+        "SM-G950[A-Za-z0-9]+": [
+          "9.0"
+        ],
+        "SM-G955[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "SM-G960[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "SM-G965[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "SM-G973[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G975[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G970[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G980[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-G986[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-G988[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N950[A-Za-z0-9]+": [
+          "9.0"
+        ],
+        "SM-N960[A-Za-z0-9]+": [
+          "10.0"
+        ],
+        "SM-N970[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-A217[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SM-A202[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SM-A750[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SM-A530[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "SM-A716[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A715[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A505[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-S506[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A507[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A515[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-S515[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A516[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SC(-)*[A-Za-z0-9]+": [
+          "10.0-11.0"
+        ],
+        "MI 6": [
+          "9.0"
+        ],
+        "MCE16": [
+          "9.0"
+        ],
+        "Pixel 3": [
+          "9.0-12.0"
+        ],
+        "Pixel 3 XL": [
+          "9.0-12.0"
+        ],
+        "Pixel 4": [
+          "10.0-12.0"
+        ],
+        "Pixel 4 XL": [
+          "10.0-12.0"
+        ],
+        "LM-G820[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SC-01K": [
+          "9.0"
+        ],
+        "SC-01L": [
+          "10.0"
+        ],
+        "SC-01M": [
+          "10.0-12.0"
+        ],
+        "SC-02J": [
+          "9.0"
+        ],
+        "SC-02K": [
+          "9.0-10.0"
+        ],
+        "SC-03J": [
+          "9.0"
+        ],
+        "SC-03K": [
+          "9.0-10.0"
+        ],
+        "SC-03L": [
+          "9.0-12.0"
+        ],
+        "SC-04L": [
+          "9.0-12.0"
+        ],
+        "SC-05L": [
+          "9.0-12.0"
+        ],
+        "SC-51A": [
+          "10.0-12.0"
+        ],
+        "SC-52A": [
+          "10.0-12.0"
+        ],
+        "SCG01": [
+          "10.0-12.0"
+        ],
+        "SCG02": [
+          "10.0-12.0"
+        ],
+        "SCG03": [
+          "10.0-12.0"
+        ],
+        "SCV35": [
+          "9.0"
+        ],
+        "SCV36": [
+          "9.0"
+        ],
+        "SCV37": [
+          "9.0"
+        ],
+        "SCV38": [
+          "9.0-10.0"
+        ],
+        "SCV39": [
+          "9.0-10.0"
+        ],
+        "SCV40": [
+          "10.0"
+        ],
+        "SCV41": [
+          "9.0-12.0"
+        ],
+        "SCV42": [
+          "9.0-12.0"
+        ],
+        "SCV45": [
+          "10.0-12.0"
+        ],
+        "SM-G977[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G981[A-Za-z0-9]*": [
+          "10.0-12.0"
+        ],
+        "SM-G985F": [
+          "10.0-12.0"
+        ],
+        "SM-N971[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N975[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N976[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N980[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N980F\/DS": [
+          "10.0-12.0"
+        ],
+        "SM-N981[A-Za-z0-9]*(\/DS)*": [
+          "10.0-12.0"
+        ],
+        "SM-N985[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N985F\/DS": [
+          "10.0-12.0"
+        ],
+        "SM-N986[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SC-53A": [
+          "10.0-12.0"
+        ],
+        "SCG06": [
+          "10.0-12.0"
+        ],
+        "SM-G780[A-Za-z0-9]*(\/DS)*": [
+          "10.0-12.0"
+        ],
+        "SM-G781[A-Za-z0-9]*(\/DS)*": [
+          "10.0-12.0"
+        ],
+        "LM-V500[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LM-V510N[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LM-V450": [
+          "10.0"
+        ],
+        "SM-G770[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-G770F\/DS[M]*": [
+          "10.0-12.0"
+        ],
+        "SM-N770F": [
+          "10.0-11.0"
+        ],
+        "SM-N770F\/DS[M]*": [
+          "10.0-11.0"
+        ],
+        "SM-G990[A-Za-z0-9]+": [
+          "11.0-12.0"
+        ],
+        "SM-G991[A-Za-z0-9]+": [
+          "11.0-12.0"
+        ],
+        "SM-G996[A-Za-z0-9]+": [
+          "11.0-12.0"
+        ],
+        "SM-G998[A-Za-z0-9]*(\/DS)*": [
+          "11.0-12.0"
+        ],
+        "SM-A205[A-Za-z0-9]+": [
+          "10.0"
+        ],
+        "SM-S205DL": [
+          "10.0"
+        ],
+        "SC-02M": [
+          "10.0"
+        ],
+        "SCV46-j": [
+          "10.0"
+        ],
+        "SCV46-u": [
+          "10.0"
+        ],
+        "SCV46": [
+          "10.0"
+        ],
+        "SM-A102[A-Za-z0-9]+": [
+          "10.0"
+        ],
+        "SM-S102DL": [
+          "10.0"
+        ],
+        "SM-A526[A-Za-z0-9]*": [
+          "11.0-12.0"
+        ],
+        "SM-A528[A-Za-z0-9]*": [
+          "11.0-12.0"
+        ],
+        "Pixel 3a": [
+          "9.0-12.0"
+        ],
+        "Pixel 3a XL": [
+          "9.0-12.0"
+        ],
+        "Pixel 4a": [
+          "10.0-12.0"
+        ],
+        "Pixel 4a \\(5G\\)": [
+          "10.0-12.0"
+        ],
+        "Pixel 5": [
+          "11.0-13.0"
+        ],
+        "Pixel 5a": [
+          "11.0-12.0"
+        ],
+        "Pixel 5a \\(5G\\)": [
+          "11.0-12.0"
+        ],
+        "LM-G710[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LG-G710": [
+          "10.0"
+        ],
+        "LM-V405[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LM-V409N": [
+          "10.0"
+        ],
+        "LM-V600[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "A001LG": [
+          "10.0"
+        ],
+        "L-51A": [
+          "10.0"
+        ],
+        "moto g\\(6\\)": [
+          "9.0"
+        ],
+        "XT1925[-]*[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "XT1925DL": [
+          "9.0"
+        ],
+        "XT1962[-]*[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "moto g\\(7\\)": [
+          "9.0"
+        ],
+        "XT1955[-]*[A-Za-z0-9]*": [
+          "9.0-10.0"
+        ],
+        "moto g\\(7\\) power": [
+          "9.0-10.0"
+        ],
+        "XT1952[-]*[A-Za-z0-9]*": [
+          "9.0-10.0"
+        ],
+        "moto g\\(7\\) play": [
+          "9.0-10.0"
+        ],
+        "ONEPLUS A601[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "ELE-[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "HMA-[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "LYA-[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "XQ-AT[0-9]+": [
+          "10.0"
+        ],
+        "SO(-51A|G01)+": [
+          "10.0"
+        ],
+        "H82[0-9]+": [
+          "10.0"
+        ],
+        "(702)*SO[-]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "H83[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SO-05K": [
+          "10.0"
+        ],
+        "XQ[-]*AT[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SO(-51A|G01)*": [
+          "10.0"
+        ],
+        "XQ[-]*AS[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "(A002)*SO(-52A|G02)*": [
+          "10.0"
+        ],
+        "J(8|9)1[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "(802)*SO(-03L|V40)*": [
+          "10.0-11.0"
+        ],
+        "J(8|9)2[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "(901)*SO(-01M|V41)*": [
+          "10.0-11.0"
+        ],
+        "XT2087-[12]": [
+          "10.0"
+        ],
+        "moto g\\(9\\) plus": [
+          "10.0"
+        ],
+        "KB200[0135]": [
+          "11.0-12.0"
+        ],
+        "IN201[0379]": [
+          "12.0"
+        ],
+        "IN202[0135]": [
+          "12.0"
+        ],
+        "LE211[01357]": [
+          "12.0"
+        ],
+        "LE212[01357]": [
+          "12.0"
+        ],
+        "NE221[01357]": [
+          "12.0"
+        ],
+        "CPH2415": [
+          "12.0"
+        ],
+        "Redmi Note 9 Pro": [
+          "10.0"
+        ],
+        "M2003J6(B2G|A1I)": [
+          "10.0"
+        ],
+        "M2101K7A[GI]": [
+          "11.0"
+        ],
+        "2201123[CG]": [
+          "12.0"
+        ],
+        "2201122[CG]": [
+          "12.0"
+        ],
+        "22081212(G|UG)": [
+          "12.0"
+        ],
+        "21121210[GI]": [
+          "12.0"
+        ],
+        "moto g\\(30\\)": [
+          "11.0"
+        ],
+        "XT2129-[123]": [
+          "11.0"
+        ],
+        "PAML0000IN": [
+          "11.0"
+        ],
+        "SM-S901[A-Za-z0-9]*(\/DS)*": [
+          "12.0-13.0"
+        ],
+        "SM-S906[A-Za-z0-9]*(\/DS)*": [
+          "12.0-13.0"
+        ],
+        "SM-S908[A-Za-z0-9]*(\/DS)*": [
+          "12.0-13.0"
+        ],
+        "M2003J15S[CGS]": [
+          "10.0"
+        ],
+        "CX295(VRD|CIN)": [
+          "10.0"
+        ]
+      }
+    },
+    "BLACKLIST": {
+      "configs": {
+        "HWV33": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1Am": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1B": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1M": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1Mm": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX2B": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX3A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX3Am": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX3Bm": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-L01A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L01A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L21BX": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-L21A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L21A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-L21MEA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L22A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L21MEA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX1M": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX2J": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX2J": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX3A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-AL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "POT-TL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SNE-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "SNE-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "SNE-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "SNE-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "INE-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "JDN2-W09": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JDN2-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JDN2-L09": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "GLK-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-LX1U": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1AF": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX2J": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1RUA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1T": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-L21": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-L22": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "AQM-LX1": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ANE-LX2J": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ANE-LX1": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HWV32": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ART-L28": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ART-L29": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ART-L29N": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JKM-LX1": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-LX2": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-LX3": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-TL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-AL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-AL00b": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "HRY-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-LX1MEB": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-AL00a": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-LX1T": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "MAR-LX1R": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "HRY-L21T": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "HRY-AL00Ta": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-TL00T": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-AL00TA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-L29": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-AL10": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-L19": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-TL10": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L22": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L42": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L11": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JSN-L21": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L23": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JSN-TL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JSN-AL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "AKA-L29": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L22B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L02B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L23B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L03B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-LX2": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ART-TL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ART-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ART-AL00x": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "PPA-AL20": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "AQM-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "AQM-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ]
+      }
+    },
+    "GRAYLIST": {
+      "configs": {
+        "(?i)samsung": [
+          {
+            "osVersions": [
+              "9.0-13.*"
+            ]
+          }
+        ],
+        "(?i)google": [
+          {
+            "osVersions": [
+              "9.0-13.*"
+            ]
+          }
+        ],
+        "(?i)lge": [
+          {
+            "osVersions": [
+              "10.*"
+            ]
+          }
+        ],
+        "(?i)motorola": [
+          {
+            "osVersions": [
+              "9.0-11.*"
+            ]
+          }
+        ],
+        "(?i)oneplus": [
+          {
+            "osVersions": [
+              "9.0-12.*"
+            ]
+          }
+        ],
+        "(?i)xiaomi": [
+          {
+            "osVersions": [
+              "9.0-12.*"
+            ]
+          }
+        ],
+        "(?i)huawei": [
+          {
+            "osVersions": [
+              "9.0-10.*"
+            ]
+          }
+        ],
+        "(?i)sony": [
+          {
+            "osVersions": [
+              "10.0-11.*"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "appVersion": [
+      "2.2.*",
+      "2.1.*"
+    ],
+    "WHITELIST": {
+      "configs": {
+        "SM-G960[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "SM-G965[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "SM-G973[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G975[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G970[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G980[A-Za-z0-9]+": [
+          "10.0-13.0"
+        ],
+        "SM-G986[A-Za-z0-9]+": [
+          "10.0-13.0"
+        ],
+        "SM-G988[A-Za-z0-9]+": [
+          "10.0-13.0"
+        ],
+        "SM-N960[A-Za-z0-9]+": [
+          "10.0"
+        ],
+        "SM-N970[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-A217[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SM-A202[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SM-A750[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SM-A530[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "SM-A716[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A715[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A505[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-S506[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A507[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A515[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-S515[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SM-A516[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "SC(-)*[A-Za-z0-9]+": [
+          "10.0-11.0"
+        ],
+        "MI 6": [
+          "9.0"
+        ],
+        "MCE16": [
+          "9.0"
+        ],
+        "Pixel 3": [
+          "9.0-12.0"
+        ],
+        "Pixel 3 XL": [
+          "9.0-12.0"
+        ],
+        "Pixel 4": [
+          "10.0-12.0"
+        ],
+        "Pixel 4 XL": [
+          "10.0-14.0"
+        ],
+        "LM-G820[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SC-01L": [
+          "10.0"
+        ],
+        "SC-01M": [
+          "10.0-12.0"
+        ],
+        "SC-02K": [
+          "9.0-10.0"
+        ],
+        "SC-03K": [
+          "9.0-10.0"
+        ],
+        "SC-03L": [
+          "9.0-12.0"
+        ],
+        "SC-04L": [
+          "9.0-12.0"
+        ],
+        "SC-05L": [
+          "9.0-12.0"
+        ],
+        "SC-51A": [
+          "10.0-13.0"
+        ],
+        "SC-52A": [
+          "10.0-13.0"
+        ],
+        "SCG01": [
+          "10.0-13.0"
+        ],
+        "SCG02": [
+          "10.0-13.0"
+        ],
+        "SCG03": [
+          "10.0-13.0"
+        ],
+        "SCV38": [
+          "9.0-10.0"
+        ],
+        "SCV39": [
+          "9.0-10.0"
+        ],
+        "SCV40": [
+          "10.0"
+        ],
+        "SCV41": [
+          "9.0-12.0"
+        ],
+        "SCV42": [
+          "9.0-12.0"
+        ],
+        "SCV45": [
+          "10.0-12.0"
+        ],
+        "SM-G977[A-Za-z0-9]+": [
+          "9.0-12.0"
+        ],
+        "SM-G981[A-Za-z0-9]*": [
+          "10.0-13.0"
+        ],
+        "SM-G985F": [
+          "10.0-13.0"
+        ],
+        "SM-N971[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N975[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N976[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-N980[A-Za-z0-9]+": [
+          "10.0-13.0"
+        ],
+        "SM-N980F\/DS": [
+          "10.0-13.0"
+        ],
+        "SM-N981[A-Za-z0-9]*(\/DS)*": [
+          "10.0-12.0"
+        ],
+        "SM-N985[A-Za-z0-9]+": [
+          "10.0-13.0"
+        ],
+        "SM-N985F\/DS": [
+          "10.0-13.0"
+        ],
+        "SM-N986[A-Za-z0-9]+": [
+          "10.0-13.0"
+        ],
+        "SC-53A": [
+          "10.0-13.0"
+        ],
+        "SCG06": [
+          "10.0-13.0"
+        ],
+        "SM-G780[A-Za-z0-9]*(\/DS)*": [
+          "10.0-13.0"
+        ],
+        "SM-G781[A-Za-z0-9]*(\/DS)*": [
+          "10.0-13.0"
+        ],
+        "LM-V500[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LM-V510N[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LM-V450": [
+          "10.0"
+        ],
+        "SM-G770[A-Za-z0-9]+": [
+          "10.0-12.0"
+        ],
+        "SM-G770F\/DS[M]*": [
+          "10.0-12.0"
+        ],
+        "SM-N770F": [
+          "10.0-11.0"
+        ],
+        "SM-N770F\/DS[M]*": [
+          "10.0-11.0"
+        ],
+        "SM-G990[A-Za-z0-9]+": [
+          "11.0-13.0"
+        ],
+        "SM-G991[A-Za-z0-9]+": [
+          "11.0-13.0"
+        ],
+        "SM-G996[A-Za-z0-9]+": [
+          "11.0-13.0"
+        ],
+        "SM-G998[A-Za-z0-9]*(\/DS)*": [
+          "11.0-13.0"
+        ],
+        "SM-A205[A-Za-z0-9]+": [
+          "10.0"
+        ],
+        "SM-S205DL": [
+          "10.0"
+        ],
+        "SC-02M": [
+          "10.0"
+        ],
+        "SCV46-j": [
+          "10.0"
+        ],
+        "SCV46-u": [
+          "10.0"
+        ],
+        "SCV46": [
+          "10.0"
+        ],
+        "SM-A102[A-Za-z0-9]+": [
+          "10.0"
+        ],
+        "SM-S102DL": [
+          "10.0"
+        ],
+        "SM-A526[A-Za-z0-9]*": [
+          "11.0-12.0"
+        ],
+        "SM-A528[A-Za-z0-9]*": [
+          "11.0-12.0"
+        ],
+        "Pixel 3a": [
+          "9.0-12.0"
+        ],
+        "Pixel 3a XL": [
+          "9.0-12.0"
+        ],
+        "Pixel 4a": [
+          "10.0-12.0"
+        ],
+        "Pixel 4a \\(5G\\)": [
+          "10.0-14.0"
+        ],
+        "Pixel 5": [
+          "11.0-14.0"
+        ],
+        "Pixel 5a": [
+          "11.0-12.0"
+        ],
+        "Pixel 5a \\(5G\\)": [
+          "11.0-14.0"
+        ],
+        "Pixel 6": [
+          "13.0-14.0"
+        ],
+        "Pixel 6a": [
+          "13.0-14.0"
+        ],
+        "Pixel 6 Pro": [
+          "13.0-14.0"
+        ],
+        "G[A-Za-z0-9]*": [
+          "13.0"
+        ],
+        "LM-G710[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LG-G710": [
+          "10.0"
+        ],
+        "LM-V405[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "LM-V409N": [
+          "10.0"
+        ],
+        "LM-V600[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "A001LG": [
+          "10.0"
+        ],
+        "L-51A": [
+          "10.0"
+        ],
+        "moto g\\(6\\)": [
+          "9.0"
+        ],
+        "XT1925[-]*[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "XT1925DL": [
+          "9.0"
+        ],
+        "XT1962[-]*[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "moto g\\(7\\)": [
+          "9.0"
+        ],
+        "XT1955[-]*[A-Za-z0-9]*": [
+          "9.0-10.0"
+        ],
+        "moto g\\(7\\) power": [
+          "9.0-10.0"
+        ],
+        "XT1952[-]*[A-Za-z0-9]*": [
+          "9.0-10.0"
+        ],
+        "moto g\\(7\\) play": [
+          "9.0-10.0"
+        ],
+        "ONEPLUS A601[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "ELE-[A-Za-z0-9]+": [
+          "9.0-10.0"
+        ],
+        "HMA-[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "LYA-[A-Za-z0-9]*": [
+          "9.0"
+        ],
+        "XQ-AT[0-9]+": [
+          "10.0"
+        ],
+        "SO(-51A|G01)+": [
+          "10.0"
+        ],
+        "H82[0-9]+": [
+          "10.0"
+        ],
+        "(702)*SO[-]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "H83[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SO-05K": [
+          "10.0"
+        ],
+        "XQ[-]*AT[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "SO(-51A|G01)*": [
+          "10.0"
+        ],
+        "XQ[-]*AS[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          "10.0"
+        ],
+        "(A002)*SO(-52A|G02)*": [
+          "10.0"
+        ],
+        "J(8|9)1[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "(802)*SO(-03L|V40)*": [
+          "10.0-11.0"
+        ],
+        "J(8|9)2[A-Za-z0-9]*": [
+          "10.0-11.0"
+        ],
+        "(901)*SO(-01M|V41)*": [
+          "10.0-11.0"
+        ],
+        "XT2087-[12]": [
+          "10.0"
+        ],
+        "moto g\\(9\\) plus": [
+          "10.0"
+        ],
+        "KB200[0135]": [
+          "11.0-12.0"
+        ],
+        "IN201[0379]": [
+          "12.0"
+        ],
+        "IN202[0135]": [
+          "12.0"
+        ],
+        "LE211[01357]": [
+          "12.0-13.0"
+        ],
+        "LE212[01357]": [
+          "12.0-13.0"
+        ],
+        "NE221[01357]": [
+          "12.0-13.0"
+        ],
+        "CPH241[357]": [
+          "12.0-13.0"
+        ],
+        "PHB110": [
+          "13.0"
+        ],
+        "CPH24(47|49|51)": [
+          "13"
+        ],
+        "Redmi Note 9 Pro": [
+          "10.0"
+        ],
+        "M2003J6(B2G|A1I)": [
+          "10.0"
+        ],
+        "M2101K7A[GI]": [
+          "11.0"
+        ],
+        "2201123[CG]": [
+          "12.0"
+        ],
+        "2201122[CG]": [
+          "12.0"
+        ],
+        "22081212(G|UG)": [
+          "12.0"
+        ],
+        "21121210[GI]": [
+          "12.0"
+        ],
+        "moto g\\(30\\)": [
+          "11.0"
+        ],
+        "XT2129-[123]": [
+          "11.0"
+        ],
+        "PAML0000IN": [
+          "11.0"
+        ],
+        "SM-S901[A-Za-z0-9]*(\/DS)*": [
+          "12.0-13.0"
+        ],
+        "SM-S906[A-Za-z0-9]*(\/DS)*": [
+          "12.0-13.0"
+        ],
+        "SM-S908[A-Za-z0-9]*(\/DS)*": [
+          "12.0-13.0"
+        ],
+        "M2003J15S[CGS]": [
+          "10.0"
+        ],
+        "CX295(VRD|CIN)": [
+          "10.0"
+        ],
+        "SM-S911[A-Za-z0-9]*(\/DS)*": [
+          "13.0"
+        ],
+        "S916[A-Za-z0-9]*(\/DS)*": [
+          "13.0"
+        ],
+        "SM-S918[A-Za-z0-9]*(\/DS)*": [
+          "13.0"
+        ]
+      }
+    },
+    "BLACKLIST": {
+      "configs": {
+        "SM-A530[A-Za-z0-9]+[\/]*[A-Za-z0-9]*": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SM-G950[A-Za-z0-9]+": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SC-02J": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SCV36": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SM-G955[A-Za-z0-9]+": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SC-03J": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SCV35": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SM-N950[A-Za-z0-9]+": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SC-01K": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SCV37": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "Pixel XL": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HWV33": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1Am": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1B": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1M": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX1Mm": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX2B": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX3A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX3Am": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX3Bm": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-L01A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L01A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L21BX": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-L21A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L21A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-L21MEA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L22A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-L21MEA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX1M": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "MAR-LX2J": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX2J": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "Marie-LX3A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-AL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "POT-TL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "SNE-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "SNE-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "SNE-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "SNE-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "INE-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          },
+          {
+            "osVersion": "11.0"
+          }
+        ],
+        "JDN2-W09": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JDN2-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JDN2-L09": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "GLK-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-LX1U": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "GLK-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1AF": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX2J": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1RUA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1A": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "POT-LX1T": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-L21": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-L22": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-LX3": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "AQM-LX1": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ANE-LX2J": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ANE-LX1": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HWV32": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ART-L28": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ART-L29": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ART-L29N": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JKM-LX1": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-LX2": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-LX3": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-TL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-AL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JKM-AL00b": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "HRY-LX1": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-LX1MEB": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-LX2": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-AL00a": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-LX1T": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "MAR-LX1R": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "HRY-L21T": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "HRY-AL00Ta": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-TL00T": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "HRY-AL00TA": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-L29": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-AL10": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-L19": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "COL-TL10": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L22": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L42": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L11": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JSN-L21": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-L23": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "JSN-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JSN-TL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "JSN-AL00a": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "AKA-L29": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L22B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L02B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L23B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-L03B": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "PPA-LX2": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "ART-TL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ART-AL00": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "ART-AL00x": [
+          {
+            "osVersion": "9.0"
+          }
+        ],
+        "PPA-AL20": [
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "STK-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "AQM-AL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ],
+        "AQM-TL00": [
+          {
+            "osVersion": "9.0"
+          },
+          {
+            "osVersion": "10.0"
+          }
+        ]
+      }
+    },
+    "GRAYLIST": {
+      "configs": {
+        "(?i)samsung": [
+          {
+            "osVersions": [
+              "9.0-13.*"
+            ]
+          }
+        ],
+        "(?i)google": [
+          {
+            "osVersions": [
+              "9.0-14.*"
+            ]
+          }
+        ],
+        "(?i)lge": [
+          {
+            "osVersions": [
+              "10.*"
+            ]
+          }
+        ],
+        "(?i)motorola": [
+          {
+            "osVersions": [
+              "9.0-11.*"
+            ]
+          }
+        ],
+        "(?i)oneplus": [
+          {
+            "osVersions": [
+              "9.0-13.*"
+            ]
+          }
+        ],
+        "(?i)xiaomi": [
+          {
+            "osVersions": [
+              "9.0-12.*"
+            ]
+          }
+        ],
+        "(?i)huawei": [
+          {
+            "osVersions": [
+              "9.0-10.*"
+            ]
+          }
+        ],
+        "(?i)sony": [
+          {
+            "osVersions": [
+              "10.0-11.*"
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
+2023-12-09 17:25:09,710 D [RxCachedThreadScheduler-8] MobileApprovedConfigurationsManagerImpl Retrieved approved mobile configurations: MobileApprovedConfigurations(appVersionConfigurations=[AppVersionConfigurations(appVersionList=[2.0.*, 1.4.*, 1.3.*, 1.2.*, 1.1.*, 1.0.*, 0.9.*], approvedConfigList=ApprovedConfigList(deviceModelToOsVersionsMap={SM-G950[A-Za-z0-9]+=[9.0], SM-G955[A-Za-z0-9]*=[9.0], SM-G960[A-Za-z0-9]+=[9.0-10.0], SM-G965[A-Za-z0-9]+=[9.0-10.0], SM-G973[A-Za-z0-9]+=[9.0-12.0], SM-G975[A-Za-z0-9]+=[9.0-12.0], SM-G970[A-Za-z0-9]+=[9.0-12.0], SM-G980[A-Za-z0-9]+=[10.0-12.0], SM-G986[A-Za-z0-9]+=[10.0-12.0], SM-G988[A-Za-z0-9]+=[10.0-12.0], SM-N950[A-Za-z0-9]+=[9.0], SM-N960[A-Za-z0-9]+=[10.0], SM-N970[A-Za-z0-9]+=[10.0-12.0], SM-A217[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SM-A202[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SM-A750[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SM-A530[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[9.0], SM-A716[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A715[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A505[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-S506[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A507[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A515[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-S515[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A516[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SC(-)*[A-Za-z0-9]+=[10.0-11.0], MI 6=[9.0], MCE16=[9.0], Pixel 3=[9.0-12.0], Pixel 3 XL=[9.0-12.0], Pixel 4=[10.0-12.0], Pixel 4 XL=[10.0-12.0], LM-G820[A-Za-z0-9]*=[10.0], SC-01K=[9.0], SC-01L=[10.0], SC-01M=[10.0-12.0], SC-02J=[9.0], SC-02K=[9.0-10.0], SC-03J=[9.0], SC-03K=[9.0-10.0], SC-03L=[9.0-12.0], SC-04L=[9.0-12.0], SC-05L=[9.0-12.0], SC-51A=[10.0-12.0], SC-52A=[10.0-12.0], SCG01=[10.0-12.0], SCG02=[10.0-12.0], SCG03=[10.0-12.0], SCV35=[9.0], SCV36=[9.0], SCV37=[9.0], SCV38=[9.0-10.0], SCV39=[9.0-10.0], SCV40=[10.0], SCV41=[9.0-12.0], SCV42=[9.0-12.0], SCV45=[10.0-12.0], SM-G977[A-Za-z0-9]+=[9.0-12.0], SM-G981[A-Za-z0-9]*=[10.0-12.0], SM-G985F=[10.0-12.0], SM-N971[A-Za-z0-9]+=[10.0-12.0], SM-N975[A-Za-z0-9]+=[10.0-12.0], SM-N976[A-Za-z0-9]+=[10.0-12.0], SM-N980[A-Za-z0-9]+=[10.0-12.0], SM-N980F/DS=[10.0-12.0], SM-N981[A-Za-z0-9]*(/DS)*=[10.0-12.0], SM-N985[A-Za-z0-9]+=[10.0-12.0], SM-N985F/DS=[10.0-12.0], SM-N986[A-Za-z0-9]+=[10.0-12.0], SC-53A=[10.0-12.0], SCG06=[10.0-12.0], SM-G780[A-Za-z0-9]*(/DS)*=[10.0-12.0], SM-G781[A-Za-z0-9]*(/DS)*=[10.0-12.0], LM-V500[A-Za-z0-9]*=[10.0], LM-V510N[A-Za-z0-9]*=[10.0], LM-V450=[10.0], SM-G770[A-Za-z0-9]+=[10.0-12.0], SM-G770F/DS[M]*=[10.0-12.0], SM-N770F=[10.0-11.0], SM-N770F/DS[M]*=[10.0-11.0], SM-G990[A-Za-z0-9]+=[11.0-12.0], SM-G991[A-Za-z0-9]+=[11.0-12.0], SM-G996[A-Za-z0-9]+=[11.0-12.0], SM-G998[A-Za-z0-9]*(/DS)*=[11.0-12.0], SM-A205[A-Za-z0-9]+=[10.0], SM-S205DL=[10.0], SC-02M=[10.0], SCV46-j=[10.0], SCV46-u=[10.0], SCV46=[10.0], SM-A102[A-Za-z0-9]+=[10.0], SM-S102DL=[10.0], SM-A526[A-Za-z0-9]*=[11.0-12.0], SM-A528[A-Za-z0-9]*=[11.0-12.0], Pixel 3a=[9.0-12.0], Pixel 3a XL=[9.0-12.0], Pixel 4a=[10.0-12.0], Pixel 4a \(5G\)=[10.0-12.0], Pixel 5=[11.0-13.0], Pixel 5a=[11.0-12.0], Pixel 5a \(5G\)=[11.0-12.0], LM-G710[A-Za-z0-9]*=[10.0], LG-G710=[10.0], LM-V405[A-Za-z0-9]*=[10.0], LM-V409N=[10.0], LM-V600[A-Za-z0-9]*=[10.0], A001LG=[10.0], L-51A=[10.0], moto g\(6\)=[9.0], XT1925[-]*[A-Za-z0-9]*=[9.0], XT1925DL=[9.0], XT1962[-]*[A-Za-z0-9]*=[9.0], moto g\(7\)=[9.0], XT1955[-]*[A-Za-z0-9]*=[9.0-10.0], moto g\(7\) power=[9.0-10.0], XT1952[-]*[A-Za-z0-9]*=[9.0-10.0], moto g\(7\) play=[9.0-10.0], ONEPLUS A601[A-Za-z0-9]+=[9.0-10.0], ELE-[A-Za-z0-9]+=[9.0-10.0], HMA-[A-Za-z0-9]*=[9.0], LYA-[A-Za-z0-9]*=[9.0], XQ-AT[0-9]+=[10.0], SO(-51A|G01)+=[10.0], H82[0-9]+=[10.0], (702)*SO[-]*[A-Za-z0-9]*=[10.0], H83[A-Za-z0-9]*=[10.0], SO-05K=[10.0], XQ[-]*AT[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SO(-51A|G01)*=[10.0], XQ[-]*AS[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], (A002)*SO(-52A|G02)*=[10.0], J(8|9)1[A-Za-z0-9]*=[10.0-11.0], (802)*SO(-03L|V40)*=[10.0-11.0], J(8|9)2[A-Za-z0-9]*=[10.0-11.0], (901)*SO(-01M|V41)*=[10.0-11.0], XT2087-[12]=[10.0], moto g\(9\) plus=[10.0], KB200[0135]=[11.0-12.0], IN201[0379]=[12.0], IN202[0135]=[12.0], LE211[01357]=[12.0], LE212[01357]=[12.0], NE221[01357]=[12.0], CPH2415=[12.0], Redmi Note 9 Pro=[10.0], M2003J6(B2G|A1I)=[10.0], M2101K7A[GI]=[11.0], 2201123[CG]=[12.0], 2201122[CG]=[12.0], 22081212(G|UG)=[12.0], 21121210[GI]=[12.0], moto g\(30\)=[11.0], XT2129-[123]=[11.0], PAML0000IN=[11.0], SM-S901[A-Za-z0-9]*(/DS)*=[12.0-13.0], SM-S906[A-Za-z0-9]*(/DS)*=[12.0-13.0], SM-S908[A-Za-z0-9]*(/DS)*=[12.0-13.0], M2003J15S[CGS]=[10.0], CX295(VRD|CIN)=[10.0]}), disapprovedConfigList=DisapprovedConfigList(deviceModelToDisapprovedConfigurationsMap={HWV33=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1Am=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1B=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1M=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1Mm=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX2B=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX3A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX3Am=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX3Bm=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-L01A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L01A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L21BX=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-L21A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L21A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-L21MEA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L22A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L21MEA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX1M=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX3A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], POT-TL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SNE-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], SNE-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], SNE-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], SNE-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], INE-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], JDN2-W09=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JDN2-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JDN2-L09=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], GLK-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-LX1U=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1AF=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1RUA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-L21=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-L22=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], AQM-LX1=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ANE-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ANE-LX1=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HWV32=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ART-L28=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ART-L29=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ART-L29N=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JKM-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-AL00b=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], HRY-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-LX1MEB=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-LX1T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], MAR-LX1R=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], HRY-L21T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], HRY-AL00Ta=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-TL00T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-AL00TA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-L29=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-AL10=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-L19=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-TL10=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L22=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L42=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L11=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JSN-L21=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L23=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JSN-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JSN-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], AKA-L29=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L22B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L02B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L23B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L03B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-LX2=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ART-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ART-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ART-AL00x=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], PPA-AL20=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], AQM-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], AQM-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)]}), allowedConfigList=AllowedConfigList(deviceManufacturerToAllowedConfigurationsMap={(?i)samsung=[AllowedConfiguration(osVersions=[9.0-13.*])], (?i)google=[AllowedConfiguration(osVersions=[9.0-13.*])], (?i)lge=[AllowedConfiguration(osVersions=[10.*])], (?i)motorola=[AllowedConfiguration(osVersions=[9.0-11.*])], (?i)oneplus=[AllowedConfiguration(osVersions=[9.0-12.*])], (?i)xiaomi=[AllowedConfiguration(osVersions=[9.0-12.*])], (?i)huawei=[AllowedConfiguration(osVersions=[9.0-10.*])], (?i)sony=[AllowedConfiguration(osVersions=[10.0-11.*])]})), AppVersionConfigurations(appVersionList=[2.2.*, 2.1.*], approvedConfigList=ApprovedConfigList(deviceModelToOsVersionsMap={SM-G960[A-Za-z0-9]+=[9.0-10.0], SM-G965[A-Za-z0-9]+=[9.0-10.0], SM-G973[A-Za-z0-9]+=[9.0-12.0], SM-G975[A-Za-z0-9]+=[9.0-12.0], SM-G970[A-Za-z0-9]+=[9.0-12.0], SM-G980[A-Za-z0-9]+=[10.0-13.0], SM-G986[A-Za-z0-9]+=[10.0-13.0], SM-G988[A-Za-z0-9]+=[10.0-13.0], SM-N960[A-Za-z0-9]+=[10.0], SM-N970[A-Za-z0-9]+=[10.0-12.0], SM-A217[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SM-A202[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SM-A750[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SM-A530[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[9.0], SM-A716[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A715[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A505[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-S506[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A507[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A515[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-S515[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SM-A516[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0-11.0], SC(-)*[A-Za-z0-9]+=[10.0-11.0], MI 6=[9.0], MCE16=[9.0], Pixel 3=[9.0-12.0], Pixel 3 XL=[9.0-12.0], Pixel 4=[10.0-12.0], Pixel 4 XL=[10.0-14.0], LM-G820[A-Za-z0-9]*=[10.0], SC-01L=[10.0], SC-01M=[10.0-12.0], SC-02K=[9.0-10.0], SC-03K=[9.0-10.0], SC-03L=[9.0-12.0], SC-04L=[9.0-12.0], SC-05L=[9.0-12.0], SC-51A=[10.0-13.0], SC-52A=[10.0-13.0], SCG01=[10.0-13.0], SCG02=[10.0-13.0], SCG03=[10.0-13.0], SCV38=[9.0-10.0], SCV39=[9.0-10.0], SCV40=[10.0], SCV41=[9.0-12.0], SCV42=[9.0-12.0], SCV45=[10.0-12.0], SM-G977[A-Za-z0-9]+=[9.0-12.0], SM-G981[A-Za-z0-9]*=[10.0-13.0], SM-G985F=[10.0-13.0], SM-N971[A-Za-z0-9]+=[10.0-12.0], SM-N975[A-Za-z0-9]+=[10.0-12.0], SM-N976[A-Za-z0-9]+=[10.0-12.0], SM-N980[A-Za-z0-9]+=[10.0-13.0], SM-N980F/DS=[10.0-13.0], SM-N981[A-Za-z0-9]*(/DS)*=[10.0-12.0], SM-N985[A-Za-z0-9]+=[10.0-13.0], SM-N985F/DS=[10.0-13.0], SM-N986[A-Za-z0-9]+=[10.0-13.0], SC-53A=[10.0-13.0], SCG06=[10.0-13.0], SM-G780[A-Za-z0-9]*(/DS)*=[10.0-13.0], SM-G781[A-Za-z0-9]*(/DS)*=[10.0-13.0], LM-V500[A-Za-z0-9]*=[10.0], LM-V510N[A-Za-z0-9]*=[10.0], LM-V450=[10.0], SM-G770[A-Za-z0-9]+=[10.0-12.0], SM-G770F/DS[M]*=[10.0-12.0], SM-N770F=[10.0-11.0], SM-N770F/DS[M]*=[10.0-11.0], SM-G990[A-Za-z0-9]+=[11.0-13.0], SM-G991[A-Za-z0-9]+=[11.0-13.0], SM-G996[A-Za-z0-9]+=[11.0-13.0], SM-G998[A-Za-z0-9]*(/DS)*=[11.0-13.0], SM-A205[A-Za-z0-9]+=[10.0], SM-S205DL=[10.0], SC-02M=[10.0], SCV46-j=[10.0], SCV46-u=[10.0], SCV46=[10.0], SM-A102[A-Za-z0-9]+=[10.0], SM-S102DL=[10.0], SM-A526[A-Za-z0-9]*=[11.0-12.0], SM-A528[A-Za-z0-9]*=[11.0-12.0], Pixel 3a=[9.0-12.0], Pixel 3a XL=[9.0-12.0], Pixel 4a=[10.0-12.0], Pixel 4a \(5G\)=[10.0-14.0], Pixel 5=[11.0-14.0], Pixel 5a=[11.0-12.0], Pixel 5a \(5G\)=[11.0-14.0], Pixel 6=[13.0-14.0], Pixel 6a=[13.0-14.0], Pixel 6 Pro=[13.0-14.0], G[A-Za-z0-9]*=[13.0], LM-G710[A-Za-z0-9]*=[10.0], LG-G710=[10.0], LM-V405[A-Za-z0-9]*=[10.0], LM-V409N=[10.0], LM-V600[A-Za-z0-9]*=[10.0], A001LG=[10.0], L-51A=[10.0], moto g\(6\)=[9.0], XT1925[-]*[A-Za-z0-9]*=[9.0], XT1925DL=[9.0], XT1962[-]*[A-Za-z0-9]*=[9.0], moto g\(7\)=[9.0], XT1955[-]*[A-Za-z0-9]*=[9.0-10.0], moto g\(7\) power=[9.0-10.0], XT1952[-]*[A-Za-z0-9]*=[9.0-10.0], moto g\(7\) play=[9.0-10.0], ONEPLUS A601[A-Za-z0-9]+=[9.0-10.0], ELE-[A-Za-z0-9]+=[9.0-10.0], HMA-[A-Za-z0-9]*=[9.0], LYA-[A-Za-z0-9]*=[9.0], XQ-AT[0-9]+=[10.0], SO(-51A|G01)+=[10.0], H82[0-9]+=[10.0], (702)*SO[-]*[A-Za-z0-9]*=[10.0], H83[A-Za-z0-9]*=[10.0], SO-05K=[10.0], XQ[-]*AT[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], SO(-51A|G01)*=[10.0], XQ[-]*AS[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[10.0], (A002)*SO(-52A|G02)*=[10.0], J(8|9)1[A-Za-z0-9]*=[10.0-11.0], (802)*SO(-03L|V40)*=[10.0-11.0], J(8|9)2[A-Za-z0-9]*=[10.0-11.0], (901)*SO(-01M|V41)*=[10.0-11.0], XT2087-[12]=[10.0], moto g\(9\) plus=[10.0], KB200[0135]=[11.0-12.0], IN201[0379]=[12.0], IN202[0135]=[12.0], LE211[01357]=[12.0-13.0], LE212[01357]=[12.0-13.0], NE221[01357]=[12.0-13.0], CPH241[357]=[12.0-13.0], PHB110=[13.0], CPH24(47|49|51)=[13], Redmi Note 9 Pro=[10.0], M2003J6(B2G|A1I)=[10.0], M2101K7A[GI]=[11.0], 2201123[CG]=[12.0], 2201122[CG]=[12.0], 22081212(G|UG)=[12.0], 21121210[GI]=[12.0], moto g\(30\)=[11.0], XT2129-[123]=[11.0], PAML0000IN=[11.0], SM-S901[A-Za-z0-9]*(/DS)*=[12.0-13.0], SM-S906[A-Za-z0-9]*(/DS)*=[12.0-13.0], SM-S908[A-Za-z0-9]*(/DS)*=[12.0-13.0], M2003J15S[CGS]=[10.0], CX295(VRD|CIN)=[10.0], SM-S911[A-Za-z0-9]*(/DS)*=[13.0], S916[A-Za-z0-9]*(/DS)*=[13.0], SM-S918[A-Za-z0-9]*(/DS)*=[13.0]}), disapprovedConfigList=DisapprovedConfigList(deviceModelToDisapprovedConfigurationsMap={SM-A530[A-Za-z0-9]+[/]*[A-Za-z0-9]*=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SM-G950[A-Za-z0-9]+=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SC-02J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SCV36=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SM-G955[A-Za-z0-9]+=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SC-03J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SCV35=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SM-N950[A-Za-z0-9]+=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SC-01K=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SCV37=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], Pixel XL=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HWV33=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1Am=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1B=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1M=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX1Mm=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX2B=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX3A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX3Am=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX3Bm=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-L01A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L01A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L21BX=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-L21A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L21A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-L21MEA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L22A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-L21MEA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX1M=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], MAR-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], Marie-LX3A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], POT-TL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], SNE-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], SNE-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], SNE-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], SNE-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], INE-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=11.0, buildId=null, description=null)], JDN2-W09=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JDN2-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JDN2-L09=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], GLK-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-LX1U=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], GLK-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1AF=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1RUA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1A=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], POT-LX1T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-L21=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-L22=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], AQM-LX1=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ANE-LX2J=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ANE-LX1=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HWV32=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ART-L28=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ART-L29=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ART-L29N=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JKM-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-LX3=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JKM-AL00b=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], HRY-LX1=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-LX1MEB=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-LX2=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-LX1T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], MAR-LX1R=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], HRY-L21T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], HRY-AL00Ta=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-TL00T=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], HRY-AL00TA=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-L29=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-AL10=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-L19=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], COL-TL10=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L22=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L42=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L11=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JSN-L21=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-L23=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], JSN-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JSN-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], JSN-AL00a=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], AKA-L29=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L22B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L02B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L23B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-L03B=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], PPA-LX2=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], ART-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ART-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], ART-AL00x=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null)], PPA-AL20=[DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], STK-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], AQM-AL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)], AQM-TL00=[DisapprovedConfiguration(osVersion=9.0, buildId=null, description=null), DisapprovedConfiguration(osVersion=10.0, buildId=null, description=null)]}), allowedConfigList=AllowedConfigList(deviceManufacturerToAllowedConfigurationsMap={(?i)samsung=[AllowedConfiguration(osVersions=[9.0-13.*])], (?i)google=[AllowedConfiguration(osVersions=[9.0-14.*])], (?i)lge=[AllowedConfiguration(osVersions=[10.*])], (?i)motorola=[AllowedConfiguration(osVersions=[9.0-11.*])], (?i)oneplus=[AllowedConfiguration(osVersions=[9.0-13.*])], (?i)xiaomi=[AllowedConfiguration(osVersions=[9.0-12.*])], (?i)huawei=[AllowedConfiguration(osVersions=[9.0-10.*])], (?i)sony=[AllowedConfiguration(osVersions=[10.0-11.*])]}))], dateLoaded=Sat Dec 09 17:25:09 GMT+01:00 2023).
+2023-12-09 17:25:09,866 D [RxCachedThreadScheduler-8] MobileApprovedConfigurationsManagerImpl Approved mobile configurations are stored.
+2023-12-09 17:25:09,867 D [RxCachedThreadScheduler-8] MobileApprovedConfigurationsManagerImpl Mobile compatibility status: SUPPORTED.
+2023-12-09 17:25:09,867 D [RxCachedThreadScheduler-8] DeviceConfigurationMonitorImpl Device configuration status: SUPPORTED.
+2023-12-09 17:25:09,867 D [RxCachedThreadScheduler-8] ForbiddenDeviceConfigStatusPreventer Handling configuration status: SUPPORTED.
+2023-12-09 17:25:09,868 D [RxCachedThreadScheduler-8] SplashScreenPresenter Start user instruction downloading.
+2023-12-09 17:25:09,896 D [main] UserInstructionDownloadingService Service started.
+2023-12-09 17:25:09,898 D [main] UserInstructionDownloadingService User is not authenticated, instruction downloading canceled.
+2023-12-09 17:25:09,909 D [RxCachedThreadScheduler-8] ForbiddenDeviceConfigStatusPreventer Communication is not resumed. Communication allowed: true. Pair pump startup wizard step completed: false.
+2023-12-09 17:25:09,913 D [RxCachedThreadScheduler-8] ConsentStatusMonitor Schedule consents check in 3599 seconds at 2023-12-09T18:25:09.909+01:00.
+2023-12-09 17:25:09,913 D [RxCachedThreadScheduler-8] SystemTimerManager cancel(timerId=SCHEDULED_CONSENTS_CHECK_TIMER_ID), nowMillis=1829644
+2023-12-09 17:25:09,914 D [RxCachedThreadScheduler-8] AlarmManagerProxyImpl cancel operation: PendingIntent{28e1b43: android.os.BinderProxy@ba235c0}
+2023-12-09 17:25:09,915 D [RxCachedThreadScheduler-8] SystemTimerManager schedule(delayMillis=3599996, timerId=SCHEDULED_CONSENTS_CHECK_TIMER_ID), triggerAtMillis=5429642, nowMillis=1829646.
+2023-12-09 17:25:09,915 D [RxCachedThreadScheduler-8] AlarmManagerProxyImpl setExactAndAllowWhileIdle operation: PendingIntent{2f192f9: android.os.BinderProxy@ba235c0}, triggerAt: 5429642
+2023-12-09 17:25:09,917 D [RxCachedThreadScheduler-8] ConsentStatusMonitor User is authenticated: false.
+2023-12-09 17:25:09,917 D [RxCachedThreadScheduler-8] SystemTimerManager Start observing timer (timerId=SCHEDULED_CONSENTS_CHECK_TIMER_ID)
+2023-12-09 17:25:09,955 D [main] UserInstructionDownloadingService Service destroyed.
+2023-12-09 17:25:09,957 D [main] AnalyticsCollectorProxy Track screen transition exit: SPLASH
+2023-12-09 17:25:09,958 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"1.0-SplashScreen","state":"SCREEN_EXIT","title":"Splash","uiddRef":"3414718"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:09.958+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:10,115 D [main] AnalyticsCollectorProxy Track screen transition enter: WELCOME
+2023-12-09 17:25:10,115 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"1.1-WelcomeScreen","state":"SCREEN_ENTER","title":"Welcome","uiddRef":"3434786"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:10.115+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:12,122 D [main] AnalyticsCollectorProxy Track screen transition exit: WELCOME
+2023-12-09 17:25:12,128 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"1.1-WelcomeScreen","state":"SCREEN_EXIT","title":"Welcome","uiddRef":"3434786"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:12.122+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:12,372 D [main] AnalyticsCollectorProxy Track screen transition enter: CONNECT_INFO
+2023-12-09 17:25:12,375 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"17.0-MiniMedMobileInformationScreen","state":"SCREEN_ENTER","title":"MiniMed Mobile Information","uiddRef":"3401281"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:12.374+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:14,118 D [main] AnalyticsCollectorProxy Track screen transition exit: CONNECT_INFO
+2023-12-09 17:25:14,119 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"17.0-MiniMedMobileInformationScreen","state":"SCREEN_EXIT","title":"MiniMed Mobile Information","uiddRef":"3401281"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:14.118+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:14,250 D [main] AnalyticsCollectorProxy Track screen transition enter: CARELINK_INFO
+2023-12-09 17:25:14,251 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"17.1-CareLinkUploadsInformationScreen","state":"SCREEN_ENTER","title":"CareLink Uploads Information","uiddRef":"3401289"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:14.250+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:16,069 D [main] AnalyticsCollectorProxy Track screen transition exit: CARELINK_INFO
+2023-12-09 17:25:16,071 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"17.1-CareLinkUploadsInformationScreen","state":"SCREEN_EXIT","title":"CareLink Uploads Information","uiddRef":"3401289"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:16.070+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:16,233 D [main] AnalyticsCollectorProxy Track screen transition enter: CARE_PARTNER_INFO
+2023-12-09 17:25:16,234 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"17.2-CarePartnerSharingInformationScreen","state":"SCREEN_ENTER","title":"Partner Sharing Information","uiddRef":"3401291"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:16.234+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:17,137 D [main] AnalyticsCollectorProxy Track screen transition exit: CARE_PARTNER_INFO
+2023-12-09 17:25:17,138 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"17.2-CarePartnerSharingInformationScreen","state":"SCREEN_EXIT","title":"Partner Sharing Information","uiddRef":"3401291"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:17.137+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:17,226 I [RxCachedThreadScheduler-16] DiagnosticLogsPresenter Is user authenticated: false
+2023-12-09 17:25:17,228 I [RxCachedThreadScheduler-17] DiagnosticLogsPresenter Is user authenticated: false
+2023-12-09 17:25:17,304 I [main] DiagnosticLogsPresenter Received new log exporting status: com.medtronic.applogs.ExportingStatus$Idle@39891b0
+2023-12-09 17:25:17,305 I [main] DiagnosticLogsPresenter Received new log uploading status: com.medtronic.applogs.UploadingStatus$Idle@279d829
+2023-12-09 17:25:17,306 D [main] AnalyticsCollectorProxy Track screen transition enter: DIAGNOSTIC_LOGS
+2023-12-09 17:25:17,306 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"30.0-DiagnosticLogsScreen","state":"SCREEN_ENTER","title":"Diagnostic Logs","uiddRef":"3733622"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:17.306+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:19,130 D [main] AnalyticsCollectorProxy Track screen transition enter: EXPORT_LOGS_CONFIRMATION
+2023-12-09 17:25:19,130 D [main] CarelinkAnalyticsCollector Analytics event {"data":{"screenId":"30.7-ExportLogsConfirmationPopup","state":"SCREEN_ENTER","title":"Export Logs Confirmation","uiddRef":"3733626"},"cat":"analytics","cid":"","grp":"APP","ts":"2023-12-09T17:25:19.130+01:00","type":"ScreenTransitionEvent"}
+2023-12-09 17:25:20,034 D [main] DiagnosticLogsService Diagnostic Logs service created.
+2023-12-09 17:25:20,035 D [main] DiagnosticLogsService Received action to export diagnostic logs.
+2023-12-09 17:25:20,039 D [main] NotificationChannelCategory Created notification channel NotificationChannel{mId='DIAGNOSTIC_LOGS_CHANNEL_ID_ac804cee-24b5-41a9-be33-9b8160e2798a', mName=Diagnostic Logs, mDescription=, mImportance=3, mBypassDnd=false, mLockscreenVisibility=-1000, mSound=null, mLights=false, mLightColor=0, mVibration=null, mUserLockedFields=0, mFgServiceShown=false, mVibrationEnabled=false, mShowBadge=true, mDeleted=false, mGroup='null', mAudioAttributes=null, mBlockableSystem=false, mAllowBubbles=true, mImportanceLockedByOEM=false, mImportanceLockedDefaultApp=false}
+2023-12-09 17:25:20,165 E [main] MobileSecurityUtil Rooted phone detected

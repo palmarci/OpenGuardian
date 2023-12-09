@@ -212,7 +212,7 @@
       "caret": 6946,
       "view": {
         "x": 0,
-        "y": 1892
+        "y": 1880
       }
     },
     {
@@ -272,7 +272,7 @@
       "caret": 251,
       "view": {
         "x": 0,
-        "y": 408
+        "y": 162
       }
     },
     {
@@ -312,14 +312,26 @@
       "caret": 34628,
       "view": {
         "x": 0,
-        "y": 14134
+        "y": 12866
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "b6.a",
+      "subPath": "java",
+      "caret": 7008,
+      "view": {
+        "x": 0,
+        "y": 1832
       }
     }
   ],
-  "activeTab": 16,
+  "activeTab": 17,
   "cacheDir": "MiniMed_Mobile_220_original.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "Applying US logger ",
+    "MII",
     "security",
     ".ROOTED",
     "root",

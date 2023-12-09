@@ -30,6 +30,13 @@
     sget-object v0, Ly4/d$a;->SUPPORTED:Ly4/d$a;
     return-object v0
 	```
+### log encryption keys
+
+- Medtronic does not use the adb logcat logs but instead stores the information in an encrypted database which they upload periodically to their servers
+- This encryption key is hardcoded and can be found very easily, search for the text `Applying US logger encryption key`, it should be inside the classes `AppLoggerConfigurator` and `CarelinkAnalyticsConfigurator`
+- You can generate an RSA 2048 keypair and patch every public key to your own
+- You can manually force the app to export the diagnostic logs which will be at `/sdcard/Android/data/com.medtronic.diabetes.minimedmobile.eu/files/diagnostic logs`
+- I also implemented a script which can encrypt & decrypt the logs using Medtronic's format, check the `logdecrypt` folder
 
 ### rebuild the apk
 - execute `../rebuild_reinstall.sh` in the apktool decode output folder
