@@ -1,6 +1,6 @@
 # OpenGuardian4
 
-Reverse engineering the BT communication for the Medtronic Guardian 4 glucose monitoring system. This work is based on the Guardian 1.3.4 application.
+Reverse engineering the BT communication for the Medtronic Guardian 4 glucose monitoring system. This work is based on the Guardian 1.3.4 application, but there is a big overlap with the Medtronic insulin pumps. 
 
 ## sub-projects
 - Sakeproxy: android app to interface with the native sake crpyto library
@@ -10,11 +10,11 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 	- python script to decode the dumps into a human readable format
 - OpenGuardian4: the java parser to decode the decrypted messages
 - Sake_RE: the ghidra project to fully reverse engineer the armv7 sake library
-- MinimedPatch: guide & patched apk for the Minimed Mobile version 2.2.0 to remove whitelist, root and developer option checks at startup
+- MinimedPatch: guide & patched apk for the Minimed Mobile version 2.2.0 to remove whitelist, root and developer option checks at startup + debug log decryption
 - CarelinkApi: script which can communicate with the CareLink mobile API
 
 ## jadx usage
-1. get the apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download
+1. get the Guardian apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download
 	(md5sum of the original file: 865d1872c197c073830c02416d63f294.
 2. place it in the project's root folder under the name "Guardian_134.apk"
 3. get jadx from here: https://github.com/skylot/jadx/releases
@@ -35,7 +35,7 @@ or from sketch:
 5. those are the conveters and the target classes that we are interested in
 
 
-## libsake ghidra
+## Sake_RE
 - TODO
 - https://github.com/Ayrx/JNIAnalyzer
 
