@@ -120,17 +120,17 @@ if (isGuardian) {
         */
 
         sake_class.b.overload('[B').implementation = function (arg0) {
-            var to_return = this.d.overload('[B',).call(this, arg0);
+            var to_return = this.b.overload('[B',).call(this, arg0);
             log("sake", "handshake", [arg0, to_return]);
             return to_return;
         };
         sake_class.decrypt.overload('[B').implementation = function (arg0) {
-            var to_return = this.b.overload('[B',).call(this, arg0);
+            var to_return = this.decrypt.overload('[B',).call(this, arg0);
             log("sake", "decrypt", [arg0, to_return]);
             return to_return;
         };
         sake_class.encrypt.overload('[B').implementation = function (arg0) {
-            var to_return = this.a.overload('[B',).call(this, arg0);
+            var to_return = this.encrypt.overload('[B',).call(this, arg0);
             log("sake", "encrypt", [arg0, to_return]);
             return to_return;
         };
