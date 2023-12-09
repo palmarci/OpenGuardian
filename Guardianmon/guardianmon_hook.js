@@ -41,6 +41,7 @@ function log(maintype, subtype, parameters = []) {
 }
 var isGuardian = true;
 
+
 if (isGuardian) {
 
     var sake_class_name = "e.g.f.a.d.a.w";
@@ -50,7 +51,7 @@ if (isGuardian) {
         let sake_class = Java.use(sake_class_name);
         var bt_class = Java.use(bt_class_name);
 
-        console.log("\n")
+        console.log("\nStarting in Guardian mode")
 
         /*
         sake_class.$init.overload('[B').implementation = function (arg0) {
@@ -109,7 +110,7 @@ if (isGuardian) {
         let sake_class = Java.use(sake_class_name);
         var bt_class = Java.use(bt_class_name);
 
-        console.log("\n")
+        console.log("\nStarting in Minimed mode")
 
         /*
         sake_class.$init.overload('[B').implementation = function (arg0) {
