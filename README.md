@@ -15,11 +15,11 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 
 ## jadx usage
 1. get the Guardian apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download
-	(md5sum of the original file: 865d1872c197c073830c02416d63f294.
+	(md5sum of the original file: 865d1872c197c073830c02416d63f294)
 2. place it in the project's root folder under the name "Guardian_134.apk"
 3. get jadx from here: https://github.com/skylot/jadx/releases
 4. open the project
-5. profit (you will mostly need just two buttons: X for references and N for rename.
+5. start reversing: you will mostly need just two buttons: X for references, N for rename, and also the search menu
 
 #### finding the converter map
 
@@ -44,7 +44,7 @@ or from sketch:
 Usage: 
 
 0. get a rooted android phone
-1. download frida server (https://frida.re/docs/android/.
+1. download frida server (https://frida.re/docs/android)
 3. connect to adb via usb 
 4. start your frida server as root
 5. frida -U -f com.medtronic.diabetes.guardian -l guardianmon.js

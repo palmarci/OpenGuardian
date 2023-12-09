@@ -319,17 +319,54 @@
       "type": "class",
       "tabPath": "b6.a",
       "subPath": "java",
-      "caret": 7008,
+      "caret": 5586,
       "view": {
         "x": 0,
         "y": 1832
       }
+    },
+    {
+      "type": "class",
+      "tabPath": "l4.c",
+      "subPath": "java",
+      "caret": 5240,
+      "view": {
+        "x": 0,
+        "y": 1606
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "k4.a",
+      "subPath": "java",
+      "caret": 1082,
+      "view": {
+        "x": 0,
+        "y": 206
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.storage.sharedstorage.MASAuthenticatorService",
+      "subPath": "java",
+      "caret": 428,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
     }
   ],
-  "activeTab": 17,
+  "activeTab": 20,
   "cacheDir": "MiniMed_Mobile_220_original.apk.cache",
   "enableLiveReload": false,
   "searchHistory": [
+    "Sake handshake failed with error",
+    "cannot retrieve the sake",
+    "Cannot ret",
+    "onCharacteristicRead",
+    "sake",
+    "ahhgnkhesr",
+    "CarelinkAnalyticsCollector",
     "Applying US logger ",
     "MII",
     "security",
