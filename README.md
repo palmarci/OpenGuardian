@@ -11,6 +11,7 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 - OpenGuardian4: the java parser to decode the decrypted messages
 - Sake_RE: the ghidra project to fully reverse engineer the armv7 sake library
 - MinimedPatch: guide & patched apk for the Minimed Mobile version 2.2.0 to remove whitelist, root and developer option checks at startup
+- CarelinkApi: script which can communicate with the CareLink mobile API
 
 ## jadx usage
 1. get the apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download

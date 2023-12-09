@@ -6,7 +6,7 @@
 - uber-apk-signer
 - adb access
 - rooted android phone
-- frida server on phone & frida client on pc
+- (frida server on phone & frida client on pc)
 - unmodified v2.2.0 apk, sha256 checksum: `437556f9e562073293ace335468cc35a1a9c0e1cae79be58de5a3bf716511e2d`
 
 ## patching
