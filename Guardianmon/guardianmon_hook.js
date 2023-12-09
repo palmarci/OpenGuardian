@@ -52,11 +52,13 @@ if (isGuardian) {
 
         console.log("\n")
 
+        /*
         sake_class.$init.overload('[B').implementation = function (arg0) {
             var to_return = this.init.overload('[B',).call(this, arg0);
             log("sake", "constructor");
             return to_return;
         };
+        */
         sake_class.h.overload('[B').implementation = function (arg0) {
             var to_return = this.h.overload('[B',).call(this, arg0);
             log("sake", "open_key_db", [arg0, to_return]);
@@ -109,11 +111,13 @@ if (isGuardian) {
 
         console.log("\n")
 
+        /*
         sake_class.$init.overload('[B').implementation = function (arg0) {
             var to_return = this.init.overload('[B',).call(this, arg0);
             log("sake", "constructor");
             return to_return;
         };
+        */
 
         sake_class.b.overload('[B').implementation = function (arg0) {
             var to_return = this.d.overload('[B',).call(this, arg0);
