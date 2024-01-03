@@ -101,10 +101,12 @@ def reformat_csr(csr):
 def do_captcha(url, redirect_url):
 	driver = webdriver.Firefox()
 	driver.get(url)
-
+	username = None
 	while True:
 		for request in driver.requests:  
-			if request.response:  
+			if request.response:
+				if request.method.lower() == "post" and "/mmcl/auth/oauth/v2/authorize/login" in request.url.lower():
+					username = request.params["username"]
 				if request.response.status_code == 302:
 					if "location" in request.response.headers:
 						location = request.response.headers["location"]
@@ -112,7 +114,7 @@ def do_captcha(url, redirect_url):
 							code = re.search(r"code=(.*)&", location).group(1)
 							state = re.search(r"state=(.*)", location).group(1)
 							driver.quit()
-							return (code, state)
+							return (code, state, username)
 		sleep(0.1)
 
 def resolve_endpoint_config(discovery_url, is_us_region=False):
@@ -176,7 +178,7 @@ def do_login(endpoint_config):
 
 	# step 3 captcha login and consent
 	print(f"captcha url: {captcha_url}")
-	captcha_code, captcha_sso_state = do_captcha(captcha_url, sso_config["oauth"]["client"]["client_ids"][0]['redirect_uri'])
+	captcha_code, captcha_sso_state, username = do_captcha(captcha_url, sso_config["oauth"]["client"]["client_ids"][0]['redirect_uri'])
 	print(f"sso state after captcha: {captcha_sso_state}")
 
 	# step 4 registraton
