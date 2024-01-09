@@ -40,12 +40,14 @@ or from sketch:
 - https://github.com/Ayrx/JNIAnalyzer
 
 ## Guardianmon
+(works on Guardian and Minimed Connect!)
 
 Usage: 
 
 0. get a rooted android phone
 1. download frida server (https://frida.re/docs/android)
-3. connect to adb via usb 
-4. start your frida server as root
-5. frida -U -f com.medtronic.diabetes.guardian -l guardianmon.js
-6. save the output to a txt file and use the dump printer to inspect the communication
+3. connect to adb via usb & install frida on your phone
+4. start your frida server as root on the device
+5. edit the isGuardian variable in the guardianmon.js script 
+6. `frida -U -f com.medtronic.diabetes.guardian -l guardianmon.js`
+7. save the output to a txt file and use the dump printer to inspect the communication
