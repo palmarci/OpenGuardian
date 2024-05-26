@@ -9,7 +9,7 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 	- example dumps 
 	- python script to decode the dumps into a human readable format
 - OpenGuardian4: the java parser to decode the decrypted messages
-- Sake_RE: the ghidra project to fully reverse engineer the armv7 sake library
+- Sake_RE: the ghidra project to reverse engineer the armv7 sake crypto library (not started yet :( )
 - MinimedPatch: guide & patched apk for the Minimed Mobile version 2.2.0 to remove whitelist, root and developer option checks at startup + debug log decryption
 - CarelinkApi: script which can communicate with the CareLink mobile API
 
