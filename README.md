@@ -1,19 +1,58 @@
-# OpenGuardian4
+# OpenGuardian
 
-Reverse engineering the BT communication for the Medtronic Guardian 4 glucose monitoring system. This work is based on the Guardian 1.3.4 application, but there is a big overlap with the Medtronic insulin pumps. 
+Reverse engineering the BT communication for the Medtronic Guardian Continous Glucose Monitoring Systems and Insulin Pumps. This work originally started on the Guardian 4 Sensor, but now the insulin pumps are also being researched.
 
-## sub-projects
-- Sakeproxy: android app to interface with the native sake crpyto library
-- Guardianmon: 
-	- frida script to hook and monitor the messages
-	- example dumps 
-	- python script to decode the dumps into a human readable format
-- OpenGuardian4: the java parser to decode the decrypted messages
-- Sake_RE: the ghidra project to reverse engineer the armv7 sake crypto library (not started yet :( )
-- MinimedPatch: guide & patched apk for the Minimed Mobile version 2.2.0 to remove whitelist, root and developer option checks at startup + debug log decryption
-- CarelinkApi: script which can communicate with the CareLink mobile API
 
-## jadx usage
+![alt text](docs/banner.png)
+
+- [OpenGuardian](#openguardian)
+	- [Structure](#structure)
+	- [JADX notes](#jadx-notes)
+		- [finding the converter map](#finding-the-converter-map)
+	- [Monitor script](#monitor-script)
+	- [Random notes](#random-notes)
+
+
+## Structure
+- Jadx_Projects: 
+  - it contains the [JADX](https://github.com/skylot/jadx) projects to reverse engineer the APK contents  
+- OpenGuardian4
+   - the Java code for parsing and decoding already decrypted BT messages. 
+   - this is intended to be used in an Android app hopefully in the forseable future
+
+  - limited support for UUIDs, but can also parse some Guardian 4 messages
+  - the "4" will be dropped from the name and support will be added for Guardian 3 and pumps
+- Sake_RE
+  - the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called *SAKE* ([see more](docs/sake_whitepaper.pdf)) 
+  - progress has been stated, but is in its early stages
+  - currently using an older version of the library built for ARMv7
+- Sakeproxy
+  - an example Android application which uses the prebuilt SAKE libraries extracted from the original APKs
+  - just a proof of concept, it can call the library and enter a "key database" to be used for handshake and encryption 
+  - probably will be used to "proxy" the data back to PC where the actual development will happen over BT
+- Data 
+	- decrypted SAKE "key databases"
+	- logs from the Monitor script
+- Docs
+  - TODO: document everything
+- Scripts
+  - various scripts to be used with frida (including the Monitor)
+  - TODO: go trough the old backups and upload everything
+- Tools
+  - log_decrypt
+    - the app contains functionality to dump decrypted logs into a zip file for debugging with Medtronic's email support (???)
+    - the algorithm has been reversed, after manually patching the public key in the APK, it can be decrypted and will contain juicy info for reversing
+  - db_decrypt
+    - scripts to dump the AndroidKeyStore, where the keys are stored for the app's databases
+  - minimal API for CareLink Cloud
+    - I have reversed the API where the data upload/download takes place
+    - the code now has been integrated in some open-source projects, this is just a mirror (see  [carelink-python-client](https://github.com/ondrej1024/carelink-python-client), [xDripCareLinkFollower](https://github.com/benceszasz/xDripCareLinkFollower/))
+  - other scripts used for dev
+  - TODO: sort out scripts used for MITM
+
+
+
+## JADX notes
 1. get the Guardian apk here: https://m.apkpure.com/guardian%E2%84%A2/com.medtronic.diabetes.guardian/download
 	(md5sum of the original file: 865d1872c197c073830c02416d63f294)
 2. place it in the project's root folder under the name "Guardian_134.apk"
@@ -21,7 +60,7 @@ Reverse engineering the BT communication for the Medtronic Guardian 4 glucose mo
 4. open the project
 5. start reversing: you will mostly need just two buttons: X for references, N for rename, and also the search menu
 
-#### finding the converter map
+### finding the converter map
 
 1.  **just search for classes > ConverterMap** 
 
@@ -35,12 +74,7 @@ or from sketch:
 5. those are the conveters and the target classes that we are interested in
 
 
-## Sake_RE
-- TODO
-- https://github.com/Ayrx/JNIAnalyzer
-
-## Guardianmon
-(works on Guardian and Minimed Connect!)
+## Monitor script
 
 Usage: 
 
@@ -48,6 +82,9 @@ Usage:
 1. download frida server (https://frida.re/docs/android)
 3. connect to adb via usb & install frida on your phone
 4. start your frida server as root on the device
-5. edit the isGuardian variable in the guardianmon.js script 
-6. `frida -U -f com.medtronic.diabetes.guardian -l guardianmon.js`
-7. save the output to a txt file and use the dump printer to inspect the communication
+5. edit the beginning of the monitor.js script to select your app version  
+6. `frida -U -f com.medtronic.diabetes.guardian -l guardianmon.js` (you can stack additional scripts to bypass the security checks like: `-l bypass_developer.js`)
+7. save the output to a txt file and use OpenGuardian to parse them
+
+## Random notes
+- If the app is patched it will NOT be able to receive the SAKE keys, because PlayIntegrity will detect it but MITM is still possible for login and the "Teneo secure communications" (after some Frida scripts)

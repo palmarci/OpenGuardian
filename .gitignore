@@ -1,5 +1,5 @@
 *.cache
 __pycache__/
 *.py[cod]
-Guardian_134.apk
+*.apk
 .vscode
