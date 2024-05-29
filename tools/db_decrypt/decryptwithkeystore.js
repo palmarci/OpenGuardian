@@ -1,0 +1,12 @@
+Java.perform(function() {
+	var encryptionUtilityClass = Java.use("com.medtronic.securerepositories.internal.utility.EncryptionUtility");
+	var Gson = Java.use("com.google.gson.Gson");
+	var alias = "APP_LOGS_DATABASE_KEY";
+	//var data = "StS157pl9EflJ7j4VRtbrAdamsNXpDtjzdz5MRSIZNntGpLkI9agarAzqiGBMn+OxvsO8+zaSktmS0c7jD0F9IxDUAA1rwpaThG8XvwGoNGMLZj4YgQlc9TFKu3r1LYwe8iGW2Khp7T03kfz4KJYST0ieePbrefNBX7pDrUQQ4vbUn4kyVphx91CjUQ8nbr6uMznWzawFuOE85S8P86Rw3VxHuek/1ddQXZVdiXFzs4AYY7vhqTl7oV4yAMkCfq6jTjFZGIyvHzW+3kNQZu7OCk8pQs5U+XZ5UgwQkLVtOesfRno/A5TypfwDNdLpKrJwbWibWhGZczT4PbO5YeozQ==";
+	//var data = 'Qdj4elxZKk/FgmefHAqZQnlaaaT05aebr2V6340H3cKjKCn3qWQh0ieCmAI1QJnO56TGQyI9hVafR9XGigD0HNViVpvowRE2aZKWr9FhqOrLKi9J1oACyDYZsvHimidDUvkNr589C5aYrOaAUgi221dWa44ejfw9SAryCIlUj1yLP9Hd1avclKOvdensKZd9fVWgZGRo+Ptd+R64rHUcckHvj/i3LKBiFL0BkpsfVKGo4o36WppNb2Zh3ILPbc8h/ieWLAfW6FHJwBdIZ1V5/YXy3Md9+SdkP0jpsmx4te0jX4Y3wPp3ZD56pfsJ0flvvqnvLFopU6zdmEr3vs2eraYPQ==';
+	var data = "ONg+PmeHufrE3GZDMGAlzbmbioPDJJkwhJcfvL+ISOJ7a1PmnR5h2/5WpcoPl/1HyJ/n/Wz2jJ0drSSiHeKnwR8iAwvUg+Kg8oabxSSCa2CYP342KYegKesprE5Qfy0wD74zxUeeGoVDsxA9rn5Hr9+IIEfH6sT2i6JlEIKZOWGXqyuSJl5s+MvdvhpLwXnqPnMgML+PeOyPGUJ91UJ0nvGvcTLyQoZZG172lkwF9t1SuUERp8Bf2QaeePVjkzaUbmY4Ud1lDeBwZQYsxIHNKzrIkGsnIEsTE9ZMrkZBKdKnlfp0wJyf9f/PmAosZkdRKB9s9T5IU1g/tJJNX5QzMQ==";
+	var decypted_data = encryptionUtilityClass.decryptWithKeystore.overload('java.lang.String', 'java.lang.String').call(encryptionUtilityClass, data, alias);
+	console.log(decypted_data);
+
+	
+});

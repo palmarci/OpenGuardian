@@ -1,0 +1,1202 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "mmm_250.apk"
+  ],
+  "treeExpansions": [
+    [
+      "com",
+      "Source code",
+      "mmm_250.apk"
+    ],
+    [
+      "p049ca.mas",
+      "com",
+      "Source code",
+      "mmm_250.apk"
+    ],
+    [
+      "identity",
+      "p049ca.mas",
+      "com",
+      "Source code",
+      "mmm_250.apk"
+    ],
+    [
+      "messaging",
+      "p049ca.mas",
+      "com",
+      "Source code",
+      "mmm_250.apk"
+    ],
+    [
+      "topic",
+      "messaging",
+      "p049ca.mas",
+      "com",
+      "Source code",
+      "mmm_250.apk"
+    ],
+    [
+      "p456xj",
+      "Source code",
+      "mmm_250.apk"
+    ],
+    [
+      "p187jf",
+      "Source code",
+      "mmm_250.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.bl.configmonitor.b"
+        },
+        "newName": "DeviceConfigurationMonitorImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.a"
+        },
+        "newName": "SWIGTYPE_p_unsigned_char"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.b"
+        },
+        "newName": "SWIGTYPE_p_void"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.c"
+        },
+        "newName": "NativeSakeLib"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ek.a"
+        },
+        "newName": "BehaviourProcessor"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "g6.a"
+        },
+        "newName": "CurrentMobileConfiguration"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "g6.d"
+        },
+        "newName": "MobileApprovedConfigurationsManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gb.b"
+        },
+        "newName": "BleConnectApplicationProvider"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "h1.k"
+        },
+        "newName": "MetadataBackendRegistry"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "hj.b"
+        },
+        "newName": "Disposable"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "io.reactivex.l"
+        },
+        "newName": "FlowableEmitter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "j7.a"
+        },
+        "newName": "MobileSecurityConfigurationsToSecurityStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "j7.c"
+        },
+        "newName": "IMobileSecurityManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "j7.c$a"
+        },
+        "newName": "MobileSecurityManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "jf.a"
+        },
+        "newName": "SAKE_HANDSHAKE_ERROR_E"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "jf.c"
+        },
+        "newName": "ISakeConstants"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "kj.f"
+        },
+        "newName": "Cancellable"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ma.x"
+        },
+        "newName": "ResourcesProvider"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "me.g"
+        },
+        "newName": "SakeHandshakeError"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.a"
+        },
+        "newName": "ConvertUtils"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.b"
+        },
+        "newName": "CrcUtils"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.e"
+        },
+        "newName": "PayloadDecryptor"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.g"
+        },
+        "newName": "SakeKeyRetrievalConfiguration"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.h"
+        },
+        "newName": "SakeKeysDecryptor"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.j"
+        },
+        "newName": "ISakeKeysManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.o"
+        },
+        "newName": "SakeKeyZeroer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ne.x"
+        },
+        "newName": "SakeKeysManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "r5.f0"
+        },
+        "newName": "ResourceIds"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "s7.a"
+        },
+        "newName": "DestroyableSecretKey"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "t7.b"
+        },
+        "newName": "KeyFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "t7.c"
+        },
+        "newName": "SignatureFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "wl.c"
+        },
+        "newName": "ILogger"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "y7.w0"
+        },
+        "newName": "ForbiddenDeviceConfigStatusPreventer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "b7.g",
+          "shortId": "f:Lma/x;"
+        },
+        "newName": "resources_provider"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.bl.configmonitor.b",
+          "shortId": "b:Lj7/c;"
+        },
+        "newName": "imobilesecuritymanager"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.data.utilities.MobileSecurityUtil$a",
+          "shortId": "a:Lio/reactivex/l;"
+        },
+        "newName": "emitter"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.data.utilities.MobileSecurityUtil$a",
+          "shortId": "b:Landroid/content/Context;"
+        },
+        "newName": "context"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.connectionmanager.implementation.i3",
+          "shortId": "n:Lne/j;"
+        },
+        "newName": "isake_keyss_mgr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "c:Lme/a;"
+        },
+        "newName": "sake_server_status"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "d:Lcom/medtronic/minimed/sake/SAKE_SERVER_S;"
+        },
+        "newName": "sake_Server"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "e:Lcom/medtronic/minimed/sake/p_uint8_t;"
+        },
+        "newName": "key_len"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "f:Lne/j;"
+        },
+        "newName": "sakekeysmanager"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "g:Lwl/c;"
+        },
+        "newName": "sake_logger"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "dd.c",
+          "shortId": "a:Lne/j;"
+        },
+        "newName": "sakekeysmanager"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "j7.i",
+          "shortId": "a:Landroid/content/Context;"
+        },
+        "newName": "context"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "j7.i",
+          "shortId": "b:Lcom/medtronic/minimed/data/ParametersForTesting;"
+        },
+        "newName": "parametersForTesting"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "jf.a",
+          "shortId": "l:Ljf/a;"
+        },
+        "newName": "not_supported_sake"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.e",
+          "shortId": "a:Lt7/b;"
+        },
+        "newName": "keyfactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.g",
+          "shortId": "a:Ljava/lang/String;"
+        },
+        "newName": "url"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.g",
+          "shortId": "b:Ljava/lang/String;"
+        },
+        "newName": "keyOrCloudProjNum"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.g",
+          "shortId": "c:Ljava/security/cert/Certificate;"
+        },
+        "newName": "cert"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.g",
+          "shortId": "d:Ljava/lang/String;"
+        },
+        "newName": "sakeDecryptionKey"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.g",
+          "shortId": "e:Ljava/lang/String;"
+        },
+        "newName": "appSecret"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.h",
+          "shortId": "a:Lne/e;"
+        },
+        "newName": "payload_decryptor"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.o",
+          "shortId": "d:Lne/x;"
+        },
+        "newName": "sake_keys_mgr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "a:Lcom/medtronic/securerepositories/NetworkSecureRepository;"
+        },
+        "newName": "network_Secure_repository"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "b:Lcom/medtronic/securerepositories/StorageSecureRepository;"
+        },
+        "newName": "storage_secure_repos"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "c:Lne/h;"
+        },
+        "newName": "sake_keys_decryptor"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "f:[B"
+        },
+        "newName": "decrypted_keys"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "g:Ljava/lang/String;"
+        },
+        "newName": "sake_decryption_key"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "h:Ljava/lang/String;"
+        },
+        "newName": "appsecret"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "i:Lwl/c;"
+        },
+        "newName": "sakekeysmanager_logger"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "ne.x",
+          "shortId": "j:[B"
+        },
+        "newName": "sake_keys"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "xj.k",
+          "shortId": "d:Ljava/lang/String;"
+        },
+        "newName": "id"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "y7.w0",
+          "shortId": "f:Lcom/medtronic/minimed/bl/configmonitor/DeviceConfigurationMonitor;"
+        },
+        "newName": "deviceconfigmonitor"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b7.g",
+          "shortId": "o(Lcom/medtronic/minimed/data/carelink/model/TlsCertificate;)Lne/g;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65536
+        },
+        "newName": "url"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b7.g",
+          "shortId": "o(Lcom/medtronic/minimed/data/carelink/model/TlsCertificate;)Lne/g;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 458756
+        },
+        "newName": "app_Secret"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.bl.appsetup.k",
+          "shortId": "s()Z"
+        },
+        "newName": "startup_wizard_step_completed"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.bl.configmonitor.b",
+          "shortId": "a()Z"
+        },
+        "newName": "securitycheck"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.data.ParametersForTesting",
+          "shortId": "component3()Z"
+        },
+        "newName": "isRetrieveRealSakeKeys"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.connectionmanager.implementation.i3",
+          "shortId": "Z1()V"
+        },
+        "newName": "do_forget_pump"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.a",
+          "shortId": "p()V"
+        },
+        "newName": "sake_manager_prepared_ok_msg"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.c",
+          "shortId": "f()V"
+        },
+        "newName": "initialize"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "j()V"
+        },
+        "newName": "init_sake_server"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "j()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65538
+        },
+        "newName": "keys"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "j()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131072
+        },
+        "newName": "sake_logger"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "j()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 131074
+        },
+        "newName": "key_length"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+          "shortId": "j()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196610
+        },
+        "newName": "keys"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "c()Ljf/a;"
+        },
+        "newName": "get_sake_handshake_Error"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "b(Lcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;Lcom/medtronic/minimed/sake/a;J)Z"
+        },
+        "newName": "Sake_KeyDatabase_Open"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "c(Lcom/medtronic/minimed/sake/SAKE_PASSKEY_S;J)Z"
+        },
+        "newName": "passkey_from_int"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "f(Lcom/medtronic/minimed/sake/SAKE_SERVER_S;Lcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;)Z"
+        },
+        "newName": "sake_Server_init"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "k(Lcom/medtronic/minimed/sake/b;[B)V"
+        },
+        "newName": "memmove"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "a()Lcom/medtronic/minimed/sake/a;"
+        },
+        "newName": "cast_to_uint8"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.securerepositories.internal.utility.EncryptionUtility",
+          "shortId": "decryptCbcAes(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.securerepositories.internal.utility.EncryptionUtility",
+          "shortId": "decryptCbcAes(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 327680
+        },
+        "newName": "data"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "io.reactivex.l",
+          "shortId": "a(Lkj/f;)V"
+        },
+        "newName": "setCancellable"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "io.reactivex.l",
+          "shortId": "b(Lhj/b;)V"
+        },
+        "newName": "setDisposable"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "io.reactivex.q",
+          "shortId": "b()Ljava/lang/Object;"
+        },
+        "newName": "try_and_decrypt_sake_key_event"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j7.i",
+          "shortId": "a()Z"
+        },
+        "newName": "performSecurityChecks"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j7.i",
+          "shortId": "i()Z"
+        },
+        "newName": "developerModeCheck"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j7.i",
+          "shortId": "j()Z"
+        },
+        "newName": "rootCheck"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "jf.a",
+          "shortId": "\u003cclinit\u003e()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 589825
+        },
+        "newName": "not_supported_sake2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "jf.a",
+          "shortId": "a(I)Ljf/a;"
+        },
+        "newName": "translate_sake_error"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.a",
+          "shortId": "a(Ljava/lang/String;)[B"
+        },
+        "newName": "base64decode"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.a",
+          "shortId": "c([B)I"
+        },
+        "newName": "convertByteArrayToInt16"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.b",
+          "shortId": "a([B)I"
+        },
+        "newName": "calc_crc"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.e",
+          "shortId": "b([BLjava/lang/String;Ljava/lang/String;)[B"
+        },
+        "newName": "decrypt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.g",
+          "shortId": "b()Ljava/lang/String;"
+        },
+        "newName": "getAppSecret"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.g",
+          "shortId": "d()Ljava/lang/String;"
+        },
+        "newName": "getkeyOrCloudProjNum"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.g",
+          "shortId": "e()Ljava/lang/String;"
+        },
+        "newName": "getsakeDecryptionKey"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "a([BLjava/lang/String;Ljava/lang/String;)[B"
+        },
+        "newName": "check_and_decrypt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "b([BLjava/lang/String;Ljava/lang/String;)[B"
+        },
+        "newName": "decrypt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "c([B)I"
+        },
+        "newName": "get_expected_crc"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "d([B)I"
+        },
+        "newName": "get_given_crc"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "e([B)I"
+        },
+        "newName": "get_coded_length"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "g([B)V"
+        },
+        "newName": "check_crc"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.h",
+          "shortId": "h([B)V"
+        },
+        "newName": "validate_sake_format"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "C()V"
+        },
+        "newName": "delete_sake_data"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "D(Lio/reactivex/d;)V"
+        },
+        "newName": "start_dl"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "E(Ljava/lang/String;Lio/reactivex/d;)V"
+        },
+        "newName": "put_data"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "G()V"
+        },
+        "newName": "zero_out_sake_keys"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "b()Lio/reactivex/c;"
+        },
+        "newName": "delete_sake_data_job"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "c()Lio/reactivex/q;"
+        },
+        "newName": "try_and_decrypt_sake_key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "e(Lne/g;)V"
+        },
+        "newName": "apply_config"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "r([B)[B"
+        },
+        "newName": "sake_key_decrypt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "s()Ljava/lang/String;"
+        },
+        "newName": "get_app_Secret"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "t()Ljava/lang/String;"
+        },
+        "newName": "get_sake_decrypt_key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "v()Z"
+        },
+        "newName": "decrypted_keys_dont_match"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "y(Lio/reactivex/r;)V"
+        },
+        "newName": "get_keys"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ne.x",
+          "shortId": "z(Lio/reactivex/d0;)V"
+        },
+        "newName": "request_data"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "t7.b",
+          "shortId": "a()Ljavax/crypto/Cipher;"
+        },
+        "newName": "getInstance"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "y7.w0",
+          "shortId": "E0()Z"
+        },
+        "newName": "allow_communication"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "y7.w0",
+          "shortId": "R0()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 0
+        },
+        "newName": "communicationŰ_allowed"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "ek.a",
+      "subPath": "java",
+      "caret": 7327,
+      "view": {
+        "x": 0,
+        "y": 3837
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "ne.x",
+      "subPath": "java",
+      "caret": 9911,
+      "view": {
+        "x": 0,
+        "y": 4249
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "ne.h",
+      "subPath": "java",
+      "caret": 2877,
+      "view": {
+        "x": 0,
+        "y": 676
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+      "subPath": "java",
+      "caret": 2330,
+      "view": {
+        "x": 0,
+        "y": 901
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "io.reactivex.q",
+      "subPath": "java",
+      "caret": 7417,
+      "view": {
+        "x": 0,
+        "y": 3205
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "me.a",
+      "subPath": "java",
+      "caret": 104,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+      "subPath": "java",
+      "caret": 1165,
+      "view": {
+        "x": 0,
+        "y": 81
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "ch.qos.logback.core.net.HardenedObjectInputStream",
+      "subPath": "java",
+      "caret": 850,
+      "view": {
+        "x": 0,
+        "y": 51
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.carelink.model.AppVersionConfigurations",
+      "subPath": "java",
+      "caret": 524,
+      "view": {
+        "x": 0,
+        "y": 1593
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.carelink.model.MobileSecurityConfigurations",
+      "subPath": "java",
+      "caret": 2521,
+      "view": {
+        "x": 0,
+        "y": 675
+      }
+    },
+    {
+      "type": "class",
+      "tabPath": "j7.a",
+      "subPath": "java",
+      "caret": 736,
+      "view": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  ],
+  "activeTab": 10,
+  "cacheDir": "mmm_250.apk.cache",
+  "enableLiveReload": true,
+  "searchHistory": [
+    "mobilesecurityconfig",
+    "whitelist",
+    "Failed to obtain SAKE keys from ",
+    "SAKE keys decryption failed",
+    "Incorrect payload data",
+    "sake dec",
+    "KopqrAHrDjhmBgFEvNJPiGslhEuAnpND",
+    "ecryptionMessageJob: Data decrypted successfully",
+    "- SecretMessageJob: Received key",
+    "isCorrectNonce",
+    "SakeKeysDecryptor",
+    "keydatabase",
+    "sake.d",
+    "decrypt",
+    "sakejni",
+    "decryption",
+    "attestatio",
+    "not_supported",
+    "CHALLENGE_NOT_GENERATED",
+    "sakehandshake",
+    "-lib",
+    "sakeserver",
+    "device_type",
+    "integrity",
+    "E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED",
+    "Preparing SAKE manager for",
+    "sake_key",
+    "\"SAKE\"",
+    "The SAKE keys successfully downloaded.",
+    "Data decrypted successfully."
+  ]
+}

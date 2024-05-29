@@ -18,6 +18,7 @@ import openguardian4.Bluetooth.BluetoothMessageType;
 
 public class App {
 
+	
 	private static List<BluetoothMessage> parseLogFile(String filename) throws Exception {
 		List<BluetoothMessage> messages = new ArrayList<>();
 		Map<String, String> cryptoPairs = new HashMap<>(); // contains the pairs of encryped and decrypted msgs
@@ -33,8 +34,10 @@ public class App {
 				lines.add(line);
 			}
 		}
-		// extract the crypto pairs first since its not necessarily in order with the
-		// other messages
+
+		lines = Utils.removeComments(lines); // remove any comments in the logs 
+
+		// extract the crypto pairs first since its not necessarily in order with the other messages
 		for (String line : lines) {
 			String[] parts = line.split(",");
 			// long timestamp = Long.parseLong(parts[0]);
@@ -54,6 +57,7 @@ public class App {
 
 		//extract the messages
 		for (String line : lines) {
+			
 			String[] parts = line.split(",");
 			long timestamp = Long.parseLong(parts[0]); // / 1000;
 			String module = parts[1];
@@ -99,12 +103,15 @@ public class App {
 			messages = parseLogFile(args[0]);
 		} catch (Exception e) {
 			System.out.println("Exception: " + e);
+			return;
 		}
 
 		for (BluetoothMessage msg : messages) {
-			if (msg.getParsedMessage() != null) {
+			//if (msg.getParsedMessage() != null) {
 				System.out.println(msg);
-			}
+		//	} else {
+		//		System.out.println(":(");
+		//	}
 		}
 	}
 }

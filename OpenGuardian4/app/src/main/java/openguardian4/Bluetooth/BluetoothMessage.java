@@ -39,7 +39,6 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		}
 
 		this.serviceUuid = serviceUuid;
-		// this.data = hexStringToByteArray(data);
 		this.rawData = data;
 		this.decrypted = decrypted;
 	}
@@ -98,7 +97,7 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 
 	@Override
 	public String toString() {
-		return this.getClass() + " {" +
+		return this.getClass().getSimpleName() + " {" +
 				" time='" + getTime() + "'" +
 				", type='" + getType() + "'" +
 				", parsedMessage='" + getParsedMessage() + "'" +
