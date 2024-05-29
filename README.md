@@ -88,3 +88,5 @@ Usage:
 
 ## Random notes
 - If the app is patched it will NOT be able to receive the SAKE keys, because PlayIntegrity will detect it but MITM is still possible for login and the "Teneo secure communications" (after some Frida scripts)
+
+![alt text](image.png)
