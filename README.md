@@ -6,11 +6,11 @@ Reverse engineering the BT communication for the Medtronic Guardian Continous Gl
 ![alt text](docs/banner.png)
 
 - [OpenGuardian](#openguardian)
-	- [Structure](#structure)
-	- [JADX notes](#jadx-notes)
-		- [finding the converter map](#finding-the-converter-map)
-	- [Monitor script](#monitor-script)
-	- [Random notes](#random-notes)
+  - [Structure](#structure)
+  - [JADX notes](#jadx-notes)
+    - [finding the converter map](#finding-the-converter-map)
+  - [Monitor script](#monitor-script)
+  - [Random notes](#random-notes)
 
 
 ## Structure
@@ -24,7 +24,7 @@ Reverse engineering the BT communication for the Medtronic Guardian Continous Gl
   - the "4" will be dropped from the name and support will be added for Guardian 3 and pumps
 - Sake_RE
   - the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called *SAKE* ([see more](docs/sake_whitepaper.pdf)) 
-  - progress has been stated, but is in its early stages
+  - progress has been stated, but it is in its early stages
   - currently using an older version of the library built for ARMv7
 - Sakeproxy
   - an example Android application which uses the prebuilt SAKE libraries extracted from the original APKs
@@ -88,5 +88,3 @@ Usage:
 
 ## Random notes
 - If the app is patched it will NOT be able to receive the SAKE keys, because PlayIntegrity will detect it but MITM is still possible for login and the "Teneo secure communications" (after some Frida scripts)
-
-![alt text](image.png)

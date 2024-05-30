@@ -1,0 +1,642 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "../../apk/Guardian™ Connect_3.5.0_APKPure.apk"
+  ],
+  "treeExpansions": [
+    [
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "diabetes.guardianconnect",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "application",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "common",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "time",
+      "common",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "p329ui",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "common",
+      "p329ui",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "activities",
+      "p329ui",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "debug",
+      "activities",
+      "p329ui",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "sensorsetup",
+      "activities",
+      "p329ui",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "pairing",
+      "sensorsetup",
+      "activities",
+      "p329ui",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ],
+    [
+      "com.medtronic.guardian.application.GuardianApplication",
+      "application",
+      "guardian",
+      "medtronic",
+      "com",
+      "Source code",
+      "Guardian™ Connect_3.5.0_APKPure.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "c.a.a.a.j.a"
+        },
+        "newName": "MssoConfig"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "c.e.a.a.a.i"
+        },
+        "newName": "EddystoneTLM"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "c.e.a.a.a.n"
+        },
+        "newName": "iBeacon"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.d.q0.h"
+        },
+        "newName": "GSTDeviceLocatorImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c.e.a.a.a.i",
+          "shortId": "f:I"
+        },
+        "newName": "version"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "c.e.a.a.a.i",
+          "shortId": "g:I"
+        },
+        "newName": "batteryvolt"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "A:Ljava/util/UUID;"
+        },
+        "newName": "non_critical_ops"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "B:Ljava/util/UUID;"
+        },
+        "newName": "critical_ops"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "C:Ljava/util/UUID;"
+        },
+        "newName": "start_coms_resp"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "D:Ljava/util/UUID;"
+        },
+        "newName": "meas_ready"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "E:Ljava/util/UUID;"
+        },
+        "newName": "measured_Data"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "F:Ljava/util/UUID;"
+        },
+        "newName": "sensor_connected_State"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "G:Ljava/util/UUID;"
+        },
+        "newName": "sensor_Expire"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "H:Ljava/util/UUID;"
+        },
+        "newName": "sensor_Cal_expiration"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "I:Ljava/util/UUID;"
+        },
+        "newName": "cal_status_ready"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "J:Ljava/util/UUID;"
+        },
+        "newName": "cal_Status_Data"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "K:Ljava/util/UUID;"
+        },
+        "newName": "backfill_Ready"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+          "shortId": "L:Ljava/util/UUID;"
+        },
+        "newName": "backfill_data"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "c.e.a.a.b.b",
+      "subPath": "java",
+      "caret": 330,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.e.a.a.a.n",
+      "subPath": "java",
+      "caret": 232,
+      "view": {
+        "x": 0,
+        "y": 139
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.f.c",
+      "subPath": "java",
+      "caret": 11363,
+      "view": {
+        "x": 0,
+        "y": 4924
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.f.a.e0.w.o",
+      "subPath": "java",
+      "caret": 324,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.f.a.e0.u.m",
+      "subPath": "java",
+      "caret": 1749,
+      "view": {
+        "x": 0,
+        "y": 393
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.f.a.e0.n",
+      "subPath": "java",
+      "caret": 475,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.guardian.services.bluetooth.c0.g.h3",
+      "subPath": "java",
+      "caret": 14354,
+      "view": {
+        "x": 0,
+        "y": 5319
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.guardian.services.bluetooth.c0.g.r3.g",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "k.e",
+      "subPath": "java",
+      "caret": 23259,
+      "view": {
+        "x": 0,
+        "y": 10022
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.guardian.services.bluetooth.c0.e.f1",
+      "subPath": "java",
+      "caret": 1268,
+      "view": {
+        "x": 0,
+        "y": 315
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.f.a.y",
+      "subPath": "java",
+      "caret": 1393,
+      "view": {
+        "x": 0,
+        "y": 311
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "k.p.a.e1",
+      "subPath": "java",
+      "caret": 3516,
+      "view": {
+        "x": 0,
+        "y": 1535
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "k.p.a.l0",
+      "subPath": "java",
+      "caret": 5760,
+      "view": {
+        "x": 0,
+        "y": 2691
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.e.a.a.a.i",
+      "subPath": "java",
+      "caret": 217,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.e.a.a.a.g",
+      "subPath": "java",
+      "caret": 582,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": true
+    },
+    {
+      "type": "class",
+      "tabPath": "c.e.a.a.a.c",
+      "subPath": "java",
+      "caret": 274,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.guardian.services.bluetooth.c0.d.q0.h",
+      "subPath": "java",
+      "caret": 1269,
+      "view": {
+        "x": 0,
+        "y": 164
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.d.e.f.a.y3.q",
+      "subPath": "java",
+      "caret": 8011,
+      "view": {
+        "x": 0,
+        "y": 2021
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.d.e.f.a.y3.y",
+      "subPath": "java",
+      "caret": 948,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.foundation.f",
+      "subPath": "java",
+      "caret": 1289,
+      "view": {
+        "x": 0,
+        "y": 334
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.a",
+      "subPath": "java",
+      "caret": 76,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.j.c",
+      "subPath": "java",
+      "caret": 274,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.j.a",
+      "subPath": "java",
+      "caret": 147,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.foundation.r",
+      "subPath": "java",
+      "caret": 4218,
+      "view": {
+        "x": 0,
+        "y": 1463
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.q.n",
+      "subPath": "java",
+      "caret": 1938,
+      "view": {
+        "x": 0,
+        "y": 436
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.q.g",
+      "subPath": "java",
+      "caret": 816,
+      "view": {
+        "x": 0,
+        "y": 22
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.r.a",
+      "subPath": "java",
+      "caret": 1828,
+      "view": {
+        "x": 0,
+        "y": 487
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.guardian.application.GuardianApplication",
+      "subPath": "java",
+      "caret": 1366,
+      "view": {
+        "x": 0,
+        "y": 1025
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.j.d",
+      "subPath": "java",
+      "caret": 6078,
+      "view": {
+        "x": 0,
+        "y": 2943
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.a.a.a.j.b",
+      "subPath": "java",
+      "caret": 14122,
+      "view": {
+        "x": 0,
+        "y": 4489
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.d.g.g.a",
+      "subPath": "java",
+      "caret": 1444,
+      "view": {
+        "x": 0,
+        "y": 204
+      },
+      "active": false
+    },
+    {
+      "type": "class",
+      "tabPath": "c.e.a.a.a.k",
+      "subPath": "java",
+      "caret": 231,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false
+    }
+  ],
+  "cacheDir": "/home/marci/.cache/jadx/projects/Guardian™ Connect_3.5.0_APKPure-a452ac042bef1e313341a67c50b9bb9f",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "https",
+    "msso_config.json",
+    "encr",
+    "Start BLE",
+    "msso.ble.service.uui",
+    "advert",
+    "Advertis",
+    "-000",
+    "-0000-",
+    "-1000-"
+  ],
+  "pluginOptions": {}
+}
