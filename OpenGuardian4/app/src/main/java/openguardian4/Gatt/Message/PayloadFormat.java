@@ -10,7 +10,8 @@ public enum PayloadFormat {
     FORMAT_UINT16(18),
     FORMAT_UINT24(19),
     FORMAT_UINT32(20),
-    FORMAT_UINT8(17);
+    FORMAT_UINT8(17),
+    FORMAT_CRC_SOMETHING(18);
 
     private Integer value;
 

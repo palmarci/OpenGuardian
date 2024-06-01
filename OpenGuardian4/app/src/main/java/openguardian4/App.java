@@ -23,6 +23,7 @@ public class App {
 		Map<String, String> cryptoPairs = new HashMap<>(); // contains the pairs of encryped and decrypted msgs
 		List<String> lines = new ArrayList<>();
 		File f = new File(filename);
+		
 		if (!f.exists() || !f.isFile()) {
 			throw new IOException("File does not exist on disk: " + f);
 		}
@@ -36,8 +37,8 @@ public class App {
 
 		lines = Utils.removeComments(lines); // remove any comments in the logs
 
-		// extract the crypto pairs first since its not necessarily in order with the
-		// other messages
+		// extract the crypto pairs first since its not necessarily in order with
+		// the other messages
 		for (String line : lines) {
 			String[] parts = line.split(",");
 			// long timestamp = Long.parseLong(parts[0]);
@@ -94,7 +95,7 @@ public class App {
 
 	public static void main(String[] args) {
 		if (args.length < 1) {
-			System.out.println("No file was given in the arguments!");
+			System.err.println("No file was given in the arguments!");
 			System.exit(1);
 		}
 
@@ -102,7 +103,7 @@ public class App {
 		try {
 			messages = parseLogFile(args[0]);
 		} catch (Exception e) {
-			System.out.println("Could not parse log file: " + e);
+			System.err.println("Could not parse log file: " + e);
 			return;
 		}
 

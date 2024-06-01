@@ -16,7 +16,7 @@ public class ConnectionActiveParamsConverter implements IMessageConverter  {
 
 		//try {
 			int updateSource = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT8, 0);
-			int offset = GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue()) + 0;
+			int offset = GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());// + 0;
 
 			int connectionInterval = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT16, offset);
 			int offset2 = offset + GattPayload.getNextLength(PayloadFormat.FORMAT_UINT16.getValue());

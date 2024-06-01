@@ -1,7 +1,7 @@
 {
   "projectVersion": 1,
   "files": [
-    "Guardian_134.apk"
+    "../../apk/Guardian_134.apk"
   ],
   "treeExpansions": [
     [
@@ -1343,7 +1343,7 @@
           "declClass": "e.g.g.a.a.e.b.e",
           "shortId": "i(I)I"
         },
-        "newName": "extractLowerNibble"
+        "newName": "getNextLength"
       },
       {
         "nodeRef": {
@@ -1504,7 +1504,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1514,7 +1515,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1524,7 +1526,8 @@
       "view": {
         "x": 0,
         "y": 172
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1534,7 +1537,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1544,7 +1548,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1554,7 +1559,8 @@
       "view": {
         "x": 0,
         "y": 1016
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1564,7 +1570,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1574,7 +1581,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1584,7 +1592,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1594,7 +1603,8 @@
       "view": {
         "x": 0,
         "y": 22
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1604,7 +1614,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1614,7 +1625,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1624,7 +1636,8 @@
       "view": {
         "x": 0,
         "y": 276
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1634,7 +1647,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1644,7 +1658,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1654,7 +1669,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1664,7 +1680,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1674,7 +1691,8 @@
       "view": {
         "x": 0,
         "y": 351
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1684,7 +1702,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1694,7 +1713,8 @@
       "view": {
         "x": 0,
         "y": 574
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1704,7 +1724,8 @@
       "view": {
         "x": 0,
         "y": 0
-      }
+      },
+      "active": false
     },
     {
       "type": "class",
@@ -1714,13 +1735,15 @@
       "view": {
         "x": 0,
         "y": 10216
-      }
+      },
+      "active": false
     }
   ],
-  "activeTab": 21,
-  "cacheDir": "Guardian_134.apk.cache",
+  "cacheDir": "/home/marci/.cache/jadx/projects/Guardian_134-37d49c1ce629eec5518e3237e002a345",
   "enableLiveReload": false,
   "searchHistory": [
+    "location\u003d",
+    "feature",
     "00002a50-0000-1000-8000-00805f9b34fb",
     "handshake",
     "-sake",
@@ -1748,8 +1771,7 @@
     "00000200",
     "0000181F",
     "00205",
-    "ActiveParam",
-    "SensorConnected",
-    "ConverterMap"
-  ]
+    "ActiveParam"
+  ],
+  "pluginOptions": {}
 }

@@ -4,9 +4,10 @@ import java.util.Arrays;
 import openguardian4.Utils;
 
 import openguardian4.Gatt.Converters.UnpackException;
+
 /* renamed from: e.g.g.a.a.e.b.e */
 /* loaded from: classes.dex */
-public class GattPayload  {
+public class GattPayload {
 
 	private final byte[] value;
 
@@ -34,9 +35,10 @@ public class GattPayload  {
 	}
 
 	/* renamed from: e */
-//	public static IllegalArgumentException FormatException(int format) {
-//		return new IllegalArgumentException("Format type " + format + " is not supported");
-//	}
+	// public static IllegalArgumentException FormatException(int format) {
+	// return new IllegalArgumentException("Format type " + format + " is not
+	// supported");
+	// }
 
 	/* renamed from: i */
 	public static int getNextLength(int i) {
@@ -70,7 +72,7 @@ public class GattPayload  {
 	}
 
 	/* renamed from: d */
-	public Float unpackFloat(PayloadFormat format, int index) throws UnpackException  {
+	public Float unpackFloat(PayloadFormat format, int index) throws UnpackException {
 		float floatValue;
 
 		int nibbleOffset = getNextLength(format.getValue()) + index;
@@ -103,7 +105,7 @@ public class GattPayload  {
 	}
 
 	/* renamed from: f */
-	public Integer unpackInt(PayloadFormat format, int index) throws UnpackException  {
+	public Integer unpackInt(PayloadFormat format, int index) throws UnpackException {
 		int temp1;
 		int temp2;
 		int bitLength;
@@ -128,6 +130,8 @@ public class GattPayload  {
 				temp2 = bytesToUInt24(bArr[index], bArr[index + 1], bArr[index + 2]);
 			} else if (format == PayloadFormat.FORMAT_UINT32) {
 				temp2 = bytesToUnsignedInt32(bArr[index], bArr[index + 1], bArr[index + 2], bArr[index + 3]);
+			} else if (format == PayloadFormat.FORMAT_CRC_SOMETHING) {
+				temp2 = bytesToUInt16(bArr[index], bArr[index + 1]);
 			} else {
 				throw new UnpackException("Invalid format: " + format);
 			}
@@ -141,7 +145,7 @@ public class GattPayload  {
 	}
 
 	/* renamed from: g */
-	public Long unpackLong(PayloadFormat format, int i2) throws UnpackException  {
+	public Long unpackLong(PayloadFormat format, int i2) throws UnpackException {
 		Integer unpackInt = unpackInt(format, i2);
 		if (unpackInt != null) {
 			return Long.valueOf(unpackInt.intValue() & 4294967295L);

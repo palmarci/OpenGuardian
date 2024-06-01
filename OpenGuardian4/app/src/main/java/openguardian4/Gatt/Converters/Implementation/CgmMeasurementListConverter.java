@@ -55,7 +55,7 @@ public class CgmMeasurementListConverter implements IMessageConverter {
             // - i);
 
             // TODO: replace constants from format types
-            int len = extractedCount + GattPayload.getNextLength(17);
+            int len = extractedCount + GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());
             extractedCount = len;
             int unpackInt2 = payload.unpackInt(PayloadFormat.FORMAT_UINT8, len);
             extractedCount += GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());
@@ -67,19 +67,19 @@ public class CgmMeasurementListConverter implements IMessageConverter {
             extractedCount += GattPayload.getNextLength(PayloadFormat.FORMAT_UINT16.getValue());
             if (flags.contains(CgmMeasurementFlags.SENSOR_STATUS_STATUS_PRESENT)) {
                 i2 = payload.unpackInt(PayloadFormat.FORMAT_UINT8, extractedCount) | 0;
-                extractedCount += GattPayload.getNextLength(17);
+                extractedCount += GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());
             } else {
                 i2 = 0;
             }
             if (flags.contains(CgmMeasurementFlags.SENSOR_STATUS_CAL_TEMP_PRESENT)) {
                 i3 = 0 | payload.unpackInt(PayloadFormat.FORMAT_UINT8, extractedCount); // TODO: two status flags are
                                                                                         // not working in the app?
-                extractedCount += GattPayload.getNextLength(17);
+                extractedCount += GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());
             }
             int i5 = i3;
             if (flags.contains(CgmMeasurementFlags.SENSOR_STATUS_WARNING_PRESENT)) {
                 i2 |= payload.unpackInt(PayloadFormat.FORMAT_UINT8, extractedCount) << 16;
-                extractedCount += GattPayload.getNextLength(17);
+                extractedCount += GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());
             }
             int i6 = i2;
             if (flags.contains(CgmMeasurementFlags.CGM_TREND_INFO_PRESENT)) {
