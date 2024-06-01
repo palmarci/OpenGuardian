@@ -18,7 +18,6 @@ import openguardian4.Bluetooth.BluetoothMessageType;
 
 public class App {
 
-	
 	private static List<BluetoothMessage> parseLogFile(String filename) throws Exception {
 		List<BluetoothMessage> messages = new ArrayList<>();
 		Map<String, String> cryptoPairs = new HashMap<>(); // contains the pairs of encryped and decrypted msgs
@@ -35,9 +34,10 @@ public class App {
 			}
 		}
 
-		lines = Utils.removeComments(lines); // remove any comments in the logs 
+		lines = Utils.removeComments(lines); // remove any comments in the logs
 
-		// extract the crypto pairs first since its not necessarily in order with the other messages
+		// extract the crypto pairs first since its not necessarily in order with the
+		// other messages
 		for (String line : lines) {
 			String[] parts = line.split(",");
 			// long timestamp = Long.parseLong(parts[0]);
@@ -55,9 +55,9 @@ public class App {
 			}
 		}
 
-		//extract the messages
+		// extract the messages
 		for (String line : lines) {
-			
+
 			String[] parts = line.split(",");
 			long timestamp = Long.parseLong(parts[0]); // / 1000;
 			String module = parts[1];
@@ -94,24 +94,24 @@ public class App {
 
 	public static void main(String[] args) {
 		if (args.length < 1) {
-			System.out.println("No argument was given");
-			System.exit(-1);
+			System.out.println("No file was given in the arguments!");
+			System.exit(1);
 		}
 
 		List<BluetoothMessage> messages = new ArrayList<BluetoothMessage>();
 		try {
 			messages = parseLogFile(args[0]);
 		} catch (Exception e) {
-			System.out.println("Exception: " + e);
+			System.out.println("Could not parse log file: " + e);
 			return;
 		}
 
 		for (BluetoothMessage msg : messages) {
-			//if (msg.getParsedMessage() != null) {
-				System.out.println(msg);
-		//	} else {
-		//		System.out.println(":(");
-		//	}
+			// if (msg.getParsedMessage() != null) {
+			System.out.println(msg);
+			// } else {
+			// System.out.println(":(");
+			// }
 		}
 	}
 }

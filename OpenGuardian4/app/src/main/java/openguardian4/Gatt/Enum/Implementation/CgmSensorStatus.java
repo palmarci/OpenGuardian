@@ -1,7 +1,6 @@
-package openguardian4.Gatt.Enum.Concrete;
+package openguardian4.Gatt.Enum.Implementation;
 
 import openguardian4.Gatt.Enum.IGattEnum;
-
 
 public enum CgmSensorStatus implements IGattEnum<Integer> {
     SENSOR_STATUS_ANNUNCIATION(1),

@@ -1,7 +1,7 @@
 package openguardian4.Gatt.Converters;
 
 public class UnpackException extends Exception {
-    private static final String defaultMsg = "Not sufficient payload length for extracting";
+    private static final String defaultMsg = "Unknown exception (maybe not sufficient payload length?) for extracting";
 
     public UnpackException() {
         super(defaultMsg);
@@ -10,3 +10,5 @@ public class UnpackException extends Exception {
         super(message);
     }
 }
+
+

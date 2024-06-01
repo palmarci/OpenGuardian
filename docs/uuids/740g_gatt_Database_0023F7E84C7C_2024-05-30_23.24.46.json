@@ -1,0 +1,444 @@
+{
+  "address": "00:23:F7:E8:XX:XX",
+  "name": "Pump 33650XXH",
+  "services": [
+    {
+      "name": "Generic Access",
+      "uuid": "0x1800",
+      "characteristics": [
+        {
+          "name": "Device Name",
+          "uuid": "0x2A00",
+          "properties": "Read"
+        },
+        {
+          "name": "Appearance",
+          "uuid": "0x2A01",
+          "properties": "Read"
+        }
+      ]
+    },
+    {
+      "name": "Device Information",
+      "uuid": "0x180A",
+      "characteristics": [
+        {
+          "name": "Manufacturer Name String",
+          "uuid": "0x2A29",
+          "properties": "Read"
+        },
+        {
+          "name": "Model Number String",
+          "uuid": "0x2A24",
+          "properties": "Read"
+        },
+        {
+          "name": "Serial Number String",
+          "uuid": "0x2A25",
+          "properties": "Read"
+        },
+        {
+          "name": "Hardware Revision String",
+          "uuid": "0x2A27",
+          "properties": "Read"
+        },
+        {
+          "name": "Firmware Revision String",
+          "uuid": "0x2A26",
+          "properties": "Read"
+        },
+        {
+          "name": "Software Revision String",
+          "uuid": "0x2A28",
+          "properties": "Read"
+        },
+        {
+          "name": "PnP ID",
+          "uuid": "0x2A50",
+          "properties": "Read"
+        },
+        {
+          "name": "System ID",
+          "uuid": "0x2A23",
+          "properties": "Read"
+        },
+        {
+          "name": "IEEE 11073-20601 Regulatory Certification Data List",
+          "uuid": "0x2A2A",
+          "properties": "Read"
+        }
+      ]
+    },
+    {
+      "uuid": "00000100-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00000101-0000-1000-0000-009132591325",
+          "properties": "Read, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000102-0000-1000-0000-009132591325",
+          "properties": "Read"
+        },
+        {
+          "uuid": "00000103-0000-1000-0000-009132591325",
+          "properties": "Read"
+        },
+        {
+          "uuid": "00000104-0000-1000-0000-009132591325",
+          "properties": "Read"
+        },
+        {
+          "uuid": "00000105-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000106-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000107-0000-1000-0000-009132591325",
+          "properties": "Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "name": "Record Access Control Point",
+          "uuid": "0x2A52",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000108-0000-1000-0000-009132591325",
+          "properties": "Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000400-0000-1000-0000-009132591325",
+          "properties": "Read, Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Current Time Service",
+      "uuid": "0x1805",
+      "characteristics": [
+        {
+          "name": "Current Time",
+          "uuid": "0x2A2B",
+          "properties": "Read, Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Battery Service",
+      "uuid": "0x180F",
+      "characteristics": [
+        {
+          "name": "Battery Level",
+          "uuid": "0x2A19",
+          "properties": "Read, Notify",
+          "value": {
+            "hex": "4B",
+            "parsed": "Level: 75 %",
+            "text": "75 %"
+          },
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Continuous Glucose Monitoring",
+      "uuid": "0x181F",
+      "characteristics": [
+        {
+          "name": "CGM Measurement",
+          "uuid": "0x2AA7",
+          "properties": "Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "name": "CGM Feature",
+          "uuid": "0x2AA8",
+          "properties": "Read"
+        },
+        {
+          "name": "CGM Status",
+          "uuid": "0x2AA9",
+          "properties": "Read"
+        },
+        {
+          "name": "CGM Session Start Time",
+          "uuid": "0x2AAA",
+          "properties": "Read, Write"
+        },
+        {
+          "name": "CGM Session Run Time",
+          "uuid": "0x2AAB",
+          "properties": "Read"
+        },
+        {
+          "name": "Record Access Control Point",
+          "uuid": "0x2A52",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "name": "CGM Specific Ops Control Point",
+          "uuid": "0x2AAC",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000201-0000-1000-0000-009132591325",
+          "properties": "Read, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000202-0000-1000-0000-009132591325",
+          "properties": "Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000203-0000-1000-0000-009132591325",
+          "properties": "Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000200-0000-1000-0000-009132591325",
+          "properties": "Read"
+        }
+      ]
+    },
+    {
+      "uuid": "00000300-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00000360-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000350-0000-1000-0000-009132591325",
+          "properties": "Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "name": "Record Access Control Point",
+          "uuid": "0x2A52",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000370-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "00000500-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00000510-0000-1000-0000-009132591325",
+          "properties": "Read, Write, Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "00001020-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00001010-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "00000700-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00000701-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000702-0000-1000-0000-009132591325",
+          "properties": "Write no response, Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "00000600-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00000601-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000602-0000-1000-0000-009132591325",
+          "properties": "Write no response, Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "00000800-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "uuid": "00000801-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000802-0000-1000-0000-009132591325",
+          "properties": "Write no response, Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

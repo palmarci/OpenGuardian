@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.TimeZone;
 
 import openguardian4.Utils;
+import openguardian4.Gatt.Converters.UnpackException;
 import openguardian4.Gatt.Message.AbstractGattMessage;
 import openguardian4.Gatt.Message.GattPayload;
 
@@ -17,8 +18,8 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 	private byte[] rawData;
 	private boolean decrypted;
 
-	public BluetoothMessage(long unixTimestamp, BluetoothMessageType type, String serviceUuid, byte[] data,
-			boolean decrypted) {
+	public BluetoothMessage(long unixTimestamp, BluetoothMessageType type, String serviceUuid,
+			byte[] data, boolean decrypted) {
 		// parse unix timestamp
 		var utcTime = LocalDateTime.ofInstant(Instant.ofEpochMilli(unixTimestamp),
 				TimeZone.getTimeZone("Etc/UTC").toZoneId());
@@ -31,11 +32,14 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 		// parse message if we have a converter for it
 		var converter = Utils.getConverter(serviceUuid);
 		if (converter != null) {
-			var unpacked = converter.unpack(new GattPayload(data));
-			if (unpacked != null) {
+			AbstractGattMessage unpacked = null;
+			try {
+				unpacked = converter.unpack(new GattPayload(data));
 				this.parsedMessage = unpacked;
-			}
 
+			} catch (UnpackException e) {
+				System.err.println("Failed parsing payload: " + e);
+			}
 		}
 
 		this.serviceUuid = serviceUuid;
@@ -97,14 +101,11 @@ public class BluetoothMessage implements Comparable<BluetoothMessage> {
 
 	@Override
 	public String toString() {
-		return this.getClass().getSimpleName() + " {" +
-				" time='" + getTime() + "'" +
-				", type='" + getType() + "'" +
-				", parsedMessage='" + getParsedMessage() + "'" +
-				", serviceUuid='" + getServiceUuid() + "'" +
-				", rawData='" + Utils.bytesToHexStr(getRawData()) + "'" +
-				", decrypted='" + isDecrypted() + "'" +
-				"}";
+		return this.getClass().getSimpleName() + " {" + " time='" + getTime() + "'" + ", type='"
+				+ getType() + "'" + ", parsedMessage='" + getParsedMessage() + "'"
+				+ ", serviceUuid='" + getServiceUuid() + "'" + ", rawData='"
+				+ Utils.bytesToHexStr(getRawData()) + "'" + ", decrypted='" + isDecrypted() + "'"
+				+ "}";
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package openguardian4.Gatt.Message.Concrete;
+package openguardian4.Gatt.Message.Implementation;
 
 import java.util.ArrayList;
 import java.util.List;

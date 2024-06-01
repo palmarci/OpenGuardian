@@ -3,7 +3,8 @@ package openguardian4;
 import java.util.ArrayList;
 import java.util.List;
 
-import openguardian4.Gatt.Converters.AbstractMessageConverter;
+import openguardian4.Gatt.Converters.IMessageConverter;
+//import openguardian4.Gatt.Converters.AbstractMessageConverter;
 import openguardian4.Gatt.Message.GattMessageType;
 
 public final class Utils {
@@ -29,9 +30,9 @@ public final class Utils {
 		return data;
 	}
 
-	public static AbstractMessageConverter getConverter(String service) {
+	public static IMessageConverter getConverter(String service) {
 		for (GattMessageType type : GattMessageType.values()) {
-			if (type.uuid.equals(service)) {
+			if (type.supportedUuids.contains(service)) {
 				return type.converter;
 			}
 		}

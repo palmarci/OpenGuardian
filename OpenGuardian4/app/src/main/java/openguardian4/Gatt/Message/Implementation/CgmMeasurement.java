@@ -1,13 +1,12 @@
-package openguardian4.Gatt.Message.Concrete;
+package openguardian4.Gatt.Message.Implementation;
 
 import java.util.Objects;
 import java.util.Set;
 
 import openguardian4.Gatt.Enum.IntEnumConverter;
-
-import openguardian4.Gatt.Enum.Concrete.CgmSensorStatus;
-import openguardian4.Gatt.Enum.Concrete.CgmCalibrationFlags;
-import openguardian4.Gatt.Enum.Concrete.CgmMeasurementFlags;
+import openguardian4.Gatt.Enum.Implementation.CgmCalibrationFlags;
+import openguardian4.Gatt.Enum.Implementation.CgmMeasurementFlags;
+import openguardian4.Gatt.Enum.Implementation.CgmSensorStatus;
 
 
 /* renamed from: e.g.f.a.d.d.a.n.w.d */

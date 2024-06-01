@@ -1,16 +1,14 @@
-package openguardian4.Gatt.Message.Concrete;
+package openguardian4.Gatt.Message.Implementation;
 
 
 import java.util.Objects;
 import java.util.Set;
 
 import openguardian4.Gatt.Message.AbstractGattMessage;
-import openguardian4.Gatt.Enum.Concrete.ChangeSensorError;
-import openguardian4.Gatt.Enum.Concrete.SensorError;
-import openguardian4.Gatt.Enum.Concrete.AlgorithmDataFlags;
-
-
 import openguardian4.Gatt.Enum.IntEnumConverter;
+import openguardian4.Gatt.Enum.Implementation.AlgorithmDataFlags;
+import openguardian4.Gatt.Enum.Implementation.ChangeSensorError;
+import openguardian4.Gatt.Enum.Implementation.SensorError;
 
 public class AlgorithmData extends AbstractGattMessage {
 	public static final AlgorithmData EMPTY = new AlgorithmData(0, 0, 0);

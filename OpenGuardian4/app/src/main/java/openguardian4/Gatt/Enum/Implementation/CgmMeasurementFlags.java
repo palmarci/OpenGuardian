@@ -1,4 +1,5 @@
-package openguardian4.Gatt.Enum.Concrete;
+
+package openguardian4.Gatt.Enum.Implementation;
 
 import openguardian4.Gatt.Enum.IGattEnum;
 

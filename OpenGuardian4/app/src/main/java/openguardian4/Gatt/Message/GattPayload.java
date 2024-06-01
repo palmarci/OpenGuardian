@@ -39,7 +39,7 @@ public class GattPayload  {
 //	}
 
 	/* renamed from: i */
-	public static int extractLowerNibble(int i) {
+	public static int getNextLength(int i) {
 		return i & 15;
 	}
 
@@ -70,19 +70,19 @@ public class GattPayload  {
 	}
 
 	/* renamed from: d */
-	public Float unpackFloat(int format, int index) throws UnpackException  {
+	public Float unpackFloat(PayloadFormat format, int index) throws UnpackException  {
 		float floatValue;
 
-		int nibbleOffset = extractLowerNibble(format) + index;
+		int nibbleOffset = getNextLength(format.getValue()) + index;
 		byte[] byteArray = this.value;
 
 		if (nibbleOffset > byteArray.length) {
 			return null;
 		}
 
-		if (format == PayloadFormat.FORMAT_SFLOAT.getValue()) {
+		if (format == PayloadFormat.FORMAT_SFLOAT) {
 			floatValue = unpackFloatFrom2Bytes(byteArray[index], byteArray[index + 1]);
-		} else if (format == PayloadFormat.FORMAT_FLOAT.getValue()) {
+		} else if (format == PayloadFormat.FORMAT_FLOAT) {
 			floatValue = unpackFloatFrom4Bytes(byteArray[index], byteArray[index + 1], byteArray[index + 2],
 					byteArray[index + 3]);
 		} else {
@@ -103,30 +103,30 @@ public class GattPayload  {
 	}
 
 	/* renamed from: f */
-	public Integer unpackInt(int format, int index) throws UnpackException  {
+	public Integer unpackInt(PayloadFormat format, int index) throws UnpackException  {
 		int temp1;
 		int temp2;
 		int bitLength;
-		int length = extractLowerNibble(format) + index;
+		int length = getNextLength(format.getValue()) + index;
 		byte[] bArr = this.value;
 		if (length > bArr.length) {
 			return null;
 		}
-		if (format == PayloadFormat.FORMAT_SINT8.getValue()) {
+		if (format == PayloadFormat.FORMAT_SINT8) {
 			temp1 = byteToUInt8(bArr[index]);
 			bitLength = 8;
-		} else if (format == PayloadFormat.FORMAT_SINT16.getValue()) {
+		} else if (format == PayloadFormat.FORMAT_SINT16) {
 			temp1 = bytesToUInt16(bArr[index], bArr[index + 1]);
 			bitLength = 16;
-		} else if (format != PayloadFormat.FORMAT_SINT32.getValue()) {
+		} else if (format != PayloadFormat.FORMAT_SINT32) {
 
-			if (format == PayloadFormat.FORMAT_UINT8.getValue()) {
+			if (format == PayloadFormat.FORMAT_UINT8) {
 				temp2 = byteToUInt8(bArr[index]);
-			} else if (format == PayloadFormat.FORMAT_UINT16.getValue()) {
+			} else if (format == PayloadFormat.FORMAT_UINT16) {
 				temp2 = bytesToUInt16(bArr[index], bArr[index + 1]);
-			} else if (format == PayloadFormat.FORMAT_UINT24.getValue()) {
+			} else if (format == PayloadFormat.FORMAT_UINT24) {
 				temp2 = bytesToUInt24(bArr[index], bArr[index + 1], bArr[index + 2]);
-			} else if (format == PayloadFormat.FORMAT_UINT32.getValue()) {
+			} else if (format == PayloadFormat.FORMAT_UINT32) {
 				temp2 = bytesToUnsignedInt32(bArr[index], bArr[index + 1], bArr[index + 2], bArr[index + 3]);
 			} else {
 				throw new UnpackException("Invalid format: " + format);
@@ -141,8 +141,8 @@ public class GattPayload  {
 	}
 
 	/* renamed from: g */
-	public Long unpackLong(int i, int i2) throws UnpackException  {
-		Integer unpackInt = unpackInt(i, i2);
+	public Long unpackLong(PayloadFormat format, int i2) throws UnpackException  {
+		Integer unpackInt = unpackInt(format, i2);
 		if (unpackInt != null) {
 			return Long.valueOf(unpackInt.intValue() & 4294967295L);
 		}

@@ -1,0 +1,304 @@
+{
+  "address": "DC:16:A2:84:XX:XX",
+  "name": "CGM GT86541XXM",
+  "services": [
+    {
+      "name": "Generic Attribute",
+      "uuid": "0x1801",
+      "characteristics": [
+        {
+          "name": "Service Changed",
+          "uuid": "0x2A05",
+          "properties": "Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Generic Access",
+      "uuid": "0x1800",
+      "characteristics": [
+        {
+          "name": "Device Name",
+          "uuid": "0x2A00",
+          "properties": "Read, Write"
+        },
+        {
+          "name": "Appearance",
+          "uuid": "0x2A01",
+          "properties": "Read"
+        },
+        {
+          "name": "Peripheral Preferred Connection Parameters",
+          "uuid": "0x2A04",
+          "properties": "Read"
+        }
+      ]
+    },
+    {
+      "name": "Device Information",
+      "uuid": "0x180A",
+      "characteristics": [
+        {
+          "name": "Manufacturer Name String",
+          "uuid": "0x2A29",
+          "properties": "Read"
+        },
+        {
+          "name": "Model Number String",
+          "uuid": "0x2A24",
+          "properties": "Read"
+        },
+        {
+          "name": "Serial Number String",
+          "uuid": "0x2A25",
+          "properties": "Read"
+        },
+        {
+          "name": "Firmware Revision String",
+          "uuid": "0x2A26",
+          "properties": "Read"
+        },
+        {
+          "name": "Hardware Revision String",
+          "uuid": "0x2A27",
+          "properties": "Read"
+        },
+        {
+          "name": "Software Revision String",
+          "uuid": "0x2A28",
+          "properties": "Read"
+        },
+        {
+          "name": "System ID",
+          "uuid": "0x2A23",
+          "properties": "Read"
+        },
+        {
+          "name": "IEEE 11073-20601 Regulatory Certification Data List",
+          "uuid": "0x2A2A",
+          "properties": "Read"
+        },
+        {
+          "name": "PnP ID",
+          "uuid": "0x2A50",
+          "properties": "Read"
+        }
+      ]
+    },
+    {
+      "name": "Battery Service",
+      "uuid": "0x180F",
+      "characteristics": [
+        {
+          "name": "Battery Level",
+          "uuid": "0x2A19",
+          "properties": "Read, Notify",
+          "value": {
+            "hex": "5F",
+            "parsed": "Level: 95 %",
+            "text": "95 %"
+          },
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "15dbcd61-6388-4c33-b9d8-580254fed03b",
+      "characteristics": [
+        {
+          "uuid": "c774edac-e573-45e1-97c6-8b5c18cc571a",
+          "properties": "Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "de3e5221-1308-439c-a13a-884ddc387ca7",
+          "properties": "Read"
+        },
+        {
+          "uuid": "8484039e-97d3-40c0-bb55-c70c17badae2",
+          "properties": "Write"
+        }
+      ]
+    },
+    {
+      "uuid": "0xFE82",
+      "characteristics": [
+        {
+          "uuid": "0000fe82-0000-1000-0000-009132591325",
+          "properties": "Write, Notify",
+          "descriptors": [
+            {
+              "name": "Characteristic User Description",
+              "uuid": "0x2901"
+            },
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "uuid": "00000300-0000-1000-0000-009132591325",
+      "characteristics": [
+        {
+          "name": "Record Access Control Point",
+          "uuid": "0x2A52",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000360-0000-1000-0000-009132591325",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000350-0000-1000-0000-009132591325",
+          "properties": "Notify",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Continuous Glucose Monitoring",
+      "uuid": "0x181F",
+      "characteristics": [
+        {
+          "name": "CGM Measurement",
+          "uuid": "0x2AA7",
+          "properties": "Notify, Indicate",
+          "descriptors": [
+            {
+              "name": "Characteristic User Description",
+              "uuid": "0x2901"
+            },
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000200-0000-1000-0000-009132591325",
+          "properties": "Read",
+          "descriptors": [
+            {
+              "name": "Characteristic User Description",
+              "uuid": "0x2901"
+            }
+          ]
+        },
+        {
+          "name": "CGM Feature",
+          "uuid": "0x2AA8",
+          "properties": "Read"
+        },
+        {
+          "name": "CGM Status",
+          "uuid": "0x2AA9",
+          "properties": "Read"
+        },
+        {
+          "name": "CGM Session Start Time",
+          "uuid": "0x2AAA",
+          "properties": "Read, Write"
+        },
+        {
+          "name": "CGM Session Run Time",
+          "uuid": "0x2AAB",
+          "properties": "Read, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000203-0000-1000-0000-009132591325",
+          "properties": "Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "name": "Record Access Control Point",
+          "uuid": "0x2A52",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "name": "CGM Specific Ops Control Point",
+          "uuid": "0x2AAC",
+          "properties": "Write, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000201-0000-1000-0000-009132591325",
+          "properties": "Read, Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        },
+        {
+          "uuid": "00000202-0000-1000-0000-009132591325",
+          "properties": "Indicate",
+          "descriptors": [
+            {
+              "name": "Client Characteristic Configuration",
+              "uuid": "0x2902"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
