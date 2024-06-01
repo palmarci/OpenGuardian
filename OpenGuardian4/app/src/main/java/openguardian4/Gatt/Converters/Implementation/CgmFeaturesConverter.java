@@ -1,6 +1,5 @@
 package openguardian4.Gatt.Converters.Implementation;
 
-import openguardian4.RandomConstants;
 import openguardian4.Gatt.Converters.IMessageConverter;
 import openguardian4.Gatt.Converters.PackException;
 import openguardian4.Gatt.Converters.UnpackException;
@@ -25,10 +24,10 @@ public class CgmFeaturesConverter implements IMessageConverter {
 		}
 		*/
 
-		int e2eCrcFeatureFlag = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT32, 0) & RandomConstants.MEASURED_SIZE_MASK.getValue();
+		int e2eCrcFeatureFlag = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT32, 0) & 0xFFFFFF;
 		int getNextLength = (GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue()) * 3); //+ 0;
 		int unpackInt = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT8, getNextLength) & 15;
-		int unpackInt2 = (gattPayload.unpackInt(PayloadFormat.FORMAT_UINT8, getNextLength) & RandomConstants.VIDEO_STREAM_MASK.getValue()) >> 4;
+		int unpackInt2 = (gattPayload.unpackInt(PayloadFormat.FORMAT_UINT8, getNextLength) & 0xF0) >> 4;
 		int getNextLength2 = getNextLength + GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue());
 		if (!(deviceSupportsCrc ^ IntEnumConverter.fromInt(e2eCrcFeatureFlag, SensorFeatures.values()).contains(SensorFeatures.E2E_CRC))) {
 			
