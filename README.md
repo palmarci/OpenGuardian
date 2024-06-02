@@ -21,20 +21,22 @@ Reverse engineering the BT communication for the Medtronic Guardian Continous Gl
    - this is intended to be used in an Android app hopefully in the forseable future
 
   - limited support for UUIDs, but can also parse some Guardian 4 messages
-  - the "4" will be dropped from the name and support will be added for Guardian 3 and pumps
+  - the "4" will be dropped from the name and support will be added for Guardian 3, and the Pumps
 - Sake_RE
   - the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called *SAKE* ([see more](data/sake_whitepaper.pdf)) 
   - progress has been stated, but it is in its early stages
   - currently using an older version of the library built for ARMv7
 - Sakeproxy
-  - an example Android application which uses the prebuilt SAKE libraries extracted from the original APKs
-  - just a proof of concept, it can call the library and enter a "key database" to be used for handshake and encryption 
-  - probably will be used to "proxy" the data back to PC where the actual development will happen over BT
+  - an Android application which uses the prebuilt SAKE libraries extracted from the original APKs
+  - it provides a simple HTTP API and it can be used to perform the crypto functions without an actual device
+  - only a temporary solution until we can fully reverse enginer the crypto library, but will be very useful for development
+  - also I am planning on hosting some kind of development server for other people to talk with their devices
 - Data 
 	- decrypted SAKE "key databases"
 	- logs from the Monitor script
-- Docs
-  - TODO: document everything
+	- UUID information
+	- sniffed BT traffic in pcap format
+  - TODO: document everything, maybe create a wiki on github
 - Scripts
   - various scripts to be used with frida (including the Monitor)
   - TODO: go trough the old backups and upload everything
