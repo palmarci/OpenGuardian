@@ -3,7 +3,7 @@
 Reverse engineering the BT communication for the Medtronic Guardian Continous Glucose Monitoring Systems and Insulin Pumps. This work originally started on the Guardian 4 Sensor, but now the insulin pumps are also being researched.
 
 
-![alt text](docs/banner.png)
+![alt text](data/banner.png)
 
 - [OpenGuardian](#openguardian)
   - [Structure](#structure)
@@ -23,7 +23,7 @@ Reverse engineering the BT communication for the Medtronic Guardian Continous Gl
   - limited support for UUIDs, but can also parse some Guardian 4 messages
   - the "4" will be dropped from the name and support will be added for Guardian 3 and pumps
 - Sake_RE
-  - the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called *SAKE* ([see more](docs/sake_whitepaper.pdf)) 
+  - the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called *SAKE* ([see more](data/sake_whitepaper.pdf)) 
   - progress has been stated, but it is in its early stages
   - currently using an older version of the library built for ARMv7
 - Sakeproxy

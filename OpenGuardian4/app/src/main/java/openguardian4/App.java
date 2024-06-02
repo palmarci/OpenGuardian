@@ -89,7 +89,7 @@ public class App {
 				messages.add(msg);
 			}
 		}
-		Collections.sort(messages);
+		Collections.sort(messages); // fix time order
 		return messages;
 	}
 
@@ -104,7 +104,7 @@ public class App {
 			messages = parseLogFile(args[0]);
 		} catch (Exception e) {
 			System.err.println("Could not parse log file: " + e);
-			return;
+			System.exit(1);
 		}
 
 		for (BluetoothMessage msg : messages) {

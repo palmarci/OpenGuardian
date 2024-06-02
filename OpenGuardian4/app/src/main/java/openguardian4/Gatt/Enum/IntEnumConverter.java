@@ -2,6 +2,8 @@ package openguardian4.Gatt.Enum;
 import java.util.HashSet;
 import java.util.Set;
 
+import openguardian4.Gatt.Converters.UnpackException;
+
 public final class IntEnumConverter {
     public static final int BITS_PER_BYTE = 8;
     public static final int BITS_PER_WORD = 16;
@@ -27,12 +29,21 @@ public final class IntEnumConverter {
     }
 
     /* renamed from: c */
-    public static <E extends IGattEnum<Integer>> E m3876c(int i, E[] eArr, E e) {
+    public static <E extends IGattEnum<Integer>> E pickValuesHelper(int i, E[] eArr, E e) {
+        //idk wtf this is
         for (E e2 : eArr) {
             if (i == ((Integer) e2.getValue()).intValue()) {
                 return e2;
             }
         }
         return e;
+    }
+
+    public static <E extends IGattEnum<Integer>> E pickValues(int i2, E[] eArr) throws UnpackException {
+        E e2 = (E) IntEnumConverter.pickValuesHelper(i2, eArr, null);
+        if (e2 != null) {
+            return e2;
+        }
+        throw new UnpackException("Failed to pick value '" + i2 + "' from " + eArr.getClass().getName());
     }
 }
