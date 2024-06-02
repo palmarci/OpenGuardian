@@ -1,4 +1,4 @@
-package com.medtronic.sake;
+package com.medtronic.SakeClient;
 
 import com.medtronic.minimed.sake.NativeSakeClient;
 import com.medtronic.minimed.sake.NativeSakeKeyDatabase;
@@ -7,7 +7,7 @@ import com.medtronic.minimed.sake.NativeSakeUserMessage;
 import com.medtronic.minimed.sake.SakeJNI;
 import com.medtronic.minimed.sake.SwigPtr;
 
-public class SakeApi {
+public class SakeJNIWrapper {
     /* renamed from: a */
     public static VoidPtr getPointer(SwigPtr swigPtr) {
         long AsVoidPtr = SakeJNI.AsVoidPtr(SwigPtr.getPointer(swigPtr));
@@ -18,8 +18,8 @@ public class SakeApi {
     }
 
     /* renamed from: b */
-    public static SakeStatus getStatus(NativeSakeClient nativeSakeClient, NativeSakeSecureMessage nativeSakeSecureMessage, NativeSakeSecureMessage nativeSakeSecureMessage2) {
-        return SakeStatus.getStatus(SakeJNI.Sake_Client_Handshake(NativeSakeClient.getPointer(nativeSakeClient), nativeSakeClient, NativeSakeSecureMessage.m24084c(nativeSakeSecureMessage), nativeSakeSecureMessage, NativeSakeSecureMessage.m24084c(nativeSakeSecureMessage2), nativeSakeSecureMessage2));
+    public static SakeHandshakeStatus getStatus(NativeSakeClient nativeSakeClient, NativeSakeSecureMessage nativeSakeSecureMessage, NativeSakeSecureMessage nativeSakeSecureMessage2) {
+        return SakeHandshakeStatus.getStatus(SakeJNI.Sake_Client_Handshake(NativeSakeClient.getPointer(nativeSakeClient), nativeSakeClient, NativeSakeSecureMessage.m24084c(nativeSakeSecureMessage), nativeSakeSecureMessage, NativeSakeSecureMessage.m24084c(nativeSakeSecureMessage2), nativeSakeSecureMessage2));
     }
 
     /* renamed from: c */

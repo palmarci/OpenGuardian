@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.openguardian4.sakeproxy"
         minSdk 24
-        targetSdk 24
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -29,6 +29,9 @@ android {
 }
 
 dependencies {
+    
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'

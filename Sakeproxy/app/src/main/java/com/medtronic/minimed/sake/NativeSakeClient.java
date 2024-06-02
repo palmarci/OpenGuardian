@@ -39,8 +39,8 @@ public class NativeSakeClient {
     }
 
     /* renamed from: c */
-    public SakeException getLastError() {
-        return SakeException.parseErrorCode(SakeJNI.SAKE_CLIENT_S_lastError_get(this.swigCPtr, this));
+    public NativeSakeException getLastError() {
+        return NativeSakeException.parseErrorCode(SakeJNI.SAKE_CLIENT_S_lastError_get(this.swigCPtr, this));
     }
 
     public void finalize() {

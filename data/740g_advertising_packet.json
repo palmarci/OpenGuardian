@@ -1,0 +1,39 @@
+{
+  "address": "DC:16:A2:84:XX:XX",
+  "name": "CGM GT86541XXM",
+  "advData": {
+    "hex": "02 01 06 0F 09 43 47 4D 20 47 54 38 36 35 34 31 35 32 4D 04 FF F9 01 00 05 02 82 FE 1F 18 02 0A 00",
+    "AD": [
+      {
+        "length": 2,
+        "type": "0x01 - Flags",
+        "data": "06",
+        "text": "General Discoverable, BR/EDR Not Supported"
+      },
+      {
+        "length": 15,
+        "type": "0x09 - Complete Local Name",
+        "data": "43 47 4D 20 47 54 38 36 35 34 31 35 32 4D",
+        "text": "CGM GT8654152M"
+      },
+      {
+        "length": 4,
+        "type": "0xFF - Manufacturer Specific Data",
+        "data": "F9 01 00",
+        "text": "Medtronic Inc. <0x01F9> [ 00 ]"
+      },
+      {
+        "length": 5,
+        "type": "0x02 - Incomplete List of 16-bit Service Class UUIDs",
+        "data": "82 FE 1F 18",
+        "text": "Medtronic Inc. (0xFE82), Continuous Glucose Monitoring (0x181F)"
+      },
+      {
+        "length": 2,
+        "type": "0x0A - Tx Power Level",
+        "data": "00",
+        "text": "0 dBm"
+      }
+    ]
+  }
+}

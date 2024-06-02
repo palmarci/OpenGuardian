@@ -1,7 +1,7 @@
-package com.medtronic.sake;
+package com.medtronic.SakeClient;
 
 /* loaded from: classes.dex */
-public enum SakeAuthStatus {
+public enum SakeClientStatus {
     LINK_SYNC_LOST,
     AUTHORIZED,
     FAILED,

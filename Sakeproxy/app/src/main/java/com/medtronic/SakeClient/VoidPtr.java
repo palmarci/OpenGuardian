@@ -1,4 +1,4 @@
-package com.medtronic.sake;
+package com.medtronic.SakeClient;
 
 public class VoidPtr {
     private transient long swigCPtr;
