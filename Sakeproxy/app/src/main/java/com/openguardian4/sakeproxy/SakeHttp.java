@@ -50,7 +50,11 @@ public class SakeHttp extends NanoHTTPD {
                 String requestAction = requestJson.get("action").getAsString();
                 requestAction = requestAction.trim();
                 String requestDataStr = gson.fromJson(requestJson.get("data"), String.class);
-                byte[] requestDataBytes = Utils.hexStrToBytes(requestDataStr);
+                byte[] requestDataBytes = null;
+                if (!requestDataStr.equals("null")) {
+                    requestDataBytes = Utils.hexStrToBytes(requestDataStr);
+                }
+
                 byte[] sakeResponseData = null;
 
                 Utils.logPrint("got request: " + requestAction);
@@ -60,16 +64,16 @@ public class SakeHttp extends NanoHTTPD {
 
                     if (requestAction.equals("init")) {
                         Utils.logPrint("trying to start sakeclient...");
-                        boolean success;
+                       // boolean success = false;
                         try {
                             this.sakeClient = new SakeClient(requestDataBytes);
-                            success = true;
+                            return sendHttpResponse(null, true);
                         } catch (Exception e) {
                             Utils.logPrint("failed to open key db!");
                             this.sakeClient = null;
-                            success = false;
+                            return sendHttpResponse(e.getMessage(), false);
+
                         }
-                        return sendHttpResponse(null, success);
                     }
 
                     return sendHttpResponse("LIBRARY_NOT_INITIALIZED", false);
@@ -94,8 +98,14 @@ public class SakeHttp extends NanoHTTPD {
                     sakeResponseData = this.sakeClient.decrypt(requestDataBytes);
                     return sendHttpResponse(sakeResponseData, sakeResponseData != null);
                 } else if ("handshake".equals(requestAction)) {
-                    sakeResponseData = this.sakeClient.doHandshake(requestDataBytes);
-                    return sendHttpResponse(sakeResponseData, sakeResponseData != null);
+                    // bool success = false;
+                    // byte[] resp = null;
+                    try {
+                        sakeResponseData = this.sakeClient.doHandshake(requestDataBytes);
+                        return sendHttpResponse(sakeResponseData, true); // may return null actually
+                    } catch (Exception e) {
+                        return sendHttpResponse(e.getMessage(), false); // may return null actually
+                    }
                 }
 
                 return sendHttpResponse("UNKNOWN_REQUEST", false);
