@@ -1,6 +1,6 @@
 # OpenGuardian
 
-Reverse engineering the BT communication for the Medtronic Guardian Continous Glucose Monitoring Systems and Insulin Pumps. This work originally started on the Guardian 4 Sensor, but now the insulin pumps are also being researched.
+Reverse engineering the BT communication for the Medtronic Guardian Continous Glucose Monitoring Systems and Insulin Pumps. This work originally started on the Guardian 4 Sensor, but now the insulin pumps are also being researched. Check the discord for more info! https://discord.gg/tb4egy8VYh (no Medtronic spies please)
 
 
 ![alt text](data/banner.png)
