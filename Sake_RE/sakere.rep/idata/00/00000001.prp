@@ -6,6 +6,6 @@
         <STATE NAME="FILE_ID" TYPE="string" VALUE="c0a8164a693923820923795" />
         <STATE NAME="FILE_TYPE" TYPE="int" VALUE="0" />
         <STATE NAME="READ_ONLY" TYPE="boolean" VALUE="false" />
-        <STATE NAME="NAME" TYPE="string" VALUE="libandroid-sake-lib_v210.so" />
+        <STATE NAME="NAME" TYPE="string" VALUE="libandroid-sake-lib_v210.so_old" />
     </BASIC_INFO>
 </FILE_INFO>
