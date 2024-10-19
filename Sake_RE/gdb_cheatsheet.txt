@@ -1,0 +1,5 @@
+info sharedlibrary
+set pagination off <- doesnt do shit for me
+info functions sake*
+info reg
+x/100xb <address>

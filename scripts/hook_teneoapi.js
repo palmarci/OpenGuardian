@@ -1,6 +1,6 @@
 var baseTeneo = 'com.medtronic.teneo.';
 var socketTeneo = "com.medtronic.securerepositories.internal.websocket.";
-var sakepath = 'com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S';
+		//var sakepath = 'com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S';
 //https://stackoverflow.com/questions/69668741/setting-a-member-in-current-class-using-frida
 //https://stackoverflow.com/questions/69503358/unable-to-retrieve-value-from-interface-using-frida
 
@@ -21,7 +21,7 @@ setTimeout(function () {
 		var response = Java.use(baseTeneo + "HttpConnectionResponse");
 		var socket_sender = Java.use(socketTeneo + "WebSocketCommunicator");
 		var socket_receiver = Java.use(socketTeneo + "WebSocketCommunicator$EchoWebSocketListener");
-		var sake = Java.use(sakepath);
+	//	var sake = Java.use(sakepath);
 
 		request.$init.overload('java.net.URL', baseTeneo + 'HttpMethod', 'java.util.Map', 'java.util.Map', baseTeneo + 'bodybuilders.BodyBuilder').implementation = function (url, method, headers, data, bodyBuilder) {
 			console.log("cert called");
@@ -67,12 +67,14 @@ setTimeout(function () {
 			return toret;
 		}
 
+		/*
 		sake.$init.overload("long", "boolean").implementation = function (j, z) {
 			var toret = this.sendStringMessage.overload("long", "boolean").call(this, j, z);
 			console.log("init key db called:", j, z, "toret: ", toret);
 			return toret;
-
 		}
+		*/
+
 
 	})
 }, 0);
