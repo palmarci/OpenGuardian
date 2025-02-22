@@ -1,9 +1,9 @@
 #Ghidra Lock File
-#Sat Oct 19 20:47:04 CEST 2024
+#Sat Feb 22 10:20:23 CET 2025
 OS\ Name=Linux
-OS\ Version=6.6.56-1-lts
+OS\ Version=6.13.3-zen1-1-zen
 Username=marci
 Hostname=marcipc
 <META>\ Supports\ File\ Channel\ Locking=Channel Lock
 OS\ Architecture=amd64
-Timestamp=10/19/24, 8\:47 PM
+Timestamp=2/22/25, 10\:20 AM
