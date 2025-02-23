@@ -5,12 +5,11 @@ Reverse engineering the BT communication for the Medtronic Guardian Continous Gl
 
 ![alt text](data/banner.png)
 
-- [OpenGuardian](#openguardian)
-  - [Structure](#structure)
-  - [JADX notes](#jadx-notes)
-    - [finding the converter map](#finding-the-converter-map)
-  - [Monitor script](#monitor-script)
-  - [Random notes](#random-notes)
+- [Structure](#structure)
+- [JADX notes](#jadx-notes)
+  - [finding the converter map](#finding-the-converter-map)
+- [Monitor script](#monitor-script)
+- [Random notes](#random-notes)
 
 
 ## Structure
@@ -24,7 +23,6 @@ Reverse engineering the BT communication for the Medtronic Guardian Continous Gl
   - the "4" will be dropped from the name and support will be added for Guardian 3, and the Pumps
 - Sake_RE
   - the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called *SAKE* ([see more](data/sake_whitepaper.pdf)) 
-  - progress has been stated, but it is in its early stages
   - currently using an older version of the library built for ARMv7
 - Sakeproxy
   - an Android application which uses the prebuilt SAKE libraries extracted from the original APKs

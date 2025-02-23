@@ -365,6 +365,38 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "a:J"
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "b:Z"
+        },
+        "newName": "opened"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "a:J"
+        },
+        "newName": "ptr_maybe"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "b:Z"
+        },
+        "newName": "is_valid"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "dd.c",
           "shortId": "a:Lne/j;"
         },
@@ -393,6 +425,14 @@
           "shortId": "l:Ljf/a;"
         },
         "newName": "not_supported_sake"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "me.f",
+          "shortId": "a:Lcom/medtronic/minimed/ngpsdk/connect/pump/sake/c;"
+        },
+        "newName": "sakeServer"
       },
       {
         "nodeRef": {
@@ -670,9 +710,65 @@
         "nodeRef": {
           "refType": "METHOD",
           "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "\u003cinit\u003e(JZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65536
+        },
+        "newName": "ptr_maybe"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "\u003cinit\u003e(JZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "validity"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "a()V"
+        },
+        "newName": "delete"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+          "shortId": "b(Lcom/medtronic/minimed/sake/SAKE_SERVER_S;)J"
+        },
+        "newName": "get_ptr_maybe"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SERVER_S",
           "shortId": "c()Ljf/a;"
         },
         "newName": "get_sake_handshake_Error"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
+          "shortId": "e(J)V"
+        },
+        "newName": "set_bytecount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "a(Lcom/medtronic/minimed/sake/a;)Lcom/medtronic/minimed/sake/b;"
+        },
+        "newName": "asvoidptr"
       },
       {
         "nodeRef": {
@@ -697,6 +793,14 @@
           "shortId": "f(Lcom/medtronic/minimed/sake/SAKE_SERVER_S;Lcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;)Z"
         },
         "newName": "sake_Server_init"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "g(Lcom/medtronic/minimed/sake/SAKE_SERVER_S;Lcom/medtronic/minimed/sake/SAKE_USER_MESSAGE_S;Lcom/medtronic/minimed/sake/SAKE_SECURE_MESSAGE_S;)Z"
+        },
+        "newName": "secure_for_sending"
       },
       {
         "nodeRef": {
@@ -1055,119 +1159,82 @@
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "ek.a",
-      "subPath": "java",
-      "caret": 7327,
-      "view": {
-        "x": 0,
-        "y": 3837
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "ne.x",
-      "subPath": "java",
-      "caret": 9911,
-      "view": {
-        "x": 0,
-        "y": 4249
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "ne.h",
-      "subPath": "java",
-      "caret": 2877,
-      "view": {
-        "x": 0,
-        "y": 676
-      }
-    },
-    {
-      "type": "class",
       "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
       "subPath": "java",
-      "caret": 2330,
+      "caret": 12442,
       "view": {
         "x": 0,
-        "y": 901
-      }
+        "y": 4364
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
     },
     {
       "type": "class",
-      "tabPath": "io.reactivex.q",
+      "tabPath": "com.medtronic.minimed.sake.c",
       "subPath": "java",
-      "caret": 7417,
+      "caret": 2350,
       "view": {
-        "x": 0,
-        "y": 3205
-      }
+        "x": 420,
+        "y": 281
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
     },
     {
       "type": "class",
-      "tabPath": "me.a",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
       "subPath": "java",
-      "caret": 104,
+      "caret": 832,
+      "view": {
+        "x": 0,
+        "y": 183
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SakeJNI",
+      "subPath": "java",
+      "caret": 2443,
+      "view": {
+        "x": 0,
+        "y": 298
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+      "subPath": "java",
+      "caret": 320,
       "view": {
         "x": 0,
         "y": 0
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SAKE_SERVER_S",
-      "subPath": "java",
-      "caret": 1165,
-      "view": {
-        "x": 0,
-        "y": 81
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "ch.qos.logback.core.net.HardenedObjectInputStream",
-      "subPath": "java",
-      "caret": 850,
-      "view": {
-        "x": 0,
-        "y": 51
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.data.carelink.model.AppVersionConfigurations",
-      "subPath": "java",
-      "caret": 524,
-      "view": {
-        "x": 0,
-        "y": 1593
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.data.carelink.model.MobileSecurityConfigurations",
-      "subPath": "java",
-      "caret": 2521,
-      "view": {
-        "x": 0,
-        "y": 675
-      }
-    },
-    {
-      "type": "class",
-      "tabPath": "j7.a",
-      "subPath": "java",
-      "caret": 736,
-      "view": {
-        "x": 0,
-        "y": 0
-      }
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
     }
   ],
-  "activeTab": 10,
-  "cacheDir": "mmm_250.apk.cache",
+  "cacheDir": "/home/marci/.cache/jadx/projects/mmm_250.apk-0d631ac9763142371dace325cf25e4c9",
   "enableLiveReload": true,
   "searchHistory": [
+    "nativesake",
+    "sake",
+    "handshake",
+    "sakejni",
     "mobilesecurityconfig",
     "whitelist",
     "Failed to obtain SAKE keys from ",
@@ -1182,7 +1249,6 @@
     "keydatabase",
     "sake.d",
     "decrypt",
-    "sakejni",
     "decryption",
     "attestatio",
     "not_supported",
@@ -1194,9 +1260,7 @@
     "integrity",
     "E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED",
     "Preparing SAKE manager for",
-    "sake_key",
-    "\"SAKE\"",
-    "The SAKE keys successfully downloaded.",
-    "Data decrypted successfully."
-  ]
+    "sake_key"
+  ],
+  "pluginOptions": {}
 }

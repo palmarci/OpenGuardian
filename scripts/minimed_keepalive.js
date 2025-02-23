@@ -33,6 +33,7 @@ setTimeout(function() {
 
 
         // hooks for debugging
+        let keydb = null;
         let AppSetupPresenterBase = Java.use("com.medtronic.minimed.ui.startupwizard.AppSetupPresenterBase");
         AppSetupPresenterBase["showCareLinkErrorMessage"].overload('java.lang.Runnable', 'java.lang.Runnable', 'com.medtronic.minimed.ui.util.d', 'java.lang.Throwable').implementation = function(runnable, runnable2, carelinkDialogMetadata, th) {
             console.log(`AppSetupPresenterBase.showCareLinkErrorMessage is called: runnable=${runnable}, runnable2=${runnable2}, carelinkDialogMetadata=${carelinkDialogMetadata}, th=${th}`);
@@ -68,6 +69,48 @@ setTimeout(function() {
             console.log(`EncryptionUtility.decryptCbcAes result=${result}`);
             return result;
         };
+        let C3673c = Java.use("com.medtronic.minimed.sake.c");
+        C3673c["i"].implementation = function (c3672b, bArr) {
+            if (keydb == null) {
+                keydb = bArr;
+            //    console.log("keydb probably set!:");
+             //   console.log(bArr);
+            }
+            console.log(`C3673c.memmove is called: c3672b=${c3672b}, bArr=${bArr}`);
+            this["i"](c3672b, bArr);
+        };
+
+        let InterfaceC5243c = Java.use("hd.c");
+        InterfaceC5243c["debug"].overload('java.lang.String').implementation = function (str) {
+            console.log(`sake.debug is called: str=${str}`);
+            this["debug"](str);
+        };
+       // let InterfaceC5243c = Java.use("hd.c");
+        InterfaceC5243c["warn"].overload('java.lang.String').implementation = function (str) {
+            console.log(`sake.warn is called: str=${str}`);
+            this["warn"](str);
+        };
+     //   let InterfaceC5243c = Java.use("hd.c");
+        InterfaceC5243c["error"].overload('java.lang.String', 'java.lang.Throwable').implementation = function (str, th) {
+            console.log(`sake.error is called: str=${str}, th=${th}`);
+            this["error"](str, th);
+        };
+        let SAKE_SERVER_S = Java.use("com.medtronic.minimed.sake.SAKE_SERVER_S");
+        SAKE_SERVER_S["c"].implementation = function () {
+            //console.log(`SAKE_SERVER_S.m11241c is called`);
+            let result = this["c"]();
+            console.log(`SAKE_SERVER_S.GET LAST ERROR=${result}`);
+            return result;
+        };
+
+        let AbstractC5408q = Java.use("io.reactivex.q");
+        AbstractC5408q["b"].implementation = function () {
+            //console.log(`maybe se.m15157b is called`);
+            let result = this["b"]();
+            console.log(`MAYBE SAKE KEY=${result}`);
+            return result;
+        };
+        
 
         // remove sslv3 support
         let TLSSocketFactory = Java.use("com.ca.mas.core.io.ssl.TLSSocketFactory");
