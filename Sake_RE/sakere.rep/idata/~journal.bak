@@ -1,0 +1,17 @@
+IDEL:/fos.bin
+IDEL:/sake_dump3.bin
+IDEL:/sake_dump.bin
+IDEL:/fosgeci.elf
+IDEL:/libandroid-sake-lib_minimedmobile_v221.so
+IMV:/libandroid-sake-lib.so:/libandroid-sake-lib_dumped.so
+FADD:/New Traces
+IADD:0000000b:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.31.48-CET
+IDSET:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.31.48-CET:c0a81648cb59814323366420
+IDEL:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.31.48-CET
+FDEL:/New Traces
+FADD:/New Traces
+IADD:0000000c:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.34.58-CET
+IDSET:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.34.58-CET:c0a816496c910070659658532
+IADD:0000000d:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.41.06-CET
+IDSET:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.41.06-CET:c0a816492ff10443705098768
+IDEL:/New Traces/1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.34.58-CET
