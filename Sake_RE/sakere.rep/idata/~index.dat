@@ -1,8 +1,5 @@
 VERSION=1
 /
-  00000008:libandroid-sake-lib_dumped.so:c0a8164a3232032807711527
-  00000003:libandroid-sake-lib_minimedmobile_v210.so:c0a8164add54223316495359
-/New Traces
-  0000000d:1 - process 27279 - target__system_bin_app_process64 2025.02.24-19.41.06-CET:c0a816492ff10443705098768
-NEXT-ID:e
+  00000013:libandroid-sake-lib.so_v7:c0a816482e54425985234123
+NEXT-ID:1b
 MD5:d41d8cd98f00b204e9800998ecf8427e

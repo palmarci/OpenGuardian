@@ -6,7 +6,7 @@ if (Java.available) {
     Java.perform(function() {
         console.log("\n");
         hook_ble_standalone(); // hopefully
-        hook_sake_minimed_v121();
+      //  hook_sake_minimed_v121();
     });
 }
 

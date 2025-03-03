@@ -1,6 +1,8 @@
+// working on minimed 2.2.1
 var baseTeneo = 'com.medtronic.teneo.';
 var socketTeneo = "com.medtronic.securerepositories.internal.websocket.";
-		//var sakepath = 'com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S';
+
+//var sakepath = 'com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S';
 //https://stackoverflow.com/questions/69668741/setting-a-member-in-current-class-using-frida
 //https://stackoverflow.com/questions/69503358/unable-to-retrieve-value-from-interface-using-frida
 
@@ -12,7 +14,6 @@ function bytes_to_hexstr(array) {
 	for (var i = 0; i < array.length; ++i) result += ('0' + (array[i] & 0xFF).toString(16)).slice(-2);
 	return result;
 };
-
 
 setTimeout(function () {
 
