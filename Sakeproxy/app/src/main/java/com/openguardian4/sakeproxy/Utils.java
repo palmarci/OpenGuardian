@@ -31,6 +31,8 @@ public class Utils {
 
     public static void logPrint(String text) {
         String className = getCallerClassName();
+       // MainActivity mainActivity = (MainActivity) getApplicationContext();
+       // mainActivity.addLog(text);
         if (className != null) {
             Log.d(className, text);
         } else {
