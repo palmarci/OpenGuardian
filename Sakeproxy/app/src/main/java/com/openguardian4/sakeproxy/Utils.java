@@ -1,7 +1,8 @@
 package com.openguardian4.sakeproxy;
 
 import android.util.Log;
-
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 public class Utils {
 
@@ -16,6 +17,17 @@ public class Utils {
         }
         return null;
     }
+
+    public static String convertExceptionToString(Exception e) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        e.printStackTrace(pw);
+        String stackTrace = sw.toString();
+        return stackTrace;
+     //   Utils.logPrint("Error: " + stackTrace);
+       // return sendHttpResponse(e.getMessage(), false);
+    }
+
 
     public static void logPrint(String text) {
         String className = getCallerClassName();

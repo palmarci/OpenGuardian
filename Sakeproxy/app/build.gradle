@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.openguardian4.sakeproxy"
         minSdk 24
-        targetSdk 31
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -26,6 +26,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    splits {
+        abi {
+        enable true
+        reset()
+        include 'armeabi-v7a' //,'x86', 'mips'
+        universalApk true
+        }
+    }
+
+
+    
 }
 
 dependencies {

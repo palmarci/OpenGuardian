@@ -1,6 +1,5 @@
 import subprocess
 
-PKG = "com.medtronic.diabetes.minimedmobile.eu"
 TMP_ELF = "/tmp/dump.bin"
 
 def run_cmd(cmd_str, background=False):
@@ -12,8 +11,8 @@ def run_cmd(cmd_str, background=False):
 		result = subprocess.run(cmd_str, shell=True, capture_output=True, text=True)
 		return result.stdout.strip("\n") #+ result.stderr
 
-def get_pid():
-	pid = run_cmd(f'adb shell su -c "pidof {PKG}"')
+def get_pid(pkg):
+	pid = run_cmd(f'adb shell su -c "pidof {pkg}"')
 	print(f"pid = {pid}")
 	return int(pid)
 

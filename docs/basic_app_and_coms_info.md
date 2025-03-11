@@ -1,4 +1,4 @@
-## The App
+## The (Guardian) App
 
 The app is built on Flutter and runs on the Dart VM. It has two native ELF binary components: one is called the SCP (likely standing for Security ? Provider), and the other is the SAKE library, used for secure communication with the transmitter.
 

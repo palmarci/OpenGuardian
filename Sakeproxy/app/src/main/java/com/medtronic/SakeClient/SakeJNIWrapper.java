@@ -9,12 +9,12 @@ import com.medtronic.minimed.sake.SwigPtr;
 
 public class SakeJNIWrapper {
     /* renamed from: a */
-    public static VoidPtr getPointer(SwigPtr swigPtr) {
+    public static SakePtr getPointer(SwigPtr swigPtr) {
         long AsVoidPtr = SakeJNI.AsVoidPtr(SwigPtr.getPointer(swigPtr));
         if (AsVoidPtr == 0) {
             return null;
         }
-        return new VoidPtr(AsVoidPtr, false);
+        return new SakePtr(AsVoidPtr, false);
     }
 
     /* renamed from: b */
@@ -43,8 +43,8 @@ public class SakeJNIWrapper {
     }
 
     /* renamed from: g */
-    public static byte[] cdata(VoidPtr voidPtr, int i) {
-        return SakeJNI.cdata(VoidPtr.m3609a(voidPtr), i);
+    public static byte[] cdata(SakePtr SakePtr, int i) {
+        return SakeJNI.cdata(SakePtr.getPointer(SakePtr), i);
     }
 
     /* renamed from: h */
@@ -53,7 +53,7 @@ public class SakeJNIWrapper {
     }
 
     /* renamed from: i */
-    public static void memMove(VoidPtr voidPtr, byte[] bArr) {
-        SakeJNI.memmove(VoidPtr.m3609a(voidPtr), bArr);
+    public static void memMove(SakePtr SakePtr, byte[] bArr) {
+        SakeJNI.memmove(SakePtr.getPointer(SakePtr), bArr);
     }
 }

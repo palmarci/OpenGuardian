@@ -62,6 +62,7 @@ setTimeout(function() {
             console.log(`AttestationJob.getGooglePlayServiceStatus result=${result}`);
             return result;
         };
+        /*
         let EncryptionUtility = Java.use("com.medtronic.securerepositories.internal.utility.EncryptionUtility");
         EncryptionUtility["decryptCbcAes"].implementation = function (str, str2) {
             console.log(`EncryptionUtility.decryptCbcAes is called: str=${str}, str2=${str2}`);
@@ -69,6 +70,8 @@ setTimeout(function() {
             console.log(`EncryptionUtility.decryptCbcAes result=${result}`);
             return result;
         };
+        */
+        /*
         let C3673c = Java.use("com.medtronic.minimed.sake.c");
         C3673c["i"].implementation = function (c3672b, bArr) {
             if (keydb == null) {
@@ -78,7 +81,7 @@ setTimeout(function() {
             }
             console.log(`C3673c.memmove is called: c3672b=${c3672b}, bArr=${bArr}`);
             this["i"](c3672b, bArr);
-        };
+        };*/
 
         let InterfaceC5243c = Java.use("hd.c");
         InterfaceC5243c["debug"].overload('java.lang.String').implementation = function (str) {

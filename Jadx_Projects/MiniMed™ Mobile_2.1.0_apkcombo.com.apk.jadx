@@ -1,0 +1,647 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "../../apks/MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+  ],
+  "treeExpansions": [
+    [
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "sake",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "pump",
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "sake",
+      "pump",
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "com.medtronic.minimed.ngpsdk.connect.pump.sake.c",
+      "sake",
+      "pump",
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "profile.client.deviceinfo",
+      "pump",
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "com.medtronic.minimed.ngpsdk.connect.pump.sake.c",
+      "sake",
+      "pump",
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ],
+    [
+      "com.medtronic.minimed.ngpsdk.connect.pump.sake.c",
+      "sake",
+      "pump",
+      "connect",
+      "ngpsdk",
+      "minimed",
+      "medtronic",
+      "com",
+      "Source code",
+      "MiniMed™ Mobile_2.1.0_apkcombo.com.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.a"
+        },
+        "newName": "SwigTypeCharPtr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.b"
+        },
+        "newName": "SwigTypeVoidPtr"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t"
+        },
+        "newName": "PChar"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "a:J"
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "b:Z"
+        },
+        "newName": "isAlive"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.a",
+          "shortId": "a:J"
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.b",
+          "shortId": "a:J"
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "a:J"
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "b:Z"
+        },
+        "newName": "isAlive"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "a()V"
+        },
+        "newName": "update"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "b()J"
+        },
+        "newName": "getByteCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "c(Lcom/medtronic/minimed/sake/SAKE_SECURE_MESSAGE_S;)J"
+        },
+        "newName": "getPtr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "d()Lcom/medtronic/minimed/sake/a;"
+        },
+        "newName": "getPBytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+          "shortId": "e(J)V"
+        },
+        "newName": "setByteCount"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.a",
+          "shortId": "\u003cinit\u003e(JZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65536
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.a",
+          "shortId": "\u003cinit\u003e(JZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "unused"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.a",
+          "shortId": "a(Lcom/medtronic/minimed/sake/a;)J"
+        },
+        "newName": "GetPtr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.b",
+          "shortId": "\u003cinit\u003e(JZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 65536
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.b",
+          "shortId": "\u003cinit\u003e(JZ)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "unused"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.b",
+          "shortId": "a(Lcom/medtronic/minimed/sake/b;)J"
+        },
+        "newName": "GetPtr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "a(Lcom/medtronic/minimed/sake/a;)Lcom/medtronic/minimed/sake/b;"
+        },
+        "newName": "ConvertPtrType"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "b(Lcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;Lcom/medtronic/minimed/sake/a;J)Z"
+        },
+        "newName": "KeyDbOpen"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "c(Lcom/medtronic/minimed/sake/SAKE_SERVER_S;)V"
+        },
+        "newName": "ServerDestroy"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "e(Lcom/medtronic/minimed/sake/SAKE_SERVER_S;Lcom/medtronic/minimed/sake/SAKE_KEY_DATABASE_S;)V"
+        },
+        "newName": "SakeServerInit"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.c",
+          "shortId": "i(Lcom/medtronic/minimed/sake/b;[B)V"
+        },
+        "newName": "Memmove"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "a()Lcom/medtronic/minimed/sake/a;"
+        },
+        "newName": "asCharPtr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "a()Lcom/medtronic/minimed/sake/a;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "b()V"
+        },
+        "newName": "finalize2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "b()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 1
+        },
+        "newName": "ptr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.p_uint8_t",
+          "shortId": "finalize()V"
+        },
+        "newName": "finalize"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.c",
+      "subPath": "java",
+      "caret": 701,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "k9.c",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.p_uint8_t",
+      "subPath": "java",
+      "caret": 988,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.a",
+      "subPath": "java",
+      "caret": 557,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.b",
+      "subPath": "java",
+      "caret": 395,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SakeJNI",
+      "subPath": "java",
+      "caret": 2457,
+      "view": {
+        "x": 0,
+        "y": 306
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_SERVER_S",
+      "subPath": "java",
+      "caret": 120,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
+      "subPath": "java",
+      "caret": 81,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S",
+      "subPath": "java",
+      "caret": 81,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "k9.a",
+      "subPath": "java",
+      "caret": 6219,
+      "view": {
+        "x": 0,
+        "y": 1685
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
+      "subPath": "java",
+      "caret": 81,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+      "subPath": "java",
+      "caret": 3162,
+      "view": {
+        "x": 0,
+        "y": 918
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.sake.c",
+      "subPath": "java",
+      "caret": 278,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.profile.client.deviceinfo.a",
+      "subPath": "java",
+      "caret": 699,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.profile.client.deviceinfo.b",
+      "subPath": "java",
+      "caret": 329,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.profile.client.deviceinfo.SystemId",
+      "subPath": "java",
+      "caret": 259,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.profile.client.deviceinfo.PnpId",
+      "subPath": "java",
+      "caret": 241,
+      "view": {
+        "x": 0,
+        "y": 91
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "io.reactivex.q",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 765
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    }
+  ],
+  "cacheDir": "/home/marci/.cache/jadx/projects/MiniMed™ Mobile_2.1.0_apkcombo.com-3182937fc967f128671f2b9e3761254b",
+  "enableLiveReload": false,
+  "searchHistory": [],
+  "pluginOptions": {}
+}

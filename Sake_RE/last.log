@@ -3,7 +3,7 @@ Android SDK Version : 30
 
 
 [+] minimed mobile v2.2.1 lifesupport hook started
-MAYBE SAKE KEY=WELCOME
+MAYBE SAKE KEY=INTRO1
 [+] Bypassing Developer Options
 [+] MobileSecurityConfigurations.$init is called: z10=true, z11=true -> returning false for both
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
@@ -12,7 +12,7 @@ MAYBE SAKE KEY=WELCOME
 [+] 1.Global.getInt(force_resizable_activities) Bypassed
 [!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
 [+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.66.27.10,port=443,localPort=54206]
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.66.27.10,port=443,localPort=37288]
 SSLSocket protocols updated
 ConfigurationManager.isSslPinningEnabled is called, return false
 [+] MobileConfigurationCompatibilityChecker.m21904f is called, returning SUPPORTED
@@ -38,13 +38,7 @@ ConfigurationManager.isSslPinningEnabled is called, return false
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : force_resizable_activities
 [+] 1.Global.getInt(force_resizable_activities) Bypassed
-[!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
-[+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : force_resizable_activities
-[+] 1.Global.getInt(force_resizable_activities) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.66.27.10,port=443,localPort=54207]
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.66.27.10,port=443,localPort=37289]
 SSLSocket protocols updated
 [!] settingGlobal.getInt(cr,name) : device_provisioned
 [+] 1.Global.getInt(device_provisioned) Bypassed
@@ -56,7 +50,7 @@ SSLSocket protocols updated
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=carelink.minimed.eu/3.165.206.18,port=443,localPort=55026]
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=carelink.minimed.eu/18.239.255.10,port=443,localPort=35084]
 SSLSocket protocols updated
 ConfigurationManager.isSslPinningEnabled is called, return false
 WebSocketCommunicator.addCertificate is called: certificate=Certificate:
@@ -146,10 +140,10 @@ WebSocketCommunicator.addCertificate is called: certificate=Certificate:
 
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=mdtlogin-ocl.medtronic.com/144.15.111.12,port=443,localPort=44383]
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=mdtlogin-ocl.medtronic.com/144.15.111.12,port=443,localPort=47669]
 SSLSocket protocols updated
 ConfigurationManager.isSslPinningEnabled is called, return false
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.66.27.10,port=443,localPort=54211]
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.66.27.10,port=443,localPort=37294]
 SSLSocket protocols updated
 ConfigurationManager.isSslPinningEnabled is called, return false
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
@@ -182,33 +176,27 @@ ConfigurationManager.isSslPinningEnabled is called, return false
 [+] 1.Global.getInt(device_provisioned) Bypassed
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=www.medtronic.com/104.103.96.137,port=443,localPort=33916]
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=www.medtronic.com/104.103.96.137,port=443,localPort=33917]
-SSLSocket protocols updated
-SSLSocket protocols updated
 [!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
 [+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
-ConfigurationManager.isSslPinningEnabled is called, return false
-ConfigurationManager.isSslPinningEnabled is called, return false
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : force_resizable_activities
-[+] 1.Global.getInt(force_resizable_activities) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
-[+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=carelink.minimed.eu/3.165.206.18,port=443,localPort=55040]
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=www.medtronic.com/104.103.96.137,port=443,localPort=48111]
 SSLSocket protocols updated
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=www.medtronic.com/104.103.96.137,port=443,localPort=48112]
+SSLSocket protocols updated
+ConfigurationManager.isSslPinningEnabled is called, return false
 ConfigurationManager.isSslPinningEnabled is called, return false
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
+[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
+[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : force_resizable_activities
 [+] 1.Global.getInt(force_resizable_activities) Bypassed
+[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
+[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
 [+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
+TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=carelink.minimed.eu/18.239.255.10,port=443,localPort=35099]
+SSLSocket protocols updated
+ConfigurationManager.isSslPinningEnabled is called, return false
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : force_resizable_activities
@@ -227,51 +215,43 @@ ConfigurationManager.isSslPinningEnabled is called, return false
 [+] 1.Global.getInt(force_resizable_activities) Bypassed
 [!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
 [+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
+[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
+[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
+[!] settingGlobal.getInt(cr,name) : force_resizable_activities
+[+] 1.Global.getInt(force_resizable_activities) Bypassed
+[!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
+[+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 AttestationJob.getGooglePlayServiceStatus is called
 AttestationJob.getGooglePlayServiceStatus result=0
-EncryptionUtility.decryptCbcAes is called: str=spME16jnzo17urh1MOD5pEHcXhZmqfNlyMMfpbJaAkQ=, str2=0mi1GBxMEta/shiZY3jtudWGGprmOcHC6rq2enjg706K+a9pviku/XEVzWO/Pot3i3JRPKwTX43QZB4DZAEoOKfXjOWIbj80LwLXhlxfcjq875rbUPRHZZvULxevbs7PZPUktId2qF3g9ND5wRrqZQ==
-EncryptionUtility.decryptCbcAes result=J±S\l£³T&¶oóÿís¥ì(ÂGF¶ÄPaÂÌÚ-­övêäK
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741026981837,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741026982060,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741026982308,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741026982548,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741026982804,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741026983062,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741026983307,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741026983578,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@541e828, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@6a26537, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@fc338ed, bArr=-83,98,-106,-67,76,-19,-108,-112,1,53,117,92,-108,-17,-18,59,-125,46,-75,-102
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@d5fb7ef, bArr=118,-79,-10,90,-82,108,124,49,-120,-38,126,-57,-10,-50,60,19,17,-23,-85,-5
-aes_encrypt_round_internal at 0xa099d591 called!
-TypeError: not a function
-    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:57)
-aes_encrypt_round_internal at 0xa099d591 called!
-aes_encrypt_round_internal at 0xa099d591 called!
-TypeError: not a function
-    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:57)
-TypeError: not a function
-    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:57)
-aes_encrypt_round_internal at 0xa099d591 called!
-aes_encrypt_round_internal at 0xa099d591 called!
-TypeError: not a function
-    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:57)
-TypeError: not a function
-    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:57)
-aes_encrypt_round_internal at 0xa099d591 called!
-TypeError: not a function
-    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:57)
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@8082b3a, bArr=24,-60,11,-119,87,81,83,17,31,50,2,36,-12,53,-76,-115,-6,0,96,103
+1741672251559,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
+1741672251772,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
+1741672252020,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
+1741672252270,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
+1741672252511,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
+1741672252775,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
+1741672253023,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
+1741672253270,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
+Sake.KeyDbOpen is called: sake_key_database_s=com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S@3626d0b, swigTypeCharPtr=com.medtronic.minimed.sake.a@fa3f7e8, j10=1
+Error: expected an unsigned integer
+Error: a(): argument types do not match any of:
+	.overload('com.medtronic.minimed.sake.a')
+    at X (frida/node_modules/frida-java-bridge/lib/class-factory.js:626)
+    at value (frida/node_modules/frida-java-bridge/lib/class-factory.js:1145)
+    at e (frida/node_modules/frida-java-bridge/lib/class-factory.js:610)
+    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/monitor.js:117)
+    at apply (native)
+    at ne (frida/node_modules/frida-java-bridge/lib/class-factory.js:677)
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/class-factory.js:655)
+1741672275771,sake,handshake,null;0000000000000000000000000000000000000000
+1741672276025,sake,handshake,0000000000000000000000000000000000000000;0001eb6ff6a34f7d4af671b538e4107356669347
+1741672276269,sake,handshake,0eef2fdafab6ce1701a79f5108b410d9375bc493;4793b69616a694ec498cc038d3730dfc9fa5c78d
+1741672276514,sake,handshake,6ce3f366f4a9a42ce5322071e87c7f71f01ad9ce;425bc022832874a080880a808b62cd027700ed1d
 SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
+1741672276782,sake,handshake,acc3c7b9b33bc7c48176c3c7c07c3f08c30052fd;null
 PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
@@ -280,63 +260,40 @@ Android SDK Version : 30
 
 
 [+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741027112835,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741027113047,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741027113313,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741027113561,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741027113810,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741027114041,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741027114305,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741027114555,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@5071fd1, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@7fadf7c, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@c3fc9c8, bArr=25,-90,62,-110,30,49,-109,62,1,95,50,51,63,16,113,46,-39,-74,-10,-6
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@b257c7d, bArr=126,89,-65,67,-100,40,107,118,8,-85,-27,-52,77,94,47,11,-120,66,-120,61
-aes_encrypt_round_internal at 0xa099d591 called!
-0xa5f3e838
-0xa5f3e828
-0xa5f3e818
-aes_encrypt_round_internal at 0xa099d591 called!
-0xa5f3e838
-0xa5f3e828
-0xa5f3e818
-aes_encrypt_round_internal at 0xa099d591 called!
-0xa5f3e7a4
-0xa5f3e780
-0xa5f3e780
-aes_encrypt_round_internal at 0xa099d591 called!
-0xa5f3e7a4
-0xa5f3e780
-0xa5f3e780
-aes_encrypt_round_internal at 0xa099d591 called!
-0xa5f3e7a4
-0xa5f3e740
-0xa5f3e740
-aes_encrypt_round_internal at 0xa099d591 called!
-0xa5f3e7a4
-0xa5f3e780
-0xa5f3e780
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@f6a26ff, bArr=-15,108,33,0,-7,113,86,95,124,32,21,-128,-77,36,-35,20,-72,0,-77,46
+1741672409666,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
+1741672409889,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
+1741672410265,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
+1741672410513,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
+1741672410767,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
+1741672411012,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
+1741672411387,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
+1741672411641,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
+Sake.KeyDbOpen is called: sake_key_database_s=com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S@8b20c90, swigTypeCharPtr=com.medtronic.minimed.sake.a@b036989, j10=1
+Pointer to the actual data: 2724732656
+Error: expected an unsigned integer
+Error: expected an integer
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/env.js:202)
+    at apply (native)
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/env.js:97)
+    at call (native)
+    at d (frida/node_modules/frida-java-bridge/lib/types.js:342)
+    at toJni (/_java.js)
+    at array (frida/node_modules/frida-java-bridge/lib/class-factory.js:197)
+    at array (frida/node_modules/frida-java-bridge/index.js:273)
+    at <anonymous> (/home/marci/src/Diab/OpenGuardian/scripts/monitor.js:122)
+    at apply (native)
+    at ne (frida/node_modules/frida-java-bridge/lib/class-factory.js:677)
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/class-factory.js:655)
+1741672433885,sake,handshake,null;0000000000000000000000000000000000000000
+1741672434146,sake,handshake,0000000000000000000000000000000000000000;0001fdde8939df46c6966cc4896fb7ba990243cc
+1741672434384,sake,handshake,37c473ac2713d259011314f60165a6b6a13a8aff;137e196f114e68c9e26b636c035d8a8e90cd4e61
+1741672434635,sake,handshake,6c08acd0468cdcaaee97e5592909cb489289d400;b55063644f8c4172931a74cb57bd7ec2c500ddad
 SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
+1741672434893,sake,handshake,ff9360bf5b1a61692d295855d27dd290cb003af5;null
 PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
@@ -345,938 +302,28 @@ Android SDK Version : 30
 
 
 [+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
-[+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741027825047,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741027825270,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741027825522,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741027825773,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741027826020,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741027826271,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741027826649,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741027826896,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@cc7a36a, bArr=0
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.239.255.95,port=443,localPort=46980]
-SSLSocket protocols updated
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@225032c, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@57cddb, bArr=-115,-118,-81,48,121,121,-66,16,1,-111,-38,33,-62,123,-97,-53,-99,99,-27,98
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@f2b9c84, bArr=127,-68,-57,-29,-98,96,107,19,-25,-8,-59,-16,119,-51,-73,-23,-39,-96,54,95
-aes_encrypt_round_internal at 0xa099d591 called!
--1510741960 is probably NOT a pointer!
--1510741976 is probably NOT a pointer!
--1510741992 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
--1510741960 is probably NOT a pointer!
--1510741976 is probably NOT a pointer!
--1510741992 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
--1510742108 is probably NOT a pointer!
--1510742144 is probably NOT a pointer!
--1510742144 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
--1510742108 is probably NOT a pointer!
--1510742144 is probably NOT a pointer!
--1510742144 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
--1510742108 is probably NOT a pointer!
--1510742208 is probably NOT a pointer!
--1510742208 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
--1510742108 is probably NOT a pointer!
--1510742144 is probably NOT a pointer!
--1510742144 is probably NOT a pointer!
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@914b350, bArr=-47,-61,57,-100,-58,-53,83,-47,-60,-124,52,-15,41,63,-87,-121,-118,0,-17,-67
+1741672628785,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
+1741672629008,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
+1741672629260,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
+1741672629513,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
+1741672629761,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
+1741672630012,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
+1741672630260,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
+1741672630508,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
+Sake.KeyDbOpen is called: sake_key_database_s=com.medtronic.minimed.sake.SAKE_KEY_DATABASE_S@3ef307e, swigTypeCharPtr=com.medtronic.minimed.sake.a@d1239df, j10=1
+Pointer to the actual data: 0xa2689350
+a2689350  00                                               .
+Sake.KeyDbOpen result=false
+1741672652634,sake,handshake,null;0000000000000000000000000000000000000000
+1741672652890,sake,handshake,0000000000000000000000000000000000000000;0001568cdab238327825dd101f0f8f2199a16a85
+1741672653141,sake,handshake,609fd0e4409ea5820198734fdd08a2130f61aa2c;8cd9b96c99d9acd413b7bd589459a64631e460cb
+1741672653387,sake,handshake,41925b96761d4830ed1f38cd4ebf30c250216005;2d1dc29e1e471e78d21eef83109fd0d68c00d046
 SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
+1741672653655,sake,handshake,1fdbb22916ade3ee48a145eb9c2b03cb7600881c;null
 PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
 [!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
 [+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741027937289,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741027937516,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741027937773,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741027938017,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741027938267,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741027938518,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741027938768,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741027939021,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@f4b1e06, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@d12851b, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@f1566c4, bArr=-93,-114,110,-4,51,-90,-118,-34,1,-62,-119,-84,105,5,37,73,83,-19,4,93
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@f1bba89, bArr=-7,77,40,-88,-16,-56,127,118,-92,-119,124,82,-14,-121,-74,-9,-72,10,49,48
-aes_encrypt_round_internal at 0xa099d591 called!
-not a pointer due to shit msb
--1512417224 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417240 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417256 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
-not a pointer due to shit msb
--1512417224 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417240 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417256 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
-not a pointer due to shit msb
--1512417372 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417408 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417408 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
-not a pointer due to shit msb
--1512417372 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417408 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417408 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
-not a pointer due to shit msb
--1512417372 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417472 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417472 is probably NOT a pointer!
-aes_encrypt_round_internal at 0xa099d591 called!
-not a pointer due to shit msb
--1512417372 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417408 is probably NOT a pointer!
-not a pointer due to shit msb
--1512417408 is probably NOT a pointer!
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@4e5e4fa, bArr=8,104,72,-44,14,-80,-1,77,55,62,99,-55,51,7,-128,-125,-100,0,108,-62
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741028113533,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741028113756,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741028114016,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741028114263,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741028114516,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741028114763,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741028115016,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741028115263,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@b6c1e1d, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@8df8bf7, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@3503473, bArr=3,-70,-73,-74,50,-72,107,-122,1,91,-11,12,104,-31,85,-4,27,69,87,59
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@8e14a45, bArr=98,-120,116,-13,-110,-125,-119,61,-5,16,79,2,-96,85,42,44,-65,-106,-127,-118
-aes_encrypt_round_internal at 0xa099d591 called!
-[arg0] = 0xa1b7a838             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a838  0a 00 00 00 40 a8 b7 a1 9e 26 10 ec e9 d7 3f e6  ....@....&....?.
-[arg1] = 0xa1b7a828             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-[arg2] = 0xa1b7a818             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a818  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-aes_encrypt_round_internal at 0xa099d591 called!
-[arg0] = 0xa1b7a838             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a838  0a 00 00 00 40 a8 b7 a1 9e 26 10 ec e9 d7 3f e6  ....@....&....?.
-[arg1] = 0xa1b7a828             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01  ................
-[arg2] = 0xa1b7a818             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a818  f2 46 0a d3 af 56 7e 4c 3f ad 25 76 ff 29 c3 f0  .F...V~L?.%v.)..
-aes_encrypt_round_internal at 0xa099d591 called!
-[arg0] = 0xa1b7a7a4             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a7a4  0a 00 00 00 ac a7 b7 a1 9e 26 10 ec e9 d7 3f e6  .........&....?.
-[arg1] = 0xa1b7a780             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-[arg2] = 0xa1b7a780             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-aes_encrypt_round_internal at 0xa099d591 called!
-[arg0] = 0xa1b7a7a4             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a7a4  0a 00 00 00 ac a7 b7 a1 9e 26 10 ec e9 d7 3f e6  .........&....?.
-[arg1] = 0xa1b7a780             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-[arg2] = 0xa1b7a780             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-aes_encrypt_round_internal at 0xa099d591 called!
-[arg0] = 0xa1b7a7a4             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a7a4  0a 00 00 00 ac a7 b7 a1 9e 26 10 ec e9 d7 3f e6  .........&....?.
-[arg1] = 0xa1b7a740             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-[arg2] = 0xa1b7a740             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-aes_encrypt_round_internal at 0xa099d591 called!
-[arg0] = 0xa1b7a7a4             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a7a4  0a 00 00 00 ac a7 b7 a1 9e 26 10 ec e9 d7 3f e6  .........&....?.
-[arg1] = 0xa1b7a780             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a780  f5 ab e4 4b 2d 39 b2 5e f1 8a 88 c5 f8 68 ba 8b  ...K-9.^.....h..
-[arg2] = 0xa1b7a780             0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F  0123456789ABCDEF
-a1b7a780  f5 ab e4 4b 2d 39 b2 5e f1 8a 88 c5 f8 68 ba 8b  ...K-9.^.....h..
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@ec0b8a1, bArr=23,-112,15,100,-17,85,83,78,113,-76,-99,38,123,-69,124,-115,30,0,106,15
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-Error: could not parse '/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js' line 1: expecting '}'
-    at <anonymous> (/frida/repl-6.js:1)
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741028390156,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741028390384,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741028390641,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741028390883,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741028391131,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741028391383,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741028391635,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741028391885,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@dbfa704, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@33570e9, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@7cd49da, bArr=-6,-57,65,-102,108,-120,74,87,1,-28,-83,125,-126,53,-31,-95,-18,-80,25,-106
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@75ffdc7, bArr=-49,54,-57,67,46,35,59,72,44,118,-86,-80,87,-105,120,104,-68,-91,115,-24
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] = 0xa23df838 ->  a23df838  0a 00 00 00 40 f8 3d a2 20 84 11 c1 57 d5 d7 fd  ....@.=. ...W...
-  [arg1] = 0xa23df828 ->  a23df828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] = 0xa23df818 ->  a23df818  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] = 0xa23df838 ->  a23df838  0a 00 00 00 40 f8 3d a2 20 84 11 c1 57 d5 d7 fd  ....@.=. ...W...
-  [arg1] = 0xa23df828 ->  a23df828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01  ................
-  [arg2] = 0xa23df818 ->  a23df818  f8 f0 12 9b 1f a9 27 b5 a8 85 07 f4 58 09 cd 1f  ......'.....X...
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] = 0xa23df7a4 ->  a23df7a4  0a 00 00 00 ac f7 3d a2 20 84 11 c1 57 d5 d7 fd  ......=. ...W...
-  [arg1] = 0xa23df780 ->  a23df780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] = 0xa23df780 ->  a23df780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] = 0xa23df7a4 ->  a23df7a4  0a 00 00 00 ac f7 3d a2 20 84 11 c1 57 d5 d7 fd  ......=. ...W...
-  [arg1] = 0xa23df780 ->  a23df780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] = 0xa23df780 ->  a23df780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] = 0xa23df7a4 ->  a23df7a4  0a 00 00 00 ac f7 3d a2 20 84 11 c1 57 d5 d7 fd  ......=. ...W...
-  [arg1] = 0xa23df740 ->  a23df740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] = 0xa23df740 ->  a23df740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] = 0xa23df7a4 ->  a23df7a4  0a 00 00 00 ac f7 3d a2 20 84 11 c1 57 d5 d7 fd  ......=. ...W...
-  [arg1] = 0xa23df780 ->  a23df780  b0 d8 46 7c 5a 62 1d d6 c9 d2 36 db ad 93 5d f6  ..F|Zb....6...].
-  [arg2] = 0xa23df780 ->  a23df780  b0 d8 46 7c 5a 62 1d d6 c9 d2 36 db ad 93 5d f6  ..F|Zb....6...].
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@a93b5c0, bArr=-11,-65,-112,115,-39,-75,13,-45,-22,1,81,19,-11,-20,116,5,-109,0,79,35
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.239.255.3,port=443,localPort=35812]
-SSLSocket protocols updated
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Scan complete for aes_encrypt_round_internal
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : show_angle_in_use_dialog_box
-[+] 2.Global.getInt(show_angle_in_use_dialog_box) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Pattern for maybe_sign found at: 0xa099cfd0
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-[+] Scan complete for aes_encrypt_round_internal
-[+] Scan complete for maybe_sign
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Pattern for aes_encrypt_round_internal found at: 0xa099d590
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Pattern for maybe_sign found at: 0xa099cfd0
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741029511233,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741029511468,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741029511728,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741029511971,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741029512219,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741029512468,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741029512731,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741029512967,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@d4220e5, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@ab33a12, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@2302d79, bArr=82,-109,-127,-95,7,83,123,-28,1,-117,-1,94,52,114,-49,-50,88,-54,-122,-127
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@2408bb8, bArr=-106,17,2,-124,102,-111,29,113,-110,115,13,21,-2,-110,-78,-70,-77,66,-41,-35
-onEnter!
-onLeave!
-onEnter!
-onLeave!
-onEnter!
-onEnter!
-onLeave!
-onEnter!
-onLeave!
-onEnter!
-onLeave!
-onEnter!
-onLeave!
-onLeave!
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@12babc4, bArr=-52,-25,-69,-19,-115,72,39,-60,-88,-31,37,98,12,-128,-10,40,-4,0,92,-24
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.239.255.3,port=443,localPort=35813]
-SSLSocket protocols updated
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741029845232,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741029845448,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741029845702,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741029845947,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741029846200,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741029846447,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741029846821,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741029847080,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@87b6da6, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@5a9300, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@ef3ad5, bArr=66,117,-125,107,69,2,-61,28,1,-40,93,67,-45,92,-84,64,28,16,32,53
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@7b92a31, bArr=-113,-2,74,-48,-54,12,46,89,-21,-124,87,101,-118,-70,116,-94,-54,-117,110,-9
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = *0x a5f3e838  0a 00 00 00 40 e8 f3 a5 28 e0 75 db 09 ae 9d 6c  ....@...(.u....l
-  [arg1] before = *0x a5f3e828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x a5f3e818  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-onLeave!
-  retval = 0x0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = *0x a5f3e838  0a 00 00 00 40 e8 f3 a5 28 e0 75 db 09 ae 9d 6c  ....@...(.u....l
-  [arg1] before = *0x a5f3e828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01  ................
-  [arg2] before = *0x a5f3e818  a6 19 2f b1 09 ea d1 4c 21 1e db e5 44 1e 82 70  ../....L!...D..p
-
-
-
-onLeave!
-  retval = 0x0
-maybe_sign at 0xa099cfd1 called!
-  [arg0] before = 0xe7b0a9e0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-  [arg1] before = *0x 
-  [arg2] before = 0x21
-
-
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = *0x a5f3e7a4  0a 00 00 00 ac e7 f3 a5 28 e0 75 db 09 ae 9d 6c  ........(.u....l
-  [arg1] before = *0x a5f3e780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x a5f3e780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-onLeave!
-  retval = 0x0
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = *0x a5f3e7a4  0a 00 00 00 ac e7 f3 a5 28 e0 75 db 09 ae 9d 6c  ........(.u....l
-  [arg1] before = *0x a5f3e780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-  [arg2] before = *0x a5f3e780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-onLeave!
-  retval = 0x0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = *0x a5f3e7a4  0a 00 00 00 ac e7 f3 a5 28 e0 75 db 09 ae 9d 6c  ........(.u....l
-  [arg1] before = *0x a5f3e740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x a5f3e740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-onLeave!
-  retval = 0x0
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = *0x a5f3e7a4  0a 00 00 00 ac e7 f3 a5 28 e0 75 db 09 ae 9d 6c  ........(.u....l
-  [arg1] before = *0x a5f3e780  cf f4 04 57 26 43 a2 ca a5 0b cf f9 52 aa c2 e8  ...W&C......R...
-  [arg2] before = *0x a5f3e780  cf f4 04 57 26 43 a2 ca a5 0b cf f9 52 aa c2 e8  ...W&C......R...
-
-
-
-onLeave!
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-  retval = 0x0
-onLeave!
-  retval = 0x1
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:153)
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@defe113, bArr=100,78,86,-82,92,22,12,94,36,44,-122,-44,23,-72,102,67,-36,0,-88,-16
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741030242837,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741030243060,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741030243313,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741030243566,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741030243815,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741030244067,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741030244339,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741030244557,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@582bf09, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@dd50e80, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@c9f6855, bArr=17,112,-85,-74,36,-56,-99,105,1,-29,-57,73,75,65,-58,-54,63,-46,-12,69
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@4836017, bArr=-98,-88,122,62,112,-89,6,-29,-65,-63,73,2,22,-49,76,12,125,39,-118,52
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = 0x9eee0838
-  [arg1] before = 0x9eee0828
-  [arg2] before = 0x9eee0818
-
-
-
-onLeave!
-  retval = 0x0
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = 0x9eee0838
-  [arg1] before = 0x9eee0828
-  [arg2] before = 0x9eee0818
-
-
-
-onLeave!
-  retval = 0x0
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-maybe_sign at 0xa099cfd1 called!
-  [arg0] before = 0xe7b09360
-  [arg1] before = 0x9eee0920
-  [arg2] before = 0x21
-
-
-
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = 0x9eee07a4
-  [arg1] before = 0x9eee0780
-  [arg2] before = 0x9eee0780
-
-
-
-onLeave!
-  retval = 0x0
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = 0x9eee07a4
-  [arg1] before = 0x9eee0780
-  [arg2] before = 0x9eee0780
-
-
-
-onLeave!
-  retval = 0x0
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = 0x9eee07a4
-  [arg1] before = 0x9eee0740
-  [arg2] before = 0x9eee0740
-
-
-
-onLeave!
-  retval = 0x0
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal at 0xa099d591 called!
-  [arg0] before = 0x9eee07a4
-  [arg1] before = 0x9eee0780
-  [arg2] before = 0x9eee0780
-
-
-
-onLeave!
-  retval = 0x0
-onLeave!
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-  retval = 0x1
-TypeError: cannot read property '0' of undefined
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@1d46ad0, bArr=54,-28,-33,-82,-71,33,-17,114,-77,72,-55,-81,126,13,-119,-123,-26,0,-53,-105
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741030461079,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741030461301,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741030461549,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741030461805,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741030462058,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741030462313,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741030462556,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741030462802,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@425363f, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@1e961f8, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@652b7ed, bArr=-26,-124,117,-10,-76,36,90,71,1,-73,-98,-55,108,-6,50,-64,64,-95,-47,34
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@da28cc9, bArr=-97,117,30,-32,121,-112,84,23,14,19,51,117,-25,111,-99,63,54,-1,-103,25
-aes_encrypt_round_internal:
-  [arg0] before = 0x9e47a838
-  [arg1] before = 0x9e47a828
-  [arg2] before = 0x9e47a818
-
-
-
-  retval = 0x0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal:
-  [arg0] before = 0x9e47a838
-  [arg1] before = 0x9e47a828
-  [arg2] before = 0x9e47a818
-
-
-
-  retval = 0x0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-maybe_sign:
-  [arg0] before = 0xe7b0a3e0
-  [arg1] before = 0x9e47a920
-  [arg2] before = 0x21
-  [arg3] before = 0x9e47a980
-
-
-
-aes_encrypt_round_internal:
-  [arg0] before = 0x9e47a7a4
-  [arg1] before = 0x9e47a780
-  [arg2] before = 0x9e47a780
-
-
-
-  retval = 0x0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal:
-  [arg0] before = 0x9e47a7a4
-  [arg1] before = 0x9e47a780
-  [arg2] before = 0x9e47a780
-
-
-
-  retval = 0x0
-aes_encrypt_round_internal:
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-  [arg0] before = 0x9e47a7a4
-  [arg1] before = 0x9e47a740
-  [arg2] before = 0x9e47a740
-
-
-
-  retval = 0x0
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-aes_encrypt_round_internal:
-  [arg0] before = 0x9e47a7a4
-  [arg1] before = 0x9e47a780
-  [arg2] before = 0x9e47a780
-
-
-
-  retval = 0x0
-  retval = 0x1
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-Error: invalid operation
-    at onLeave (/home/marci/src/Diab/OpenGuardian/scripts/hook_sake_internals.js:154)
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@a3e3aeb, bArr=-122,-59,115,-18,122,5,44,19,3,41,-38,16,64,34,118,-87,122,0,54,33
-SAKE_SERVER_S.GET LAST ERROR=E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED
-PairPumpPresenterBase.lambda$handlePairingFailed$29 is called: aVar=GENERIC_ERROR
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=clcloud.minimed.eu/18.173.205.91,port=443,localPort=56025]
-SSLSocket protocols updated
-TLSSocketFactory.enableTLS is called: socket=SSL socket over Socket[address=carelink.minimed.eu/3.160.150.97,port=443,localPort=54925]
-SSLSocket protocols updated
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-Attach
-Android SDK Version : 30
-
-
-[+] minimed mobile v2.2.1 lifesupport hook started
-[+] Module libandroid-sake-lib.so loaded at 0xa0997000
-
-
-****** reattach ******
-Scanning memory region from: 0xa0997000 size: 53248
-[+] Attaching to function aes_encrypt_round_internal at: 0xa099d591
-[+] Attaching to function maybe_sign at: 0xa099cfd1
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-[!] settingGlobal.getInt(cr,name) : render_shadows_in_compositor
-[+] 1.Global.getInt(render_shadows_in_compositor) Bypassed
-1741030696561,bt,read,00002a29-0000-1000-8000-00805f9b34fb;4d656474726f6e696300
-1741030696922,bt,read,00002a24-0000-1000-8000-00805f9b34fb;4d4d542d3138383500
-1741030697291,bt,read,00002a25-0000-1000-8000-00805f9b34fb;4e47333637313530344800
-1741030697545,bt,read,00002a27-0000-1000-8000-00805f9b34fb;41322e303100
-1741030697788,bt,read,00002a26-0000-1000-8000-00805f9b34fb;382e31322e3200
-1741030698030,bt,read,00002a28-0000-1000-8000-00805f9b34fb;00
-1741030698417,bt,read,00002a23-0000-1000-8000-00805f9b34fb;d095675009f72300
-1741030698669,bt,read,00002a50-0000-1000-8000-00805f9b34fb;01f90100001001
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@3dc7ee3, bArr=0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@f044111, bArr=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@8a38762, bArr=57,53,-13,-44,-104,17,-60,-10,1,-21,-57,-85,-62,-111,21,20,-77,-23,30,62
-C3673c.memmove is called: c3672b=com.medtronic.minimed.sake.b@aa3bb2f, bArr=96,113,-117,-91,-88,55,-41,-15,53,-54,-111,-7,120,-46,-48,-84,-18,-93,116,-108
-aes_encrypt_round_internal:
-  [arg0] before = *0x 9dff1838  0a 00 00 00 40 18 ff 9d ab d8 94 08 f0 38 d5 5a  ....@........8.Z
-  [arg1] before = *0x 9dff1828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x 9dff1818  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-  retval = 0x0
-  [arg0] after = *0x 9dff1838  0a 00 00 00 40 18 ff 9d ab d8 94 08 f0 38 d5 5a  ....@........8.Z
-  [arg1] after = *0x 9dff1828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] after = *0x 9dff1818  a2 62 33 c9 fc d9 2c 7b 4c 55 76 1d a5 95 e8 c5  .b3...,{LUv.....
-aes_encrypt_round_internal:
-  [arg0] before = *0x 9dff1838  0a 00 00 00 40 18 ff 9d ab d8 94 08 f0 38 d5 5a  ....@........8.Z
-  [arg1] before = *0x 9dff1828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01  ................
-  [arg2] before = *0x 9dff1818  a2 62 33 c9 fc d9 2c 7b 4c 55 76 1d a5 95 e8 c5  .b3...,{LUv.....
-
-
-
-  retval = 0x0
-  [arg0] after = *0x 9dff1838  0a 00 00 00 40 18 ff 9d ab d8 94 08 f0 38 d5 5a  ....@........8.Z
-  [arg1] after = *0x 9dff1828  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 01  ................
-  [arg2] after = *0x 9dff1818  6e 8b 86 29 99 01 c2 5b 5c d5 e2 75 03 ba 1a 0a  n..)...[\..u....
-maybe_sign:
-  [arg0] before = *0x e7b09660  ab d8 94 08 f0 38 d5 5a 92 75 39 23 88 36 03 48  .....8.Z.u9#.6.H
-  [arg1] before = *0x 9dff1920  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = 0x21
-  [arg3] before = *0x 9dff1980  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-aes_encrypt_round_internal:
-  [arg0] before = *0x 9dff17a4  0a 00 00 00 ac 17 ff 9d ab d8 94 08 f0 38 d5 5a  .............8.Z
-  [arg1] before = *0x 9dff1780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x 9dff1780  00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-  retval = 0x0
-  [arg0] after = *0x 9dff17a4  0a 00 00 00 ac 17 ff 9d ab d8 94 08 f0 38 d5 5a  .............8.Z
-  [arg1] after = *0x 9dff1780  a2 62 33 c9 fc d9 2c 7b 4c 55 76 1d a5 95 e8 c5  .b3...,{LUv.....
-  [arg2] after = *0x 9dff1780  a2 62 33 c9 fc d9 2c 7b 4c 55 76 1d a5 95 e8 c5  .b3...,{LUv.....
-aes_encrypt_round_internal:
-  [arg0] before = *0x 9dff17a4  0a 00 00 00 ac 17 ff 9d ab d8 94 08 f0 38 d5 5a  .............8.Z
-  [arg1] before = *0x 9dff1780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x 9dff1780  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-  retval = 0x0
-  [arg0] after = *0x 9dff17a4  0a 00 00 00 ac 17 ff 9d ab d8 94 08 f0 38 d5 5a  .............8.Z
-  [arg1] after = *0x 9dff1780  59 29 52 34 5c a0 ab 08 47 79 7d 0f d7 d3 c4 fb  Y)R4\...Gy}.....
-  [arg2] after = *0x 9dff1780  59 29 52 34 5c a0 ab 08 47 79 7d 0f d7 d3 c4 fb  Y)R4\...Gy}.....
-aes_encrypt_round_internal:
-  [arg0] before = *0x 9dff17a4  0a 00 00 00 ac 17 ff 9d ab d8 94 08 f0 38 d5 5a  .............8.Z
-  [arg1] before = *0x 9dff1740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-  [arg2] before = *0x 9dff1740  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
-
-
-
-  retval = 0x0
-  [arg0] after = *0x 9dff17a4  0a 00 00 00 ac 17 ff 9d ab d8 94 08 f0 38 d5 5a  .............8.Z

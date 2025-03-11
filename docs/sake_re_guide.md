@@ -43,3 +43,7 @@
 - for some reason i thought it would be a cool idea to start reversing the armv7 binary instead of the aarch64
 - luckily we can use a hack to force the armv7 to load: just reinstall the apk with adb install --abi armeabi-v7a xyz.apk
 echo 0 > /proc/sys/kernel/randomize_va_space
+
+
+# Ghidra workaround for connection timeout
+- https://github.com/NationalSecurityAgency/ghidra/issues/7866#issuecomment-2695646126
