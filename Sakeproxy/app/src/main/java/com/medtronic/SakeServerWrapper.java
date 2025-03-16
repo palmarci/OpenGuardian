@@ -107,7 +107,7 @@ public class SakeServerWrapper {
             SakeSecureMessage = null;
         }
         SakeSecureMessage SakeSecureMessage2 = new SakeSecureMessage();
-        SakeHandshakeStatus handshakeStatus = SakeJNIWrapper.Server_GetHandshakeStatus(this.sakeServer, SakeSecureMessage, SakeSecureMessage2);
+        SakeHandshakeStatus handshakeStatus = SakeJNIWrapper.Server_Handshake_Step(this.sakeServer, SakeSecureMessage, SakeSecureMessage2);
         if (handshakeStatus == SakeHandshakeStatus.E_SAKE_HANDSHAKE_FAILED) {
             Utils.logPrint("Sake handshake failed with error " + this.sakeServer.getLastError());
         }

@@ -70,7 +70,7 @@ public class SakeJNIWrapper {
     }
 
     /* renamed from: d */
-    public static SakeHandshakeStatus Server_GetHandshakeStatus(SakeServer sake_server_s, SakeSecureMessage SakeSecureMessage, SakeSecureMessage SakeSecureMessage2) {
+    public static SakeHandshakeStatus Server_Handshake_Step(SakeServer sake_server_s, SakeSecureMessage SakeSecureMessage, SakeSecureMessage SakeSecureMessage2) {
         return SakeHandshakeStatus.fromInt(SakeJNI.Sake_Server_Handshake(SakeServer.getValue(sake_server_s), sake_server_s, SakeSecureMessage.getValue(SakeSecureMessage), SakeSecureMessage, SakeSecureMessage.getValue(SakeSecureMessage2), SakeSecureMessage2));
     }
 

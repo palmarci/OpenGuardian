@@ -38,8 +38,8 @@ public class SakeServer {
     }
 
     /* renamed from: c */
-    public SakeException getLastError() {
-        return SakeException.parseErrorCode(SakeJNI.SAKE_SERVER_S_lastError_get(this.ptr, this));
+    public SakeError getLastError() {
+        return SakeError.parseErrorCode(SakeJNI.SAKE_SERVER_S_lastError_get(this.ptr, this));
     }
 
     protected void finalize() {

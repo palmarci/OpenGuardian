@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private int stepCount = 0;
 	private String[] stepData = {
+			null,
 			"0000000000000000000000000000000000000000",
 			"c41feeac76ba58d90838ff8264e0fbe118d82707",
 			"6f2898a885704de55acd824c781795ebf3b8d841",
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 		this.statusLabel = findViewById(R.id.status_label);
 		this.statusLabel.setText("Initializing...");
+		System.setProperty("dalvik.vm.execution-mode", "int:transitive");
 
 		this.logTextView = findViewById(R.id.logTextView); // Assuming you have a TextView for logs
 
@@ -125,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
 			byte[] data = Utils.hexStrToBytes(this.stepData[this.stepCount]);
 			byte[] resp = this.sakeServer.doHandshake(data);
+			
 			Utils.logPrint(
 					"step " + this.stepCount + " (" + Utils.bytesToHexStr(data) + ") -> " + Utils.bytesToHexStr(resp));
 			this.stepCount++;

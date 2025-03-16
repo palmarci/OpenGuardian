@@ -11,7 +11,7 @@ import subprocess
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
 
-from common import TARGET_DUMP_FILE, resolve_map
+from common import TARGET_DUMP_FILE, resolve_map, dump_memory
 
 def copy_to_clipboard(text):
 	os.system('echo -n "' + text + '" | xclip -selection clipboard')
@@ -48,6 +48,10 @@ def main():
 		return
 
 	print("Function code bytes length = " + str(len(code_bytes)))
+
+	if not os.path.isfile(TARGET_DUMP_FILE):
+		print("sake dump does not exist, dumping...")
+		dump_memory()
 
 	with open(TARGET_DUMP_FILE, "rb") as target_file:
 		file_content = target_file.read()
@@ -89,5 +93,8 @@ def main():
 	break_point_address = hex(break_point_address)[:-1]
 	print("Break should be set at: " + break_point_address)
 	copy_to_clipboard(break_point_address)
+
+	if int(str(current_cursor_address),16) & 0xFF != int(break_point_address,16) & 0xFF:
+		print("WARNING: ADDRESS LOOKS SUS!")
 
 main()

@@ -14,26 +14,26 @@ GDBCLIENT = "aarch64-linux-gnu-gdb"
 PORT = 6666
 
 def run_cmd(cmd_str, background=False):
-    print(" > " + cmd_str)
+	print(" > " + cmd_str)
 
-    # Check if the command contains single quotes that need to be escaped
-    # If the command contains spaces or other special characters, we'll quote it correctly
-    if background:
-        # Run the command in the background with nohup, but avoid quoting the entire command.
-        cmd = "nohup " + cmd_str + " > /dev/null 2>&1 &"
-        os.system(cmd)
-        return None
-    else:
-        # For regular commands, use os.popen to capture output and avoid breaking the command.
-        # Use shlex.split to safely separate the command and its arguments for os.popen()
-        try:
-            cmd_list = shlex.split(cmd_str)  # Split command safely into list
-            with os.popen(' '.join(cmd_list)) as stream:
-                result = stream.read().strip()  # Capture the output and remove leading/trailing spaces
-            return result
-        except Exception as e:
-            print("Error executing command: " + str(e))
-            return None
+	# Check if the command contains single quotes that need to be escaped
+	# If the command contains spaces or other special characters, we'll quote it correctly
+	if background:
+		# Run the command in the background with nohup, but avoid quoting the entire command.
+		cmd = "nohup " + cmd_str + " > /dev/null 2>&1 &"
+		os.system(cmd)
+		return None
+	else:
+		# For regular commands, use os.popen to capture output and avoid breaking the command.
+		# Use shlex.split to safely separate the command and its arguments for os.popen()
+		try:
+			cmd_list = shlex.split(cmd_str)  # Split command safely into list
+			with os.popen(' '.join(cmd_list)) as stream:
+				result = stream.read().strip()  # Capture the output and remove leading/trailing spaces
+			return result
+		except Exception as e:
+			print("Error executing command: " + str(e))
+			return None
 
 def get_pid():
 	pid = run_cmd('adb shell su -c "pidof ' + PKG + '"')
@@ -83,6 +83,4 @@ def dump_memory():
 	return
 
 if __name__ == "__main__":
-	import pyperclip
-	pyperclip.copy("test")
 	dump_memory()

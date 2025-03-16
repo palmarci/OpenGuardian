@@ -42,7 +42,7 @@ def main():
 	
 	print(f"\nyou can attach using:\n{gdb_start_cmd}\n")
 
-	#input("\nPRESS ENTER TO ATTACH WITH GDB!")
+	input("\nPRESS ENTER TO ATTACH WITH GDB!")
 
 	os.system(gdb_start_cmd)
 

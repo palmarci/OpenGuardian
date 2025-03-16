@@ -1,7 +1,7 @@
 package com.medtronic.minimed.sake;
 
 
-//import p123e.p416g.p517g.p535b.SakeException;
+//import p123e.p416g.p517g.p535b.SakeError;
 
 /* renamed from: com.medtronic.SakeInternal.SAKE_CLIENT_S */
 /* loaded from: classes.dex */
@@ -39,8 +39,8 @@ public class SakeClient {
     }
 
     /* renamed from: c */
-    public SakeException getLastError() {
-        return SakeException.parseErrorCode(SakeJNI.SAKE_CLIENT_S_lastError_get(this.ptr, this));
+    public SakeError getLastError() {
+        return SakeError.parseErrorCode(SakeJNI.SAKE_CLIENT_S_lastError_get(this.ptr, this));
     }
 
     public void finalize() {

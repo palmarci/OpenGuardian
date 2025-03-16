@@ -1,0 +1,12 @@
+Attach
+Android SDK Version : 30
+
+
+[+] minimed mobile v2.2.1 lifesupport hook started
+[+] Module libandroid-sake-lib.so loaded at 0xdd949000
+
+
+****** reattach ******
+Scanning memory region from: 0xdd949000 size: 53248
+[+] Attaching to function aes_encrypt_round_internal at: 0xdd94f591
+[+] Attaching to function maybe_sign at: 0xdd94efd1
