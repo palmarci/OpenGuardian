@@ -68,9 +68,10 @@ def main():
 
 	print("gdb server started!")
 
-	gdb_start_cmd = f'{GDBCLIENT} -q -ex "set architecture armv7" -ex "set debuginfod enabled off" -ex "target remote localhost:{PORT}"'
+	gdb_start_cmd = f'{GDBCLIENT} -q -ex "set pagination off" -ex "set architecture armv7" -ex "set debuginfod enabled off" -ex "target remote localhost:{PORT}"'
 	#gdb_start_cmd += f' -ex "set auto-solib-add 0" -ex "sharedlibrary {get_elf_location()}"'
-	
+	gdb_start_cmd += f'  -ex "sharedlibrary {get_elf_location()}"'
+
 	print(f"\nyou can attach using:\n{gdb_start_cmd}")
 	os.system(gdb_start_cmd)
 

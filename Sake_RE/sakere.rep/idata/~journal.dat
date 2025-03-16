@@ -1,5 +1,0 @@
-IDEL:/libandroid-sake-lib_orig.so
-FADD:/New Traces
-FADD:/New Traces/gdb
-IADD:00000021:/New Traces/gdb/app_process32
-IDSET:/New Traces/gdb/app_process32:c0a816493fb9213414204735

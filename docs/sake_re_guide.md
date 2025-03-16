@@ -26,12 +26,13 @@
 - info b(reakpoints)
 - continue
 - disassemble funcname
-- dump binary memory /temp/dump.bin 0x200000000 0x20000c350
+- dump binary memory /tmp/dump.bin 0x200000000 0x20000c350
 - set auto-solib-add 0
 - python exec(open("sigbreak.py").read())
 - x/20xbw 0xe7974810
 - set scheduler-locking on
 - b dlclose
+- b Java_com_medtronic_minimed_sake_SakeJNI_Sake_1KeyDatabase_1Open
   
 # Relocated address shit
 - if the app says "pairing timeout reached" it will re-load the library and the addresses will change?
@@ -47,3 +48,7 @@ echo 0 > /proc/sys/kernel/randomize_va_space
 
 # Ghidra workaround for connection timeout
 - https://github.com/NationalSecurityAgency/ghidra/issues/7866#issuecomment-2695646126
+
+
+# Ghidra speed improvement
+close this window in ghidra for speed improvement<br>![alt text](image.png)

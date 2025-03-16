@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sakeproxy"
         tools:targetApi="31"
-        android:extractNativeLibs="true">
+        android:extractNativeLibs="true"
+        android:debuggable="true">
 
         <activity
             android:name=".MainActivity"

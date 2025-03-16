@@ -18,7 +18,7 @@ public class Utils {
         return null;
     }
 
-    public static String convertExceptionToString(Exception e) {
+    public static String exceptionToString(Exception e) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         e.printStackTrace(pw);
@@ -51,6 +51,9 @@ public class Utils {
     }
 
     public static String bytesToHexStr(byte[] bytes) {
+        if (bytes == null) {
+            return "<NULL>";
+        }
         char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
         char[] hexChars = new char[bytes.length * 2];
         for (int j = 0; j < bytes.length; j++) {
