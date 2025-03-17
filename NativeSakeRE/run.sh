@@ -1,0 +1,1 @@
+make push && adb shell /data/local/tmp/sakeloader/sakeloader

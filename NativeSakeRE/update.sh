@@ -1,0 +1,1 @@
+make && make push && rm sakeloader

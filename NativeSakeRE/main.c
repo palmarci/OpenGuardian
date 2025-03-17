@@ -12,9 +12,6 @@ static void *android_handle;
 
 static SakeKeyDatabaseOpen_t SakeKeyDatabaseOpen = NULL;
 
-// typedef jint (*JNI_CreateJavaVM_t)(JavaVM **pvm, JNIEnv **penv, void *args);
-// static JNI_CreateJavaVM_t my_JNI_CreateJavaVM = NULL;
-
 void init_sake()
 {
 	// Load the SAKE library
@@ -73,15 +70,29 @@ void close_all()
 	dlclose(android_handle);
 }
 
-int main()
+int main(int argc, char *argv[])
 {
+	bool debug = false;
+
+	if (argc == 2) {
+		if (strcmp(argv[1], "debug") == 0) {
+			debug = true;
+		} else {
+			printf("starting in normal mode!\n");
+		}
+	}
+
 	init_sake();
 	// init_android();
 
-	debug_break();
+	if (debug) {
+		debug_break();
+	}
 
 	uint32_t *key_db = malloc(8);
-	int retval = SakeKeyDatabaseOpen(NULL, NULL, NULL, key_db, &TEST_KEY_DB, sizeof(TEST_KEY_DB));
+
+	//									env 		thiz		a0			a1			a2			a3
+	int retval = SakeKeyDatabaseOpen(0xAAAAAAAA, 0xBBBBBBBB, key_db, 0xDDDDDDDD, &TEST_KEY_DB, sizeof(TEST_KEY_DB));
 	printf("SakeKeyDatabaseOpen returned %d\n", retval);
 
 	close_all();
