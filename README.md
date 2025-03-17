@@ -19,9 +19,8 @@ Check the discord for more info: https://discord.gg/tb4egy8VYh (no Medtronic spi
 - Sake_RE
 	- the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called SAKE
 	- using an older version of the library built for ARMv7
-	- SAKE has two parts: a client and a server side, currently the focus is on the server side (mobile app) for now
-	- i got to a point where i think i can not go futher with only static reversing
-	- current goal is to debug out the unknowns and the crypto with ghidra
+	- SAKE has two parts: a client and a server side, currently the focus is on the server side (MiniMed <-> Pump) for now
+	- static reversing is pretty much done, now only the unknowns, the crypto and the bugs should be debugged out (with ghidra)
 	- a guy has successfully paired (?) with a medtronic device, i am positive that he knows what he is talking about, but i could not reach him for more details, [see this](./data/info.png)
 	
 - Sakeproxy
@@ -30,7 +29,12 @@ Check the discord for more info: https://discord.gg/tb4egy8VYh (no Medtronic spi
 	- only a temporary solution until we can fully reverse enginer the crypto library, but will be very useful for development
 	- it only supports one user at a time
 	- <del>also I am planning on hosting some kind of development server for other people to talk with their devices</del> the server for it is currently offline due to lack of interest, but i can start up again if necessary
-	- **Sakeproxy is now also used to simulate a real application around sake, since it is A LOT easier to debug**
+	- <del>Sakeproxy is now also used to simulate a real application around sake, since it is A LOT easier to debug</del> it is still too painful to debug, see NativeSakeRE
+
+- NativeSakeRE
+  - a native android ELF that can load sake and call its exported functions
+  - this is a painless experience (at least compared to what was before) and works very nicely with ghidra
+  
 - SakeproxyClient
   - shitty arduino and python wrapper for the Sakeproxy HTTP API 
 
@@ -39,7 +43,7 @@ Check the discord for more info: https://discord.gg/tb4egy8VYh (no Medtronic spi
 	- logs from the Monitor script
 	- UUID information
 	- sniffed BT traffic in pcap format
-	- TODO: document them properly, maybe create a wiki on github
+	- TODO: document everything properly, maybe create a wiki page on github
 	
 - Scripts
 	- various scripts to be used with frida (including the Monitor)
@@ -47,7 +51,7 @@ Check the discord for more info: https://discord.gg/tb4egy8VYh (no Medtronic spi
 
 - Docs
 	- random guides and useful notes
-	- TODO: organize them
+	- TODO: organize everything
 
 - Tools
 	- log_decrypt
