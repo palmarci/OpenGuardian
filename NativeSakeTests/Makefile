@@ -11,14 +11,18 @@ LD = $(NDK_PATH)/toolchains/llvm/prebuilt/linux-x86_64/bin/ld
 AR = $(NDK_PATH)/toolchains/llvm/prebuilt/linux-x86_64/bin/ar
 SYSROOT = $(NDK_PATH)/platforms/android-21/arch-arm64
 
-# Compiler and linker flags for JNI and JVM
-CFLAGS = -g -Wall -O2 -fPIC -I$(SYSROOT)/usr/include -I$(NDK_PATH)/sysroot/usr/include/jni -I$(NDK_PATH)/sysroot/usr/include/jni.h
-LDFLAGS = -L$(SYSROOT)/usr/lib -L$(NDK_PATH)/platforms/android-21/arch-arm64/usr/lib -ldl -L$(NDK_PATH)/platforms/android-21/arch-arm64/usr/lib
+# Paths for additional archives and includes
+HOOKER_ARCHIVE = /home/marci/src/Diab/OpenGuardian/NativeSakeRE/InlineHook/jni/hook/libhooker.a
+INCLUDE_DIR = /home/marci/src/Diab/OpenGuardian/NativeSakeRE/InlineHook/jni/hook/
 
-LIBS = -ldl  # Link with libdl for dynamic loading
+# Compiler and linker flags for JNI and JVM
+CFLAGS = -g -Wall -O2 -fPIC -I$(SYSROOT)/usr/include -I$(NDK_PATH)/sysroot/usr/include/jni -I$(NDK_PATH)/sysroot/usr/include/jni.h -I$(INCLUDE_DIR)
+LDFLAGS = -L$(SYSROOT)/usr/lib -L$(NDK_PATH)/platforms/android-21/arch-arm64/usr/lib -L$(INCLUDE_DIR) -ldl
+
+LIBS = -ldl -L$(INCLUDE_DIR) -lhooker # Link with libhooker.a and libTKHooklib
 
 TARGET = sakeloader
-SRC = main.c
+SRC = *.c
 
 # Build rules
 all: $(TARGET)
