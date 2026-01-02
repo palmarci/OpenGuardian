@@ -2,7 +2,7 @@
 
 All devices use Bluetooth Low Energy (BLE). The pumps act in Central mode, while the sensors act as a Peripheral. This is the only way multiple devices can be connected to a pump at the same time. It also means that the mobile app acts as Peripheral when talking to the pump.
 
-The devices do NOT use _LE Secure Connection_, meaning the communication should be crackable and sniffable. (https://github.com/mikeryan/crackle).
+The devices do NOT use _LE Secure Connection_, meaning the communication should be crackable and sniffable if we are able to sniff the pairing process (we can reconstruct the SAKE session key) (https://github.com/mikeryan/crackle).
 
 The sensor can be easily connected with the provided [python script](/PythonConnector/). The pump is a bit different and it requires MITM protection. It still currently under investigation.
 
