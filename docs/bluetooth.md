@@ -18,6 +18,6 @@ CGM GT1122867N -> 1122867 = 0x112233 -> MAC should be DC:16:A2:11:22:33.
 
 ## Device names
 
-The mobile apps and the pump use a pseudo device name. The apps on first startup will generate a "Mobile xxxxxx" like string, where the number is always a random 6 digit **odd** number. 
+The mobile apps and the pump use a pseudo device name. The apps on first startup will generate a "Mobile xxxxxx" like string, where the number is always a random 6 digit number (**odd** on Android devices and **even** on iOS devices).
 
 The pump probably derives it's name from its own MAC, in a string "Pump xxxxxxH" which is similar to the sensor.
