@@ -1,10 +1,12 @@
 # BT communication
 
-All devices use Bluetooth Low Energy. The Pumps acts in central mode, while the sensors act as a Peripheral. They do NOT use LE Secure Connections, meaning the communication should be crackable and sniffable. (https://github.com/mikeryan/crackle).
+All devices use Bluetooth Low Energy (BLE). The pumps act in Central mode, while the sensors act as a Peripheral. This is the only way multiple devices can be connected to a pump at the same time. It also means that the mobile app acts as Peripheral when talking to the pump.
+
+The devices do NOT use _LE Secure Connection_, meaning the communication should be crackable and sniffable. (https://github.com/mikeryan/crackle).
 
 The sensor can be easily connected with the provided [python script](/PythonConnector/). The pump is a bit different and it requires MITM protection. It still currently under investigation.
 
-The devices utilize standardized and custom GATT services and characteristics. The interesting data is encrypted using a Medtronic protocol called SAKE (Secure? Authenticated? Key Exchange?). The protocol seems to have 2 versions, a v1.0 and a v2.0. They use the service ID 0xfe82 (and perhaps 0xfe81 for the older one).
+The devices utilize standardized and custom GATT services and characteristics. The interesting data (as payload in specific characteristics) is encrypted using a Medtronic protocol called SAKE (Secure? Authenticated? Key Exchange?). The protocol seems to have 2 versions, a v1.0 and a v2.0. They use the service ID 0xfe82 (and perhaps 0xfe81 for the older one).
 
 Please check out the [Communication Matrix](./attachments/com_matrix.ods) for more info.
 
