@@ -1,7 +1,7 @@
 
 #include "stdbool.h"
 
-#include "InlineHook.h"
+#include "InlineHook.h" // get it from https://github.com/yongyecc/InlineHook
 
 #include "hook.h"
 #include "common.h"
