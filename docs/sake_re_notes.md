@@ -1,13 +1,14 @@
 # Sake reversing notes 
 
-- [How to debug sake with ghidra](#how-to-debug-sake-with-ghidra)
-- [Hooking with frida](#hooking-with-frida)
-- [GDB cheatsheet](#gdb-cheatsheet)
-- [Relocated address stuff](#relocated-address-stuff)
-- [ABI mismatch](#abi-mismatch)
-- [Ghidra workaround for connection timeout](#ghidra-workaround-for-connection-timeout)
-- [Ghidra speed improvement](#ghidra-speed-improvement)
-- [Ghidra no modules fix](#ghidra-no-modules-fix)
+- [Sake reversing notes](#sake-reversing-notes)
+  - [How to debug sake with ghidra](#how-to-debug-sake-with-ghidra)
+  - [Hooking with frida](#hooking-with-frida)
+  - [GDB cheatsheet](#gdb-cheatsheet)
+  - [Relocated address stuff](#relocated-address-stuff)
+  - [ABI mismatch](#abi-mismatch)
+  - [Ghidra workaround for connection timeout](#ghidra-workaround-for-connection-timeout)
+  - [Ghidra speed improvement](#ghidra-speed-improvement)
+  - [Ghidra no modules fix](#ghidra-no-modules-fix)
 
 
 
@@ -60,9 +61,9 @@
 
 
 ## Ghidra speed improvement
-close this window in ghidra for speed improvement<br>![alt text](image.png)
+close this window in ghidra for speed improvement<br>![alt text](./attachments/ghidra_threads.png)
 
 ## Ghidra no modules fix
 - if you attach to gdb via ghidra before loading the shared library in the process AND before executing "sharedlibrary" command, ghidra will not be very usable
-- fix is to add some lines into <code>/opt/ghidra/Ghidra/Debug/Debugger-agent-gdb/data/debugger-launchers/remote-gdb.sh</code> (or what have you) <br>![alt text](image-1.png)
+- fix is to add some lines into <code>/opt/ghidra/Ghidra/Debug/Debugger-agent-gdb/data/debugger-launchers/remote-gdb.sh</code> (or what have you) <br>![alt text](./attachments/gdb_flags.png)
   - i added a SIGINT breakpoint in the code after loading the lib, so i can go from the entry breakpoint, then break, load the symbols and only AFTER that, connect to the ghidra gui

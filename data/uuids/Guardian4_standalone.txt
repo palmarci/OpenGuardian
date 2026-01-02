@@ -1,0 +1,45 @@
+Service 0000180f-0000-1000-8000-00805f9b34fb
+  Characteristic 00002a19-0000-1000-8000-00805f9b34fb | ['read', 'notify']
+Service 00001801-0000-1000-8000-00805f9b34fb
+  Characteristic 00002a05-0000-1000-8000-00805f9b34fb | ['indicate']
+Service 0000180a-0000-1000-8000-00805f9b34fb
+  Characteristic 00002a2a-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a28-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a29-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a50-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a27-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a23-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a26-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a24-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a25-0000-1000-8000-00805f9b34fb | ['read']
+Service 0000181f-0000-1000-8000-00805f9b34fb
+  Characteristic 00000200-0000-1000-0000-009132591325 | ['read']
+  Characteristic 00002aab-0000-1000-8000-00805f9b34fb | ['read', 'indicate']
+  Characteristic 00000202-0000-1000-0000-009132591325 | ['indicate']
+  Characteristic 00000204-0000-1000-0000-009132591325 | ['indicate']
+  Characteristic 00002aac-0000-1000-8000-00805f9b34fb | ['write', 'indicate']
+  Characteristic 00002aaa-0000-1000-8000-00805f9b34fb | ['read', 'write']
+  Characteristic 00000203-0000-1000-0000-009132591325 | ['indicate']
+  Characteristic 00002aa9-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00000205-0000-1000-0000-009132591325 | ['read']
+  Characteristic 00002aa8-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a52-0000-1000-8000-00805f9b34fb | ['write', 'indicate']
+  Characteristic 00000201-0000-1000-0000-009132591325 | ['read', 'indicate']
+  Characteristic 00002aa7-0000-1000-8000-00805f9b34fb | ['notify', 'indicate']
+Service 0000fe82-0000-1000-8000-00805f9b34fb
+  Characteristic 0000fe82-0000-1000-0000-009132591325 | ['write', 'notify']
+Service 00000300-0000-1000-0000-009132591325
+  Characteristic 00002a52-0000-1000-8000-00805f9b34fb | ['write', 'indicate']
+  Characteristic 00000350-0000-1000-0000-009132591325 | ['notify']
+  Characteristic 00000360-0000-1000-0000-009132591325 | ['write', 'indicate']
+Service 00001800-0000-1000-8000-00805f9b34fb
+  Characteristic 00002a01-0000-1000-8000-00805f9b34fb | ['read']
+  Characteristic 00002a00-0000-1000-8000-00805f9b34fb | ['read', 'write']
+  Characteristic 00002a04-0000-1000-8000-00805f9b34fb | ['read']
+Service 15dbcd61-6388-4c33-b9d8-580254fed03b
+  Characteristic c774edac-e573-45e1-97c6-8b5c18cc571a | ['indicate']
+  Characteristic de3e5221-1308-439c-a13a-884ddc387ca7 | ['read']
+  Characteristic 8484039e-97d3-40c0-bb55-c70c17badae2 | ['write']
+Service 4484fae0-be34-11e4-851e-0002a5d5c51b
+  Characteristic 5f0b2420-be34-11e4-bc62-0002a5d5c51b | ['read', 'indicate']
+  Characteristic 500d8e40-be34-11e4-9b24-0002a5d5c51b | ['read', 'write']

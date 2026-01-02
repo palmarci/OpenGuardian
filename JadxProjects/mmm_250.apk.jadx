@@ -1,52 +1,11 @@
 {
   "projectVersion": 1,
   "files": [
-    "mmm_250.apk"
+    "../../mmm_250.apk"
   ],
-  "treeExpansions": [
-    [
-      "com",
-      "Source code",
-      "mmm_250.apk"
-    ],
-    [
-      "p049ca.mas",
-      "com",
-      "Source code",
-      "mmm_250.apk"
-    ],
-    [
-      "identity",
-      "p049ca.mas",
-      "com",
-      "Source code",
-      "mmm_250.apk"
-    ],
-    [
-      "messaging",
-      "p049ca.mas",
-      "com",
-      "Source code",
-      "mmm_250.apk"
-    ],
-    [
-      "topic",
-      "messaging",
-      "p049ca.mas",
-      "com",
-      "Source code",
-      "mmm_250.apk"
-    ],
-    [
-      "p456xj",
-      "Source code",
-      "mmm_250.apk"
-    ],
-    [
-      "p187jf",
-      "Source code",
-      "mmm_250.apk"
-    ]
+  "treeExpansionsV2": [
+    "c:com.ca.mas.core.auth.ble.BluetoothLePeripheralCallback",
+    "c:com.ca.mas.core.auth.ble.BluetoothLePeripheral"
   ],
   "codeData": {
     "comments": [],
@@ -1164,12 +1123,13 @@
       "caret": 12442,
       "view": {
         "x": 0,
-        "y": 4364
+        "y": 3926
       },
       "active": false,
       "pinned": false,
       "bookmarked": false,
-      "hidden": false
+      "hidden": false,
+      "previewTab": false
     },
     {
       "type": "class",
@@ -1177,13 +1137,14 @@
       "subPath": "java",
       "caret": 2350,
       "view": {
-        "x": 420,
-        "y": 281
+        "x": 274,
+        "y": 69
       },
       "active": false,
       "pinned": false,
       "bookmarked": false,
-      "hidden": false
+      "hidden": false,
+      "previewTab": false
     },
     {
       "type": "class",
@@ -1192,12 +1153,13 @@
       "caret": 832,
       "view": {
         "x": 0,
-        "y": 183
+        "y": 11
       },
       "active": false,
       "pinned": false,
       "bookmarked": false,
-      "hidden": false
+      "hidden": false,
+      "previewTab": false
     },
     {
       "type": "class",
@@ -1208,10 +1170,11 @@
         "x": 0,
         "y": 298
       },
-      "active": true,
+      "active": false,
       "pinned": false,
       "bookmarked": false,
-      "hidden": false
+      "hidden": false,
+      "previewTab": false
     },
     {
       "type": "class",
@@ -1225,12 +1188,286 @@
       "active": false,
       "pinned": false,
       "bookmarked": false,
-      "hidden": false
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLePeripheral",
+      "subPath": "java",
+      "caret": 4991,
+      "view": {
+        "x": 0,
+        "y": 965
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.otp.OtpConstants",
+      "subPath": "java",
+      "caret": 79,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.otp.OtpUtil",
+      "subPath": "java",
+      "caret": 369,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.otp.model.OtpResponseBody",
+      "subPath": "java",
+      "caret": 142,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.otp.model.OtpResponseHeaders",
+      "subPath": "java",
+      "caret": 165,
+      "view": {
+        "x": 0,
+        "y": 108
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.QRCodeRenderer",
+      "subPath": "java",
+      "caret": 347,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.QRCode",
+      "subPath": "java",
+      "caret": 141,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.NfcResultReceiver",
+      "subPath": "java",
+      "caret": 155,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.AuthResultReceiver",
+      "subPath": "java",
+      "caret": 108,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.AuthenticationException",
+      "subPath": "java",
+      "caret": 206,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLe",
+      "subPath": "java",
+      "caret": 310,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLeCentralCallback",
+      "subPath": "java",
+      "caret": 83,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLeConsentHandler",
+      "subPath": "java",
+      "caret": 83,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLeCentralRenderer",
+      "subPath": "java",
+      "caret": 2533,
+      "view": {
+        "x": 0,
+        "y": 933
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.MobileSsoConfig",
+      "subPath": "java",
+      "caret": 368,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLePeripheralCallback",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.MobileSsoFactory",
+      "subPath": "java",
+      "caret": 1086,
+      "view": {
+        "x": 0,
+        "y": 438
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.conf.Config",
+      "subPath": "java",
+      "caret": 6071,
+      "view": {
+        "x": 0,
+        "y": 531
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
     }
   ],
-  "cacheDir": "/home/marci/.cache/jadx/projects/mmm_250.apk-0d631ac9763142371dace325cf25e4c9",
+  "cacheDir": "/home/marci/.cache/jadx/projects/mmm_250.apk-8888e80a09325d76b580d32d7558b5cc",
   "enableLiveReload": true,
   "searchHistory": [
+    "PROP_BLE_SERVICE_UUID",
+    "MobileSsoFactory",
+    "BluetoothLeAdvertiser",
     "nativesake",
     "sake",
     "handshake",
@@ -1257,10 +1494,9 @@
     "-lib",
     "sakeserver",
     "device_type",
-    "integrity",
-    "E_SAKE_HANDSHAKE_DEVICE_TYPE_NOT_SUPPORTED",
-    "Preparing SAKE manager for",
-    "sake_key"
+    "integrity"
   ],
+  "searchResourcesFilter": "$TEXT",
+  "searchResourcesSizeLimit": 0,
   "pluginOptions": {}
 }

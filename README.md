@@ -1,61 +1,59 @@
 # OpenGuardian
 
-Reverse engineering the BT communication for the Medtronic Guardian Continous Glucose Monitoring Systems and Insulin Pumps. This work originally started on the Guardian 4 Sensor and the long term goal is to support the insulin pumps too. 
+This repo contains tools and data for reverse engineering the Medtronic Guardian Continous Glucose Monitoring Systems and Insulin Pumps. 
 
-Check the discord for more info: https://discord.gg/tb4egy8VYh (no Medtronic spies please!)
+Join our [Discord](https://discord.gg/tb4egy8VYh)!
 
-![alt text](data/banner.png)
+![banner](./docs/attachments/banner.png)
 
-## Project structure
+## Sub projects
 
-- Jadx_Projects: 
-	- it contains the [JADX](https://github.com/skylot/jadx) projects to reverse engineer the APK contents  
-	
+- JadxProjects 
+	- it contains the [JADX](https://github.com/skylot/jadx) projects to reverse engineer the APK contents
+
+- PythonConnector
+  - python scripts to be used on a PC that can connect and talk to the devices
+  - **contains a full SAKE implementation!**
+
 - OpenGuardian4
-	 - the Java code for parsing and decoding already decrypted BT messages. 
-	 - this is intended to be used in an Android app hopefully in the forseable future
-	- limited support for UUIDs, but can also parse some Guardian 4 messages
+	 - Java code for parsing and decoding already decrypted BT messages. 
+	 - this is intended to be used in an Android app hopefully in the foreseeable future
+	- limited support for GATT characteristics
 
-- Sake_RE
+- SakeRE
 	- the [Ghidra](https://github.com/NationalSecurityAgency/ghidra) project to reverse engineer the Medtronic's crypto library called SAKE
-	- using an older version of the library built for ARMv7
-	- SAKE has two parts: a client and a server side, currently the focus is on the server side (MiniMed <-> Pump) for now
-	- static reversing is pretty much done, now only the unknowns, the crypto and the bugs should be debugged out (with ghidra)
-	- a guy has successfully paired (?) with a medtronic device, i am positive that he knows what he is talking about, but i could not reach him for more details, [see this](./data/info.png)
+	- using an older version of the library built for ARMv7 from the Minimed 2.1.0
 	
-- Sakeproxy
+- (Sakeproxy)
 	- an Android application which uses the prebuilt SAKE libraries extracted from the original APKs
 	- it provides a simple HTTP API and it can be used to perform the crypto functions without an actual device
 	- only a temporary solution until we can fully reverse enginer the crypto library, but will be very useful for development
 	- it only supports one user at a time
-	- <del>also I am planning on hosting some kind of development server for other people to talk with their devices</del> the server for it is currently offline due to lack of interest, but i can start up again if necessary
-	- <del>Sakeproxy is now also used to simulate a real application around sake, since it is A LOT easier to debug</del> it is still too painful to debug, see NativeSakeRE
 
-- NativeSakeRE
+- (NativeSakeRE)
   - a native android ELF that can load sake and call its exported functions
   - this is a painless experience (at least compared to what was before) and works very nicely with ghidra
   
-- SakeproxyClient
+- (SakeproxyClient)
   - shitty arduino and python wrapper for the Sakeproxy HTTP API 
 
 - Data 
 	- decrypted SAKE "key databases"
-	- logs from the Monitor script
-	- UUID information
+	- logs from the frida Monitor script
+	- GATT service & char information
 	- sniffed BT traffic in pcap format
-	- TODO: document everything properly, maybe create a wiki page on github
+	- 
 	
-- Scripts
+- FridaScripts
 	- various scripts to be used with frida (including the Monitor)
 	- TODO: go trough the old backups and upload everything
 
 - Docs
-	- random guides and useful notes
-	- TODO: organize everything
+  
 
 - Tools
 	- log_decrypt
-		- the app contains functionality to dump decrypted logs into a zip file for debugging with Medtronic's email support (???)
+		- the app contains functionality to dump decrypted logs into a zip file for debugging with Medtronic's email support (?)
 		- the algorithm has been reversed, after manually patching the public key in the APK, it can be decrypted and will contain juicy info for reversing
 	- db_decrypt
 		- scripts to dump the AndroidKeyStore, where the keys are stored for the app's databases
