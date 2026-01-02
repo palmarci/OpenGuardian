@@ -8,7 +8,7 @@ The sensor can be easily connected with the provided [python script](/PythonConn
 
 The devices utilize standardized and custom GATT services and characteristics. The interesting data (as payload in specific characteristics) is encrypted using a Medtronic protocol called SAKE (Secure? Authenticated? Key Exchange?). The protocol seems to have 2 versions, a v1.0 and a v2.0. They use the service ID 0xfe82 (and perhaps 0xfe81 for the older one).
 
-Please check out the [Communication Matrix](./attachments/com_matrix.ods) for more info.
+Please check out the [Communication Matrix](./attachments/com_matrix.ods) and [Bluetooth SIG's official specifications](https://www.bluetooth.com/specifications/specs/) for more info.
 
 
 ## MAC addresses
