@@ -30,7 +30,7 @@ From [Sake RE project](/SakeRE/), function at <code>0x0001dcf0</code>. There was
 | :---  | :--- |
 | 1 | Insulin Pump |
 | 2 | Glucose Sensor |
-| 3 | Blood Glucose Meter |
+| 3 | Blood Glucose Meter (according to [this](https://www.medtronic.com/content/dam/medtronic-wide/public/canada/products/diabetes/post-software-update-re-pairing-guide.pdf) Accu-Check meters can sync with the pump?!) |
 | 4 | Mobile Application  / *Secondary Display* |
 | 5 | CareLink Upload Application|
 | 6 | Firmware Update Application |
