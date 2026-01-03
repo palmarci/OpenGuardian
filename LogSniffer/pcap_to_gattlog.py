@@ -59,7 +59,7 @@ def get_value(att):
     return None
 
 def reformat_uuid(u):
-    u = u.replace(":", "")
+    u = u.replace(":", "").lower()
     return u
 
 def parse_data(a):

@@ -266,7 +266,7 @@ class Session:
             raise ValueError
         inner = self.client_crypt.decrypt(msg)[:-1]
         log.debug(f"{inner.hex() = }")
-        self.check_payload(inner, self.server_static_keys, self.client_static_keys, self.client_device_type)
+        return self.check_payload(inner, self.server_static_keys, self.client_static_keys, self.client_device_type)
 
 
     @staticmethod
@@ -286,6 +286,7 @@ class Session:
             log.debug(f"{prover_static_keys.handshake_payload.hex() = }")
             if payload == prover_static_keys.handshake_payload:
                 log.info("handshake payload match")
+                # TODO add this to return condition??
         if verifier_static_keys is not None:
             plain = AES.new(verifier_static_keys.permit_decrypt_key, AES.MODE_ECB).decrypt(
                 payload
@@ -297,6 +298,8 @@ class Session:
             auth.verify(plain[12:])
             if plain[0] == 0 and plain[1] == prover_device_type:
                 log.info("prover device type match")
+                return True
+        return False
 
 
 
@@ -305,3 +308,5 @@ G4_CGM_KEYDB = KeyDatabase.from_bytes(bytes.fromhex("5fe5928308010230f0b50df613f
 PUMP_PM_KEYDB = KeyDatabase.from_bytes(bytes.fromhex("f75995e70401011bc1bf7cbf36fa1e2367d795ff09211903da6afbe986b650f14179c0e6852e0ce393781078ffc6f51919e2eaefbde69b8eca21e41ab59b881a0bea0286ea91dc7582a86a714e1737f558f0d66dc1895c"))
 
 PUMP_HARCODED_KEYDB = KeyDatabase.from_bytes(bytes.fromhex("c2cdfdd1040101fce36ed66ef21def3b0763975494b239038ebe8606f79a9bf00d9f11b6db04c7c0434787cbf00d5476289c22288e2105ae40e01391837f9476fa5003895c5a1afe35662a2a6211826af016eebe30e4ba"))
+
+AVAILABLE_KEYS = [G4_CGM_KEYDB, PUMP_PM_KEYDB, PUMP_HARCODED_KEYDB]
