@@ -1,11 +1,31 @@
 #!/usr/bin/env python3
 from bluezero import peripheral, adapter, advertisement
+from bluezero.broadcaster import Beacon
 from gi.repository import GLib
 import json
 import random
 import time
+import sys
+from time import sleep
 
+from PythonConnector.pump.advertise import advertise
+from threading import Thread
+
+# NOTE: does not seem to work, since bluez rejects MITM = 1 flag when no input no output io capabilities is presented!
+# avertise.py contains a hacky advertisement method, since dbus does not allow type flag to be set ?
+
+
+# sudo btmgmt power off
+# sudo btmgmt bredr off
+# sudo btmgmt le on
 # sudo btmgmt io-cap 4
+# sudo btmgmt power on
+
+connected = False
+
+def adv_thread():
+    while not connected:
+        advertise(mobile_name)
 
 # ---------------- BLE Peripheral Settings ----------------
 SERVICE_UUID = "980c2f36-bde3-11e4-8dfc-aa07a5b093db" # extracted from SSO config (see carelink api repo)
@@ -17,17 +37,18 @@ loop = GLib.MainLoop()
 
 # ---------------- Utility Functions ----------------
 def gen_mobile_name():
-    # stolen from minimed mobile apk too
     while True:
         num = random.randint(100000, 999999)
         if num % 2 == 1:
             return f"Mobile {num}"
 
-mobile_name = "Mobile 042069" # gen_mobile_name()
+mobile_name = gen_mobile_name()
 print(f"using mobile name {mobile_name}")
 
 # ---------------- BLE Callbacks ----------------
 def on_connect(dev):
+    global connected
+    connected = True
     print("Connected:", dev.address)
 
 def on_disconnect(adapter_addr, device_addr):
@@ -76,25 +97,25 @@ adapter_addr = list(adapter.Adapter.available())[0].address
 print(f"Using adapter: {adapter_addr}")
 
 # ---------------- BLE Advertisement ----------------
-adv_id = random.randint(1000, 9999)
-beacon = advertisement.Advertisement(adv_id, "peripheral")
-beacon.service_UUIDs = ['0000fe82-0000-1000-8000-00805f9b34fb']  # Medtronic SAKE service
-beacon.manufacturer_data = {0x01F9: b'\x00' + mobile_name.encode() + b'\x00'}
-beacon.include_tx_power = True
-beacon.local_name = mobile_name
 
-ad_manager = advertisement.AdvertisingManager()
-ad_manager.register_advertisement(beacon, {})
-beacon.start()
-print(f"Advertising as {mobile_name}")
+#while True:
+
+
 
 # ---------------- BLE Peripheral ----------------
 ble = peripheral.Peripheral(
     adapter_address=adapter_addr,
     local_name=mobile_name,
-    #io_capabilities='KeyboardDisplay', # MITM protection, device asks for it
-    pairable=True,
-    bondable=True,
+    
+    # you might need to run
+    # sudo btmgmt io-cap keyboard-display
+    # bluetoothctl
+    # agent KeyboardDisplay
+    # default-agent
+
+    
+    #pairable=True,
+    #bondable=True,
 )
 
 ble.add_service(
@@ -115,17 +136,14 @@ ble.add_characteristic(
 )
 
 # Save characteristic object for later use
-characteristic = ble.services[0].characteristics[0]
+#characteristic = ble.services[0].characteristics[0]
 
 ble.on_connect = on_connect
 ble.on_disconnect = on_disconnect
 
-ble.publish()
-print("Peripheral running. Waiting for connections...")
 
-# ---------------- Main Loop ----------------
-try:
-    loop.run()
-except KeyboardInterrupt:
-    print("Shutting down...")
-    beacon.stop()
+thread = Thread(target = adv_thread)
+thread.start()
+
+ble.publish()
+

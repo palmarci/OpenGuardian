@@ -7,7 +7,7 @@ import sys
 import logging
 
 from helpers import resolve_char, read_string, write_char, read_bytes
-from handshake_client import HandshakeClient, g4s_keydb
+from handshake_client import HandshakeClient, G4_CGM_KEYDB
 
 # ***** USAGE *****
 # 1. put device on charger
@@ -26,7 +26,7 @@ CLIENT = None
 CHAR_SAKE = None
 HANDSHAKE_DONE = False
 HANDSHAKE_COUNT = 0
-HSC = HandshakeClient(g4s_keydb)
+HSC = HandshakeClient(G4_CGM_KEYDB)
 
 # setup logging: console + file with timestamped filename, same format including date
 _LOG_FMT = "%(asctime)s %(levelname)s: %(message)s"
