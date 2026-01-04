@@ -262,8 +262,8 @@ def main():
     parser = argparse.ArgumentParser(description="Gattlog decryptor")
     parser.add_argument("file", help="Gattlog file to parse")
     parser.add_argument("-o", "--out", help="output file", default="decrypted.gattlog")
-    parser.add_argument("-m", "--com_matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
-    parser.add_argument("-r",  "--resolve_uuids", action="store_true", help="resolve uuid names for debugging", default=False)
+    parser.add_argument("-m", "--com-matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
+    parser.add_argument("-r",  "--resolve-uuids", action="store_true", help="resolve uuid names for debugging", default=False)
     parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
     parser.add_argument("-k", "--key-db", choices=AVAILABLE_KEYS.keys(), help="use this specific key database instead of trying the available ones until a working one is found")
 
