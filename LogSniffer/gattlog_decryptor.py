@@ -246,6 +246,7 @@ def main():
     parser.add_argument("--com_matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
     parser.add_argument("--resolve_uuids", action="store_true", help="resolve uuid names for debugging", default=False)
     parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
+    parser.add_argument("-k", "--key-db", choices=AVAILABLE_KEYS.keys(), help="use this specific key database instead of trying the available ones until a working one is found")
 
     args = parser.parse_args()
 
@@ -286,12 +287,19 @@ def main():
     text = text.strip(",")
     out_f.write(text + "\n")
 
-    # try to decrypt the data with all available keys
-    for kdb in AVAILABLE_KEYS:
+    if args.key_db:
+        # use key database chosen by user
+        kdb_list = {args.key_db: AVAILABLE_KEYS[args.key_db]}
+    else:
+        # use all available key databases
+        kdb_list = AVAILABLE_KEYS
+
+    # successively try to decrypt the data with all keys available
+    for kdb_name, kdb in kdb_list.items():
         retval = try_session(kdb, entries)
         if retval != None:
             ses, is_server = retval
-            print(f"found a key db that can decrypt the traffic!")
+            print(f"key db {kdb_name} can decrypt the traffic!")
             decrypted = decrypt_traffic(entries, com_matrix, ses, is_server)
             
             # make it indexable

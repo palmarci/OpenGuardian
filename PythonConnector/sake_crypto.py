@@ -309,4 +309,9 @@ PUMP_PM_KEYDB = KeyDatabase.from_bytes(bytes.fromhex("f75995e70401011bc1bf7cbf36
 
 PUMP_HARCODED_KEYDB = KeyDatabase.from_bytes(bytes.fromhex("c2cdfdd1040101fce36ed66ef21def3b0763975494b239038ebe8606f79a9bf00d9f11b6db04c7c0434787cbf00d5476289c22288e2105ae40e01391837f9476fa5003895c5a1afe35662a2a6211826af016eebe30e4ba"))
 
-AVAILABLE_KEYS = [G4_CGM_KEYDB, PUMP_PM_KEYDB, PUMP_HARCODED_KEYDB]
+# build dict of previously defined key databases
+AVAILABLE_KEYS = {}
+for k,v in list(vars().items()):
+    if k.endswith("_KEYDB"):
+        AVAILABLE_KEYS[k] = v
+
