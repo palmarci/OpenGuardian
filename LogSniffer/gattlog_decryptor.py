@@ -18,7 +18,7 @@ from odf.table import Table, TableRow, TableCell
 from odf.text import P
 from odf import teletype
 
-def decrypt_traffic(entries:dict, cm:tuple, ses:SakeSession, use_server:bool):
+def decrypt_traffic(entries:dict, cm:tuple, ses:SakeSession):
 
     # make it a lookupable dict
     cm_dict = {}
@@ -47,6 +47,21 @@ def decrypt_traffic(entries:dict, cm:tuple, ses:SakeSession, use_server:bool):
         # not even encrypted -> skip
         if not enc:
             continue
+
+        # Figure out whether the server or the client is writing. We need to
+        # know whose message we are trying to decrypt.
+        #
+        # HACK: This is really ugly. We should probably put the information
+        # directly into the gattlog instead of deriving it from the
+        # source/destination strings.
+        if e["source"] == "PUMP":
+            # pump as source is always the server
+            use_server = True
+        elif e["source"] == "APP" and e["dest"] == "SENSOR":
+            # app as source talking to sensor is the server
+            use_server = True
+        else:
+            use_server = False
 
         # invert who's message it is
         if not use_server:
@@ -300,7 +315,7 @@ def main():
         if retval != None:
             ses, is_server = retval
             print(f"key db {kdb_name} can decrypt the traffic!")
-            decrypted = decrypt_traffic(entries, com_matrix, ses, is_server)
+            decrypted = decrypt_traffic(entries, com_matrix, ses)
             
             # make it indexable
             dec_i = {}
