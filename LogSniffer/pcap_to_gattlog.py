@@ -132,7 +132,7 @@ def main():
         uuid = reformat_uuid(uuid)
         data = parse_data(data)
 
-        towrite = f"{src_type},{dst_type},{opcode},{uuid},{data.hex()}"
+        towrite = f"{pkt_number},{src_type},{dst_type},{opcode},{uuid},{data.hex()}"
         #print(towrite)
         outf.write(towrite + "\n")
         count += 1
@@ -143,3 +143,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
