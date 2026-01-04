@@ -1,0 +1,2 @@
+UUID,Name,Encrypted,Medtronic Proprietary,Notes
+980c34cc-bde3-11e4-8dfc-aa07a5b093db,?,no,yes,"The pump should write this on connection, and it should be parsed into an SSO url by the client"

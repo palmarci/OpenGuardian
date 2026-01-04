@@ -1,0 +1,14 @@
+UUID,Name,Encrypted,Medtronic Proprietary,Notes
+00000200-0000-1000-0000-009132591325,CGM Measurement Medtronic Extension,yes,yes,-
+00000201-0000-1000-0000-009132591325,Sensor Connected State,no,yes,"simple boolean logic, 1 if sensor/tester is actually inserted"
+00000202-0000-1000-0000-009132591325,Sensor Expiration Time,?,yes,-
+00000203-0000-1000-0000-009132591325,Sensor Calibartion Time,?,yes,always static? 0000000000000000Ffff
+00000204-0000-1000-0000-009132591325,Calibration Time Recommended,no,yes,always static? 0000000000000000Ffff
+00000205-0000-1000-0000-009132591325,Algorithm Data,yes,yes,-
+00002a52-0000-1000-8000-00805f9b34fb,Record Access Control Point,?,no,"duplicated, History and Trace service also has this char; in code it is “Racp”"
+00002aa7-0000-1000-8000-00805f9b34fb,CGM Measurement ,yes,no,
+00002aa8-0000-1000-8000-00805f9b34fb,CGM Feature,?,no,-
+00002aa9-0000-1000-8000-00805f9b34fb,CGM Status,?,no,?
+00002aaa-0000-1000-8000-00805f9b34fb ,CGM Session Start Time,yes,no,-
+00002aab-0000-1000-8000-00805f9b34fb,CGM Session Run Time ,?,no,-
+00002aac-0000-1000-8000-00805f9b34fb,CGM Specific Ops Control Point,yes,no,in code it is “Socp”

@@ -11,20 +11,22 @@ sys.path.append(str((Path.cwd() / "../PythonConnector").resolve())) # hack for n
 from sake_crypto import AVAILABLE_KEYS, KeyDatabase, SeqCrypt
 from sake_crypto import Session as SakeSession
 
+from com_matrix import ComMatrixParser, Characteristic
+
 SAKE_UUID = "0000fe82000010000000009132591325"
 
-from odf.opendocument import load
-from odf.table import Table, TableRow, TableCell
-from odf.text import P
-from odf import teletype
+# from odf.opendocument import load
+# from odf.table import Table, TableRow, TableCell
+# from odf.text import P
+# from odf import teletype
 
-def decrypt_traffic(entries:dict, cm:tuple, crypt:SeqCrypt):
+
+def decrypt_traffic(entries:dict, chars:list[Characteristic], crypt:SeqCrypt):
 
     # make it a lookupable dict
-    cm_dict = {}
-    for l in cm:
-        uuid, name, enc = l
-        cm_dict[uuid] = (name, enc)
+    char_dict:dict[Characteristic] = {}
+    for c in chars:
+        char_dict[c.uuid] = c
 
     decrypted_e = []
     count = 0
@@ -33,13 +35,15 @@ def decrypt_traffic(entries:dict, cm:tuple, crypt:SeqCrypt):
         if e["uuid"] == SAKE_UUID:
             continue
 
-        ret = cm_dict.get(e["uuid"])
+        ret = char_dict.get(e["uuid"])
 
         if ret is None:
             print(f"WARNING: {e['uuid']} is not in the db yet!")
+            return
             continue
 
-        name, enc = ret
+        name = ret.name
+        enc = ret.encrypted
 
         # if we dont even know the name, then dont decrypt for now
         if name is None:
@@ -86,71 +90,71 @@ def decrypt_traffic(entries:dict, cm:tuple, crypt:SeqCrypt):
     print(f"\ndecrypted {len(decrypted_e)} messages!")
     return decrypted_e
 
-def read_com_matrix(path) -> list[tuple]:
-    """
-    this function reads up the com matrix ods file.
+# def read_com_matrix(path) -> list[tuple]:
+#     """
+#     this function reads up the com matrix ods file.
 
-    returns: list of tuples (uuid:str, char name:str, is encrypted:bool)
-    """
+#     returns: list of tuples (uuid:str, char name:str, is encrypted:bool)
+#     """
 
-    def expand_cells(row): # chatgpt black magic
-        out = []
-        for cell in row.getElementsByType(TableCell):
-            repeat = int(cell.getAttribute("numbercolumnsrepeated") or 1)
-            out.extend([cell] * repeat)
-        return out
+#     def expand_cells(row): # chatgpt black magic
+#         out = []
+#         for cell in row.getElementsByType(TableCell):
+#             repeat = int(cell.getAttribute("numbercolumnsrepeated") or 1)
+#             out.extend([cell] * repeat)
+#         return out
 
-    to_read = [0, 1, 2] # uuid, name, encrypted
-    doc = load(path)
-    sheets = doc.spreadsheet.getElementsByType(Table)
+#     to_read = [0, 1, 2] # uuid, name, encrypted
+#     doc = load(path)
+#     sheets = doc.spreadsheet.getElementsByType(Table)
 
-    result = []
+#     result = []
 
-    for sheet in sheets[1:]: # skip first sheet
-        rows = sheet.getElementsByType(TableRow)
+#     for sheet in sheets[1:]: # skip first sheet
+#         rows = sheet.getElementsByType(TableRow)
 
-        for row in rows[1:]: # skip header
-            cells = expand_cells(row)
+#         for row in rows[1:]: # skip header
+#             cells = expand_cells(row)
 
-            if len(cells) <= max(to_read):
-                continue
+#             if len(cells) <= max(to_read):
+#                 continue
 
-            local = []
-            for i in to_read:
-                local.append(teletype.extractText(cells[i]).strip())
+#             local = []
+#             for i in to_read:
+#                 local.append(teletype.extractText(cells[i]).strip())
 
-            result.append(tuple(local))
+#             result.append(tuple(local))
 
 
-    toret = []    
-    for r in result:
+#     toret = []    
+#     for r in result:
 
-        # clean stuff
-        uuid, name, is_enc = r
-        uuid = uuid.replace("-", "").replace("0x", "").lower()
-        name = name.strip(" ")
+#         # clean stuff
+#         uuid, name, is_enc = r
+#         uuid = uuid.replace("-", "").replace("0x", "").lower()
+#         name = name.strip(" ")
 
-        # check if is actually an entry or not
-        if len(name) < 3 and len(uuid) < 3:
-            continue
+#         # check if is actually an entry or not
+#         if len(name) < 3 and len(uuid) < 3:
+#             continue
 
-        # validate the uuid length
-        if len(uuid) != 32:
-            raise Exception(f"Invalid uuid length in db: {name} {uuid}")
+#         # validate the uuid length
+#         if len(uuid) != 32:
+#             raise Exception(f"Invalid uuid length in db: {name} {uuid}")
 
-        # parse encrypted field
-        okay = ["yes", "no", "?"]
-        if is_enc not in okay:
-            raise Exception(f"Com matric ods file is filled incorrectly. Found '{is_enc}' in encrypted column for {uuid}")
-        is_enc = True if is_enc == "yes" else False # if we dont know, assume no for now?
+#         # parse encrypted field
+#         okay = ["yes", "no", "?"]
+#         if is_enc not in okay:
+#             raise Exception(f"Com matric ods file is filled incorrectly. Found '{is_enc}' in encrypted column for {uuid}")
+#         is_enc = True if is_enc == "yes" else False # if we dont know, assume no for now?
         
-        # clear out the name if we dont know it
-        if name == "?":
-            name = None
+#         # clear out the name if we dont know it
+#         if name == "?":
+#             name = None
     
-        toret.append((uuid,name,is_enc))
+#         toret.append((uuid,name,is_enc))
 
-    return toret
+#     return toret
 
 def try_session(kdb:KeyDatabase, entries:dict) -> None | SeqCrypt:
     sakes = []
@@ -251,18 +255,17 @@ def parse_file(path):
 
     return header, entries
 
-def get_uuid_name(uuid, com_matrix) -> str:
-    for i in com_matrix:
-        i_uuid, name, _ = i
-        if uuid == i_uuid:
-            return name
+def get_uuid_name(uuid, chars:list[Characteristic]) -> str:
+    for i in chars:
+        if uuid == i.uuid:
+            return i.name
     return uuid # fallback
 
 def main():
     parser = argparse.ArgumentParser(description="Gattlog decryptor")
     parser.add_argument("file", help="Gattlog file to parse")
     parser.add_argument("-o", "--out", help="output file", default="decrypted.gattlog")
-    parser.add_argument("-m", "--com-matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
+    parser.add_argument("-m", "--com-matrix", help="com matrix directory", default="../data/com_matrix")
     parser.add_argument("-r",  "--resolve-uuids", action="store_true", help="resolve uuid names for debugging", default=False)
     parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
     parser.add_argument("-k", "--key-db", choices=AVAILABLE_KEYS.keys(), help="use this specific key database instead of trying the available ones until a working one is found")
@@ -279,10 +282,14 @@ def main():
             sys.exit(1)
 
     # parse the com matrix
-    if not os.path.isfile(args.com_matrix):
-        raise FileNotFoundError(args.com_matrix)
-    com_matrix = read_com_matrix(args.com_matrix)
-    # for c in com_matrix:
+    cm_path = Path(args.com_matrix).expanduser().resolve()
+    if not cm_path.is_dir():
+        raise NotADirectoryError(args.com_matrix)
+    cm_parser = ComMatrixParser(str(cm_path))
+    chars = cm_parser.parse()
+    print(f"parsed {len(chars)} characteristics successfully")
+
+    # for c in chars:
     #     print(c)
     # return
 
@@ -319,7 +326,7 @@ def main():
         crypt = try_session(kdb, entries)
         if crypt != None:
             print(f"\nWORKING KEYDB FOUND: {kdb_name}!\n")
-            decrypted = decrypt_traffic(entries, com_matrix, crypt)
+            decrypted = decrypt_traffic(entries, chars, crypt)
             
             # make it indexable
             dec_i = {}
@@ -336,7 +343,7 @@ def main():
 
             for e in e_out:
                 if args.resolve_uuids:
-                    uuid = get_uuid_name(e["uuid"], com_matrix)
+                    uuid = get_uuid_name(e["uuid"], chars)
                 else:
                     uuid = e["uuid"]
                 out_f.write(f'{e["frame"]},{e["source"]},{e["dest"]},{e["opcode"]},{uuid},{e["data"]}\n')
@@ -345,7 +352,7 @@ def main():
             return
 
     # decryption failed
-    print("no compatible key db found, deleting out file!")
+    print("\nno compatible key db found, deleting out file!")
     out_f.close()
     os.remove(out_fn)
     return

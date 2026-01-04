@@ -1,0 +1,19 @@
+Service UUID,Service Name,Guardian 4 Standalone,780G,Guardian 3,740G,Note
+00000100-0000-1000-0000-009132591325,Insulin Delivery,no,yes,no,yes,
+00000300-0000-1000-0000-009132591325,History and Trace,yes,yes,yes,yes,-
+00000500-0000-1000-0000-009132591325,???,no,yes,no,yes,
+00000600-0000-1000-0000-009132591325,???,no,yes,no,yes,
+00000700-0000-1000-0000-009132591325,???,no,yes,no,yes,
+00000800-0000-1000-0000-009132591325,???,no,yes,no,yes,
+00001020-0000-1000-0000-009132591325,???,no,yes,no,yes, 
+00001800-0000-1000-8000-00805f9b34fb,Generic Access (GAP),yes,yes,yes,yes,standard GATT service (Bluetooth SIG)
+00001801-0000-1000-8000-00805f9b34fb,Generic Attribute (GATT),yes,,no,no,standard GATT service (Bluetooth SIG)
+00001805-0000-1000-8000-00805f9b34fb,Current Time,no,yes,no,yes,standard GATT service (Bluetooth SIG)
+0000180a-0000-1000-8000-00805f9b34fb,Device Information,yes,yes,yes,yes,standard GATT service (Bluetooth SIG)
+0000180f-0000-1000-8000-00805f9b34fb,Battery,yes,yes,yes,yes,standard GATT service (Bluetooth SIG)
+0000181f-0000-1000-8000-00805f9b34fb,Continuous Glucose Monitoring (CGM),yes,yes,yes,yes,standard GATT service (Bluetooth SIG)
+0000fe81-0000-1000-8000-00805f9b34fb,???,?,?,member service allocated for Medtronic without a name (Bluetooth SIG)
+0000fe82-0000-1000-8000-00805f9b34fb,SAKE,yes,no,yes,no???,member service allocated for Medtronic without a name (Bluetooth SIG)
+15dbcd61-6388-4c33-b9d8-580254fed03b,???,yes,,yes,yes,-
+4484fae0-be34-11e4-851e-0002a5d5c51b,Connection Management Service,yes,,no,no,-
+980c2f36-bde3-11e4-8dfc-aa07a5b093db,Pump SSO (?),no,yes,no,no,Used for SSO during pump pairing
