@@ -83,7 +83,7 @@ def decrypt_traffic(entries:dict, cm:tuple, crypt:SeqCrypt):
 
         count += 1
 
-    print(f"decrypted {len(decrypted_e)} messages!")
+    print(f"\ndecrypted {len(decrypted_e)} messages!")
     return decrypted_e
 
 def read_com_matrix(path) -> list[tuple]:
@@ -178,10 +178,10 @@ def try_session(kdb:KeyDatabase, entries:dict) -> None | SeqCrypt:
         sess.handshake_4_s(bytes.fromhex(sakes[6]["data"]))
         succ = sess.handshake_5_c(bytes.fromhex(sakes[7]["data"]))
         if succ:
-            print("client db works, returning server object")
+            print("  client db works, returning server object")
             return sess.server_crypt
     except Exception as e:
-        #print(e)
+        print(f"  client reject this keydb: {e}")
         pass
 
     # try the server
@@ -194,10 +194,10 @@ def try_session(kdb:KeyDatabase, entries:dict) -> None | SeqCrypt:
         sess.handshake_4_s(bytes.fromhex(sakes[6]["data"]))
         succ = sess.handshake_5_c(bytes.fromhex(sakes[7]["data"]))
         if succ:
-            print("server db works, returning client object")
+            print("  server db works, returning client object")
             return sess.client_crypt
     except Exception as e:
-        #print(e)
+        print(f"  server reject this keydb: {e}")
         pass
 
     return None
@@ -288,7 +288,7 @@ def main():
     # parse the file
     try:
         header, entries = parse_file(args.file)
-        print(f"read {len(entries)} messages!")
+        print(f"read {len(entries)} messages!\n")
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
@@ -314,9 +314,10 @@ def main():
 
     # successively try to decrypt the data with all keys available
     for kdb_name, kdb in kdb_list.items():
+        print(f"trying keydb {kdb_name}...")
         crypt = try_session(kdb, entries)
         if crypt != None:
-            print(f"key db {kdb_name} can decrypt the traffic!")
+            print(f"\nWORKING KEYDB FOUND: {kdb_name}!\n")
             decrypted = decrypt_traffic(entries, com_matrix, crypt)
             
             # make it indexable
