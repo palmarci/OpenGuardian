@@ -222,12 +222,13 @@ def parse_header(line):
 def parse_entry(line, lineno):
     parts = [p.strip() for p in line.split(",")]
 
-    if len(parts) != 5:
-        raise ValueError(f"Line {lineno}: expected 5 fields, got {len(parts)}")
+    if len(parts) != 6:
+        raise ValueError(f"Line {lineno}: expected 6 fields, got {len(parts)}")
 
-    source, dest, opcode, uuid, data = parts
+    pkt_number, source, dest, opcode, uuid, data = parts
 
     return {
+        "frame": pkt_number,
         "source": source,
         "dest": dest,
         "opcode": opcode,
@@ -260,9 +261,9 @@ def get_uuid_name(uuid, com_matrix) -> str:
 def main():
     parser = argparse.ArgumentParser(description="Gattlog decryptor")
     parser.add_argument("file", help="Gattlog file to parse")
-    parser.add_argument("--out", help="output file", default="decrypted.gattlog")
-    parser.add_argument("--com_matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
-    parser.add_argument("-r",  "--resolve_uuids", action="store_true", help="resolve uuid names for debugging", default=False)
+    parser.add_argument("-o", "--out", help="output file", default="decrypted.gattlog")
+    parser.add_argument("-m", "--com-matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
+    parser.add_argument("-r",  "--resolve-uuids", action="store_true", help="resolve uuid names for debugging", default=False)
     parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
     parser.add_argument("-k", "--key-db", choices=AVAILABLE_KEYS.keys(), help="use this specific key database instead of trying the available ones until a working one is found")
 
@@ -338,7 +339,7 @@ def main():
                     uuid = get_uuid_name(e["uuid"], com_matrix)
                 else:
                     uuid = e["uuid"]
-                out_f.write(f'{e["source"]},{e["dest"]},{e["opcode"]},{uuid},{e["data"]}\n')
+                out_f.write(f'{e["frame"]},{e["source"]},{e["dest"]},{e["opcode"]},{uuid},{e["data"]}\n')
             print(f"{len(e_out)} messages were written!")
             out_f.close()
             return
@@ -351,3 +352,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

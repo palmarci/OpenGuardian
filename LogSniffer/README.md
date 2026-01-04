@@ -25,8 +25,9 @@ TODO: extend the description.
     4. other notes, ignored
 
 - then it shall contain the following fields separated by a ','
-   1. source: APP / PUMP / SENSOR
-   2. dest: APP / PUMP / SENSOR
-   3. opcode: READ / WRITE / NOTIFY
-   4. uuid: in full format with no special characters
-   5. data: in hex with no special characters
+   1. frame: Bluetooth frame number in the original capture (for easier cross-referencing)
+   2. source: APP / PUMP / SENSOR
+   3. dest: APP / PUMP / SENSOR
+   4. opcode: READ / WRITE / NOTIFY
+   5. uuid: in full format with no special characters
+   6. data: in hex with no special characters
