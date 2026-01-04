@@ -56,8 +56,9 @@ extracted from [g4s monitor logs](/data/monitor_logs/g4s/)
 
 ---
 
-Mobile Application <-> Insulin Pump
+Probably a development key between Mobile Application <-> Insulin Pump
 
 c2cdfdd1 04 01 01 fce36ed66ef21def3b0763975494b239038ebe8606f79a9bf00d9f11b6db04c7c0434787cbf00d5476289c22288e2105ae40e01391837f9476fa5003895c5a1afe35662a2a6211826af016eebe30e4ba
 
-found hardcoded in MiniMed Mobile v1.2.1 (class com.medtronic.minimed.ngpsdk.connect.a) by foobar:
+Found hardcoded in MiniMed Mobile v1.2.1 (class com.medtronic.minimed.ngpsdk.connect.a) by @drfubar.
+We could indentify this keydb in at least in 19 APKs, in the MiniMedMobile and Fota Updater apps (probably a branch of MMM).
