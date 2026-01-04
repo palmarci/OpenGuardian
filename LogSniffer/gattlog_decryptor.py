@@ -245,15 +245,18 @@ def main():
     parser.add_argument("--out", help="output file", default="decrypted.gattlog")
     parser.add_argument("--com_matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
     parser.add_argument("--resolve_uuids", action="store_true", help="resolve uuid names for debugging", default=False)
+    parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
 
     args = parser.parse_args()
 
     # check outfile
     out_fn = os.path.abspath(args.out)
     if os.path.exists(out_fn):
-        print(f"output file '{out_fn}' already exists on disk.")
-        input("press enter to delete it and continue! else CTRL+C")
-        os.remove(out_fn)
+        if args.force_output:
+            os.remove(out_fn)
+        else:
+            print(f"Error: output file '{out_fn}' already exists on disk.")
+            sys.exit(1)
 
     # parse the com matrix
     if not os.path.isfile(args.com_matrix):
