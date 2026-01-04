@@ -4,7 +4,7 @@ from typing import Optional
 from binascii import hexlify
 from secrets import token_bytes
 
-from sake_crypto import Session, KeyDatabase, G4_CGM_KEYDB
+from sake_crypto import Session, KeyDatabase, KEYDB_G4_CGM
 
 
 class HandshakeClient:
@@ -123,7 +123,7 @@ if __name__ == "__main__":
     client_msg1 = bytes.fromhex("a579868377f401ae083405ef88cc0962d6079a04")
     msg2 = bytes.fromhex("77f3fb85b079310455fd8f47ddaf81ab49defc7b")
 
-    hc = HandshakeClient(G4_CGM_KEYDB, local_device_type=0x08, client_message=client_msg1)
+    hc = HandshakeClient(KEYDB_G4_CGM, local_device_type=0x08, client_message=client_msg1)
 
     out1 = hc.handshake(msg0)
     print("-> 1_c:", hexlify(out1).decode())
