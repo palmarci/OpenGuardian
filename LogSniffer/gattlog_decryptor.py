@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 sys.path.append(str((Path.cwd() / "../PythonConnector").resolve())) # hack for now
 
-from sake_crypto import AVAILABLE_KEYS, KeyDatabase
+from sake_crypto import AVAILABLE_KEYS, KeyDatabase, SeqCrypt
 from sake_crypto import Session as SakeSession
 
 SAKE_UUID = "0000fe82000010000000009132591325"
@@ -18,7 +18,7 @@ from odf.table import Table, TableRow, TableCell
 from odf.text import P
 from odf import teletype
 
-def decrypt_traffic(entries:dict, cm:tuple, ses:SakeSession, use_server:bool):
+def decrypt_traffic(entries:dict, cm:tuple, crypt:SeqCrypt):
 
     # make it a lookupable dict
     cm_dict = {}
@@ -27,6 +27,7 @@ def decrypt_traffic(entries:dict, cm:tuple, ses:SakeSession, use_server:bool):
         cm_dict[uuid] = (name, enc)
 
     decrypted_e = []
+    count = 0
     for e in entries:
 
         if e["uuid"] == SAKE_UUID:
@@ -48,22 +49,39 @@ def decrypt_traffic(entries:dict, cm:tuple, ses:SakeSession, use_server:bool):
         if not enc:
             continue
 
-        # invert who's message it is
-        if not use_server:
-            func = ses.server_crypt.decrypt
-        else:
-            func = ses.client_crypt.decrypt
+        # Figure out whether the server or the client is writing. We need to
+        # know whose message we are trying to decrypt.
+        #
+        # This is really ugly. We should probably put the information
+        # directly into the gattlog instead of deriving it from the
+        # source/destination strings.
+        # if e["source"] == "PUMP":
+        #     # pump as source is always the server
+        #     use_server = True
+        # elif e["source"] == "APP" and e["dest"] == "SENSOR":
+        #     # app as source talking to sensor is the server
+        #     use_server = True
+        # else:
+        #     use_server = False
+
+        # # invert who's message it is
+        # if not use_server:
+        #     func = ses.server_crypt.decrypt
+        # else:
+        #     func = ses.client_crypt.decrypt
 
         try:
             d = bytes.fromhex(e["data"])
             if len(d) > 3:
-                decrypted = func(d)
+                decrypted = crypt.decrypt(d) # for now just depend on the brute forced crypt object
                 e["decrypted"] = decrypted
                 decrypted_e.append(e)
             else:
                 print(f"WARNING: skipping too small message: {e}")
         except Exception as e:
-            print(f"{d} -> {e}")
+            print(f"msg #{count} ({name}) failed to decrypt: {d.hex()} -> {e}")
+
+        count += 1
 
     print(f"decrypted {len(decrypted_e)} messages!")
     return decrypted_e
@@ -134,7 +152,7 @@ def read_com_matrix(path) -> list[tuple]:
 
     return toret
 
-def try_session(kdb:KeyDatabase, entries:dict) -> None | tuple[SakeSession, bool]:
+def try_session(kdb:KeyDatabase, entries:dict) -> None | SeqCrypt:
     sakes = []
     for e in entries:
         if e["uuid"] == SAKE_UUID:
@@ -159,9 +177,9 @@ def try_session(kdb:KeyDatabase, entries:dict) -> None | tuple[SakeSession, bool
         sess.handshake_3_c(bytes.fromhex(sakes[5]["data"]))
         sess.handshake_4_s(bytes.fromhex(sakes[6]["data"]))
         succ = sess.handshake_5_c(bytes.fromhex(sakes[7]["data"]))
-        print(f"client success? {succ}")
         if succ:
-            return sess, False
+            print("client db works, returning server object")
+            return sess.server_crypt
     except Exception as e:
         #print(e)
         pass
@@ -176,8 +194,8 @@ def try_session(kdb:KeyDatabase, entries:dict) -> None | tuple[SakeSession, bool
         sess.handshake_4_s(bytes.fromhex(sakes[6]["data"]))
         succ = sess.handshake_5_c(bytes.fromhex(sakes[7]["data"]))
         if succ:
-            return sess, True
-        print(f"server success? {succ}")
+            print("server db works, returning client object")
+            return sess.client_crypt
     except Exception as e:
         #print(e)
         pass
@@ -244,16 +262,20 @@ def main():
     parser.add_argument("file", help="Gattlog file to parse")
     parser.add_argument("--out", help="output file", default="decrypted.gattlog")
     parser.add_argument("--com_matrix", help="com matrix file", default="../docs/attachments/com_matrix.ods")
-    parser.add_argument("--resolve_uuids", action="store_true", help="resolve uuid names for debugging", default=False)
+    parser.add_argument("-r",  "--resolve_uuids", action="store_true", help="resolve uuid names for debugging", default=False)
+    parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
+    parser.add_argument("-k", "--key-db", choices=AVAILABLE_KEYS.keys(), help="use this specific key database instead of trying the available ones until a working one is found")
 
     args = parser.parse_args()
 
     # check outfile
     out_fn = os.path.abspath(args.out)
     if os.path.exists(out_fn):
-        print(f"output file '{out_fn}' already exists on disk.")
-        input("press enter to delete it and continue! else CTRL+C")
-        os.remove(out_fn)
+        if args.force_output:
+            os.remove(out_fn)
+        else:
+            print(f"Error: output file '{out_fn}' already exists on disk.")
+            sys.exit(1)
 
     # parse the com matrix
     if not os.path.isfile(args.com_matrix):
@@ -283,13 +305,19 @@ def main():
     text = text.strip(",")
     out_f.write(text + "\n")
 
-    # try to decrypt the data with all available keys
-    for kdb in AVAILABLE_KEYS:
-        retval = try_session(kdb, entries)
-        if retval != None:
-            ses, is_server = retval
-            print(f"found a key db that can decrypt the traffic!")
-            decrypted = decrypt_traffic(entries, com_matrix, ses, is_server)
+    if args.key_db:
+        # use key database chosen by user
+        kdb_list = {args.key_db: AVAILABLE_KEYS[args.key_db]}
+    else:
+        # use all available key databases
+        kdb_list = AVAILABLE_KEYS
+
+    # successively try to decrypt the data with all keys available
+    for kdb_name, kdb in kdb_list.items():
+        crypt = try_session(kdb, entries)
+        if crypt != None:
+            print(f"key db {kdb_name} can decrypt the traffic!")
+            decrypted = decrypt_traffic(entries, com_matrix, crypt)
             
             # make it indexable
             dec_i = {}

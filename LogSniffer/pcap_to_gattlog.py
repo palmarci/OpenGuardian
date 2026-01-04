@@ -4,11 +4,13 @@ from datetime import datetime
 import argparse
 import pyshark
 import os
+import sys
 
 ATT_OPCODES = {
     "0x12": "WRITE", # ATT_WRITE_REQ
     "0x0b": "READ", # ATT_READ_RSP
-    "0x1b": "NOTIFY" # ATT_HANDLE_VALUE_NTF
+    "0x1b": "NOTIFY", # ATT_HANDLE_VALUE_NTF
+    "0x1d": "INDICATE", # ATT_HANDLE_VALUE_IND
     # https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/attribute-protocol--att-.html
 }
 
@@ -16,6 +18,8 @@ def parse_args():
     ap = argparse.ArgumentParser(description="Extract BLE GATT read/write/notify data")
     ap.add_argument("pcap", help="pcap/pcapng input file")
     ap.add_argument("--out", help="output file", default="output.gattlog")
+    ap.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
+
     return ap.parse_args()
 
 def get_device_type(address:str) -> str:
@@ -74,9 +78,11 @@ def main():
     if not os.path.exists(in_fn):
         raise FileNotFoundError(in_fn)
     if os.path.exists(out_fn):
-        print(f"output file '{out_fn}' already exists on disk.")
-        input("press enter to delete it and continue! else CTRL+C")
-        os.remove(out_fn)
+        if args.force_output:
+            os.remove(out_fn)
+        else:
+            print(f"Error: output file '{out_fn}' already exists on disk.")
+            sys.exit(1)
 
     # calculate filter we are interested in (GATT opcodes)
     display_filter = ""
