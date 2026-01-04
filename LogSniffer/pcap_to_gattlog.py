@@ -9,7 +9,8 @@ import sys
 ATT_OPCODES = {
     "0x12": "WRITE", # ATT_WRITE_REQ
     "0x0b": "READ", # ATT_READ_RSP
-    "0x1b": "NOTIFY" # ATT_HANDLE_VALUE_NTF
+    "0x1b": "NOTIFY", # ATT_HANDLE_VALUE_NTF
+    "0x1d": "INDICATE", # ATT_HANDLE_VALUE_IND
     # https://www.bluetooth.com/wp-content/uploads/Files/Specification/HTML/Core-54/out/en/host/attribute-protocol--att-.html
 }
 
