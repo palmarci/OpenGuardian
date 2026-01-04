@@ -17,7 +17,7 @@ ATT_OPCODES = {
 def parse_args():
     ap = argparse.ArgumentParser(description="Extract BLE GATT read/write/notify data")
     ap.add_argument("pcap", help="pcap/pcapng input file")
-    ap.add_argument("--out", help="output file", default="output.gattlog")
+    ap.add_argument("-o", "--out", help="output file", default="output.gattlog")
     ap.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
 
     return ap.parse_args()
