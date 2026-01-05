@@ -18,8 +18,9 @@ DEVICE_TYPE_MAP = {
     "PUMP": [1],
     "SENSOR": [2]
 }
-CHARS = None # will be filled up
-DEBUG_SAKE = False
+# will be filled up
+CHARS = None 
+ARGS = None
 
 def parse_header(line):
     if not line.startswith("#"):
@@ -143,16 +144,18 @@ def put_to_output(msg:dict, outfile) -> None:
     """
     This function prints and logs the final data to the out file.
     """
-    uuid = get_uuid_name(msg["uuid"])
+    uuid = msg["uuid"]
+    if ARGS.resolve_uuids:
+        uuid = get_uuid_name(uuid)
     d = f'{msg["frame"]},{msg["source"]},{msg["dest"]},{msg["opcode"]},{uuid},{msg["data"].hex()}'
     outfile.write(d + "\n")
-    if DEBUG_SAKE:
-        print(d)
+    if ARGS.debug_sake:
+        print(d + "\n")
     return
 
 def main():
 
-    global CHARS, DEBUG_SAKE
+    global CHARS, ARGS
 
     # init logging
     logging.basicConfig(
@@ -171,34 +174,33 @@ def main():
     parser.add_argument("-f", "--force-output", action="store_true", help="overwrite existing output file", default=False)
     parser.add_argument("-k", "--key-db", choices=AVAILABLE_KEYS.keys(), help="use this specific key database instead of automatically resolving it")
     parser.add_argument("-d", "--debug-sake", help="turn on SAKE crypto debug logging", action="store_true", default=False)
-    args = parser.parse_args()
+    ARGS = parser.parse_args()
 
     # check the output file
-    out_fn = os.path.abspath(args.out)
+    out_fn = os.path.abspath(ARGS.out)
     if os.path.exists(out_fn):
-        if args.force_output:
+        if ARGS.force_output:
             os.remove(out_fn)
         else:
             print(f"Error: output file '{out_fn}' already exists on disk.")
             sys.exit(1)
 
     # parse the com matrix
-    cm_path = Path(args.com_matrix).expanduser().resolve()
+    cm_path = Path(ARGS.com_matrix).expanduser().resolve()
     if not cm_path.is_dir():
-        raise NotADirectoryError(args.com_matrix) 
+        raise NotADirectoryError(ARGS.com_matrix) 
     cm_parser = ComMatrixParser(str(cm_path))
     CHARS = cm_parser.parse()
     print(f"parsed {len(CHARS)} characteristics successfully")
 
     # turn on crypto logging if needed
-    DEBUG_SAKE = args.debug_sake
-    if DEBUG_SAKE:
+    if ARGS.debug_sake:
         SAKE_LOGGER.setLevel(logging.DEBUG)
 
     # parse the input file
     entries_len = 0
     try:
-        header, entries = parse_file(args.file)
+        header, entries = parse_file(ARGS.file)
         entries_len = len(entries)
         print(f"read {entries_len} messages")
     except Exception as msg:
@@ -218,8 +220,8 @@ def main():
     out_f.write(text + "\n")
 
     # get the key db based on args or auto resolve
-    if args.key_db:
-        kdb = AVAILABLE_KEYS[args.key_db]
+    if ARGS.key_db:
+        kdb = AVAILABLE_KEYS[ARGS.key_db]
         print(f"forced key db: {kdb.crc.hex()}")
     else:
         kdb = get_matching_keydb(entries)
