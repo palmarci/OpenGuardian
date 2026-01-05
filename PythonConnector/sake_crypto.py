@@ -5,6 +5,8 @@ from Cryptodome.Hash import CMAC
 
 import logging
 
+SAKE_LOGGER = logging.getLogger("SakeCrypto")
+
 # an enormous thank you to planiitis! https://github.com/planiitis/medtronic-bt-decrypt
 
 def auth8(client_key_material, server_key_material, derivation_key, handshake_auth_key):
@@ -32,10 +34,12 @@ class StaticKeys:
 class KeyDatabase:
     local_device_type: int
     remote_devices: dict[int, StaticKeys]
+    crc:bytes
 
     @classmethod
     def from_bytes(cls, data: bytes):
-        log = logging.getLogger(cls.__name__).getChild("from_bytes")
+        crc = data[0:4]
+        log = SAKE_LOGGER.getChild("from_bytes")
         n = data[5]
         if len(data) != 6 + 81 * n:
             raise ValueError
@@ -46,27 +50,27 @@ class KeyDatabase:
             p = 6 + 81 * i
             remote_devices[data[p]] = StaticKeys.from_bytes(data[p + 1 : p + 81])
         log.debug(f"{remote_devices.keys() = }")
-        return cls(local_device_type=local_device_type, remote_devices=remote_devices)
+        return cls(crc=crc, local_device_type=local_device_type, remote_devices=remote_devices)
 
 
 @dataclass
 class SeqCrypt:
     key: bytes
     nonce: bytes
-    seq: int
+    seq: int # local sequence count
 
     def __post_init__(self):
-        self.logger = logging.getLogger(type(self).__name__)
+        self.logger = SAKE_LOGGER
         if len(self.nonce) != 8:
             raise ValueError
 
     def decrypt(self, msg):
         log = self.logger.getChild("decrypt")
         if len(msg) < 3:
-            raise ValueError
+            raise ValueError("Message length too small!")
         d = (msg[-3] - self.seq // 2) & 0xFF
         seq = self.seq + 2 * d
-        log.debug(f"{seq = }")
+        log.debug(f"{seq = }, {d = }")
         nonce = seq.to_bytes(length=5, byteorder="big") + self.nonce
         cobj = CMAC.new(self.key, ciphermod=AES, mac_len=4)
         ciphertext = msg[:-3]
@@ -115,7 +119,7 @@ class Session:
     server_crypt: SeqCrypt | None = None
 
     def __post_init__(self):
-        self.logger = logging.getLogger(type(self).__name__)
+        self.logger = SAKE_LOGGER
 
     def handshake_0_s(self, msg: bytes):
         if len(msg) != 20:
@@ -179,7 +183,7 @@ class Session:
         auth2.update(inner)
         received = msg[:8]
         auth2.verify(received)
-        log.info("verified")
+        log.debug("verified")
 
     # --- helpers to build/compute handshake messages (new) ---
     def build_handshake_2_s(self, server_key_material: bytes, server_nonce: bytes) -> bytes:
@@ -285,7 +289,7 @@ class Session:
             log.debug(f"{payload.hex() = }")
             log.debug(f"{prover_static_keys.handshake_payload.hex() = }")
             if payload == prover_static_keys.handshake_payload:
-                log.info("handshake payload match")
+                log.debug("handshake payload match")
                 # TODO add this to return condition??
         if verifier_static_keys is not None:
             plain = AES.new(verifier_static_keys.permit_decrypt_key, AES.MODE_ECB).decrypt(
@@ -297,7 +301,7 @@ class Session:
             log.debug(f"{plain[12:].hex() = }")
             auth.verify(plain[12:])
             if plain[0] == 0 and plain[1] == prover_device_type:
-                log.info("prover device type match")
+                log.debug("prover device type match")
                 return True
         return False
 
