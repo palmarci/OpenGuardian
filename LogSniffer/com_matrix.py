@@ -2,12 +2,18 @@ import csv
 from pathlib import Path
 from typing import List, Optional
 
+_KEY_UUID = "UUID"
+_KEY_NAME = "Name"
+_KEY_ENCRYPTED = "Encrypted"
+_KEY_MDT = "Medtronic Proprietary"
+_KEY_NOTES = "Notes"
+
 EXPECTED_HEADERS = [
-    "UUID",
-    "Name",
-    "Encrypted",
-    "Medtronic Proprietary",
-    "Notes",
+    _KEY_UUID,
+    _KEY_NAME,
+    _KEY_ENCRYPTED ,
+    _KEY_MDT,
+    _KEY_NOTES ,
 ]
 
 class Characteristic:
@@ -69,13 +75,13 @@ class ComMatrixParser():
     def _parse_row(
         self, row: dict, filename: str, row_num: int
     ) -> Characteristic:
-        uuid = self._parse_uuid(row["UUID"], filename, row_num)
-        name = self._parse_name(row["Name"], filename, row_num)
-        encrypted = self._parse_flag(row["Encrypted"], "Encrypted", filename, row_num)
+        uuid = self._parse_uuid(row[_KEY_UUID], filename, row_num)
+        name = self._parse_name(row[_KEY_NAME], filename, row_num)
+        encrypted = self._parse_flag(row[_KEY_ENCRYPTED ], _KEY_ENCRYPTED , filename, row_num)
         proprietary = self._parse_flag(
-            row["Medtronic Proprietary"], "Medtronic Proprietary", filename, row_num
+            row[_KEY_MDT], _KEY_MDT, filename, row_num
         )
-        notes = row["Notes"].strip()
+        notes = row[_KEY_NOTES ].strip()
 
         return Characteristic(uuid, name, encrypted, proprietary, notes)
 

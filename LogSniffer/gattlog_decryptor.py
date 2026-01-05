@@ -7,11 +7,6 @@ import logging
 import sys
 from pathlib import Path
 
-# from odf.opendocument import load
-# from odf.table import Table, TableRow, TableCell
-# from odf.text import P
-# from odf import teletype
-
 sys.path.append(str((Path.cwd() / "../PythonConnector").resolve())) # hack for now
 from sake_crypto import KeyDatabase, AVAILABLE_KEYS, SAKE_LOGGER, Session as SakeSession
 
@@ -205,7 +200,7 @@ def main():
     try:
         header, entries = parse_file(args.file)
         entries_len = len(entries)
-        print(f"read {entries_len} messages\n")
+        print(f"read {entries_len} messages")
     except Exception as msg:
         print(f"Error reading input file: {msg}", file=sys.stderr)
         sys.exit(1)
@@ -250,7 +245,7 @@ def main():
     # main loop
     out_count = 0
     decrypted_count = 0
-
+    print("")
     for msg in data:
 
         # get uuid
@@ -307,6 +302,7 @@ def main():
         out_count += 1
 
     # housekeeping
+    print("")
     out_f.close()
     if decrypted_count == 0:
         print(f"there was nothing we could decrypt :(")
