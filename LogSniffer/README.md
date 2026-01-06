@@ -2,6 +2,8 @@
 
 This folder's scripts can be used to convert, decrypt and visualize sniffed data.
 
+Unless noted otherwise, these scripts rely on Wireshark/TShark 4.6.2 to be installed on the computer. Other versions may work, too. They should _at least_ be version 4.0.0 though. Older versions **do not** work properly!
+
 
 ## Steps 
 

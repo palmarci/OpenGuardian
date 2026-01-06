@@ -15,7 +15,8 @@ Please check out the [Communication Matrix](./attachments/com_matrix.ods) and [B
 
 The sensor MACs start with DC-16-A2 (Medtronic Diabetes, https://standards-oui.ieee.org/oui/oui.txt), while the pump uses a private address. The lower 3 bytes are the serial number, if converted to hex. For example:
 
-CGM GT1122867N -> 1122867 = 0x112233 -> MAC should be DC:16:A2:11:22:33.
+    CGM GT1122867N → 1122867 = 0x112233
+    → Its MAC address should be DC:16:A2:11:22:33.
 
 
 ## Device names
