@@ -116,7 +116,7 @@ public class SocpConverter implements IMessageConverter {
         String str;
         int unpackInt = gattPayload.unpackInt(PayloadFormat.FORMAT_UINT8, i2);
         int nextLength = GattPayload.getNextLength(PayloadFormat.FORMAT_UINT8.getValue()) + i2;
-        Set fromInt = IntEnumConverter.fromInt(unpackInt, SensorDetailFlags.values());
+        Set<SensorDetailFlags> fromInt = IntEnumConverter.fromInt(unpackInt, SensorDetailFlags.values());
         int i5 = -1;
         if (fromInt.contains(SensorDetailFlags.SENSOR_DETAILS_ANNUNCIATION_PRESENT)) {
             i3 = gattPayload.unpackInt(PayloadFormat.FORMAT_CRC_SOMETHING, nextLength);
@@ -167,6 +167,7 @@ public class SocpConverter implements IMessageConverter {
         // (nextLength5 + GattPayload.getNextLength(17)) - i2);
     }
 
+    @SuppressWarnings({ "unused", "unchecked", "rawtypes" }) // 
     public Socp unpack(GattPayload gattPayload) throws UnpackException {
         // b m24798m;
         SocpOperand socpOperand;

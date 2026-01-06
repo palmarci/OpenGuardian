@@ -1,7 +1,7 @@
 package openguardian4;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 import openguardian4.Gatt.Converters.IMessageConverter;
 //import openguardian4.Gatt.Converters.AbstractMessageConverter;
@@ -39,7 +39,7 @@ public final class Utils {
 		return null;
 	}
 
-
+	/*
 	public static List<String> removeComments(List<String> lines) {
         List<String> result = new ArrayList<>();
         
@@ -54,5 +54,6 @@ public final class Utils {
         
         return result;
     }
+	*/
 
 }

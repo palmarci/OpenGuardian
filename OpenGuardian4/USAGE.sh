@@ -1,0 +1,1 @@
+gradle build && gradle run --args "/home/marci/projects/code/medtronic/repo/LogSniffer/decrypted.gattlog"
