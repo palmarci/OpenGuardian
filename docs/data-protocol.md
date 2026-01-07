@@ -57,9 +57,7 @@ Flags (details):
 .... .... .... .... 1... .... .... ....  Insulin On Board:      yes
 .... .... .000 0000 .... .... .... ....  (reserved)
 .... .... 1... .... .... .... .... ....  Feature Extension:     yes
-.... .111 .... .... .... .... .... ....  (unknown extended features)
-.... 1... .... .... .... .... .... ....  Feature Extension:     yes
-.001 .... .... .... .... .... .... ....  (unknown extended features)
+.001 1111 .... .... .... .... .... ....  (unknown extended features)
 0... .... .... .... .... .... .... ....  Feature Extension:     no
 </pre>
 
