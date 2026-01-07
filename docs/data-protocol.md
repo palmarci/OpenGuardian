@@ -57,8 +57,16 @@ Flags (details):
 .... .... .... .... 1... .... .... ....  Insulin On Board:      yes
 .... .... .000 0000 .... .... .... ....  (reserved)
 .... .... 1... .... .... .... .... ....  Feature Extension:     yes
-.001 1111 .... .... .... .... .... ....  (unknown extended features)
+.... ...1 .... .... .... .... .... ....  custom extension: Reservoir Size 300IU Supported
+.... ..1. .... .... .... .... .... ....  custom extension: Glucose Unit mg/dL Used
+.... .1.. .... .... .... .... .... ....  custom extension: LGS Feature Supported
+.... 1... .... .... .... .... .... ....  custom extension: PLGM Feature Supported
+...1 .... .... .... .... .... .... ....  custom extension: HCL Feature Supported
+.00. .... .... .... .... .... .... ....  (unknown extended features)
 0... .... .... .... .... .... .... ....  Feature Extension:     no
 </pre>
 
-These features look sane and also nicely fit the features of a 780G. Only the extended feature bits we cannot comment on. So we are pretty confident that this characteristic is indeed implemented as found in the spec.
+These features look sane and also nicely fit the features of a 780G. So we are pretty confident that this characteristic is indeed implemented as found in the spec.
+
+The extended feature flags are likely vendor-specific and the less cryptic ones also match the specific 780G used. Their names were extracted from the MiniMed Mobile app.
+
