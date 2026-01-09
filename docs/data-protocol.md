@@ -29,7 +29,7 @@ The spec also mentions an optional _E2E-Protection_ (End-to-End) of the data, wi
 
 ## Reading pump features
 
-The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data.
+The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
 
 For our particular pump the following data was read: `ffff006400fede801f` which decodes to the following:
 
