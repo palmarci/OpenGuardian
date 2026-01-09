@@ -186,7 +186,7 @@ Following is an annotated capture of the MMM requesting the high/low sensor gluc
 
 	If the flag for 2nd and 3rd time block are _not_ set, the corresponding block is not part of the packet, i.e. the packet shown above would be shorter by 2 or 4 bytes, respectively.
 
-3. Pump finishes with indication for _Command Control Point_:
+3. Pump finishes with indication for _IDD Command Control Point_:
 
 		550f 8e14 0f
 		550f .... ..  Opcode:  Response Code
