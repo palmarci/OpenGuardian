@@ -1,2 +1,2 @@
-UUID,Name,Encrypted,Medtronic Proprietary,Notes
-00000510-0000-1000-0000-009132591325,NOS Port,?,yes?,something connection management related. opcodes: ACTIVE_MODE(0) OBSERVATION_MODE(1) TRANSITION_MODE(2) TERMINATE_CONNECTION(3) GET_EFFECTIVE_MTU(4)
+UUID,Name,Encrypted,Medtronic Proprietary,Notes,Converter Class
+00000510-0000-1000-0000-009132591325,NOS Port,?,yes?,something connection management related. opcodes: ACTIVE_MODE(0) OBSERVATION_MODE(1) TRANSITION_MODE(2) TERMINATE_CONNECTION(3) GET_EFFECTIVE_MTU(4),
