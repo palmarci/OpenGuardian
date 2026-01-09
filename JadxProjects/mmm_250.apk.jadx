@@ -1,11 +1,21 @@
 {
   "projectVersion": 1,
   "files": [
-    "../../mmm_250.apk"
+    "../../apks/com.medtronic.diabetes.minimedmobile.eu/com.medtronic.diabetes.minimedmobile.eu_2.5.0.apk"
   ],
   "treeExpansionsV2": [
-    "c:com.ca.mas.core.auth.ble.BluetoothLePeripheralCallback",
-    "c:com.ca.mas.core.auth.ble.BluetoothLePeripheral"
+    "c:com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.BolusEventPart1DataConverter",
+    "p:com.medtronic.minimed.data.pump.ble.profile.client.currenttime.model",
+    "p:com.medtronic.minimed.data.pump.ble.profile.client.currenttime.converters",
+    "p:com.medtronic.minimed.data.pump.ble.profile.client.cgm.model",
+    "p:com.medtronic.minimed.data.pump.ble.converter",
+    "p:com.medtronic.minimed.fota.bl.pump.selectedpumptype",
+    "p:com.medtronic.minimed.bl.dataprovider.model.event",
+    "p:com.medtronic.minimed.data.utilities.parsing",
+    "p:com.medtronic.minimed.bl.pump",
+    "c:xk.m",
+    "p:e8",
+    "p:x9"
   ],
   "codeData": {
     "comments": [],
@@ -13,9 +23,121 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "b8.a"
+        },
+        "newName": "BluetoothGattLogger"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b8.b"
+        },
+        "newName": "BluetoothGattLoggerImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b8.c"
+        },
+        "newName": "GattCharacteristicConfig"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b8.d"
+        },
+        "newName": "GattCharacteristicFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b8.e"
+        },
+        "newName": "GattPayload"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b8.e$a"
+        },
+        "newName": "Builder"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "b8.f"
+        },
+        "newName": "GattWriteType"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ce.a"
+        },
+        "newName": "CurrentTimeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ce.c"
+        },
+        "newName": "DateTimeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "com.medtronic.minimed.bl.configmonitor.b"
         },
         "newName": "DeviceConfigurationMonitorImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.converter.a"
+        },
+        "newName": "BaseTypeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.converter.b"
+        },
+        "newName": "TypeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.data.repository.f"
+        },
+        "newName": "SeriesRepository"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.data.utilities.parsing.a"
+        },
+        "newName": "CrcCcitt"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.data.utilities.parsing.c"
+        },
+        "newName": "DateTimeUtilities"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.data.utilities.parsing.d"
+        },
+        "newName": "Ieee11073Float"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.data.utilities.parsing.e"
+        },
+        "newName": "Ieee11073FloatBase"
       },
       {
         "nodeRef": {
@@ -41,9 +163,79 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "d8.a"
+        },
+        "newName": "ByteArrayConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "d8.c"
+        },
+        "newName": "StringConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "d8.e"
+        },
+        "newName": "VoidConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e8.a"
+        },
+        "newName": "HasValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "e8.b"
+        },
+        "newName": "ParsingUtils"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ee.a"
+        },
+        "newName": "CurrentTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ee.b"
+        },
+        "newName": "TimeAdjustReason"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ej.d"
+        },
+        "newName": "Factory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "ek.a"
         },
         "newName": "BehaviourProcessor"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ff.e"
+        },
+        "newName": "CertificateManagementRequestConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ff.i"
+        },
+        "newName": "CertificateManagementResponseConverter"
       },
       {
         "nodeRef": {
@@ -69,6 +261,104 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "gf.a"
+        },
+        "newName": "SecureSessionEstablishmentControlPointChar"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.b"
+        },
+        "newName": "SecureSessionEstablishmentDataChar"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.c"
+        },
+        "newName": "SecureSessionEstablishmentRequest"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.d"
+        },
+        "newName": "SecureSessionEstablishmentRequestConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.e"
+        },
+        "newName": "SecureSessionEstablishmentRequestConverter_Factory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.f"
+        },
+        "newName": "SecureSessionEstablishmentResponse"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.g"
+        },
+        "newName": "SecureSessionEstablishmentResponseConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.h"
+        },
+        "newName": "SecureSessionEstablishmentResponseConverter_Factory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.i"
+        },
+        "newName": "SecureSessionEstablishmentServiceModule"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.j"
+        },
+        "newName": "SecureSessionEstablishmentServiceModule_ProvideSecureSessionEstablishmentControlPointCharFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.k"
+        },
+        "newName": "SecureSessionEstablishmentServiceModule_ProvideSecureSessionEstablishmentDataCharFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.l"
+        },
+        "newName": "SecureSessionStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.m"
+        },
+        "newName": "SseOpCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "gf.n"
+        },
+        "newName": "SseResponseCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "h1.k"
         },
         "newName": "MetadataBackendRegistry"
@@ -79,6 +369,13 @@
           "declClass": "hj.b"
         },
         "newName": "Disposable"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ik.a"
+        },
+        "newName": "Provider"
       },
       {
         "nodeRef": {
@@ -111,6 +408,20 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "jd.a"
+        },
+        "newName": "PnpIdConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "jd.c"
+        },
+        "newName": "SystemIdConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "jf.a"
         },
         "newName": "SAKE_HANDSHAKE_ERROR_E"
@@ -132,6 +443,20 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "ma.d"
+        },
+        "newName": "ClockTime"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "ma.p"
+        },
+        "newName": "Optional"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "ma.x"
         },
         "newName": "ResourcesProvider"
@@ -142,6 +467,13 @@
           "declClass": "me.g"
         },
         "newName": "SakeHandshakeError"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "n9.a"
+        },
+        "newName": "Constants"
       },
       {
         "nodeRef": {
@@ -202,6 +534,41 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "p7.e"
+        },
+        "newName": "StringUtils"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "qd.a"
+        },
+        "newName": "SecureControlRequestConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "qd.c"
+        },
+        "newName": "SecureControlResponseConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "qk.a"
+        },
+        "newName": "EnumEntries"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "qk.b"
+        },
+        "newName": "EnumEntries_"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "r5.f0"
         },
         "newName": "ResourceIds"
@@ -212,6 +579,48 @@
           "declClass": "s7.a"
         },
         "newName": "DestroyableSecretKey"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "sd.a"
+        },
+        "newName": "ConfirmDataSecureControlResponse"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "sd.b"
+        },
+        "newName": "ConfirmDataStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "sd.c"
+        },
+        "newName": "SecureControlOpCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "sd.d"
+        },
+        "newName": "SecureControlRequest"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "sd.e"
+        },
+        "newName": "SecureControlResponse"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "sd.f"
+        },
+        "newName": "SendDataSecureControlRequest"
       },
       {
         "nodeRef": {
@@ -230,6 +639,132 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "vd.a"
+        },
+        "newName": "NosPortRequestConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "vd.c"
+        },
+        "newName": "NosPortResponseConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "vd.e"
+        },
+        "newName": "NosPortValueConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "wd.a"
+        },
+        "newName": "NosServiceModule"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.a"
+        },
+        "newName": "FirmwareUpdateControlPointChar"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.b"
+        },
+        "newName": "FirmwareUpdateDataChar"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.c"
+        },
+        "newName": "FirmwareUpdateErrorCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.d"
+        },
+        "newName": "FirmwareUpdateOpCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.e"
+        },
+        "newName": "FirmwareUpdateRequest"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.f"
+        },
+        "newName": "FirmwareUpdateRequestConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.g"
+        },
+        "newName": "FirmwareUpdateRequestConverter_Factory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.h"
+        },
+        "newName": "FirmwareUpdateResponse"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.i"
+        },
+        "newName": "FirmwareUpdateResponseCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.j"
+        },
+        "newName": "FirmwareUpdateResponseConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.k"
+        },
+        "newName": "FirmwareUpdateResponseConverter_Factory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.l"
+        },
+        "newName": "FirmwareUpdateServiceModule"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.m"
+        },
+        "newName": "FirmwareUpdateServiceModule_ProvideFirmwareUpdateControlPointCharFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "we.n"
+        },
+        "newName": "FirmwareUpdateServiceModule_ProvideFirmwareUpdateDataCharFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "wl.c"
         },
         "newName": "ILogger"
@@ -237,9 +772,86 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "x9.a"
+        },
+        "newName": "BaseValuesValidator"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "x9.b"
+        },
+        "newName": "DataItemName"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.d"
+        },
+        "newName": "ClassBasedDeclarationContainer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.d0"
+        },
+        "newName": "Reflection"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.e"
+        },
+        "newName": "ClassReference"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.e0"
+        },
+        "newName": "ReflectionFactory"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.f"
+        },
+        "newName": "CollectionToArray"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.f0"
+        },
+        "newName": "PrimitiveCompanionObjects"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.g"
+        },
+        "newName": "DefaultConstructorMarker"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "xk.n"
+        },
+        "newName": "Intrinsics"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "y7.w0"
         },
         "newName": "ForbiddenDeviceConfigStatusPreventer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "yk.a"
+        },
+        "newName": "KMarkers"
       },
       {
         "nodeRef": {
@@ -256,6 +868,30 @@
           "shortId": "b:Lj7/c;"
         },
         "newName": "imobilesecuritymanager"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.bl.dataprovider.model.event.BolusEventParam",
+          "shortId": "id:I"
+        },
+        "newName": "__id"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.data.pump.ble.profile.client.ids.model.BolusActivationType",
+          "shortId": "$ENTRIES:Lqk/a;"
+        },
+        "newName": "entries"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.data.pump.ble.profile.client.ids.model.BolusActivationType",
+          "shortId": "$VALUES:[Lcom/medtronic/minimed/data/pump/ble/profile/client/ids/model/BolusActivationType;"
+        },
+        "newName": "values"
       },
       {
         "nodeRef": {
@@ -524,6 +1160,46 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "we.e",
+          "shortId": "a:Lwe/d;"
+        },
+        "newName": "opcode"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "we.h",
+          "shortId": "a:Lwe/d;"
+        },
+        "newName": "opCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "we.h",
+          "shortId": "b:Lwe/d;"
+        },
+        "newName": "requestOpCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "we.h",
+          "shortId": "c:Lwe/i;"
+        },
+        "newName": "responseCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "we.h",
+          "shortId": "d:Lwe/c;"
+        },
+        "newName": "errorCode"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "xj.k",
           "shortId": "d:Ljava/lang/String;"
         },
@@ -564,6 +1240,214 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "b(BB)F"
+        },
+        "newName": "parseSFloat16"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "c(BBBB)F"
+        },
+        "newName": "parseFloat32"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "d(II)Ljava/lang/Float;"
+        },
+        "newName": "readFloat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "e(I)Ljava/lang/IllegalArgumentException;"
+        },
+        "newName": "unsupportedFormat"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "f(II)Ljava/lang/Integer;"
+        },
+        "newName": "readInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "g(II)Ljava/lang/Long;"
+        },
+        "newName": "readUInt32"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "h(I)Ljava/lang/String;"
+        },
+        "newName": "readString"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "i(I)I"
+        },
+        "newName": "getFormatLength"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "j(II)Ljava/lang/Long;"
+        },
+        "newName": "readLong"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "k()[B"
+        },
+        "newName": "toByteArray"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "l(B)I"
+        },
+        "newName": "ubyte"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "m(B)J"
+        },
+        "newName": "ubyteToLong"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "n(BB)I"
+        },
+        "newName": "readUInt16"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "o(BBB)I"
+        },
+        "newName": "readUInt24"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "p(BBBB)I"
+        },
+        "newName": "readUInt32"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "q(BBBBB)J"
+        },
+        "newName": "readUInt40"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e",
+          "shortId": "r(II)I"
+        },
+        "newName": "signExtend"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "a()Lb8/e;"
+        },
+        "newName": "build"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "b(I)V"
+        },
+        "newName": "ensureCapacity"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "c(II)I"
+        },
+        "newName": "decodeTwosComplement"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "d(III)Lb8/e$a;"
+        },
+        "newName": "writeInt"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "e(IIII)Lb8/e$a;"
+        },
+        "newName": "writeSFLOATOrFLOAT"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "f(JII)Lb8/e$a;"
+        },
+        "newName": "writeUInt32"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "g(Ljava/lang/String;)Lb8/e$a;"
+        },
+        "newName": "setFromString"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "h([B)Lb8/e$a;"
+        },
+        "newName": "setFromBytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "b8.e$a",
+          "shortId": "i([BI)Lb8/e$a;"
+        },
+        "newName": "writeBytes"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.medtronic.minimed.bl.appsetup.k",
           "shortId": "s()Z"
         },
@@ -580,10 +1464,30 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.converter.b",
+          "shortId": "unpack(Lb8/e;)Ljava/lang/Object;"
+        },
+        "newName": "unpack"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.medtronic.minimed.data.ParametersForTesting",
           "shortId": "component3()Z"
         },
         "newName": "isRetrieveRealSakeKeys"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.data.pump.ble.profile.client.ids.model.BolusActivationType",
+          "shortId": "\u003cclinit\u003e()V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 5
+        },
+        "newName": "arr"
       },
       {
         "nodeRef": {
@@ -800,6 +1704,62 @@
           "index": 327680
         },
         "newName": "data"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e8.b",
+          "shortId": "a(Ljava/util/Set;)I"
+        },
+        "newName": "bitwiseOrIntValues"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e8.b",
+          "shortId": "b([Le8/a;)I"
+        },
+        "newName": "bitwiseOrIntValues"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e8.b",
+          "shortId": "c(Ljava/util/Set;)J"
+        },
+        "newName": "bitwiseOrLongValues"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e8.b",
+          "shortId": "d(I[Le8/a;)Ljava/util/Set;"
+        },
+        "newName": "decodeIntBitmask"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e8.b",
+          "shortId": "e(J[Le8/a;)Ljava/util/Set;"
+        },
+        "newName": "decodeLongBitmask"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "e8.b",
+          "shortId": "f(I[Le8/a;Le8/a;)Le8/a;"
+        },
+        "newName": "findByExactIntValue"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "ik.a",
+          "shortId": "get()Ljava/lang/Object;"
+        },
+        "newName": "get"
       },
       {
         "nodeRef": {
@@ -1118,12 +2078,12 @@
   "openTabs": [
     {
       "type": "class",
-      "tabPath": "com.medtronic.minimed.ngpsdk.connect.pump.sake.d",
+      "tabPath": "b8.e",
       "subPath": "java",
-      "caret": 12442,
+      "caret": 10923,
       "view": {
         "x": 0,
-        "y": 3926
+        "y": 4084
       },
       "active": false,
       "pinned": false,
@@ -1133,27 +2093,12 @@
     },
     {
       "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.c",
-      "subPath": "java",
-      "caret": 2350,
-      "view": {
-        "x": 274,
-        "y": 69
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SAKE_USER_MESSAGE_S",
-      "subPath": "java",
-      "caret": 832,
+      "tabPath": "com.medtronic.minimed.common.parsing.a",
+      "subPath": "smali",
+      "caret": 7434,
       "view": {
         "x": 0,
-        "y": 11
+        "y": 2845
       },
       "active": false,
       "pinned": false,
@@ -1163,24 +2108,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SakeJNI",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.model.IddStatusReaderOpCode",
       "subPath": "java",
-      "caret": 2443,
-      "view": {
-        "x": 0,
-        "y": 298
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.medtronic.minimed.sake.SAKE_SECURE_MESSAGE_S",
-      "subPath": "java",
-      "caret": 320,
+      "caret": 861,
       "view": {
         "x": 0,
         "y": 0
@@ -1193,24 +2123,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLePeripheral",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.model.event.Annunciation",
       "subPath": "java",
-      "caret": 4991,
-      "view": {
-        "x": 0,
-        "y": 965
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.ca.mas.core.auth.otp.OtpConstants",
-      "subPath": "java",
-      "caret": 79,
+      "caret": 430,
       "view": {
         "x": 0,
         "y": 0
@@ -1223,9 +2138,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.otp.OtpUtil",
+      "tabPath": "okio.Segment",
       "subPath": "java",
-      "caret": 369,
+      "caret": 358,
       "view": {
         "x": 0,
         "y": 0
@@ -1238,9 +2153,24 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.otp.model.OtpResponseBody",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.IddRacpResponseConverter",
       "subPath": "java",
-      "caret": 142,
+      "caret": 2944,
+      "view": {
+        "x": 0,
+        "y": 430
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.converter.a",
+      "subPath": "java",
+      "caret": 311,
       "view": {
         "x": 0,
         "y": 0
@@ -1253,12 +2183,12 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.otp.model.OtpResponseHeaders",
+      "tabPath": "com.medtronic.minimed.data.pump.PumpTherapyDataApi",
       "subPath": "java",
-      "caret": 165,
+      "caret": 3175,
       "view": {
         "x": 0,
-        "y": 108
+        "y": 403
       },
       "active": false,
       "pinned": false,
@@ -1268,9 +2198,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.QRCodeRenderer",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.model.IddStatusChangeFlags",
       "subPath": "java",
-      "caret": 347,
+      "caret": 679,
       "view": {
         "x": 0,
         "y": 0
@@ -1283,9 +2213,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.QRCode",
+      "tabPath": "ch.qos.logback.core.util.FileSize",
       "subPath": "java",
-      "caret": 141,
+      "caret": 359,
       "view": {
         "x": 0,
         "y": 0
@@ -1298,9 +2228,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.NfcResultReceiver",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.CgmAnalyticsDataConverter",
       "subPath": "java",
-      "caret": 155,
+      "caret": 979,
       "view": {
         "x": 0,
         "y": 0
@@ -1313,9 +2243,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.AuthResultReceiver",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.InsulinDeliveryRestartedEventDataConverter",
       "subPath": "java",
-      "caret": 108,
+      "caret": 1229,
       "view": {
         "x": 0,
         "y": 0
@@ -1328,9 +2258,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.AuthenticationException",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.MicroBolusDataConverter",
       "subPath": "java",
-      "caret": 206,
+      "caret": 1292,
       "view": {
         "x": 0,
         "y": 0
@@ -1343,9 +2273,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLe",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.NgpReferenceTimeDataConverter_Factory",
       "subPath": "java",
-      "caret": 310,
+      "caret": 945,
       "view": {
         "x": 0,
         "y": 0
@@ -1358,9 +2288,9 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLeCentralCallback",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.NgpReferenceTimeDataConverter",
       "subPath": "java",
-      "caret": 83,
+      "caret": 792,
       "view": {
         "x": 0,
         "y": 0
@@ -1373,12 +2303,12 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLeConsentHandler",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.ReferenceTimeDataConverter",
       "subPath": "java",
-      "caret": 83,
+      "caret": 2717,
       "view": {
         "x": 0,
-        "y": 0
+        "y": 56
       },
       "active": false,
       "pinned": false,
@@ -1388,74 +2318,254 @@
     },
     {
       "type": "class",
-      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLeCentralRenderer",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.PumpAnnunciationConverter",
       "subPath": "java",
-      "caret": 2533,
+      "caret": 7733,
       "view": {
-        "x": 0,
-        "y": 933
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.ca.mas.core.MobileSsoConfig",
-      "subPath": "java",
-      "caret": 368,
-      "view": {
-        "x": 0,
-        "y": 0
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLePeripheralCallback",
-      "subPath": "java",
-      "caret": 0,
-      "view": {
-        "x": 0,
-        "y": 0
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.ca.mas.core.MobileSsoFactory",
-      "subPath": "java",
-      "caret": 1086,
-      "view": {
-        "x": 0,
-        "y": 438
-      },
-      "active": false,
-      "pinned": false,
-      "bookmarked": false,
-      "hidden": false,
-      "previewTab": false
-    },
-    {
-      "type": "class",
-      "tabPath": "com.ca.mas.core.conf.Config",
-      "subPath": "java",
-      "caret": 6071,
-      "view": {
-        "x": 0,
-        "y": 531
+        "x": 8,
+        "y": 1499
       },
       "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.utilities.parsing.c",
+      "subPath": "java",
+      "caret": 4934,
+      "view": {
+        "x": 0,
+        "y": 1487
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "n9.a",
+      "subPath": "java",
+      "caret": 598,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.exchange.model.HistoryData",
+      "subPath": "java",
+      "caret": 3057,
+      "view": {
+        "x": 693,
+        "y": 354
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "z7.b",
+      "subPath": "java",
+      "caret": 4334,
+      "view": {
+        "x": 0,
+        "y": 1639
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.PumpTimeProviderImpl",
+      "subPath": "java",
+      "caret": 521,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.exchange.model.PumpTime",
+      "subPath": "java",
+      "caret": 1583,
+      "view": {
+        "x": 0,
+        "y": 24
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.raizlabs.android.dbflow.sql.language.Operator",
+      "subPath": "java",
+      "caret": 2863,
+      "view": {
+        "x": 0,
+        "y": 590
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.model.PairedPumpId",
+      "subPath": "java",
+      "caret": 1810,
+      "view": {
+        "x": 0,
+        "y": 356
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "p7.e",
+      "subPath": "java",
+      "caret": 298,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.model.ReferenceTimeRecord",
+      "subPath": "java",
+      "caret": 1616,
+      "view": {
+        "x": 315,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.model.event.BolusEventParam",
+      "subPath": "java",
+      "caret": 855,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.model.Banner",
+      "subPath": "java",
+      "caret": 1581,
+      "view": {
+        "x": 0,
+        "y": 399
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "xk.n",
+      "subPath": "java",
+      "caret": 940,
+      "view": {
+        "x": 0,
+        "y": 200
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.bl.dataprovider.model.SensorStatus",
+      "subPath": "java",
+      "caret": 1344,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "ma.p",
+      "subPath": "java",
+      "caret": 455,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.data.pump.ble.profile.client.ids.BasePumpAnnunciationConverter",
+      "subPath": "java",
+      "caret": 515,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
       "pinned": false,
       "bookmarked": false,
       "hidden": false,
@@ -1465,36 +2575,36 @@
   "cacheDir": "/home/marci/.cache/jadx/projects/mmm_250.apk-8888e80a09325d76b580d32d7558b5cc",
   "enableLiveReload": true,
   "searchHistory": [
-    "PROP_BLE_SERVICE_UUID",
-    "MobileSsoFactory",
-    "BluetoothLeAdvertiser",
-    "nativesake",
-    "sake",
-    "handshake",
-    "sakejni",
-    "mobilesecurityconfig",
-    "whitelist",
-    "Failed to obtain SAKE keys from ",
-    "SAKE keys decryption failed",
-    "Incorrect payload data",
-    "sake dec",
-    "KopqrAHrDjhmBgFEvNJPiGslhEuAnpND",
-    "ecryptionMessageJob: Data decrypted successfully",
-    "- SecretMessageJob: Received key",
-    "isCorrectNonce",
-    "SakeKeysDecryptor",
-    "keydatabase",
-    "sake.d",
-    "decrypt",
-    "decryption",
-    "attestatio",
-    "not_supported",
-    "CHALLENGE_NOT_GENERATED",
-    "sakehandshake",
-    "-lib",
-    "sakeserver",
-    "device_type",
-    "integrity"
+    "PumpAnnunciationConverter",
+    "SensorStatus",
+    "Banner",
+    "BolusEventParam",
+    "ReferenceTimeRecord",
+    "PairedPumpId",
+    "DateTimeUtilities",
+    "PumpTime",
+    "HistoryData",
+    "ReferenceTimeDataConverter",
+    "CgmAnalyticsDataConverter",
+    "MicroBolusDataConverter",
+    "InsulinDeliveryRestartedEventDataConverter",
+    "IddStatusChangeFlags",
+    "ddRacpResponseConverter.",
+    "IddRacpResponseConverter",
+    "IddStatusReaderOpCode",
+    "calculateMantissa",
+    "GattPayload",
+    "gattpayload",
+    "PumpTypeAndFeatures",
+    "CurrentTimeConverter",
+    "com.medtronic.minimed.data.pump.ble",
+    "PumpType",
+    "BinaryPackage",
+    "HistoryEventType",
+    "isApplicableForPumpType",
+    "parsing.c",
+    "Annunciation",
+    "utilities.parsing.c"
   ],
   "searchResourcesFilter": "$TEXT",
   "searchResourcesSizeLimit": 0,
