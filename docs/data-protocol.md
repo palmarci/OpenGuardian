@@ -6,6 +6,8 @@ Unless noted otherwise, this applies to a pump of type 780G. Other models in the
 
 This document uses example data retrieved from captured Bluetooth communication between the pump and the app. Data for SAKE-encrypted characteristics are presented only in decrypted form.
 
+For brevity, we will abbreviate _MiniMed Mobile app_ with _MMM_ in this document.
+
 
 ## Introduction
 
@@ -27,7 +29,7 @@ The spec also mentions an optional _E2E-Protection_ (End-to-End) of the data, wi
 
 ## Reading pump features
 
-The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data.
+The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
 
 For our particular pump the following data was read: `ffff006400fede801f` which decodes to the following:
 
@@ -70,3 +72,107 @@ These features look sane and also nicely fit the features of a 780G. So we are p
 
 The extended feature flags are likely vendor-specific and the less cryptic ones also match the specific 780G used. Their names were extracted from the MiniMed Mobile app.
 
+
+## Sending commands to the pump
+
+The spec for the _Insulin Delivery Service_ defines the characteristic _IDD Command Control Point_ for "adapting therapy parameters to enable the remote operation of the insulin therapy as well as the remote operation for device maintenance" [IDS_v1.0.2]. Together with a second characteristic _IDD Command Data_ it implements a simple "command in, data out" interface:
+
+* _IDD Command Control Point_
+	* app sends command to the pump
+	* pump sends back data in response (indications)
+	* also acts as indicator for "command execution finished"
+	* SAKE-encrypted
+* _IDD Command Data_
+	* pump sends back data in response (notifications)
+	* SAKE-encrypted
+
+See our [com matrix] for their respective UUID.
+
+The app (the client) writes commands to the _Command Control Point_ and receives a response from the pump (the server) either via _Command Control Point_ or _Command Data_. Commands include things like "set a bolus" or "get the basal rate profile template" [IDS_v1.0.2, sec. 4.6.1].
+
+The type of command is encoded in its _opcode_. The client may send multiple commands without waiting for a response. Responses from the server also include an opcode which references the command's opcode. This allows the client to map responses to the original command.
+
+The spec defines the following behavior: If the server wants/needs to respond to a command with more than one record (for example, lengthy basal rate profile templates), it shall use multiple _notifications_ of the _Command Data_ to do so (one per record). It shall then _indicate_ the _Command Control Point_ to confirm the end of the command's execution. Therefore, the app shall configure the _Command Data_ characteristic for notifications and the _Command Control Point_ characteristic for indications before sending its first command. Since an _indication_ in Bluetooth LE requires an acknowledgement from the client, the pump will know that the app received that final confirmation of execution.
+
+In practice we observe a 780G pump sending notifications of the Command Control Point even for single-record responses that could have been sent through the Command Control Point. Medtronic probably chose to do so because they _always_ wanted to indicate the response code (either success or one of various error codes), which they could not simply send along with other data in the response. There is only _one_ opcode allowed per response package, and "Response Code" is one of them.
+
+### Opcodes
+
+The spec defines a large table of opcodes encoding different commands. Some portions of the value range are marked as "prohibited". Medtronic uses on of these for custom opcodes. The part of the MMM that implements the client side of the _Insulin Delivery Service_ internally defines the following opcodes:
+
+<pre>
+RESPONSE_CODE                     = 0x0f55
+SET_BOLUS                         = 0x114b
+SET_BOLUS_RESPONSE                = 0x1177
+CANCEL_BOLUS                      = 0x1178
+CANCEL_BOLUS_RESPONSE             = 0x1187
+GET_MAX_BOLUS_AMOUNT              = 0x147d
+GET_MAX_BOLUS_AMOUNT_RESPONSE     = 0x1482
+GET_HIGH_LOW_SG_SETTINGS          = 0x148e (Medtronic custom)
+GET_HIGH_LOW_SG_SETTINGS_RESPONSE = 0x148f (Medtronic custom)
+</pre>
+
+Judging from its code, the MMM can only ever send commands with the following opcodes, though:
+
+* `GET_HIGH_LOW_SG_SETTINGS`
+* `SET_BOLUS`
+
+### Format of custom _Get High/Low SG Settings_ command and response
+
+Following is the capture of the MMM requesting the high/low sensor glucose settings from a 780G pump. This happens in two parts: First, the app requests the _high_ settings through Medtronic's custom command. After this command has been completed by the pump, the app requests the _low_ settings using the same command.
+
+1. App writes command _Get High/Low SG Settings_ to the _IDD Command Control Point_:
+
+		8e14 01
+		8e14 ..  Opcode:  GET_HIGH_LOW_SG_SETTINGS
+		.... 01  Operand: HIGH
+
+2. Pump responds with notification for _IDD Command Data_:
+
+		8f14 03 01 00 e001 1801 0c03 0000 b400 1801
+		8f14 .. .. .. .... .... .... .... .... ....  Response Opcode: GET_HIGH_LOW_SG_SETTINGS_RESPONSE
+		.... 03 .. .. .... .... .... .... .... ....  Operand: SECOND_TIME_BLOCK_PRESENT (0x1) | THIRD_TIME_BLOCK_PRESENT (0x2)
+		.... .. 01 .. .... .... .... .... .... ....  Operand: HIGH
+		.... .. .. 00 .... .... .... .... .... ....  Operand: 1st Time Block Number Index (u8)
+		.... .. .. .. e001 .... .... .... .... ....  Operand: 1st Duration (u16):    480
+		.... .. .. .. .... 1801 .... .... .... ....  Operand: 1st SG Limit (sfloat): 280.0
+		.... .. .. .. .... .... 0c03 .... .... ....  Operand: 2nd Duration (u16):    780
+		.... .. .. .. .... .... .... 0000 .... ....  Operand: 2nd SG Limit (sfloat): 0.0
+		.... .. .. .. .... .... .... .... b400 ....  Operand: 3rd Duration (u16):    180
+		.... .. .. .. .... .... .... .... .... 1801  Operand: 3rd SG Limit (sfloat): 280.0
+
+	If the flag for 2nd and 3rd time block are _not_ set, the corresponding block is not part of the packet, i.e. the packet shown above would be shorter by 2 or 4 bytes, respectively.
+
+3. Pump finishes with indication for _Command Control Point_:
+
+		550f 8e14 0f
+		550f .... ..  Opcode:  Response Code
+		.... 8e14 ..  Operand: Request Opcode: GET_HIGH_LOW_SG_SETTINGS
+		.... .... 0f  Operand: Response Code Value: Success
+
+4. App writes command _Get High/Low SG Settings_ to the _IDD Command Control Point_:
+
+		8e14 00
+		8e14 ..  Opcode:  GET_HIGH_LOW_SG_SETTINGS
+		.... 00  Operand: LOW
+
+5. Pump responds with notification for _IDD Command Data_:
+
+		8f14 03 00 00 c201 5000 ee02 4600 f000 5000
+		8f14 .. .. .. .... .... .... .... .... ....  Response Opcode: GET_HIGH_LOW_SG_SETTINGS_RESPONSE
+		.... 03 .. .. .... .... .... .... .... ....  Operand: SECOND_TIME_BLOCK_PRESENT (0x1) | THIRD_TIME_BLOCK_PRESENT (0x2)
+		.... .. 00 .. .... .... .... .... .... ....  Operand: LOW
+		.... .. .. 00 .... .... .... .... .... ....  Operand: 1st Time Block Number Index (u8)
+		.... .. .. .. c201 .... .... .... .... ....  Operand: 1st Duration (u16):    450
+		.... .. .. .. .... 5000 .... .... .... ....  Operand: 2nd SD Limit (sfloat): 80.0
+		.... .. .. .. .... .... ee02 .... .... ....  Operand: 2nd Duration (u16):    750
+		.... .. .. .. .... .... .... 4600 .... ....  Operand: 3rd SD Limit (sfloat): 70.0
+		.... .. .. .. .... .... .... .... f000 ....  Operand: 3rd Duration (u16):    240
+		.... .. .. .. .... .... .... .... .... 5000  Operand: 3rd SD Limit (sfloat): 80.0
+
+6.  Pump finishes with indication for _Command Control Point_:
+
+		550f 8e14 0f
+		550f .... ..  Opcode:  Response Code
+		.... 8e14 ..  Operand: Request Opcode: GET_HIGH_LOW_SG_SETTINGS
+		.... .... 0f  Operand: Response Code Value: Success
