@@ -27,6 +27,25 @@ Judging by their names, Medtronic's version of the IDS is actually comprised of 
 The spec also mentions an optional _E2E-Protection_ (End-to-End) of the data, without going into much detail about it. It does, however, sound very different from Medtronic's custom SAKE encryption, and our pump's features indeed confirm that _E2E-Protection_ is _not_ enabled (see section below).
 
 
+## Data types
+
+All multi-byte data is in Little-Endian, i.e. the least-significant bytes comes first.
+
+Two different floating-point types are used: one using 16 bits (the spec calls this _sfloat_), the other using 32 bits:
+
+	f = m × 10^e
+
+where `m` is the mantissa and `e` is the exponent. Both are encoded in 2's complement. The exponent is stored in the most-significant bits:
+
+	16 bit (sfloat):                     eeee mmmm mmmm mmmm
+	32 bit:          eeee eeee mmmm mmmm mmmm mmmm mmmm mmmm
+
+So, for example:
+
+	0xf90f     =    1777 × 10^-1 = -177.7
+	0xf82625a0 = 2500000 × 10^-8 =    0.025
+
+
 ## Reading pump features
 
 The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
