@@ -1,5 +1,5 @@
-UUID,Name,Encrypted,Medtronic Proprietary,Notes,Converter Class
-00002a52-0000-1000-8000-00805f9b34fb,Record Access Control Point,?,no,"duplicated, CGM service also has this",
-00000350-0000-1000-0000-009132591325,Slice Record,?,yes,-,
-00000360-0000-1000-0000-009132591325,Repository And Transfer Management Control Point,?,yes,-,
-00000370-0000-1000-0000-009132591325,Repository Management Control Point SE,?,yes,only the pumps have this?,
+UUID,Name,Encrypted,Medtronic Proprietary,Notes
+00002a52-0000-1000-8000-00805f9b34fb,Record Access Control Point,?,no,"duplicated, CGM service also has this"
+00000350-0000-1000-0000-009132591325,Slice Record,?,yes,-
+00000360-0000-1000-0000-009132591325,Repository And Transfer Management Control Point,?,yes,-
+00000370-0000-1000-0000-009132591325,Repository Management Control Point SE,?,yes,only the pumps have this?

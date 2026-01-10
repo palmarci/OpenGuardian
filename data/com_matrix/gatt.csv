@@ -1,5 +1,5 @@
-UUID,Name,Encrypted,Medtronic Proprietary,Notes,Converter Class
-00002a05-0000-1000-8000-00805f9b34fb,Service Changed,no,no,-,
-00002b3a-0000-1000-8000-00805f9b34fb,Server Supported Features,no,no,-,
-00002b29-0000-1000-8000-00805f9b34fb,Client Supported Features,no,no,-,
-00002b2a-0000-1000-8000-00805f9b34fb,Database Hash,no,no,-,
+UUID,Name,Encrypted,Medtronic Proprietary,Notes
+00002a05-0000-1000-8000-00805f9b34fb,Service Changed,no,no,-
+00002b3a-0000-1000-8000-00805f9b34fb,Server Supported Features,no,no,-
+00002b29-0000-1000-8000-00805f9b34fb,Client Supported Features,no,no,-
+00002b2a-0000-1000-8000-00805f9b34fb,Database Hash,no,no,-
