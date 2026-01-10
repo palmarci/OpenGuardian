@@ -27,6 +27,25 @@ Judging by their names, Medtronic's version of the IDS is actually comprised of 
 The spec also mentions an optional _E2E-Protection_ (End-to-End) of the data, without going into much detail about it. It does, however, sound very different from Medtronic's custom SAKE encryption, and our pump's features indeed confirm that _E2E-Protection_ is _not_ enabled (see section below).
 
 
+## Data types
+
+All multi-byte data is in Little-Endian, i.e. the least-significant bytes comes first.
+
+Two different floating-point types are used: one using 16 bits (the spec calls this _sfloat_), the other using 32 bits:
+
+	f = m × 10^e
+
+where `m` is the mantissa and `e` is the exponent. Both are encoded in 2's complement. The exponent is stored in the most-significant bits:
+
+	16 bit (sfloat):                     eeee mmmm mmmm mmmm
+	32 bit:          eeee eeee mmmm mmmm mmmm mmmm mmmm mmmm
+
+So, for example:
+
+	0xf90f     =    1777 × 10^-1 = -177.7
+	0xf82625a0 = 2500000 × 10^-8 =    0.025
+
+
 ## Reading pump features
 
 The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
@@ -119,7 +138,50 @@ Judging from its code, the MMM can only ever send commands with the following op
 
 ### Format of custom _Get High/Low SG Settings_ command and response
 
-Following is the capture of the MMM requesting the high/low sensor glucose settings from a 780G pump. This happens in two parts: First, the app requests the _high_ settings through Medtronic's custom command. After this command has been completed by the pump, the app requests the _low_ settings using the same command.
+The command is sent by writing to the _IDD Command Control Point_ characteristic. The pump responds by sending a notification for the _IDD Command Data_ characteristic.
+
+#### Command structure
+
+Field Name    | Data Type    | Size (octets) | Unit | Byte Order
+--------------|--------------|---------------|------|-----------
+Opcode        | Value 0x148e | 2             | None | LSO...MSO
+Settings Type | Enum of u8   | 1             | None | N/A
+
+The following values are defined for the _Settings Type_ field:
+
+Value | Description
+------|------------
+0x00  | Low
+0x01  | High
+
+#### Response structure
+
+Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Response Opcode             | Value 0x148f | 2             | None     | LSO...MSO
+Flags                       | 8 bit        | 1             | None     | N/A
+Settings Type               | Enum of u8   | 1             | None     | N/A
+1st Time Block Number Index | u8           | 1             | None     | N/A
+1st Duration                | u16          | 2             | minutes  | LSO...MSO
+1st SG Limit                | sfloat       | 2             | see note | LSO...MSO
+2nd Duration                | u16          | 2             | minutes  | LSO...MSO
+2nd SG Limit                | sfloat       | 2             | see note | LSO...MSO
+3rd Duration                | u16          | 2             | minutes  | LSO...MSO
+3rd SG Limit                | sfloat       | 2             | see note | LSO...MSO
+
+NOTE: The unit of the _SG Limit_ fields probably depends on the value of the bit _Glucose Unit mg/dL Used_ in the data read from the _IDD Feature_ characteristic. So it is likely mg/dL if the flag is set, and mmol/L otherwise.
+
+Bits in the _Flags_ field are defined as follows:
+
+Bit | Definition             | Description
+----|------------------------|-------------
+0   | 2nd Time Block Present | If this bit is set, fields _2nd Duration_ and _2nd SG Limit_ are present
+1   | 3rd Time Block Present | If this bit is set, fields _3rd Duration_ and _3rd SG Limit_ are present
+
+
+### Example capture
+
+Following is an annotated capture of the MMM requesting the high/low sensor glucose settings from a 780G pump. This happens in two parts: First, the app requests the _high_ settings through Medtronic's custom command. After this command has been completed by the pump, the app requests the _low_ settings using the same command.
 
 1. App writes command _Get High/Low SG Settings_ to the _IDD Command Control Point_:
 
@@ -143,7 +205,7 @@ Following is the capture of the MMM requesting the high/low sensor glucose setti
 
 	If the flag for 2nd and 3rd time block are _not_ set, the corresponding block is not part of the packet, i.e. the packet shown above would be shorter by 2 or 4 bytes, respectively.
 
-3. Pump finishes with indication for _Command Control Point_:
+3. Pump finishes with indication for _IDD Command Control Point_:
 
 		550f 8e14 0f
 		550f .... ..  Opcode:  Response Code
