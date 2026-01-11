@@ -92,6 +92,55 @@ These features look sane and also nicely fit the features of a 780G. So we are p
 The extended feature flags are likely vendor-specific and the less cryptic ones also match the specific 780G used. Their names were extracted from the MiniMed Mobile app.
 
 
+## Reading status changes
+
+The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Status Changed_ which can be read to determine various status changes of the pump.The app can also configure this characteristic for indications to automatically receive the status changes when they happen.
+
+Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
+
+The specified characteristic value consists of a single 16-bit flags field. Medtronic extends this to up to 48 bits in their version. They also populate some of the reserved bits with their custom ones. The extension mechanism is very similar to the one in _IDD Feature_: If the highest bit in the current block is _set_, another block of 16 bits is appended, thus extending the flags.
+
+Field Name    | Data Type    | Size (octets) | Unit | Byte Order
+--------------|--------------|---------------|------|-----------
+Flags         | 16–48 bit    | 2–6           | None | LSO...MSO
+
+Per the spec, the pump is expected to retain the status of a bit of the _Flags_ field until its value is reset by the app through the _Reset Status_ procedure using the characteristic _IDD Status Reader Control Point_.
+
+Bits in the _Flags_ field are defined as follows (Medtronic's custom extensions marked):
+
+Bit   | Definition                               | Description
+------|------------------------------------------|-------------
+ 0    | Therapy Control State Changed            |
+ 1    | Operational State Changed                |
+ 2    | Reservoir Status Changed                 |
+ 3    | Annunciation Status Changed              |
+ 4    | Total Daily Insulin Status Changed       |
+ 5    | Active Basal Rate Status Changed         |
+ 6    | Active Bolus Status Changed              |
+ 7    | History Event Recorded                   |
+ 8    | Time In Range Status Changed             | custom extension; marked as reserved in the spec
+ 9–14 | reserved/unused                          |
+15    | Extended Status                          | custom extension; If this bit is set, two additional octets are attached (bits 16–31).
+16    | Therapy Algorithm State                  | custom extension
+17    | Insulin On Board                         | custom extension
+18    | New CGM Measurement                      | custom extension
+19    | Sensor EOL                               | custom extension
+20    | CGM Calibration                          | custom extension
+21    | Sensor Status Message                    | custom extension
+22    | Sensor Connectivity State                | custom extension
+23    | Display Format Changed                   | custom extension
+24    | High/Low Settings Changed                | custom extension
+25    | Sensor Changed                           | custom extension
+26    | CGM Calibration Context Changed          | custom extension
+27    | CGM Time Calibration Recommended Changed | custom extension
+28    | Remote Bolus Option Changed              | custom extension
+29    | Local UI Interaction Requested           | custom extension
+30    | Sensor Warm-up Time Remaining Changed    | custom extension
+31    | Extended Status 1                        | custom extension; If this bit is set, two additional octets are attached (bits 32–47).
+32    | Sensor Calibration Status Icon Changed   | custom extension
+33    | Early Sensor Calibration Time Changed    | custom extension
+
+
 ## Sending commands to the pump
 
 The spec for the _Insulin Delivery Service_ defines the characteristic _IDD Command Control Point_ for "adapting therapy parameters to enable the remote operation of the insulin therapy as well as the remote operation for device maintenance" [IDS_v1.0.2]. Together with a second characteristic _IDD Command Data_ it implements a simple "command in, data out" interface:
