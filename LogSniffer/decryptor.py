@@ -7,7 +7,9 @@ import logging
 import sys
 from pathlib import Path
 
-sys.path.append(str((Path.cwd() / "../PythonConnector").resolve())) # hack for now
+# HACK: add sake_crypto's location to search path for include
+script_dir = os.path.realpath(os.path.dirname(__file__))
+sys.path.append(os.path.join(script_dir, "../PythonConnector"))
 from sake_crypto import KeyDatabase, AVAILABLE_KEYS, SAKE_LOGGER, Session as SakeSession
 
 from com_matrix import ComMatrixParser, Characteristic
