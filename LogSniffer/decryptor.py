@@ -19,7 +19,8 @@ DEVICE_TYPE_MAP = {
     "SENSOR": [2]
 }
 # will be filled up
-CHARS = None 
+CHARS = None
+SERVICES = None
 ARGS = None
 
 def parse_header(line):
@@ -42,17 +43,18 @@ def parse_header(line):
 def parse_entry(line, lineno):
     parts = [p.strip() for p in line.split(",")]
 
-    if len(parts) != 6:
+    if len(parts) != 7:
         raise ValueError(f"Line {lineno}: expected 6 fields, got {len(parts)}")
 
-    pkt_number, source, dest, opcode, uuid, data = parts
+    pkt_number, source, dest, opcode, serv_uuid, char_uuid, data = parts
 
     return {
         "frame": int(pkt_number),
         "source": source,
         "dest": dest,
         "opcode": opcode,
-        "uuid": uuid,
+        "service_uuuid": serv_uuid,
+        "char_uuid": char_uuid,
         "data": bytes.fromhex(data),
     }
 
@@ -122,7 +124,7 @@ def separate_sake_and_data(entries:list[dict]) -> tuple[bytes, list[dict]]:
     msgs = []
 
     for e in entries:
-        if e["uuid"] == SAKE_UUID:
+        if e["char_uuid"] == SAKE_UUID:
             sakes.append(e["data"])
         else:
             msgs.append(e)
@@ -140,18 +142,51 @@ def separate_sake_and_data(entries:list[dict]) -> tuple[bytes, list[dict]]:
 
     return sakes, msgs
 
-def put_to_output(msg:dict, outfile) -> None:
+def put_to_output(msg:dict, outfile, c:Characteristic) -> None:
     """
     This function prints and logs the final data to the out file.
     """
-    uuid = msg["uuid"]
+    uuid = msg["char_uuid"]
+    # Resolve characteristic and service for output. Service info goes before char info.
+    service_field = ""
+    char_field = uuid
+
+    #c = char.get(uuid)
     if ARGS.resolve_uuids:
-        uuid = get_uuid_name(uuid)
-    d = f'{msg["frame"]},{msg["source"]},{msg["dest"]},{msg["opcode"]},{uuid},{msg["data"].hex()}'
+        if c:
+            service_field = c.service.name if c.service.name else c.service.uuid
+            char_field = c.name if c.name else c.uuid
+        else:
+            char_field = uuid
+    else:
+        if c:
+            service_field = c.service.uuid
+            char_field = c.uuid
+        else:
+            service_field = ""
+            char_field = uuid
+
+    d = f'{msg["frame"]},{msg["source"]},{msg["dest"]},{msg["opcode"]},{service_field},{char_field},{msg["data"].hex()}'
     outfile.write(d + "\n")
     if ARGS.debug_sake:
         print(d + "\n")
     return
+
+def find_matching_uuid(s):
+    char:dict[Characteristic] = {}
+    for c in CHARS:
+        char[c.uuid] = c
+
+    # try to match 128bit with full path
+    t = char.get(s)
+    if t != None:
+        return t
+    
+    # if it is 16bit, then just search if its in one of them
+    for c in CHARS:
+        if s in c.uuid:
+            return c
+    
 
 def main():
 
@@ -190,7 +225,9 @@ def main():
     if not cm_path.is_dir():
         raise NotADirectoryError(ARGS.com_matrix) 
     cm_parser = ComMatrixParser(str(cm_path))
-    CHARS = cm_parser.parse()
+    chars, services = cm_parser.parse()
+    CHARS = chars
+    SERVICES = services
     print(f"parsed {len(CHARS)} characteristics successfully")
 
     # turn on crypto logging if needed
@@ -239,11 +276,6 @@ def main():
     sess.handshake_4_s(handsake[4])
     sess.handshake_5_c(handsake[5])
 
-    # chars a lookup-able dict
-    char_dict:dict[Characteristic] = {}
-    for c in CHARS:
-        char_dict[c.uuid] = c
-
     # main loop
     out_count = 0
     decrypted_count = 0
@@ -251,27 +283,29 @@ def main():
     for msg in data:
 
         # get uuid
-        ret = char_dict.get(msg["uuid"])
-        if ret is None:
-            print(f"WARNING: {msg['uuid']} is not in the db yet!")
-            put_to_output(msg, out_f)
+        char = find_matching_uuid(msg['char_uuid'])
+        #ret = char.get(msg["char_uuid"])
+        if char is None:
+            print(f"WARNING: {msg['char_uuid']} is not in the db yet!")
+            put_to_output(msg, out_f, char)
             out_count += 1
             continue
 
         # get chars' details
-        name = ret.name
-        enc = ret.encrypted
+      #  print(char)
+        name = char.name
+        enc = char.encrypted
 
         # if we dont even know the name, then dont decrypt for now
         if name is None:
             print(f"WARNING: skipping unknown char with uuid {msg['uuid']}")
-            put_to_output(msg, out_f)
+            put_to_output(msg, out_f, char)
             out_count += 1
             continue
 
         # it is not encrypted
         if not enc:
-            put_to_output(msg, out_f)
+            put_to_output(msg, out_f, char)
             out_count += 1
             continue
 
@@ -300,7 +334,7 @@ def main():
             decrypted_count += 1 
         
         # write it
-        put_to_output(msg, out_f)
+        put_to_output(msg, out_f, char)
         out_count += 1
 
     # housekeeping
