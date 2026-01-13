@@ -55,7 +55,7 @@ def parse_entry(line, lineno):
         "source": source,
         "dest": dest,
         "opcode": opcode,
-        "service_uuuid": serv_uuid,
+        "service_uuid": serv_uuid,
         "char_uuid": char_uuid,
         "data": bytes.fromhex(data),
     }
