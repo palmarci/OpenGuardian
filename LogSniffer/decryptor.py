@@ -174,21 +174,30 @@ def put_to_output(msg:dict, outfile, c:Characteristic) -> None:
         print(d + "\n")
     return
 
-def find_matching_uuid(s):
-    char:dict[Characteristic] = {}
-    for c in CHARS:
-        char[c.uuid] = c
 
-    # try to match 128bit with full path
-    t = char.get(s)
-    if t != None:
-        return t
-    
-    # if it is 16bit, then just search if its in one of them
+def find_matching_characteristic(uuid_chr, uuid_srv):
+    # build prefix string for matching (possible) 16-bit UUIDs against our
+    # database of full-length UUIDs
+    prefix_chr = "0000" + uuid_chr
+    prefix_srv = "0000" + uuid_srv
+
+    # find the characteristic with matching UUID and matching service UUID
+    # NOTE: It is crucial to match *both* UUIDs because some characteristics
+    # appear in multiple services and we need to know which one we are dealing
+    # with. Only skip matching of the service UUID if, for some reason, we were
+    # not given one.
     for c in CHARS:
-        if s in c.uuid:
-            return c
-    
+        if (uuid_chr == c.uuid) or c.uuid.startswith(prefix_chr):
+            # found a matching characteristic, now check its service
+
+            if uuid_srv == "None":
+                return c
+
+            if (uuid_srv == c.service.uuid) or c.service.uuid.startswith(prefix_srv):
+                return c
+
+    return None
+
 
 def main():
 
@@ -285,7 +294,7 @@ def main():
     for msg in data:
 
         # get uuid
-        char = find_matching_uuid(msg['char_uuid'])
+        char = find_matching_characteristic(msg['char_uuid'], msg['service_uuid'])
         #ret = char.get(msg["char_uuid"])
         if char is None:
             print(f"WARNING: {msg['char_uuid']} is not in the db yet!")
