@@ -287,3 +287,92 @@ Following is an annotated capture of the MMM requesting the high/low sensor gluc
 		550f .... ..  Opcode:  Response Code
 		.... 8e14 ..  Operand: Request Opcode: GET_HIGH_LOW_SG_SETTINGS
 		.... .... 0f  Operand: Response Code Value: Success
+
+
+## Reading history
+
+Similar to the _IDD Command_ interface, Medtronic's _Insulin Delivery Service_ defines two characteristics _Record Access Control Point_ (_RACP_) and _IDD History Data_ that also appear in the spec [IDS_v1.0.2] for this service (only difference being a dedicated _IDD RACP_ in the spec). They provide a means of accessing the pump's history database which stores _events_ such as sensor values and boluses. The app can retrieve the number of stored records as well as the actual records, including optional filtering such as "last record" or "all records within a given range of sequence numbers".
+
+The setup and workflow is analogous to that of the _IDD Command_ interface: The app sends requests through the _RACP_ and the pump sends the data by notifications of the _IDD History Data_. Since this reply can span multiple records, the pump _indicates_ the _RACP_ to confirm the end of execution.
+
+* _Record Access Control Point_
+	* app sends command to the pump
+	* pump sends back data in response (indications)
+	* also acts as indicator for "command execution finished"
+	* not encrypted (!)
+* _IDD History Data_
+	* pump sends back data in response (notifications)
+	* SAKE-encrypted
+
+See our [com matrix] for their respective UUID.
+
+
+### Format of History Data
+
+The structure of the _IDD History Data_ responses follows the spec [IDS_v1.0.2, sec. 4.9]:
+
+Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Event Type                  | Enum of u16  | 2             | None     | LSO...MSO
+Sequence Number             | u32          | 4             | None     | LSO...MSO
+Relative Offset             | u16          | 2             | seconds  | LSO...MSO
+Event Data                  | variable     | 0–10          | None     | LSO...MSO
+
+Medtronic defines a couple of custom event types in the spec's manufacturer-reserved range of event types. They also slightly modify existing event types defined in the spec:
+
+- Event type _Bolus Programmed Part 1 of 2_ uses 4-byte floats for fields _Programmed Bolus Fast Amount_ and _Programmed Bolus Extended Amount_ instead of 2-byte sfloats
+- Event type _Bolus Delivered Part 1 of 2_ uses 4-byte floats for fields _Delivered Bolus Fast Amount_ and _Delivered Bolus Extended Amount_ instead of 2-byte sfloats
+
+The _Event Data_ field for the custom Medtronic event types in responses to _Report Stored Records_ requests (opcode 0x33) is structured as follows:
+
+#### Auto Basal Delivery (event type 0xf001)
+
+Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Bolus Number                | u8           | 1             | None     | N/A
+Bolus Amount                | f32          | 4             | IU       | LSO...MSO
+
+#### CL1 Transition (event type 0xf002)
+
+#### Therapy Context (event type 0xf004)
+
+#### Meal (event type 0xf005)
+
+#### BG Reading (event type 0xf007)
+
+#### Calibration Complete (0xf008)
+
+#### Calibration Rejected (0xf009)
+
+#### Insulin Delivery Stopped (event type 0xf00a)
+
+#### Insulin Delivery Restarted (event type 0xf00b)
+
+#### SG Measurement (event type 0xf00c)
+
+Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Time Offset                 | u16          | 2             | ???      | LSO...MSO
+SG Value                    | u16          | 2             | mg/dL    | LSO...MSO
+ISIG                        | u16          | 2             | ???      | LSO...MSO
+V Counter                   | u16          | 2             | ???      | LSO...MSO
+
+NOTE: The unit of the _SG Value_ field may depend on the value of the bit _Glucose Unit mg/dL Used_ in the data read from the _IDD Feature_ characteristic.
+
+NOTE: The _ISIG_ field probably encodes the raw glucose sensor values. Older pumps such as the 640G, together with a _Guardian 2 Link_, exposed an "ISIG value" to the user. Calibrating the sensor would compute a scaling factor that translated the raw ISIG value into a blood glucose value in mg/dL. The 780G does not show the ISIG value to the user anymore.
+
+#### CGM Analytics Data Backfill (event type 0xf00d)
+
+Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Time Offset                 | u16          | 2             | ???      | LSO...MSO
+PSGV                        | sfloat       | 2             | ???      | LSO...MSO
+Cal Factor                  | u16          | 2             | ???      | LSO...MSO
+
+#### NGP Reference Time (event type 0xf00e)
+
+#### Annunciation Cleared (event type 0xf00f)
+
+#### Annunciation Consolidated (event type 0xf010)
+
+#### Max Auto Basal Rate Changed (event type 0xf01a)
