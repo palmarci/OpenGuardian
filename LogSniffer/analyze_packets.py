@@ -5,6 +5,7 @@
 
 import argparse
 import struct
+from datetime import datetime
 
 import os
 import sys
@@ -17,6 +18,8 @@ class EventType:
     BOLUS_PROGRAMMED_P2              = 0x0066
     BOLUS_DELIVERED_P1               = 0x0069
     BOLUS_DELIVERED_P2               = 0x0096
+    DELIVERED_BASAL_RATE_CHANGED     = 0x0099
+    MAX_BOLUS_AMOUNT_CHANGED         = 0x03fc
     # custom Medtronic types:
     AUTO_BASAL_DELIVERY_EVENT        = 0xF001
     CL1_TRANSITION_EVENT             = 0xF002
@@ -139,6 +142,46 @@ class BolusDeliveredP2:
         return c
 
 
+class DeliveredBasalRateChanged:
+    type_label = "Delivered Basal Rate Changed"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            # TODO: print decoded flags
+            (1, "Flags"),
+            (4, "Old Basal Rate", "f32"),
+            (4, "New Basal Rate", "f32"),
+        ])
+
+        # parse remaining data depending on flags
+        flags = c["Flags"]["value"]
+        c_def = []
+        if flags & 0x01:  # Basal Delivery Context Present
+            c_def.append((1, "Basal Delivery Context"))
+
+        if c_def:
+            cc, data = get_components(data, c_def, len(c))
+            # append new components
+            c = {**c, **cc}
+
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class MaxBolusAmountChangedData:
+    type_label = "Max Bolus Amount Changed Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (4, "Old Amount", "f32"),
+            (4, "New Amount", "f32"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
 class MicroBolusData:
     type_label = "Micro Bolus Data"
 
@@ -146,6 +189,98 @@ class MicroBolusData:
         c, data = get_components(data, [
             (1, "Bolus Number"),
             (4, "Bolus Amount", "f32"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class TherapyContextData:
+    type_label = "Therapy Context Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            # TODO: print decoded flags
+            (1, "Flags"),
+        ])
+
+        # parse remaining data depending on flags
+        flags = c["Flags"]["value"]
+        c_def = []
+        if flags & 0x02:  # Basal Rate active
+            c_def.append((4, "Basal Rate", "f32"))
+        if flags & 0x08:  # Insulin Delivery Stopped
+            c_def.append((1, "Insulin Delivery Stopped Reason"))
+        if flags & 0x10:  # TBR Active
+            c_def.append((1, "TBR Type"))
+            c_def.append((4, "TBR Adjustment", "f32"))
+
+        if c_def:
+            cc, data = get_components(data, c_def, len(c))
+            # append new components
+            c = {**c, **cc}
+
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class MealData:
+    type_label = "Meal Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (2, "Food Amount", "f16"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class BgReadingData:
+    type_label = "BG Reading Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (2, "Time Offset"),
+            (2, "BG Value", "f16"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class CalibrationEventData:
+    type_label = "Calibration Event Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (2, "Time Offset"),
+            (2, "BG Measurement", "f16"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class InsulinDeliveryStoppedData:
+    type_label = "Insulin Delivery Stopped Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (1, "Insulin Delivery Stopped Reason"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class InsulinDeliveryRestartedData:
+    type_label = "Insulin Delivery Restarted Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (1, "Insulin Delivery Restarted Reason"),
         ])
         assert len(data) == 0, \
             "Expected handler to consume all of the data"
@@ -181,14 +316,65 @@ class CGMAnalyticsData:
         return c
 
 
+class NgpReferenceTimeData:
+    type_label = "NGP Reference Time Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (1, "Recording Reason"),
+            (7, "Date Time", "datetime"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class AnnunciationClearedData:
+    type_label = "Annunciation Cleared Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (2, "Fault ID"),
+            (2, "Instance ID"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
+class MaxAutoBasalRateChangedData:
+    type_label = "Max Auto Basal Rate Changed Data"
+
+    def parse(self, data):
+        c, data = get_components(data, [
+            (4, "Old Rate", "f32"),
+            (4, "New Rate", "f32"),
+        ])
+        assert len(data) == 0, \
+            "Expected handler to consume all of the data"
+        return c
+
+
 event_type_handlers = {
-    EventType.BOLUS_PROGRAMMED_P1:         BolusProgrammedP1,
-    EventType.BOLUS_PROGRAMMED_P2:         BolusProgrammedP2,
-    EventType.BOLUS_DELIVERED_P1:          BolusDeliveredP1,
-    EventType.BOLUS_DELIVERED_P2:          BolusDeliveredP2,
-    EventType.AUTO_BASAL_DELIVERY_EVENT:   MicroBolusData,
-    EventType.SG_MEASUREMENT:              SGMeasurementData,
-    EventType.CGM_ANALYTICS_DATA_BACKFILL: CGMAnalyticsData,
+    EventType.BOLUS_PROGRAMMED_P1:              BolusProgrammedP1,
+    EventType.BOLUS_PROGRAMMED_P2:              BolusProgrammedP2,
+    EventType.BOLUS_DELIVERED_P1:               BolusDeliveredP1,
+    EventType.BOLUS_DELIVERED_P2:               BolusDeliveredP2,
+    EventType.DELIVERED_BASAL_RATE_CHANGED:     DeliveredBasalRateChanged,
+    EventType.MAX_BOLUS_AMOUNT_CHANGED:         MaxBolusAmountChangedData,
+    EventType.AUTO_BASAL_DELIVERY_EVENT:        MicroBolusData,
+    EventType.THERAPY_CONTEXT_EVENT:            TherapyContextData,
+    EventType.MEAL:                             MealData,
+    EventType.BG_READING:                       BgReadingData,
+    EventType.CALIBRATION_COMPLETE:             CalibrationEventData,
+    EventType.CALIBRATION_REJECTED:             CalibrationEventData,
+    EventType.INSULIN_DELIVERY_STOPPED_EVENT:   InsulinDeliveryStoppedData,
+    EventType.INSULIN_DELIVERY_RESTARTED_EVENT: InsulinDeliveryRestartedData,
+    EventType.SG_MEASUREMENT:                   SGMeasurementData,
+    EventType.CGM_ANALYTICS_DATA_BACKFILL:      CGMAnalyticsData,
+    EventType.NGP_REFERENCE_TIME:               NgpReferenceTimeData,
+    EventType.ANNUNCIATION_CLEARED_EVENT:       AnnunciationClearedData,
+    EventType.MAX_AUTO_BASAL_RATE_CHANGED:      MaxAutoBasalRateChangedData,
 }
 
 
@@ -212,6 +398,14 @@ def as_f32(value):
     return m * 10**e
 
 
+def as_datetime(data):
+    assert len(data) == 7, \
+        "Expected date time to by exactly 7 bytes"
+    return datetime(
+        int.from_bytes(data[0:2], "little"), data[2], data[3],
+        data[4], data[5], data[6]
+    )
+
 def get_components(data, components, first_index=0):
     out = {}
     for i, c in enumerate(components):
@@ -227,6 +421,8 @@ def get_components(data, components, first_index=0):
                     value = as_f16(value)
                 elif ctype == "f32":
                     value = as_f32(value)
+                elif ctype == "datetime":
+                    value = as_datetime(data[0:size])
 
         out[name] = {
             "index": first_index + i,
