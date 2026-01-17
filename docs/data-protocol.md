@@ -16,15 +16,15 @@ The Bluetooth SIG actually specifies an official _Insulin Delivery Profile_ (IDP
 * _Insulin Delivery Sensor_ (in our case: the pump, an _Insulin Delivery Device_ (IDD))
 * _Collector_ (in our case: the MiniMed Mobile app)
 
-The _Insulin Delivery Sensor_ provides, among other services, the _Insulin Delivery Service_ (IDS, UUID 0x183A) and associated characteristics. Through them, a device can "control the IDD" and "obtain its status and historical therapy data" [IDP_v1.0.2].
+The _Insulin Delivery Sensor_ provides, among other services, the _Insulin Delivery Service_ (IDS, UUID 0x183A) and associated characteristics. Through them, a device can "control the IDD" and "obtain its status and historical therapy data" [[IDP]](#ref-idp).
 
 For simplicity, we will mostly refer to _pump_ and _app_ instead of _Insulin Delivery Sensor_ and _Collector_ in this documentation.
 
 The pump in question provides an _Insulin Delivery Service_, but its UUID is 00000100-0000-1000-0000-009132591325. This is a Medtronic custom GATT service nearly all of whose characteristics are SAKE-encoded.
 
-Judging by their names, Medtronic's version of the IDS is actually comprised of the same characteristics as the one specified, only with Medtronic's own UUIDs; with the exception of the _IDD Record Access Control Point_ (UUID 0x2B27) which is replaced by the _Record Access Control Point_ (UUID 0x2A52). So it seems save to assume that this service is an implementation of the IDS specified in [IDS_v1.0.2]; maybe only with some non-standard extensions (such as the SAKE encryption).
+Judging by their names, Medtronic's version of the IDS is actually comprised of the same characteristics as the one specified, only with Medtronic's own UUIDs; with the exception of the _IDD Record Access Control Point_ (UUID 0x2B27) which is replaced by the _Record Access Control Point_ (UUID 0x2A52). So it seems save to assume that this service is an implementation of the IDS specified in [[IDS]](#ref-ids); maybe only with some non-standard extensions (such as the SAKE encryption).
 
-The spec also mentions an optional _E2E-Protection_ (End-to-End) of the data, without going into much detail about it. It does, however, sound very different from Medtronic's custom SAKE encryption, and our pump's features indeed confirm that _E2E-Protection_ is _not_ enabled (see section below).
+The spec also mentions an optional _E2E-Protection_ (End-to-End) of the data, without going into much detail about it. It does, however, sound very different from Medtronic's custom SAKE encryption, and our pump's features indeed confirm that _E2E-Protection_ is _not_ enabled (see [section below](#reading-pump-features)).
 
 
 ## Data types
@@ -48,7 +48,7 @@ So, for example:
 
 ## Reading pump features
 
-The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
+The spec for the _Insulin Delivery Service_ [[IDS]](#ref-ids) defines a characteristic _IDD Feature_ which can be read to determine the supported features of the pump. Medtronic SAKE-encrypts the returned data. See our [ComMatrix] for the characteristic's UUID.
 
 For our particular pump the following data was read: `ffff006400fede801f` which decodes to the following:
 
@@ -94,9 +94,9 @@ The extended feature flags are likely vendor-specific and the less cryptic ones 
 
 ## Reading status changes
 
-The spec for the _Insulin Delivery Service_ [IDS_v1.0.2] defines a characteristic _IDD Status Changed_ which can be read to determine various status changes of the pump.The app can also configure this characteristic for indications to automatically receive the status changes when they happen.
+The spec for the _Insulin Delivery Service_ [[IDS]](#ref-ids) defines a characteristic _IDD Status Changed_ which can be read to determine various status changes of the pump.The app can also configure this characteristic for indications to automatically receive the status changes when they happen.
 
-Medtronic SAKE-encrypts the returned data. See our [com matrix] for the characteristic's UUID.
+Medtronic SAKE-encrypts the returned data. See our [[ComMatrix]](#ref-com-matrix) for the characteristic's UUID.
 
 The specified characteristic value consists of a single 16-bit flags field. Medtronic extends this to up to 48 bits in their version. They also populate some of the reserved bits with their custom ones. The extension mechanism is very similar to the one in _IDD Feature_: If the highest bit in the current block is _set_, another block of 16 bits is appended, thus extending the flags.
 
@@ -143,7 +143,7 @@ Bit   | Definition                               | Description
 
 ## Sending commands to the pump
 
-The spec for the _Insulin Delivery Service_ defines the characteristic _IDD Command Control Point_ for "adapting therapy parameters to enable the remote operation of the insulin therapy as well as the remote operation for device maintenance" [IDS_v1.0.2]. Together with a second characteristic _IDD Command Data_ it implements a simple "command in, data out" interface:
+The spec for the _Insulin Delivery Service_ defines the characteristic _IDD Command Control Point_ for "adapting therapy parameters to enable the remote operation of the insulin therapy as well as the remote operation for device maintenance" [[IDS]](#ref-ids). Together with a second characteristic _IDD Command Data_ it implements a simple "command in, data out" interface:
 
 * _IDD Command Control Point_
 	* app sends command to the pump
@@ -154,9 +154,9 @@ The spec for the _Insulin Delivery Service_ defines the characteristic _IDD Comm
 	* pump sends back data in response (notifications)
 	* SAKE-encrypted
 
-See our [com matrix] for their respective UUID.
+See our [[ComMatrix]](#ref-com-matrix) for their respective UUID.
 
-The app (the client) writes commands to the _Command Control Point_ and receives a response from the pump (the server) either via _Command Control Point_ or _Command Data_. Commands include things like "set a bolus" or "get the basal rate profile template" [IDS_v1.0.2, sec. 4.6.1].
+The app (the client) writes commands to the _Command Control Point_ and receives a response from the pump (the server) either via _Command Control Point_ or _Command Data_. Commands include things like "set a bolus" or "get the basal rate profile template" [[IDS, sec. 4.6.1]](#ref-ids).
 
 The type of command is encoded in its _opcode_. The client may send multiple commands without waiting for a response. Responses from the server also include an opcode which references the command's opcode. This allows the client to map responses to the original command.
 
@@ -291,7 +291,7 @@ Following is an annotated capture of the MMM requesting the high/low sensor gluc
 
 ## Reading history
 
-Similar to the _IDD Command_ interface, Medtronic's _Insulin Delivery Service_ defines two characteristics _Record Access Control Point_ (_RACP_) and _IDD History Data_ that also appear in the spec [IDS_v1.0.2] for this service (only difference being a dedicated _IDD RACP_ in the spec). They provide a means of accessing the pump's history database which stores _events_ such as sensor values and boluses. The app can retrieve the number of stored records as well as the actual records, including optional filtering such as "last record" or "all records within a given range of sequence numbers".
+Similar to the _IDD Command_ interface, Medtronic's _Insulin Delivery Service_ defines two characteristics _Record Access Control Point_ (_RACP_) and _IDD History Data_ that also appear in the spec [[IDS]](#ref-ids) for this service (only difference being a dedicated _IDD RACP_ in the spec). They provide a means of accessing the pump's history database which stores _events_ such as sensor values and boluses. The app can retrieve the number of stored records as well as the actual records, including optional filtering such as "last record" or "all records within a given range of sequence numbers".
 
 The setup and workflow is analogous to that of the _IDD Command_ interface: The app sends requests through the _RACP_ and the pump sends the data by notifications of the _IDD History Data_. Since this reply can span multiple records, the pump _indicates_ the _RACP_ to confirm the end of execution.
 
@@ -304,12 +304,12 @@ The setup and workflow is analogous to that of the _IDD Command_ interface: The 
 	* pump sends back data in response (notifications)
 	* SAKE-encrypted
 
-See our [com matrix] for their respective UUID.
+See our [[ComMatrix]](#ref-com-matrix) for their respective UUID.
 
 
 ### Format of History Data
 
-The structure of the _IDD History Data_ responses follows the spec [IDS_v1.0.2, sec. 4.9]:
+The structure of the _IDD History Data_ responses follows the spec [[IDS, sec. 4.9]](#ref-ids):
 
 Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
 ----------------------------|--------------|---------------|----------|-----------
@@ -388,7 +388,7 @@ Value | Description
 0x05  | Not Seated
 0x0a  | PLGM On Low SG Suspended
 
-The values for field _TBR Type_ are as defined in [IDS_v1.0.2, sec. 4.5.2.8.2]:
+The values for field _TBR Type_ are as defined in [[IDS, sec. 4.5.2.8.2]](#ref-ids):
 
 Value | Description
 ------|--------------
@@ -440,7 +440,7 @@ Field Name                      | Data Type    | Size (octets) | Unit     | Byte
 --------------------------------|--------------|---------------|----------|-----------
 Insulin Delivery Stopped Reason | Enum of u8   | 1             | None     | N/A
 
-See section _Therapy Context (event type 0xf004)_ for a definition of values for this field.
+See section [Therapy Context (event type 0xf004)](#therapy-context-event-type-0xf004) for a definition of values for this field.
 
 
 #### Insulin Delivery Restarted (event type 0xf00b)
@@ -491,11 +491,11 @@ Field Name                  | Data Type    | Size (octets) | Unit     | Byte Ord
 Recording Reason            | Enum of u8   | 1             | None     | N/A
 Date Time                   | see note     | 7             | see note | see note
 
-This is a stripped-down version of the _Reference Time_ defined in [IDS_v1.0.2, sec. 4.9.4.1], without time zone and DST offset.
+This is a stripped-down version of the _Reference Time_ defined in [[IDS, sec. 4.9.4.1]](#ref-ids), without time zone and DST offset.
 
 All other event types reference this absolute time stamp by their _Relative Offset_ field.
 
-NOTE: See [GSS_2025-12-23, sec. 3.79] for the definition of this type.
+NOTE: See [[GSS, sec. 3.79]](#ref-gss) for the definition of this type.
 
 
 #### Annunciation Cleared (event type 0xf00f)
@@ -515,3 +515,23 @@ Field Name              | Data Type    | Size (octets) | Unit     | Byte Order
 ------------------------|--------------|---------------|----------|-----------
 Old Rate                | f32          | 4             | IU/h (?) | LSO...MSO
 New Rate                | f32          | 4             | IU/h (?) | LSO...MSO
+
+
+
+## References
+
+<a id="ref-com-matrix"></a>
+**[ComMatrix]**
+[insulin_delivery.csv](../data/com_matrix/insulin_delivery.csv) in this repository
+
+<a id="ref-gss"></a>
+**[GSS]**
+[GATT Specification Supplement (GSS)](specs/GATT_Specification_Supplement.pdf), Bluetooth® Document, 2025-12-23
+
+<a id="ref-idp"></a>
+**[IDP]**
+[Insulin Delivery Profile](specs/IDP_v1.0.2.pdf), Bluetooth® Profile Specification, v1.0.2
+
+<a id="ref-ids"></a>
+**[IDS]**
+[Insulin Delivery Service](specs/IDS_v1.0.2-1.pdf), Bluetooth® Service Specification, v1.0.2
