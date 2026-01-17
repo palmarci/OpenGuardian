@@ -311,7 +311,7 @@ See our [com matrix] for their respective UUID.
 
 The structure of the _IDD History Data_ responses follows the spec [IDS_v1.0.2, sec. 4.9]:
 
-Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
 ----------------------------|--------------|---------------|----------|-----------
 Event Type                  | Enum of u16  | 2             | None     | LSO...MSO
 Sequence Number             | u32          | 4             | None     | LSO...MSO
@@ -322,35 +322,146 @@ Medtronic defines a couple of custom event types in the spec's manufacturer-rese
 
 - Event type _Bolus Programmed Part 1 of 2_ uses 4-byte floats for fields _Programmed Bolus Fast Amount_ and _Programmed Bolus Extended Amount_ instead of 2-byte sfloats
 - Event type _Bolus Delivered Part 1 of 2_ uses 4-byte floats for fields _Delivered Bolus Fast Amount_ and _Delivered Bolus Extended Amount_ instead of 2-byte sfloats
+- Event type _Delivered Basal Rate Changed_ uses 4-byte floats for fields _Old Basal Rate Value_ and _New Basal Rate Value_ instead of 2-byte sfloats
+- Event type _Max Bolus Amount Changed_ uses 4-byte floats for fields _Old Max Bolus Amount_ and _New Max Bolus Amount_ instead of 2-byte sfloats
 
 The _Event Data_ field for the custom Medtronic event types in responses to _Report Stored Records_ requests (opcode 0x33) is structured as follows:
 
+
 #### Auto Basal Delivery (event type 0xf001)
 
-Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
 ----------------------------|--------------|---------------|----------|-----------
 Bolus Number                | u8           | 1             | None     | N/A
 Bolus Amount                | f32          | 4             | IU       | LSO...MSO
 
+
 #### CL1 Transition (event type 0xf002)
+
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Transition State            | Enum of u8   | 1             | None     | N/A
+
+The following values are defined for field _Transition State_:
+
+Value | Description
+------|-----------------
+0x00  | Into SI Pass
+0x01  | Out User Override
+0x02  | Out Alarm
+0x03  | Out Timeout Safe Basal
+0x04  | Out High SG
+
 
 #### Therapy Context (event type 0xf004)
 
+Field Name                      | Data Type    | Size (octets) | Unit     | Byte Order
+--------------------------------|--------------|---------------|----------|-----------
+Flags                           | 8 bit        | 1             | None     | N/A
+Basal Rate                      | f32          | 4             | IU/h (?) | LSO...MSO
+Insulin Delivery Stopped Reason | Enum of u8   | 1             | None     | N/A
+TBR Type                        | Enum of u8   | 1             | None     | N/A
+TBR Adjustment                  | f32          | 4             | IU/h (?) | LSO...MSO
+
+NOTE: TBR stands for "temporary basal rate".
+
+Bits in the _Flags_ field are defined as follows:
+
+Bit | Definition               | Description
+----|--------------------------|-------------
+0   | Sensor Enabled           |
+1   | Basal Rate Active        | If this bit is set, field _Basal Rate_ is present
+2   | Auto Mode Active         |
+3   | Insulin Delivery Stopped | If this bit is set, field _Insulin Delivery Stopped Reason_ is present
+4   | TBR Active               | If this bit is set, fields _TBR Type_ and _TBR Adjustment_ are present
+
+The following values are defined for field _Insulin Delivery Stopped Reason_:
+
+Value | Description
+------|-----------------
+0x01  | Alarm Suspended
+0x02  | User Suspended
+0x03  | Auto Suspended
+0x04  | Low SG Suspended
+0x05  | Not Seated
+0x0a  | PLGM On Low SG Suspended
+
+The values for field _TBR Type_ are as defined in [IDS_v1.0.2, sec. 4.5.2.8.2]:
+
+Value | Description
+------|--------------
+0x0f  | Undetermined
+0x33  | Absolute
+0x3c  | Relative
+
+
 #### Meal (event type 0xf005)
+
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Food Amount                 | sfloat       | 2             | g (?)    | LSO...MSO
+
 
 #### BG Reading (event type 0xf007)
 
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Time Offset                 | u16          | 2             | ???      | LSO...MSO
+BG Value                    | sfloat       | 2             | kg/L     | LSO...MSO
+
+NOTE: Convert the value in field _BG Value_ to the more common unit mg/dL by multiplying with 10⁵.
+
+
 #### Calibration Complete (0xf008)
+
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Time Offset                 | u16          | 2             | ???      | LSO...MSO
+BG Measurement              | sfloat       | 2             | kg/L     | LSO...MSO
+
+NOTE: Convert the value in field _BG Measurement_ to the more common unit mg/dL by multiplying with 10⁵.
+
 
 #### Calibration Rejected (0xf009)
 
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Time Offset                 | u16          | 2             | ???      | LSO...MSO
+BG Measurement              | sfloat       | 2             | kg/L     | LSO...MSO
+
+NOTE: Convert the value in field _BG Measurement_ to the more common unit mg/dL by multiplying with 10⁵.
+
+
 #### Insulin Delivery Stopped (event type 0xf00a)
+
+Field Name                      | Data Type    | Size (octets) | Unit     | Byte Order
+--------------------------------|--------------|---------------|----------|-----------
+Insulin Delivery Stopped Reason | Enum of u8   | 1             | None     | N/A
+
+See section _Therapy Context (event type 0xf004)_ for a definition of values for this field.
+
 
 #### Insulin Delivery Restarted (event type 0xf00b)
 
+Field Name                        | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------------|--------------|---------------|----------|-----------
+Insulin Delivery Restarted Reason | Enum of u8   | 1             | None     | N/A
+
+The following values are defined for field _Insulin Delivery Restarted Reason_:
+
+Value | Description
+------|-----------------
+0x01  | User Selects Resume
+0x02  | User Clears Alarm
+0x03  | LGM Manual Resume
+0x04  | LGM Auto Resume Due Max Suspended Time
+0x05  | LGM Auto Resume Du PSG And SG
+0x06  | LGM Manual Resume Via Disable
+
+
 #### SG Measurement (event type 0xf00c)
 
-Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
 ----------------------------|--------------|---------------|----------|-----------
 Time Offset                 | u16          | 2             | ???      | LSO...MSO
 SG Value                    | u16          | 2             | mg/dL    | LSO...MSO
@@ -361,18 +472,44 @@ NOTE: The unit of the _SG Value_ field may depend on the value of the bit _Gluco
 
 NOTE: The _ISIG_ field probably encodes the raw glucose sensor values. Older pumps such as the 640G, together with a _Guardian 2 Link_, exposed an "ISIG value" to the user. Calibrating the sensor would compute a scaling factor that translated the raw ISIG value into a blood glucose value in mg/dL. The 780G does not show the ISIG value to the user anymore.
 
+
 #### CGM Analytics Data Backfill (event type 0xf00d)
 
-Field Name                  |  Data Type   | Size (octets) | Unit     | Byte Order
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
 ----------------------------|--------------|---------------|----------|-----------
 Time Offset                 | u16          | 2             | ???      | LSO...MSO
 PSGV                        | sfloat       | 2             | ???      | LSO...MSO
 Cal Factor                  | u16          | 2             | ???      | LSO...MSO
 
+
 #### NGP Reference Time (event type 0xf00e)
+
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Recording Reason            | Enum of u8   | 1             | None     | N/A
+Date Time                   | see note     | 7             | see note | see note
+
+This is a stripped-down version of the _Reference Time_ defined in [IDS_v1.0.2, sec. 4.9.4.1], without time zone and DST offset.
+
+All other event types reference this absolute time stamp by their _Relative Offset_ field.
+
+NOTE: See [GSS_2025-12-23, sec. 3.79] for the definition of this type.
+
 
 #### Annunciation Cleared (event type 0xf00f)
 
+Field Name                  | Data Type    | Size (octets) | Unit     | Byte Order
+----------------------------|--------------|---------------|----------|-----------
+Fault ID                    | u16          | 2             | None     | LSO...MSO
+Instance ID                 | u16          | 2             | None     | LSO...MSO
+
+
 #### Annunciation Consolidated (event type 0xf010)
 
+
 #### Max Auto Basal Rate Changed (event type 0xf01a)
+
+Field Name              | Data Type    | Size (octets) | Unit     | Byte Order
+------------------------|--------------|---------------|----------|-----------
+Old Rate                | f32          | 4             | IU/h (?) | LSO...MSO
+New Rate                | f32          | 4             | IU/h (?) | LSO...MSO
