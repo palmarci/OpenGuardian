@@ -42,7 +42,7 @@ where `m` is the mantissa and `e` is the exponent. Both are encoded in 2's compl
 
 So, for example:
 
-	0xf90f     =    1777 × 10^-1 = -177.7
+	0xf90f     =   -1777 × 10^-1 = -177.7
 	0xf82625a0 = 2500000 × 10^-8 =    0.025
 
 
