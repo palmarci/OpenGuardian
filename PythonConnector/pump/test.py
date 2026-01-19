@@ -3,12 +3,15 @@ from bluezero import peripheral, adapter, advertisement
 from bluezero.broadcaster import Beacon
 from gi.repository import GLib
 import json
+import os
 import random
 import time
 import sys
 from time import sleep
 
-from PythonConnector.pump.advertise import advertise
+script_dir = os.path.realpath(os.path.dirname(__file__))
+sys.path.append(os.path.join(script_dir, "../PythonConnector"))
+from advertise import advertise
 from threading import Thread
 
 # NOTE: does not seem to work, since bluez rejects MITM = 1 flag when no input no output io capabilities is presented!
@@ -42,7 +45,7 @@ def gen_mobile_name():
         if num % 2 == 1:
             return f"Mobile {num}"
 
-mobile_name = gen_mobile_name()
+mobile_name = "Mobile 000001"
 print(f"using mobile name {mobile_name}")
 
 # ---------------- BLE Callbacks ----------------
@@ -54,43 +57,19 @@ def on_connect(dev):
 def on_disconnect(adapter_addr, device_addr):
     print("Disconnected:", device_addr)
 
+def read_callback():
+    print("!!! READ")
+    return [42,]
+
 def notify_callback(notifying, char):
+    print("!!! NOTIFY")
     print("Notifications:", "enabled" if notifying else "disabled")
 
 def write_callback(value, options):
     global buffer, characteristic
 
-    print("WRITE:", value)
+    print("!!! WRITE", value)
 
-    #if value != EOM:
-    #    buffer.extend(value)
-    #    return
-
-    # EOM received
-    try:
-        data = json.loads(buffer.decode())
-        buffer.clear()
-
-        provider_url = data["provider_url"]
-        device_name = data.get("device_name", "Unknown")
-
-        print("Auth request from:", device_name)
-        print("Provider URL:", provider_url)
-
-        # ---- CONSENT / AUTH LOGIC ----
-        approved = True
-
-        if approved:
-            characteristic.set_value(b"0")  # SUCCESS
-        else:
-            characteristic.set_value(b"1")  # CANCEL
-
-        characteristic.notify()
-
-    except Exception as e:
-        print("Error:", e)
-        #characteristic.set_value(str(e).encode())
-        #characteristic.notify()
 
 # ---------------- BLE Adapter ----------------
 adapter_addr = list(adapter.Adapter.available())[0].address
@@ -118,22 +97,132 @@ ble = peripheral.Peripheral(
     #bondable=True,
 )
 
+
+###############################
+### App Information service ###
+###############################
+
 ble.add_service(
     srv_id=1,
-    uuid=SERVICE_UUID,
+    uuid="00000900-0000-1000-0000-009132591325",
     primary=True
 )
 
+# MANUFACTURER_NAME_STRING_CHAR
 ble.add_characteristic(
     srv_id=1,
     chr_id=1,
-    uuid=CHAR_UUID,
+    uuid="00002A29-0000-1000-0000-00805F9B34FB",
     value=[],
     notifying=False,
-    flags=['write', 'notify'],
-    write_callback=write_callback,
-    notify_callback=notify_callback
+    flags=["read"],
+    read_callback=read_callback,
 )
+# MODEL_NUMBER_STRING_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=2,
+    uuid="00002A24-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# SERIAL_NUMBER_STRING_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=3,
+    uuid="00002A25-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# HARDWARE_REVISION_STRING_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=4,
+    uuid="00002A27-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# FIRMWARE_REVISION_STRING_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=5,
+    uuid="00002A26-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# SOFTWARE_REVISION_STRING_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=6,
+    uuid="00002A28-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# SYSTEM_ID_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=7,
+    uuid="00002A23-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# PNP_ID_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=8,
+    uuid="00002A50-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+# CERTIFICATION_DATA_LIST_CHAR
+ble.add_characteristic(
+    srv_id=1,
+    chr_id=9,
+    uuid="00002A2A-0000-1000-0000-00805F9B34FB",
+    value=[],
+    notifying=False,
+    flags=["read"],
+    read_callback=read_callback,
+)
+
+
+#########################
+### Medtronic service ###
+#########################
+
+ble.add_service(
+    srv_id=2,
+    uuid="0000FE82-0000-1000-8000-00805F9B34FB",
+    #uuid="FE82"
+    primary=True,
+)
+
+ble.add_characteristic(
+    srv_id=2,
+    chr_id=10,
+    uuid="0000FE82-0000-1000-8000-009132591325",
+    value=[],
+    notifying=False,
+    flags=["read", "notify"],
+    read_callback=read_callback,
+    notify_callback=notify_callback,
+)
+
+
 
 # Save characteristic object for later use
 #characteristic = ble.services[0].characteristics[0]
