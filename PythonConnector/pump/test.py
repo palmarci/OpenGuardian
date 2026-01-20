@@ -1,149 +1,108 @@
 #!/usr/bin/env python3
+
 from bluezero import peripheral, adapter, advertisement
 from bluezero.broadcaster import Beacon
-from gi.repository import GLib
-import json
-import random
-import time
-import sys
-from time import sleep
-
-from PythonConnector.pump.advertise import advertise
 from threading import Thread
 
-# NOTE: does not seem to work, since bluez rejects MITM = 1 flag when no input no output io capabilities is presented!
-# avertise.py contains a hacky advertisement method, since dbus does not allow type flag to be set ?
+from utils import *
 
+STARTUP_COMMANDS = [
+    "sudo btmgmt power off",
+    "sudo btmgmt bredr off",
+    "sudo btmgmt le on",
+    "sudo btmgmt io-cap 3",
+    "sudo btmgmt power on"
+]
 
-# sudo btmgmt power off
-# sudo btmgmt bredr off
-# sudo btmgmt le on
-# sudo btmgmt io-cap 4
-# sudo btmgmt power on
-
-connected = False
+CONNECTED = False
+MOBILE_NAME = None
+BLE = None
+SAKE_CHAR = None
 
 def adv_thread():
-    while not connected:
-        advertise(mobile_name)
-
-# ---------------- BLE Peripheral Settings ----------------
-SERVICE_UUID = "980c2f36-bde3-11e4-8dfc-aa07a5b093db" # extracted from SSO config (see carelink api repo)
-CHAR_UUID    = "980c34cc-bde3-11e4-8dfc-aa07a5b093db"
-EOM = b"EOM" # hardcoded in minimedmobile apk
-buffer = bytearray()
-characteristic = None
-loop = GLib.MainLoop()
-
-# ---------------- Utility Functions ----------------
-def gen_mobile_name():
+    print("\n"*3)
+    print("-"*10 + " starting advertisement!" + "-"*10)
+    print(" "*10 + "(ignore error 0x0d)")
     while True:
-        num = random.randint(100000, 999999)
-        if num % 2 == 1:
-            return f"Mobile {num}"
+        if not CONNECTED:
+            advertise(MOBILE_NAME)
+        sleep(0.1)
 
-mobile_name = gen_mobile_name()
-print(f"using mobile name {mobile_name}")
+def send_sake_notif():
+    zero = list(bytes.fromhex("00"*20))
+    SAKE_CHAR.set_value(zero)
+    print("sake char set value called!")
 
-# ---------------- BLE Callbacks ----------------
 def on_connect(dev):
-    global connected
-    connected = True
-    print("Connected:", dev.address)
+    global CONNECTED
+    CONNECTED = True
+    print(f"Connected: {dev.address}, waiting before sake notification...")
+    sleep(3)
+    send_sake_notif()
 
 def on_disconnect(adapter_addr, device_addr):
-    print("Disconnected:", device_addr)
+    global CONNECTED
+    CONNECTED = False
+    print(f"Disconnected {device_addr}, going back to advertising!")
+    forget_pump_devices()
+
+def read_callback():
+    print("!!! READ")
+    return [42,]
 
 def notify_callback(notifying, char):
+    print("!!! NOTIFY")
     print("Notifications:", "enabled" if notifying else "disabled")
 
 def write_callback(value, options):
     global buffer, characteristic
-
-    print("WRITE:", value)
-
-    #if value != EOM:
-    #    buffer.extend(value)
-    #    return
-
-    # EOM received
-    try:
-        data = json.loads(buffer.decode())
-        buffer.clear()
-
-        provider_url = data["provider_url"]
-        device_name = data.get("device_name", "Unknown")
-
-        print("Auth request from:", device_name)
-        print("Provider URL:", provider_url)
-
-        # ---- CONSENT / AUTH LOGIC ----
-        approved = True
-
-        if approved:
-            characteristic.set_value(b"0")  # SUCCESS
-        else:
-            characteristic.set_value(b"1")  # CANCEL
-
-        characteristic.notify()
-
-    except Exception as e:
-        print("Error:", e)
-        #characteristic.set_value(str(e).encode())
-        #characteristic.notify()
-
-# ---------------- BLE Adapter ----------------
-adapter_addr = list(adapter.Adapter.available())[0].address
-print(f"Using adapter: {adapter_addr}")
-
-# ---------------- BLE Advertisement ----------------
-
-#while True:
+    print("!!! WRITE", value)
 
 
+def main():
+    global MOBILE_NAME, BLE, SAKE_CHAR
 
-# ---------------- BLE Peripheral ----------------
-ble = peripheral.Peripheral(
-    adapter_address=adapter_addr,
-    local_name=mobile_name,
+    MOBILE_NAME = gen_mobile_name()
+    print(f"using name: {MOBILE_NAME}")
+
+    print("\n\n")
+    for i in range(5):
+        print("ALWAYS ACCEPT THE PAIRING IF YOUR DESKTOP ENVIRONMENT SHOWS IT UP!")
+    print("\n\n")
+
+    forget_pump_devices()
+
+    batch_exec(STARTUP_COMMANDS)    # configure the BT adapter
+
+    adapter_addr = list(adapter.Adapter.available())[0].address
+    print(f"using adapter: {adapter_addr}")
+
+    BLE = peripheral.Peripheral(
+        adapter_address=adapter_addr,
+        local_name=MOBILE_NAME
+    )
+
+    sake_srv_id, sake_char_id = add_chars_and_services(BLE, read_callback, notify_callback)
+    print(f"set up {len(BLE.services)} services and {len(BLE.characteristics)} chars ")
+
+    SAKE_CHAR = None
+    for char in BLE.characteristics:
+        s, c = parse_id_from_path(char.path)
+        if s == sake_srv_id and c == sake_char_id:
+            SAKE_CHAR = char
+            break
+    if SAKE_CHAR == None:
+        raise Exception("Could not find SAKE char!")
+
+    BLE.on_connect = on_connect
+    BLE.on_disconnect = on_disconnect
+
+    thread = Thread(target = adv_thread)
+    thread.start()
+
+    BLE.publish()
     
-    # you might need to run
-    # sudo btmgmt io-cap keyboard-display
-    # bluetoothctl
-    # agent KeyboardDisplay
-    # default-agent
+    return
 
-    
-    #pairable=True,
-    #bondable=True,
-)
-
-ble.add_service(
-    srv_id=1,
-    uuid=SERVICE_UUID,
-    primary=True
-)
-
-ble.add_characteristic(
-    srv_id=1,
-    chr_id=1,
-    uuid=CHAR_UUID,
-    value=[],
-    notifying=False,
-    flags=['write', 'notify'],
-    write_callback=write_callback,
-    notify_callback=notify_callback
-)
-
-# Save characteristic object for later use
-#characteristic = ble.services[0].characteristics[0]
-
-ble.on_connect = on_connect
-ble.on_disconnect = on_disconnect
-
-
-thread = Thread(target = adv_thread)
-thread.start()
-
-ble.publish()
-
+if __name__ == "__main__":
+    main()
