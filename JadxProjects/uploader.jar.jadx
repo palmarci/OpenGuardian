@@ -1,0 +1,1080 @@
+{
+  "projectVersion": 2,
+  "files": [
+    "../../../../../../../run/media/marci/C/Program Files/Medtronic/Carelink/Uploader/DSS/uploader.jar"
+  ],
+  "treeExpansionsV2": [
+    "p:com.medtronic.diabetes.solar.uploader.wizard.desktop",
+    "p:com.medtronic.diabetes.solar.uploader.service",
+    "p:com.medtronic.diabetes.solar.uploader.model",
+    "p:com.medtronic.diabetes.solar.utils.proxy",
+    "p:com.medtronic.diabetes.solar.uploader.action",
+    "p:com.medtronic.diabetes.solar.uploader.pages",
+    "p:com.medtronic.n.x.n",
+    "p:mdt.common.device.driver.minimed",
+    "p:com.medtronic.dll_loader",
+    "p:com.medtronic.bleuploader.driver.parser.snapshot",
+    "p:mdt.common.device.usb",
+    "p:com.whitecryption.annotation"
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": [
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.A"
+        },
+        "newName": "SAKE_HANDSHAKE_STATUS_E"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.H"
+        },
+        "newName": "NativeSakeLib"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.sake.g"
+        },
+        "newName": "ISakeConstants"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi"
+        },
+        "newName": "SakeServerImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.n.n.f.iIIIiiiiiIiIii"
+        },
+        "newName": "AuthenticationStatus"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.n.n.n.IIIIiiiiiiIIIi"
+        },
+        "newName": "ISakeKeySelector"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.diabetes.solar.dataupload.api.model.operations.ngp.NgpPackedKeyResponse",
+          "shortId": "iiiIIiiiiiIIii:Ljava/lang/String;"
+        },
+        "newName": "key"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.diabetes.solar.uploader.Selection",
+          "shortId": "iiiIIiiiiiIIii:Lcom/medtronic/n/n/n/IIIIiiiiiiIIIi;"
+        },
+        "newName": "keyselectionprovider"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiIiiiiiiiiIIi:Lorg/slf4j/Logger;"
+        },
+        "newName": "logger"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "iiIIiiiiiiiIII:Lcom/medtronic/n/n/f/iIIIiiiiiIiIii;"
+        },
+        "newName": "auth_status"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "iiiIIiiiiiIIii:Lcom/medtronic/minimed/sake/c;"
+        },
+        "newName": "ptr_maybe"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.n.n.n.IIiiiiiiiiiiIi",
+          "shortId": "iiIIiiiiiiiIII:Ljava/lang/String;"
+        },
+        "newName": "maybe_key_backup"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.diabetes.solar.dataupload.api.model.operations.ngp.NgpPackedKeyResponse",
+          "shortId": "setKey(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 262144
+        },
+        "newName": "arg"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.H",
+          "shortId": "K(Lcom/medtronic/minimed/sake/c;Ljava/lang/String;JJ)Z"
+        },
+        "newName": "maybe_open_key_db"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.sake.SakeJNI",
+          "shortId": "ah(JLcom/medtronic/minimed/sake/c;Ljava/lang/String;JJ)Z"
+        },
+        "newName": "open_key_Db_maybeee"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.IIiIIiiiiiiIIi",
+          "shortId": "iIIIIiiiiiiiIi(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "keyc"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.IIiIIiiiiiiIIi",
+          "shortId": "iIIIIiiiiiiiIi(Ljava/lang/String;)V"
+        },
+        "newName": "select_sake_key"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Lcom/medtronic/minimed/sake/A;)Lcom/medtronic/n/n/f/iIIIiiiiiIiIii;"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 196608
+        },
+        "newName": "in"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Lcom/medtronic/minimed/sake/A;)Lcom/medtronic/n/n/f/iIIIiiiiiIiIii;"
+        },
+        "newName": "translate_status"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Lcom/medtronic/n/n/f/iIIIiiiiiIiIii;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 393216
+        },
+        "newName": "in"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Lcom/medtronic/n/n/f/iIIIiiiiiIiIii;)V"
+        },
+        "newName": "set_status"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "arg"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Ljava/lang/String;)V"
+        },
+        "newName": "maybe_Open_Keydb_highlevel"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII([B)[B"
+        },
+        "newName": "encrypt_or_decrypt1"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+          "shortId": "iiIIiiiiiIIIIi([B)[B"
+        },
+        "newName": "encrypt_or_decrypt2"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.n.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Ljava/lang/String;)V"
+        },
+        "codeRef": {
+          "attachType": "VAR",
+          "index": 524288
+        },
+        "newName": "arg"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.n.n.n.IIiiiiiiiiiiIi",
+          "shortId": "IiiIIiiiiiiIII(Ljava/lang/String;)V"
+        },
+        "newName": "set_key_maybe"
+      }
+    ]
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.x.n.IIiIIiiiiiiIIi",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.whitecryption.annotation.JavaCodeProtection",
+      "subPath": "java",
+      "caret": 150,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mdt.common.device.driver.ISerialDeviceDriver",
+      "subPath": "java",
+      "caret": 159,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mdt.common.device.driver.PumpDevice",
+      "subPath": "java",
+      "caret": 234,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mdt.common.device.driver.AbstractCommand",
+      "subPath": "java",
+      "caret": 553,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "mdt.common.device.driver.minimed.ComLink",
+      "subPath": "java",
+      "caret": 3877,
+      "view": {
+        "x": 0,
+        "y": 1206
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.service.SakeKeySelectorService",
+      "subPath": "java",
+      "caret": 2582,
+      "view": {
+        "x": 0,
+        "y": 501
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "org.apache.commons.configuration2.Configuration",
+      "subPath": "java",
+      "caret": 401,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.wizard.pages.ConnectAdapterPage",
+      "subPath": "java",
+      "caret": 6468,
+      "view": {
+        "x": 0,
+        "y": 1412
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.Selection",
+      "subPath": "java",
+      "caret": 4601,
+      "view": {
+        "x": 0,
+        "y": 1461
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.d",
+      "subPath": "java",
+      "caret": 2998,
+      "view": {
+        "x": 0,
+        "y": 977
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.SakeJNI",
+      "subPath": "java",
+      "caret": 920,
+      "view": {
+        "x": 0,
+        "y": 41
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.H",
+      "subPath": "java",
+      "caret": 1421,
+      "view": {
+        "x": 0,
+        "y": 111
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.g",
+      "subPath": "java",
+      "caret": 197,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.f.IIiiiiiiiiiiIi",
+      "subPath": "java",
+      "caret": 3787,
+      "view": {
+        "x": 0,
+        "y": 756
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.StringDecryptor",
+      "subPath": "java",
+      "caret": 184,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "org.slf4j.Logger",
+      "subPath": "java",
+      "caret": 983,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.E",
+      "subPath": "java",
+      "caret": 249,
+      "view": {
+        "x": 0,
+        "y": 315
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.c",
+      "subPath": "java",
+      "caret": 2553,
+      "view": {
+        "x": 0,
+        "y": 692
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.f.iIIIiiiiiIiIii",
+      "subPath": "java",
+      "caret": 221,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.sake.I",
+      "subPath": "java",
+      "caret": 3626,
+      "view": {
+        "x": 0,
+        "y": 1307
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.utils.SecurityUtils",
+      "subPath": "java",
+      "caret": 485,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.n.IIiiiiiiiiiiIi",
+      "subPath": "java",
+      "caret": 2893,
+      "view": {
+        "x": 0,
+        "y": 581
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.f.iIiIiiiiiIiIii",
+      "subPath": "java",
+      "caret": 244,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.IIiIIiiiiiiIIi",
+      "subPath": "java",
+      "caret": 38029,
+      "view": {
+        "x": 0,
+        "y": 11057
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.n.IIIIiiiiiiIIIi",
+      "subPath": "java",
+      "caret": 279,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.c.IIIiIiiiiIiIIi",
+      "subPath": "java",
+      "caret": 245,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.pages.NetworkProxyPage",
+      "subPath": "java",
+      "caret": 673,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.pages.InsufficientHardwareNotificationActionBar",
+      "subPath": "java",
+      "caret": 371,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.action.DeviceAction",
+      "subPath": "java",
+      "caret": 6883,
+      "view": {
+        "x": 0,
+        "y": 1397
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.Solar",
+      "subPath": "java",
+      "caret": 3640,
+      "view": {
+        "x": 0,
+        "y": 911
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.dataupload.api.DataUploadCommunicator",
+      "subPath": "java",
+      "caret": 2846,
+      "view": {
+        "x": 0,
+        "y": 377
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.dataupload.api.model.operations.ngp.NgpPackedKeyResponse",
+      "subPath": "java",
+      "caret": 303,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.model.DataLimit",
+      "subPath": "java",
+      "caret": 182,
+      "view": {
+        "x": 0,
+        "y": 949
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.wizard.desktop.DesktopNotificator",
+      "subPath": "java",
+      "caret": 1218,
+      "view": {
+        "x": 0,
+        "y": 446
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.wizard.PumpWizard",
+      "subPath": "java",
+      "caret": 1211,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.uploader.wizard.NGPWizard",
+      "subPath": "java",
+      "caret": 5859,
+      "view": {
+        "x": 0,
+        "y": 1307
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.BinaryArchivator",
+      "subPath": "java",
+      "caret": 364,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.EncryptedInputStream",
+      "subPath": "java",
+      "caret": 313,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.EncryptedOutputStream",
+      "subPath": "java",
+      "caret": 423,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.SecurityCheckException",
+      "subPath": "java",
+      "caret": 178,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.SecurityChecks",
+      "subPath": "java",
+      "caret": 230,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.SecurityCallbacks",
+      "subPath": "java",
+      "caret": 210,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.ProxySetup",
+      "subPath": "java",
+      "caret": 343,
+      "view": {
+        "x": 0,
+        "y": 1305
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.AbstractAuthenticator",
+      "subPath": "java",
+      "caret": 497,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.ConsoleAuthenticator",
+      "subPath": "java",
+      "caret": 577,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.EncryptedString",
+      "subPath": "java",
+      "caret": 393,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.LoginCancelledException",
+      "subPath": "java",
+      "caret": 191,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.UnattendedAuthenticator",
+      "subPath": "java",
+      "caret": 546,
+      "view": {
+        "x": 0,
+        "y": 34
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.NoopAuthenticator",
+      "subPath": "java",
+      "caret": 390,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.diabetes.solar.utils.proxy.IIIIiiiiiiIIIi",
+      "subPath": "java",
+      "caret": 843,
+      "view": {
+        "x": 0,
+        "y": 859
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.f.iiIiIiiiiiIiii",
+      "subPath": "java",
+      "caret": 288,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.x.n.iIIIiiiiiIiIii",
+      "subPath": "java",
+      "caret": 676,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.n.n.v.n.iIIiiiiiiIiIii",
+      "subPath": "java",
+      "caret": 2335,
+      "view": {
+        "x": 0,
+        "y": 557
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    }
+  ],
+  "cacheDir": "/home/marci/.cache/jadx/projects/uploader-eaf72b3bd76f59e14b52d7ebe4ce962e",
+  "enableLiveReload": false,
+  "searchHistory": [
+    "open_key",
+    "sake"
+  ],
+  "searchResourcesFilter": "$TEXT",
+  "searchResourcesSizeLimit": 0,
+  "pluginOptions": {}
+}
