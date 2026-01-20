@@ -30,8 +30,10 @@ def adv_thread():
 
 def send_sake_notif():
     zero = list(bytes.fromhex("00"*20))
+    print("calling sake char set value...")
     SAKE_CHAR.set_value(zero)
-    print("sake char set value called!")
+    for i in range(1000):
+        print("notifying? " + str(SAKE_CHAR.is_notifying))
 
 def on_connect(dev):
     global CONNECTED
@@ -93,6 +95,7 @@ def main():
             break
     if SAKE_CHAR == None:
         raise Exception("Could not find SAKE char!")
+    print(f"sake char resolved to {SAKE_CHAR.path}")
 
     BLE.on_connect = on_connect
     BLE.on_disconnect = on_disconnect
