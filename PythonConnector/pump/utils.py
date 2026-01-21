@@ -32,7 +32,7 @@ def gen_mobile_name():
         if num % 2 == 1:
             return f"Mobile {num}"
 
-def add_chars_and_services(ble, read_callback, notify_callback):
+def add_chars_and_services(ble, write_callback, notify_callback):
 
     # DEVICE INFO
     ble.add_service(
@@ -154,8 +154,8 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         uuid="0000FE82-0000-1000-8000-009132591325",
         value=[],
         notifying=False,
-        flags=["read", "notify"],
-        read_callback=read_callback,
+        flags=["write", "notify"],
+        write_callback=write_callback,
         notify_callback=notify_callback,
     )
 
