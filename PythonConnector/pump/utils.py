@@ -41,6 +41,12 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         primary=True
     )
 
+    # handler for read requests to one of the device info characteristics
+    def device_info_read_callback(s):
+        print("!!! READ: Device Info Service:", s)
+        # send s as response to the read operation
+        return list(bytes(s, "ascii"))
+
     # MANUFACTURER_NAME_STRING_CHAR
     ble.add_characteristic(
         srv_id=1,
@@ -49,7 +55,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Manufacturer Name String"),
     )
     # MODEL_NUMBER_STRING_CHAR
     ble.add_characteristic(
@@ -59,7 +65,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Model Number String"),
     )
     # SERIAL_NUMBER_STRING_CHAR
     ble.add_characteristic(
@@ -69,7 +75,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Serial Number String"),
     )
     # HARDWARE_REVISION_STRING_CHAR
     ble.add_characteristic(
@@ -79,7 +85,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Hardware Revision String"),
     )
     # FIRMWARE_REVISION_STRING_CHAR
     ble.add_characteristic(
@@ -89,7 +95,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Firmware Revision String"),
     )
     # SOFTWARE_REVISION_STRING_CHAR
     ble.add_characteristic(
@@ -99,7 +105,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Software Revision String"),
     )
     # SYSTEM_ID_CHAR
     ble.add_characteristic(
@@ -109,7 +115,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("System ID"),
     )
     # PNP_ID_CHAR
     ble.add_characteristic(
@@ -119,7 +125,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("PNP ID"),
     )
     # CERTIFICATION_DATA_LIST_CHAR
     ble.add_characteristic(
@@ -129,7 +135,7 @@ def add_chars_and_services(ble, read_callback, notify_callback):
         value=[],
         notifying=False,
         flags=["read"],
-        read_callback=read_callback,
+        read_callback=lambda: device_info_read_callback("Certification Data List"),
     )
 
     # SAKE
