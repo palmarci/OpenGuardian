@@ -84,7 +84,7 @@ def main():
         local_name=MOBILE_NAME
     )
 
-    sake_srv_id, sake_char_id = add_chars_and_services(BLE, read_callback, notify_callback)
+    sake_srv_id, sake_char_id = add_chars_and_services(BLE, write_callback, notify_callback)
     print(f"set up {len(BLE.services)} services and {len(BLE.characteristics)} chars ")
 
     SAKE_CHAR = None
