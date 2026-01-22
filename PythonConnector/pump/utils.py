@@ -143,7 +143,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     SAKE_CHR_ID = 10
     ble.add_service(
         srv_id=SAKE_SRV_ID,
-        uuid="FE82"
+        uuid="FE82",
         primary=True,
     )
 
