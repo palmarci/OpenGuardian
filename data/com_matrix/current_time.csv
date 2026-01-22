@@ -1,2 +1,2 @@
-UUID,Name,Encrypted,Medtronic Proprietary,Notes
-00002a2b-0000-1000-8000-00805f9b34fb,Current Time,?,no,
+UUID,Name,Encrypted,Medtronic Proprietary,Notes,Converter Class
+00002a2b-0000-1000-8000-00805f9b34fb,Current Time,?,no,,,
