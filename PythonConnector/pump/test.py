@@ -32,15 +32,11 @@ def send_sake_notif():
     zero = list(bytes.fromhex("00"*20))
     print("calling sake char set value...")
     SAKE_CHAR.set_value(zero)
-    for i in range(1000):
-        print("notifying? " + str(SAKE_CHAR.is_notifying))
 
 def on_connect(dev):
     global CONNECTED
     CONNECTED = True
-    print(f"Connected: {dev.address}, waiting before sake notification...")
-    sleep(3)
-    send_sake_notif()
+    print(f"Connected: {dev.address}")
 
 def on_disconnect(adapter_addr, device_addr):
     global CONNECTED
@@ -55,6 +51,9 @@ def read_callback():
 def notify_callback(notifying, char):
     print("!!! NOTIFY")
     print("Notifications:", "enabled" if notifying else "disabled")
+    if notifying:
+        # pump wants to be notified, start SAKE handshake
+        send_sake_notif()
 
 def write_callback(value, options):
     global buffer, characteristic
