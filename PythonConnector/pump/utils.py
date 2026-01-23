@@ -35,8 +35,9 @@ def gen_mobile_name():
 def add_chars_and_services(ble, write_callback, notify_callback):
 
     # DEVICE INFO
+    DEVICE_INFO_SRV_ID = 1
     ble.add_service(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         uuid="00000900-0000-1000-0000-009132591325",
         primary=True
     )
@@ -49,7 +50,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
 
     # MANUFACTURER_NAME_STRING_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=1,
         uuid="00002A29-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -59,7 +60,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # MODEL_NUMBER_STRING_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=2,
         uuid="00002A24-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -69,7 +70,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # SERIAL_NUMBER_STRING_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=3,
         uuid="00002A25-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -79,7 +80,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # HARDWARE_REVISION_STRING_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=4,
         uuid="00002A27-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -89,7 +90,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # FIRMWARE_REVISION_STRING_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=5,
         uuid="00002A26-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -99,7 +100,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # SOFTWARE_REVISION_STRING_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=6,
         uuid="00002A28-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -109,7 +110,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # SYSTEM_ID_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=7,
         uuid="00002A23-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -119,7 +120,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # PNP_ID_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=8,
         uuid="00002A50-0000-1000-0000-00805F9B34FB",
         value=[],
@@ -129,7 +130,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     )
     # CERTIFICATION_DATA_LIST_CHAR
     ble.add_characteristic(
-        srv_id=1,
+        srv_id=DEVICE_INFO_SRV_ID,
         chr_id=9,
         uuid="00002A2A-0000-1000-0000-00805F9B34FB",
         value=[],
