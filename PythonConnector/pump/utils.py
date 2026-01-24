@@ -52,7 +52,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=1,
-        uuid="00002A29-0000-1000-0000-00805F9B34FB",
+        uuid="2A29",
         value=[],
         notifying=False,
         flags=["read"],
@@ -62,7 +62,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=2,
-        uuid="00002A24-0000-1000-0000-00805F9B34FB",
+        uuid="2A24",
         value=[],
         notifying=False,
         flags=["read"],
@@ -72,7 +72,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=3,
-        uuid="00002A25-0000-1000-0000-00805F9B34FB",
+        uuid="2A25",
         value=[],
         notifying=False,
         flags=["read"],
@@ -82,7 +82,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=4,
-        uuid="00002A27-0000-1000-0000-00805F9B34FB",
+        uuid="2A27",
         value=[],
         notifying=False,
         flags=["read"],
@@ -92,7 +92,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=5,
-        uuid="00002A26-0000-1000-0000-00805F9B34FB",
+        uuid="2A26",
         value=[],
         notifying=False,
         flags=["read"],
@@ -102,7 +102,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=6,
-        uuid="00002A28-0000-1000-0000-00805F9B34FB",
+        uuid="2A28",
         value=[],
         notifying=False,
         flags=["read"],
@@ -112,7 +112,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=7,
-        uuid="00002A23-0000-1000-0000-00805F9B34FB",
+        uuid="2A23",
         value=[],
         notifying=False,
         flags=["read"],
@@ -122,7 +122,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=8,
-        uuid="00002A50-0000-1000-0000-00805F9B34FB",
+        uuid="2A50",
         value=[],
         notifying=False,
         flags=["read"],
@@ -132,7 +132,7 @@ def add_chars_and_services(ble, write_callback, notify_callback):
     ble.add_characteristic(
         srv_id=DEVICE_INFO_SRV_ID,
         chr_id=9,
-        uuid="00002A2A-0000-1000-0000-00805F9B34FB",
+        uuid="2A2A",
         value=[],
         notifying=False,
         flags=["read"],
