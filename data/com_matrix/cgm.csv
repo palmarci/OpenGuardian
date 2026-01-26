@@ -9,6 +9,6 @@ UUID,Name,Encrypted,Medtronic Proprietary,Notes,Converter Class
 00002aa7-0000-1000-8000-00805f9b34fb,CGM Measurement,yes,no,,,
 00002aa8-0000-1000-8000-00805f9b34fb,CGM Feature,?,no,,,
 00002aa9-0000-1000-8000-00805f9b34fb,CGM Status,?,no,?,,
-00002aaa-0000-1000-8000-00805f9b34fb,CGM Session Start Time,yes,no,,,
+00002aaa-0000-1000-8000-00805f9b34fb,CGM Session Start Time,?,no,,,
 00002aab-0000-1000-8000-00805f9b34fb,CGM Session Run Time,?,no,,,
 00002aac-0000-1000-8000-00805f9b34fb,CGM Specific Ops Control Point,yes,no,in code it is “Socp”,,

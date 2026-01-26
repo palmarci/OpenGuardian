@@ -14,6 +14,7 @@ _KEY_NAME = "Name"
 _KEY_ENCRYPTED = "Encrypted"
 _KEY_MDT = "Medtronic Proprietary"
 _KEY_NOTES = "Notes"
+_CONVERTER_CLASS = "Converter Class"
 
 EXPECTED_HEADERS = [
     _KEY_UUID,
@@ -21,6 +22,7 @@ EXPECTED_HEADERS = [
     _KEY_ENCRYPTED,
     _KEY_MDT,
     _KEY_NOTES,
+    _CONVERTER_CLASS
 ]
 
 
