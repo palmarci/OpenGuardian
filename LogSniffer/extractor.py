@@ -113,6 +113,9 @@ def get_device_type(address:str) -> str:
     return "APP" # it must be app then. not the best
 
 def get_uuid(att, pktno) -> tuple[str,str]:
+    """
+    returns serv_uuid, char_uuid
+    """
     _key_service_128 = "service_uuid128"
     _key_char_16 = "uuid16"
     _key_char_128 = "uuid128"
@@ -251,7 +254,11 @@ def main():
             src_type = dest_type_bak
 
         # get uuids
-        uuids = get_uuid(pkt.btatt, pktno)
+        try:
+            uuids = get_uuid(pkt.btatt, pktno)
+        except Exception as e:
+            print(f"WARNING: skipping frame #{pktno}, can not get uuids: {e}")
+            continue
 
         # data
 
