@@ -5,17 +5,18 @@
   ],
   "treeExpansionsV2": [
     "c:com.medtronic.minimed.data.pump.ble.profile.client.ids.converters.history.BolusEventPart1DataConverter",
-    "p:com.medtronic.minimed.data.pump.ble.profile.client.currenttime.model",
     "p:com.medtronic.minimed.data.pump.ble.profile.client.currenttime.converters",
+    "p:com.medtronic.minimed.data.pump.ble.profile.client.currenttime.model",
     "p:com.medtronic.minimed.data.pump.ble.profile.client.cgm.model",
+    "c:com.medtronic.minimed.connect.ble.api.gatt.server.r",
     "p:com.medtronic.minimed.data.pump.ble.converter",
-    "p:com.medtronic.minimed.fota.bl.pump.selectedpumptype",
     "p:com.medtronic.minimed.bl.dataprovider.model.event",
+    "p:com.medtronic.minimed.fota.bl.pump.selectedpumptype",
     "p:com.medtronic.minimed.data.utilities.parsing",
     "p:com.medtronic.minimed.bl.pump",
     "c:xk.m",
-    "p:e8",
-    "p:x9"
+    "p:x9",
+    "p:e8"
   ],
   "codeData": {
     "comments": [],
@@ -103,6 +104,55 @@
           "declClass": "com.medtronic.minimed.connect.ble.api.gatt.converter.b"
         },
         "newName": "TypeConverter"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.server.a"
+        },
+        "newName": "BaseBleGattServer"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.server.b"
+        },
+        "newName": "BleGattServerCharacteristic"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.server.p"
+        },
+        "newName": "BleGattServerRxImpl"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.server.r"
+        },
+        "newName": "BleGattServerService"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.api.gatt.server.s"
+        },
+        "newName": "DefaultBluetoothGattServerCallbackProxy"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a"
+        },
+        "newName": "BluetoothGattServerBle"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a$a"
+        },
+        "newName": "BluetoothGattServerBle_2"
       },
       {
         "nodeRef": {
@@ -408,6 +458,20 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "j8.a"
+        },
+        "newName": "BluetoothGattCharacteristicProxy"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "j8.e"
+        },
+        "newName": "BluetoothGattServerCallbackProxy"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "jd.a"
         },
         "newName": "PnpIdConverter"
@@ -436,9 +500,23 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "k8.a"
+        },
+        "newName": "BluetoothGattServerProxy"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "kj.f"
         },
         "newName": "Cancellable"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "m8.c"
+        },
+        "newName": "BluetoothDeviceBle"
       },
       {
         "nodeRef": {
@@ -534,9 +612,23 @@
       {
         "nodeRef": {
           "refType": "CLASS",
+          "declClass": "oe.c"
+        },
+        "newName": "DeviceInformationServiceModule.kt"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
           "declClass": "p7.e"
         },
         "newName": "StringUtils"
+      },
+      {
+        "nodeRef": {
+          "refType": "CLASS",
+          "declClass": "p8.a"
+        },
+        "newName": "Converter"
       },
       {
         "nodeRef": {
@@ -880,6 +972,30 @@
       {
         "nodeRef": {
           "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+          "shortId": "a:Landroid/bluetooth/BluetoothGattServer;"
+        },
+        "newName": "gattServer"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+          "shortId": "b:Lj8/e;"
+        },
+        "newName": "callbackProxy"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+          "shortId": "c:Landroid/bluetooth/BluetoothManager;"
+        },
+        "newName": "btManager"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
           "declClass": "com.medtronic.minimed.data.pump.ble.profile.client.ids.model.BolusActivationType",
           "shortId": "$ENTRIES:Lqk/a;"
         },
@@ -1020,6 +1136,22 @@
           "shortId": "l:Ljf/a;"
         },
         "newName": "not_supported_sake"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "m8.c",
+          "shortId": "a:Landroid/bluetooth/BluetoothDevice;"
+        },
+        "newName": "btDevice"
+      },
+      {
+        "nodeRef": {
+          "refType": "FIELD",
+          "declClass": "m8.c",
+          "shortId": "b:Landroid/os/Handler;"
+        },
+        "newName": "handler"
       },
       {
         "nodeRef": {
@@ -1472,6 +1604,30 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+          "shortId": "d(Lj8/f;)Z"
+        },
+        "newName": "addService"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+          "shortId": "e(Lh8/d;III[B)Z"
+        },
+        "newName": "sendResp"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+          "shortId": "h(Landroid/bluetooth/BluetoothDevice;)Lm8/c;"
+        },
+        "newName": "newBtDevice"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "com.medtronic.minimed.data.ParametersForTesting",
           "shortId": "component3()Z"
         },
@@ -1812,6 +1968,78 @@
       {
         "nodeRef": {
           "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "a(Lh8/d;IZ)V"
+        },
+        "newName": "onExecWrite"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "b(Lh8/d;ILj8/a;ZZI[B)V"
+        },
+        "newName": "onCharacteristicWriteRequest"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "c(Lh8/d;I)V"
+        },
+        "newName": "onMtuChange"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "d(Lh8/d;ILj8/c;ZZI[B)V"
+        },
+        "newName": "onDescriptorWrite"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "e(Lh8/d;IILj8/c;)V"
+        },
+        "newName": "onDescriptorRead"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "f(Lh8/d;I)V"
+        },
+        "newName": "onNotiSent"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "g(ILj8/f;)V"
+        },
+        "newName": "onServiceAdd"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "h(Lh8/d;II)V"
+        },
+        "newName": "onConnectionStateChanged"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "j8.e",
+          "shortId": "i(Lh8/d;IILj8/a;)V"
+        },
+        "newName": "onCharacteristicReadRequest"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
           "declClass": "jf.a",
           "shortId": "\u003cclinit\u003e()V"
         },
@@ -1828,6 +2056,22 @@
           "shortId": "a(I)Ljf/a;"
         },
         "newName": "translate_sake_error"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "m8.c",
+          "shortId": "a()Ljava/lang/String;"
+        },
+        "newName": "getAddr"
+      },
+      {
+        "nodeRef": {
+          "refType": "METHOD",
+          "declClass": "m8.c",
+          "shortId": "b()I"
+        },
+        "newName": "getBondState"
       },
       {
         "nodeRef": {
@@ -2098,7 +2342,7 @@
       "caret": 7434,
       "view": {
         "x": 0,
-        "y": 2845
+        "y": 4788
       },
       "active": false,
       "pinned": false,
@@ -2322,10 +2566,10 @@
       "subPath": "java",
       "caret": 7733,
       "view": {
-        "x": 8,
+        "x": 0,
         "y": 1499
       },
-      "active": true,
+      "active": false,
       "pinned": false,
       "bookmarked": false,
       "hidden": false,
@@ -2367,8 +2611,8 @@
       "subPath": "java",
       "caret": 3057,
       "view": {
-        "x": 693,
-        "y": 354
+        "x": 368,
+        "y": 391
       },
       "active": false,
       "pinned": false,
@@ -2380,7 +2624,7 @@
       "type": "class",
       "tabPath": "z7.b",
       "subPath": "java",
-      "caret": 4334,
+      "caret": 4195,
       "view": {
         "x": 0,
         "y": 1639
@@ -2472,7 +2716,7 @@
       "subPath": "java",
       "caret": 1616,
       "view": {
-        "x": 315,
+        "x": 0,
         "y": 0
       },
       "active": false,
@@ -2530,7 +2774,7 @@
       "type": "class",
       "tabPath": "com.medtronic.minimed.bl.dataprovider.model.SensorStatus",
       "subPath": "java",
-      "caret": 1344,
+      "caret": 0,
       "view": {
         "x": 0,
         "y": 0
@@ -2570,11 +2814,448 @@
       "bookmarked": false,
       "hidden": false,
       "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.auth.ble.BluetoothLePeripheral",
+      "subPath": "java",
+      "caret": 10160,
+      "view": {
+        "x": 0,
+        "y": 2717
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.ca.mas.core.MobileSsoConfig",
+      "subPath": "java",
+      "caret": 372,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.proxy.ble.server.a",
+      "subPath": "java",
+      "caret": 6890,
+      "view": {
+        "x": 0,
+        "y": 1111
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "p8.a",
+      "subPath": "java",
+      "caret": 1601,
+      "view": {
+        "x": 0,
+        "y": 212
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "k8.a",
+      "subPath": "java",
+      "caret": 353,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "j8.e",
+      "subPath": "java",
+      "caret": 264,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "m8.c",
+      "subPath": "java",
+      "caret": 1655,
+      "view": {
+        "x": 0,
+        "y": 156
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.v",
+      "subPath": "java",
+      "caret": 17891,
+      "view": {
+        "x": 0,
+        "y": 6002
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "j8.a",
+      "subPath": "java",
+      "caret": 216,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.a",
+      "subPath": "java",
+      "caret": 875,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.s",
+      "subPath": "java",
+      "caret": 418,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.BleGattServerError",
+      "subPath": "java",
+      "caret": 104,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.b",
+      "subPath": "java",
+      "caret": 746,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.b0",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.c0",
+      "subPath": "java",
+      "caret": 805,
+      "view": {
+        "x": 0,
+        "y": 1161
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.g",
+      "subPath": "java",
+      "caret": 270,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.f",
+      "subPath": "java",
+      "caret": 270,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.h",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.i",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.j",
+      "subPath": "java",
+      "caret": 297,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.k",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.l",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.m",
+      "subPath": "java",
+      "caret": 297,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.n",
+      "subPath": "java",
+      "caret": 270,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.p",
+      "subPath": "java",
+      "caret": 3180,
+      "view": {
+        "x": 0,
+        "y": 1128
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.t",
+      "subPath": "java",
+      "caret": 245,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.medtronic.minimed.connect.ble.api.gatt.server.r",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 366
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "oe.c",
+      "subPath": "java",
+      "caret": 5159,
+      "view": {
+        "x": 0,
+        "y": 692
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
+    },
+    {
+      "type": "class",
+      "tabPath": "pe.b",
+      "subPath": "java",
+      "caret": 2516,
+      "view": {
+        "x": 0,
+        "y": 64
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false,
+      "previewTab": false
     }
   ],
   "cacheDir": "/home/marci/.cache/jadx/projects/mmm_250.apk-8888e80a09325d76b580d32d7558b5cc",
   "enableLiveReload": true,
   "searchHistory": [
+    "new BluetoothGattCharacteristic",
+    "openGattServer",
     "PumpAnnunciationConverter",
     "SensorStatus",
     "Banner",
@@ -2602,9 +3283,7 @@
     "BinaryPackage",
     "HistoryEventType",
     "isApplicableForPumpType",
-    "parsing.c",
-    "Annunciation",
-    "utilities.parsing.c"
+    "parsing.c"
   ],
   "searchResourcesFilter": "$TEXT",
   "searchResourcesSizeLimit": 0,
